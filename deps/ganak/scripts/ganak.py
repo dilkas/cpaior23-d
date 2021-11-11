@@ -32,7 +32,7 @@ def main():
         parser.error("Please provide the CNF formula file")
     if ( (not args.noCSVSADS) and args.EDR):
         parser.error("CSVSADS and EDR cannot be used together ")
-    cmd = "/usr/bin/time --verbose -o timeoutfile ./ganak -cs " + str(args.cs) + " -t " + str(args.t) + " "
+    cmd = "/usr/bin/time --verbose -o timeoutfile ./build/ganak -cs " + str(args.cs) + " -t " + str(args.t) + " "
     cmd += " -seed "+ str(args.seed) + " " 
     if (args.noCC):
         cmd += "-noCC "
