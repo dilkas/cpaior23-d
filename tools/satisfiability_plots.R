@@ -1,0 +1,58 @@
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(maditr)
+library(Hmisc)
+library(tikzDevice)
+library(ggpubr)
+
+repetitiveness_facets <- function(filename, round_clause_factor_labels) {
+  data <- read.csv(filename)
+  data <- data[data$literal_factor > 1,]
+  if (round_clause_factor_labels) {
+    levels <- sort(unique(data$clause_factor))
+    data$clause_factor <- factor(data$clause_factor, levels = levels, labels = round(levels, 1))
+  }
+  ggplot(data, aes(repetitiveness, treewidth)) +
+    geom_point() +
+    geom_smooth(se = FALSE, method = "loess") +
+    facet_grid(literal_factor ~ clause_factor, labeller =
+                 labeller(literal_factor = function(x) paste0("$\\kappa = ", x, "$"),
+                          clause_factor = function(x) paste0("$\\mu = ", x, "$"))) +
+    scale_x_continuous(breaks = c(0, 0.5, 1), labels = c(0, 0.5, 1)) +
+    scale_y_continuous(breaks = c(0, 50, 100)) +
+    xlab("$\\rho$") +
+    ylab("Primal treewidth")
+}
+# tikz(file = "../paper/irregular_repetitiveness.tex", width = 6.5, height = 7.6, standAlone = TRUE)
+# repetitiveness_facets("../experiments/satisfiability/irregular_results.csv", FALSE)
+# dev.off()
+tikz(file = "../paper/regular_repetitiveness.tex", width = 6.5, height = 3.5, standAlone = TRUE)
+repetitiveness_facets("../experiments/satisfiability/regular_results.csv", TRUE)
+dev.off()
+
+# ========== EXTRA STUFF ===========
+
+satisfiability_heatmap <- function(filename) {
+  data <- read.csv(filename)
+  df2 <- data %>% group_by(clause_factor, literal_factor) %>%
+    summarise(satisfiability = (sum(sat) / n()))
+  df2$clause_factor <- as.factor(df2$clause_factor)
+  df2$literal_factor <- as.factor(df2$literal_factor)
+  ggplot(df2, aes(clause_factor, literal_factor)) +
+    geom_tile(aes(fill = satisfiability)) +
+    geom_text(aes(label = round(satisfiability, 1))) +
+    xlab("$\\mu$") +
+    ylab("$\\kappa$") +
+    labs(fill = "Satisfiability") +
+    scale_fill_distiller(palette = "Blues") +
+    scale_x_discrete(labels = function(x) sprintf("%.1f", as.numeric(x)))
+}
+p1 <- satisfiability_heatmap("../experiments/satisfiability/irregular_results.csv")
+p2 <- satisfiability_heatmap("../experiments/satisfiability/regular_results.csv")
+tikz(file = "../paper/satisfiability.tex", width = 6.5, height = 2.4375)
+ggarrange(p1, p2, ncol = 2, common.legend = TRUE, legend = "bottom")
+dev.off()
+
+data <- read.csv("../experiments/satisfiability/regular_results.csv")
+df <- data[data$literal_factor == 3,] %>% group_by(repetitiveness) %>% summarise(mean = mean(sat))
