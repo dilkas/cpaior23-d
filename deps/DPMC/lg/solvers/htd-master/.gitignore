@@ -1,0 +1,15 @@
+include/htd/CompilerDetection.hpp
+include/htd/Id.hpp
+include/htd/PreprocessorDefinitions.hpp
+include/htd_io/PreprocessorDefinitions.hpp
+include/htd_cli/PreprocessorDefinitions.hpp
+src/htd/AssemblyInfo.cpp
+test/htd/*Test
+*.cmake
+CMakeFiles
+bin
+CMakeCache.txt
+CMakeDoxyfile.in
+DartConfiguration.tcl
+Doxyfile
+Makefile
