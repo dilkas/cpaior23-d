@@ -1,0 +1,70 @@
+solver_factory.o: solver_factory.cc solver_factory.hh \
+ ../../src/wraps/solver_config.hh ../../src/idman/id_manager.hh \
+ ../../src/include/globals.hh ../../src/include/config.hh \
+ ../../src/include/macros.hh ../../src/include/dbg_prt.hh \
+ ../../src/include/basic_types.h ../../src/include/types.hh \
+ ../../src/include/functors.hh ../../src/include/err_utils.hh \
+ ../../src/include/rusage.hh solver_wrapper.hh \
+ ../../src/clset/basic_clset.hh ../../src/clset/basic_clause.hh \
+ ../../src/clset/cl_id_manager.hh ../../src/clset/cl_functors.hh \
+ ../../src/clset/cl_types.hh ../../src/clset/cl_registry.hh \
+ ../../src/mus-2/basic_group_set.hh ../../src/clset/basic_clause.hh \
+ ../../src/clset/cl_functors.hh ../../src/clset/cl_types.hh \
+ ../../src/clset/cl_registry.hh ../../src/mus-2/mus_config.hh \
+ ../../src/mus-2/occs_list.hh ../../src/mus-2/basic_group_set.hh \
+ ../../src/wraps/solver_utils.hh ../../src/wraps/solver_ll_factory.hh \
+ ../../src/wraps/solver_config.hh ../../src/wraps/solver_ll_wrapper.hh \
+ ../../src/wraps/solver_utils.hh ../../src/wraps/solver_llni_factory.hh \
+ ../../src/wraps/solver_llni_wrapper.hh \
+ ../../src/wraps/solver_sls_factory.hh \
+ ../../src/wraps/solver_sls_wrapper.hh solver_wrapper_gincr.hh \
+ ../../src/wraps/solver_ll_wrapper.hh solver_wrapper_gnonincr.hh \
+ solver_wrapper_gsls.hh ../../src/wraps/solver_sls_wrapper.hh
+solver_wrapper_gincr.o: solver_wrapper_gincr.cc solver_wrapper_gincr.hh \
+ solver_wrapper.hh ../../src/clset/basic_clset.hh \
+ ../../src/include/globals.hh ../../src/include/config.hh \
+ ../../src/include/macros.hh ../../src/include/dbg_prt.hh \
+ ../../src/include/basic_types.h ../../src/include/types.hh \
+ ../../src/include/functors.hh ../../src/include/err_utils.hh \
+ ../../src/include/rusage.hh ../../src/clset/basic_clause.hh \
+ ../../src/clset/cl_id_manager.hh ../../src/clset/cl_functors.hh \
+ ../../src/clset/cl_types.hh ../../src/clset/cl_registry.hh \
+ ../../src/mus-2/basic_group_set.hh ../../src/clset/basic_clause.hh \
+ ../../src/clset/cl_functors.hh ../../src/clset/cl_types.hh \
+ ../../src/clset/cl_registry.hh ../../src/mus-2/mus_config.hh \
+ ../../src/wraps/solver_config.hh ../../src/idman/id_manager.hh \
+ ../../src/mus-2/occs_list.hh ../../src/mus-2/basic_group_set.hh \
+ ../../src/wraps/solver_utils.hh ../../src/wraps/solver_ll_wrapper.hh \
+ ../../src/wraps/solver_utils.hh
+solver_wrapper_gnonincr.o: solver_wrapper_gnonincr.cc \
+ ../../src/clset/cl_registry.hh ../../src/include/globals.hh \
+ ../../src/include/config.hh ../../src/include/macros.hh \
+ ../../src/include/dbg_prt.hh ../../src/include/basic_types.h \
+ ../../src/include/types.hh ../../src/include/functors.hh \
+ ../../src/include/err_utils.hh ../../src/include/rusage.hh \
+ ../../src/clset/basic_clause.hh ../../src/clset/cl_id_manager.hh \
+ ../../src/clset/cl_functors.hh ../../src/clset/cl_types.hh \
+ solver_wrapper_gnonincr.hh solver_wrapper.hh \
+ ../../src/clset/basic_clset.hh ../../src/clset/cl_registry.hh \
+ ../../src/mus-2/basic_group_set.hh ../../src/clset/basic_clause.hh \
+ ../../src/clset/cl_functors.hh ../../src/clset/cl_types.hh \
+ ../../src/mus-2/mus_config.hh ../../src/wraps/solver_config.hh \
+ ../../src/idman/id_manager.hh ../../src/mus-2/occs_list.hh \
+ ../../src/mus-2/basic_group_set.hh ../../src/wraps/solver_utils.hh \
+ ../../src/wraps/solver_llni_wrapper.hh ../../src/wraps/solver_utils.hh
+solver_wrapper_gsls.o: solver_wrapper_gsls.cc \
+ ../../src/clset/cl_registry.hh ../../src/include/globals.hh \
+ ../../src/include/config.hh ../../src/include/macros.hh \
+ ../../src/include/dbg_prt.hh ../../src/include/basic_types.h \
+ ../../src/include/types.hh ../../src/include/functors.hh \
+ ../../src/include/err_utils.hh ../../src/include/rusage.hh \
+ ../../src/clset/basic_clause.hh ../../src/clset/cl_id_manager.hh \
+ ../../src/clset/cl_functors.hh ../../src/clset/cl_types.hh \
+ solver_wrapper_gsls.hh solver_wrapper.hh ../../src/clset/basic_clset.hh \
+ ../../src/clset/cl_registry.hh ../../src/mus-2/basic_group_set.hh \
+ ../../src/clset/basic_clause.hh ../../src/clset/cl_functors.hh \
+ ../../src/clset/cl_types.hh ../../src/mus-2/mus_config.hh \
+ ../../src/wraps/solver_config.hh ../../src/idman/id_manager.hh \
+ ../../src/mus-2/occs_list.hh ../../src/mus-2/basic_group_set.hh \
+ ../../src/wraps/solver_utils.hh ../../src/wraps/solver_sls_wrapper.hh \
+ ../../src/wraps/solver_utils.hh
