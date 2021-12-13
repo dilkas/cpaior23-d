@@ -43,11 +43,45 @@ bounds1 <- function(row) {
   }
 }
 
+pmf <- function(nu, tw, prob) {
+  choose(nu, values$tw) * (1 - values$zero - values$one) ^ values$tw *
+    (values$zero + values$one) ^ (nu - values$tw)
+}
+
+cdf0 <- function(nu, tw, prob) {
+  i <- 0:tw
+  sum(choose(nu, i) * (1 - prob) ^ i * prob ^ (nu - i))
+}
+
 cdf <- function(row) {
   i <- 0:as.numeric(row[3])
   five <- as.numeric(row[5])
   six <- as.numeric(row[6])
   sum(choose(nu, i) * (1 - five - six) ^ i * (five + six) ^ (nu - i))
+}
+
+cdf_quantiles <- function(nu, mu, kappa, rho, q, f1, f2) {
+  tw <- nu
+  prob <- f1(nu, mu, kappa, rho) + f2(nu, mu, kappa, rho)
+  while (cdf0(nu, tw, prob) > q) {
+    #print(paste0("nu = ", nu, ", mu = ", mu, ", kappa = ", kappa, ", rho = ",
+    #             rho, ", q = ", q, ", prob = ", prob, ", tw = ", tw,
+    #             ", cdf = ", cdf0(nu, tw, prob)))
+    tw <- tw - 1
+  }
+  #print(paste0("ending with tw = ", tw, " and cdf = ", cdf0(nu, tw, prob)))
+  tw
+}
+
+facet_data <- function(nu, mu, kappa, rho) {
+  alpha <- 0.5
+  #print("lower bound")
+  tw_lb_0 <- cdf_quantiles(nu, mu, kappa, rho, alpha / 2, p0lb, p1lb)
+  tw_lb_1 <- cdf_quantiles(nu, mu, kappa, rho, 1 - alpha / 2, p0lb, p1lb)
+  #print("upper bound")
+  tw_ub_0 <- cdf_quantiles(nu, mu, kappa, rho, alpha / 2, p0ub, p1ub)
+  tw_ub_1 <- cdf_quantiles(nu, mu, kappa, rho, 1 - alpha / 2, p0ub, p1ub)
+  c(tw_lb_0, tw_lb_1, tw_ub_0, tw_ub_1)
 }
 
 nu <- 100
@@ -64,14 +98,12 @@ names(values) <- c("mu", "rho", "bound_type", "zero", "one")
 plot_ly(values, x = ~mu, y = ~rho, z = ~zero, color = ~bound_type)
 plot_ly(values, x = ~mu, y = ~rho, z = ~one, color = ~bound_type)
 
-# CDF of tw
+# PMF & CDF of tw
 values <- expand.grid(mu, rho, tw, c("lb", "ub"))
 values <- cbind(values, apply(values, 1, bounds0), apply(values, 1, bounds1))
 names(values) <- c("mu", "rho", "tw", "bound_type", "zero", "one")
-#values$cdf <- apply(values, 1, cdf)
-values$pmf <- choose(nu, values$tw) *
-  (1 - values$zero - values$one) ^ values$tw *
-  (values$zero + values$one) ^ (nu - values$tw)
+values$cdf <- apply(values, 1, cdf)
+values$pmf <- pmf(nu, values$tw, values$zero + values$one)
 plot_ly(colors = c("red", "blue")) %>%
   add_trace(data = values[values$mu == 312 & values$bound_type == "lb",],
             x = ~rho, y = ~tw, z = ~pmf, color = 1, type = 'mesh3d',
