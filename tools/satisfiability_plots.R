@@ -6,6 +6,15 @@ library(Hmisc)
 library(tikzDevice)
 library(ggpubr)
 
+# For testing
+data <- read.csv("../results/satisfiability.csv")
+data <- data[data$literal_factor > 1,]
+bounds <- t(apply(data, 1, function(x)
+  facet_data(100, as.integer(100 * as.numeric(x[7])), as.integer(x[6]),
+             as.numeric(x[1]))))
+data <- cbind(data, bounds = bounds)
+print(data)
+
 repetitiveness_facets <- function(filename, round_clause_factor_labels) {
   data <- read.csv(filename)
   data <- data[data$literal_factor > 1,]

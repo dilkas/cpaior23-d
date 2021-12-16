@@ -92,11 +92,11 @@ rho <- seq(0, 1, length = 100)
 tw <- (0.80 * nu):nu
 
 # bounds on p0, p1
-values <- expand.grid(mu, rho, c("lb", "ub"))
-values <- cbind(values, apply(values, 1, bounds0), apply(values, 1, bounds1))
-names(values) <- c("mu", "rho", "bound_type", "zero", "one")
-plot_ly(values, x = ~mu, y = ~rho, z = ~zero, color = ~bound_type)
-plot_ly(values, x = ~mu, y = ~rho, z = ~one, color = ~bound_type)
+#values <- expand.grid(mu, rho, c("lb", "ub"))
+#values <- cbind(values, apply(values, 1, bounds0), apply(values, 1, bounds1))
+#names(values) <- c("mu", "rho", "bound_type", "zero", "one")
+#plot_ly(values, x = ~mu, y = ~rho, z = ~zero, color = ~bound_type)
+#plot_ly(values, x = ~mu, y = ~rho, z = ~one, color = ~bound_type)
 
 # PMF & CDF of tw
 values <- expand.grid(mu, rho, tw, c("lb", "ub"))
