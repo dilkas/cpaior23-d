@@ -1,16 +1,9 @@
-%%%% kr-instructions.tex -- version 1.3 (11-Jan-2021)
-
-\typeout{KR2022 Instructions for Authors}
-
-% These are the instructions for authors for KR-22.
-
 \documentclass{article}
 \pdfpagewidth=8.5in
 \pdfpageheight=11in
 
 \usepackage{kr}
 
-% Use the postscript times font!
 \usepackage{times}
 \usepackage{soul}
 \usepackage{url}
@@ -21,566 +14,830 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{booktabs}
-\usepackage{algorithm}
-\usepackage{algorithmic}
 \urlstyle{same}
 
-% the following package is optional:
-%\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{complexity}
+\usepackage{MnSymbol}
+\usepackage[binary-units]{siunitx}
+\usepackage[capitalise]{cleveref}
+\usepackage[inline]{enumitem}
 
 % See https://www.overleaf.com/learn/latex/theorems_and_proofs
 % for a nice explanation of how to define new theorems, but keep
 % in mind that the amsthm package is already included in this
 % template and that you must *not* alter the styling.
+
+\theoremstyle{definition}
+\newtheorem{experiment}{Experiment}
 \newtheorem{example}{Example}
-\newtheorem{theorem}{Theorem}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\Crefname{experiment}{Experiment}{Experiments}
+\sisetup{range-phrase=--}
+\sisetup{range-units=single}
+\makeatletter
+\newcommand{\nosemic}{\renewcommand{\@endalgocfline}{\relax}}% Drop semi-colon ;
+\newcommand{\dosemic}{\renewcommand{\@endalgocfline}{\algocf@endline}}% Reinstate semi-colon ;
+\newcommand{\pushline}{\Indp}% Indent
+\newcommand{\popline}{\Indm\dosemic}% Undent
+\makeatother
 
-% Following comment is from ijcai97-submit.tex:
-% The preparation of these files was supported by Schlumberger Palo Alto
-% Research, AT\&T Bell Laboratories, and Morgan Kaufmann Publishers.
-% Shirley Jowell, of Morgan Kaufmann Publishers, and Peter F.
-% Patel-Schneider, of AT\&T Bell Laboratories collaborated on their
-% preparation.
-
-% These instructions can be modified and used in other conferences as long
-% as credit to the authors and supporting agencies is retained, this notice
-% is not changed, and further modification or reuse is not restricted.
-% Neither Shirley Jowell nor Peter F. Patel-Schneider can be listed as
-% contacts for providing assistance without their prior permission.
-
-% To use for other conferences, change references to files and the
-% conference appropriate and use other authors, contacts, publishers, and
-% organizations.
-% Also change the deadline and address for returning papers and the length and
-% page charge instructions.
-% Put where the files are available in the appropriate places.
-%PDF Info Is REQUIRED.
 \pdfinfo{
 /TemplateVersion (KR.2022.0)
 }
 
+\title{Generating Random Weighted Model Counting Instances: An Empirical Analysis with Varying Primal Treewidth}
 
-
-\title{KR2022 Formatting Instructions}
-
-% Single author syntax
-\iffalse % (remove the multiple-author syntax below and \iffalse ... \fi here)
 \author{%
-    Author name
+    Paulius Dilkas
     \affiliations
-    Affiliation
+    University of Edinburgh, UK
     \emails
-    email@example.com    % email
-}
-\fi
-% Multiple author syntax
-\author{%
-First Author$^1$\and
-Second Author$^2$\and
-Third Author$^{2,3}$\and
-Fourth Author$^4$ \\
-\affiliations
-$^1$First Affiliation\\
-$^2$Second Affiliation\\
-$^3$Third Affiliation\\
-$^4$Fourth Affiliation \\
-\emails
-\{first, second\}@example.com,
-third@other.example.com,
-fourth@example.com
+    p.dilkas@sms.ed.ac.uk
 }
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-  The \textit{KR2022 Proceedings} will be printed from electronic
-  manuscripts submitted by the authors. The electronic man\-u\-script will
-  also be included in the online version of the proceedings. This paper
-  provides the style instructions.
+\begin{abstract} % <= 200 words
+  Weighted model counting (\textsf{WMC}) is an extension of propositional model
+  counting with applications to probabilistic inference and other areas of
+  artificial intelligence. In recent experiments, \textsf{WMC} algorithms are
+  shown to perform similarly overall but with significant differences on
+  specific subsets of benchmarks. A good understanding of the differences in the
+  performance of algorithms requires identifying key characteristics that favour
+  some algorithms over others. In this paper, we introduce a random model for
+  \textsf{WMC} instances with a parameter that influences primal treewidth---the
+  parameter most commonly used to characterise the difficulty of an instance. We
+  then use this model to experimentally compare the performance of \textsf{WMC}
+  algorithms \textsc{c2d}, \textsc{Cachet}, \textsc{d4}, \textsc{DPMC}, and
+  \textsc{miniC2D} on random instances. We show that the easy-hard-easy pattern
+  is different for algorithms based on dynamic programming and algebraic
+  decision diagrams (ADDs) than for all other solvers. We also show how all
+  \textsf{WMC} algorithms scale exponentially with respect to primal treewidth
+  and how this scalability varies across algorithms and densities. Finally, we
+  demonstrate how the performance of ADD-based algorithms changes depending on
+  how much determinism or redundancy there is in the numerical values of
+  weights.
 \end{abstract}
 
 \section{Introduction}
 
-The \textit{KR2022 Proceedings} will be printed from electronic
-manuscripts submitted by the authors. These must be PDF (\emph{Portable
-Document Format}) files formatted for US letter paper (8-1/2$''$ $\times$ 11$''$).
-
-\subsection{Length of Papers}
-
-For the main conference track and additional tracks/sessions, except for the
-\emph{Recent Published Research Track}, we invite two types of paper
-\emph{submissions}:
-\begin{itemize}
-\item Full papers of up to 9 pages, including abstract, figures, and appendices
-  (if any), but excluding references and acknowledgements.
-\item Short papers of up to 4 pages, including abstract and figures, but excluding
- references and acknowledgements.
-\end{itemize}
-
-For the \emph{Recently Published Research Track} we invite submissions consisting
-of:
-\begin{itemize}
-\item a cover page (single page) listing the title, the authors, a complete
-  reference to the original paper, and a public or privately accessible url
-  from which the paper can be downloaded, and
-\item an extended abstract of the paper of either one page (preferred) or two
-  pages, following the format for regular KR2022 paper submissions.
-  % The abstract should present the main contributions of the paper, discuss
-  % the relevance of the paper to KR, and explain the significance of the
-  % results.
-\end{itemize}
-
-If your paper is accepted, please carefully read the notifications you receive,
-and check the proceedings submission information
-website\footnote{\url{https://kr.proceedings.confdna.com/info}} for up-to-date
-information. That website holds the most updated information regarding the
-Camera Ready Version.
-
-\subsection{Word Processing Software}
-
-As detailed below, KR has prepared and made available a set of
-\LaTeX{} macros and a Microsoft Word template for use in formatting
-your paper. If you are using some other word processing software, please follow the format instructions given below and ensure that your final paper looks as much like this sample as possible.
-
-\section{Style and Format}
-
-\LaTeX{} and Word style files that implement these instructions
-can be retrieved electronically.
-
-\subsection{Layout}
-
-Print manuscripts two columns to a page, in the manner in which these
-instructions are printed. The exact dimensions for pages are:
-\begin{itemize}
-\item left and right margins: .75$''$
-\item column width: 3.375$''$
-\item gap between columns: .25$''$
-\item top margin---first page: 1.375$''$
-\item top margin---other pages: .75$''$
-\item bottom margin: 1.25$''$
-\item column height---first page: 6.625$''$
-\item column height---other pages: 9$''$
-\end{itemize}
-
-
-\subsection{Format of Electronic Manuscript}
-
-For the production of the electronic manuscript, you must use Adobe's
-\emph{Portable Document Format} (PDF). A PDF file can be generated, for
-instance, on Unix systems using \texttt{ps2pdf} or on Windows systems
-using Adobe's Distiller. There is also a website with free software
-and conversion services: \url{http://www.ps2pdf.com}. For reasons of
-uniformity, use of Adobe's \emph{Times Roman} font is strongly suggested.
-In \LaTeX2e{} this is accomplished by writing
-\begin{quote}
-  \texttt{\textbackslash{}usepackage\{times\}}
-\end{quote}
-in the preamble.\footnote{You may want also to use the package
- \texttt{latexsym}, which defines all symbols known from the old \LaTeX{}
- version.}
-
-Additionally, it is of utmost importance to specify the \texttt{letter} format
-(corresponding to 8-1/2$''$ $\times$ 11$''$) when formatting the paper. When
-working with \texttt{dvips}, for instance, one should specify \texttt{-t
- letter}.
-
-\subsection{Title and Author Information}
-
-Center the title on the entire width of the page in a 14-point bold font. The
-title must be capitalized using Title Case. Below it, center author name(s) in
-12-point bold font. On the following line(s) place the affiliations, each
-affiliation on its own line using 12-point regular font. Matching between
-authors and affiliations can be done using numeric superindices. Optionally, a
-comma-separated list of email addresses follows the affiliation(s) line(s),
-using 12-point regular font.
-
-% \subsubsection{Blind Review}
-
-% In order to make blind reviewing possible, authors must omit their names and
-% affiliations when submitting the paper for review. In place of names and
-% affiliations, provide a list of content areas. When referring to one's own
-% work, use the third person rather than the first person. For example, say,
-% ``Previously, Gottlob~\shortcite{gottlob:nonmon} has shown that\ldots'',
-% rather than, ``In our previous work~\cite{gottlob:nonmon}, we have shown
-% that\ldots'' Try to avoid including any information in the body of the paper
-% or references that would identify the authors or their institutions. Such
-% information can be added to the final camera-ready version for publication.
-% You cannot include author names in your submitted PDF metadata. Any paper
-% breaking this rule may be desk rejected without review.
-
-\subsection{Abstract}
-
-Place the abstract at the beginning of the first column 3$''$ from the
-top of the page, unless that does not leave enough room for the title
-and author information. Use a slightly smaller width than in the body
-of the paper. Head the abstract with ``Abstract'' centered above the
-body of the abstract in a 10-point bold font. The body of the abstract
-should be in typeset in a 9-point font.
-
-The abstract should be a concise, one-paragraph summary describing the
-general thesis and conclusion of your paper. A reader should be able
-to learn the purpose of the paper and the reason for its importance
-from the abstract. The abstract should be no more than 200 words long.
-
-\subsection{Text}
-
-The main body of the text immediately follows the abstract. Use 10-point type
-in a clear, readable font with 1-point leading (10 on 11).
-
-Indent when starting a new paragraph, except after headings.
-
-\subsection{Headings and Sections}
-
-When necessary, headings should be used to separate major sections of your
-paper. (These instructions use many headings to demonstrate their appearance;
-your paper should have fewer headings.). All headings should be capitalized
-using Title Case.
-
-\subsubsection{Section Headings}
-
-Print section headings in 12-point bold type in the style shown in these
-instructions. Leave a blank space of approximately 10 points above and 4 points
-below section headings. Number sections with arabic numerals.
-
-\subsubsection{Subsection Headings}
-
-Print subsection headings in 11-point bold type. Leave a blank space of
-approximately 8 points above and 3 points below subsection headings. Number
-subsections with the sec- tion number and the subsection number (in arabic
-numerals) separated by a period.
-
-\subsubsection{Subsubsection Headings}
-
-Print subsubsection headings in 10-point bold type. Leave a blank space of
-approximately 6 points above subsubsection headings. Text follows the
-subsubsection in the same line after a double space, like in this paragraph
-itself. Do not number subsubsections.
-
-\subsubsection{Acknowledgements}
-
-You may include an unnumbered acknowledgments section, including
-acknowledgments of help from colleagues, financial support, and permission to
-publish. If present, acknowledgements must be in a dedicated, unnumbered
-section appearing after all regular sections but before any appendices or
-references.
-
-Use
-\begin{quote}
-  \texttt{\textbackslash{}section*\{Acknowledgements\}})
-\end{quote}
-to typeset the acknowledgements section in \LaTeX{}.
-
-\subsubsection{Appendices}
-Any appendices directly follow the  main text and look like sections, exceptthat they are numbered with capital letters in-
-stead of arabic numerals. See this document for an example.
-
-\subsubsection{Supplementary Material}
-Authors may optionally provide supplementary material (e.g. proof details, additional experimental results)
-as a separate file. Such material will be consulted at the discretion of reviewers and will not be published.
-Please refer to the conference website for further information.
-
-\subsubsection{References}
-
-The references section is headed ``References'', printed in the same
-style as a section heading but without numeration. A sample list of
-references is given at the end of these instructions. Use a consistent
-format for references. The reference list should not include unpublished
-work.
-
-\subsection{Citations}
-
-Citations within the text should include the author's last name and
-the year of publication, for example~\cite{gottlob:nonmon}.  Append
-lowercase letters to the year in cases of ambiguity.  Treat multiple
-authors as in the following examples:~\cite{abelson-et-al:scheme}
-or~\cite{bgf:Lixto} (for more than two authors) and
-\cite{brachman-schmolze:kl-one} (for two authors).  If the author
-portion of a citation is obvious, omit it, e.g.,
-Nebel~\shortcite{nebel:jair-2000}.  Collapse multiple citations as
-follows:~\cite{gls:hypertrees,levesque:functional-foundations}.
-\nocite{abelson-et-al:scheme}
-\nocite{bgf:Lixto}
-\nocite{brachman-schmolze:kl-one}
-\nocite{gottlob:nonmon}
-\nocite{gls:hypertrees}
-\nocite{levesque:functional-foundations}
-\nocite{levesque:belief}
-\nocite{nebel:jair-2000}
-
-\subsection{Footnotes}
-
-Place footnotes at the bottom of the page in a 9-point font.  Refer to
-them with superscript numbers.\footnote{This is how your footnotes
-should appear.} Separate them from the text by a short
-line.\footnote{Note the line separating these footnotes from the
-text.} Avoid footnotes as much as possible; they interrupt the flow of
-the text.
-
-\section{Illustrations}
-
-Place all illustrations (figures, drawings, tables, and photographs) throughout
-the paper at the places where they are first discussed, rather than at the end
-of the paper.
-
-They should be floated to the top (preferred) or bottom of the page, unless
-they are an integral part of your narrative flow. When placed at the bottom or
-top of a page, illustrations may run across both columns, but not when they
-appear inline.
-
-Illustrations must be rendered electronically or scanned and placed directly in
-your document. They should be cropped outside \LaTeX{}, otherwise portions of the
-image could reappear during the post-processing of your paper. All
-illustrations should be understandable when printed in black and white, albeit
-you can use colors to enhance them. Line weights should be 1/2-point or
-thicker. Avoid screens and superimposing type on patterns, as these effects may
-not reproduce well.
-
-Number illustrations sequentially. Use references of the following
-form: Figure~1, Table~2, etc. Place illustration numbers and captions
-under illustrations. Leave a margin of 1/4-inch around the area
-covered by the illustration and caption.  Use 9-point type for
-captions, labels, and other text in illustrations. Captions should always appear below the illustration.
-
-\section{Tables}
-
-Tables are considered illustrations containing data. Therefore, they should also appear floated to the top (preferably) or bottom of the page, and with the captions below them.
-
-\begin{table}
-\centering
-\begin{tabular}{lll}
-\hline
-Scenario  & $\delta$ & Runtime \\
-\hline
-Paris       & 0.1s  & 13.65ms     \\
-Paris       & 0.2s  & 0.01ms      \\
-New York    & 0.1s  & 92.50ms     \\
-Singapore   & 0.1s  & 33.33ms     \\
-Singapore   & 0.2s  & 23.01ms     \\
-\hline
-\end{tabular}
-\caption{Latex default table}
-\label{tab:plain}
-\end{table}
-
-\begin{table}
-\centering
-\begin{tabular}{lrr}
-\toprule
-Scenario  & $\delta$ (s) & Runtime (ms) \\
-\midrule
-Paris       & 0.1  & 13.65      \\
-            & 0.2  & 0.01       \\
-New York    & 0.1  & 92.50      \\
-Singapore   & 0.1  & 33.33      \\
-            & 0.2  & 23.01      \\
-\bottomrule
-\end{tabular}
-\caption{Booktabs table}
-\label{tab:booktabs}
-\end{table}
-
-If you are using \LaTeX, you should use the \texttt{booktabs} package, because
-it produces better tables than the standard ones. Compare Tables
-\ref{tab:plain} and~\ref{tab:booktabs}. The latter is clearly more readable for
-three reasons:
-
-\begin{enumerate}
-\item The styling is better thanks to using the \texttt{booktabs} rulers
-  instead of the default ones.
-\item Numeric columns are right-aligned, making it easier to compare the
-  numbers. Make sure to also right-align the corresponding headers, and to use
-  the same precision for all numbers.
-\item We avoid unnecessary repetition, both between lines (no need to repeat
-  the scenario name in this case) as well as in the content (units can be shown
-  in the column header).
-\end{enumerate}
-
-\section{Formulas}
-
-KR's two-column format makes it difficult to typeset long formulas. A usual
-temptation is to reduce the size of the formula by using the \texttt{small} or
-\texttt{tiny} sizes. This doesn't work correctly with the current \LaTeX{}
-versions, breaking the line spacing of the preceding paragraphs and title, as
-well as the equation number sizes. The following equation demonstrates the
-effects (notice that this entire paragraph looks badly formatted):
-%
-\begin{tiny}
-\begin{equation}
-    x = \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i
-\end{equation}
-\end{tiny}%
-
-Reducing formula sizes this way is strictly forbidden. We \textbf{strongly}
-recommend authors to split formulas in multiple lines when they don't fit in a
-single line. This is the easiest approach to typeset those formulas and
-provides the most readable output%
-%
-\begin{align}
-    x =& \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \nonumber\\
-    + & \prod_{i=1}^n \sum_{j=1}^n j_i
-\end{align}%
-
-If a line is just slightly longer than the column width, you may use the
-\texttt{resizebox} environment on that equation. The result looks better and
-doesn't interfere with the paragraph's line spacing: %
-\begin{equation}
-\resizebox{.91\linewidth}{!}{$
-    \displaystyle
-    x = \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i
-$}
-\end{equation}%
-
-This last solution may have to be adapted if you use different equation environments, but it can generally be made to work. Please notice that in any case:
-
-\begin{itemize}
-\item Equation numbers must be in the same font and size than the main text
-  (10pt).
-\item Your formula's main symbols should not be smaller than {\small small}
-  text (9pt).
-\end{itemize}
-
-For instance, the formula
-%
-\begin{equation}
-    \resizebox{.91\linewidth}{!}{$
-    \displaystyle
-    x = \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j + \prod_{i=1}^n \sum_{j=1}^n j_i + \prod_{i=1}^n \sum_{j=1}^n i_j
-$}
-\end{equation}
-%
-would not be acceptable because the text is too small.
-
-\section{Examples, Definitions, Theorems and Similar}
-
-Examples, definitions, theorems, corollaries and similar must be written in
-their own paragraph. The paragraph must be separated by at least 2pt and no
-more than 5pt from the preceding and succeeding paragraphs. They must begin
-with the kind of item written in 10pt bold font followed by their number (e.g.:
-Theorem 1), optionally followed by a title/summary between parentheses in
-non-bold font and ended with a period. After that the main body of the item
-follows, written in 10 pt italics font (see below for examples).
-
-In \LaTeX{} we strongly recommend you to define environments for your examples,
-definitions, propositions, lemmas, corollaries and similar. This can be done in
-your \LaTeX{} preamble using \texttt{\textbackslash{}newtheorem} -- see the
-source of this document for examples. Numbering for these items must be global,
-not per-section (e.g.: Theorem 1 instead of Theorem 6.1).
-
-\begin{example}[How to write an example]
-Examples should be written using the example environment defined in this template.
-\end{example}
-
-\begin{theorem}
-This is an example of an untitled theorem.
-\end{theorem}
-
-You may also include a title or description using these environments as shown in the following theorem.
-
-\begin{theorem}[A titled theorem]
-This is an example of a titled theorem.
-\end{theorem}
-
-\section{Proofs}
-
-Proofs must be written in their own paragraph separated by at least 2pt and no
-more than 5pt from the preceding and succeeding paragraphs. Proof paragraphs
-should start with the keyword ``Proof." in 10pt italics font. After that the
-proof follows in regular 10pt font. At the end of the proof, an unfilled square
-symbol (qed) marks the end of the proof.
-
-In \LaTeX{} proofs should be typeset using the \texttt{\textbackslash{}proof}
-environment.
-
-\begin{proof}
-This paragraph is an example of how a proof looks like using the
-\texttt{\textbackslash{}proof} environment.
-\end{proof}
-
-
-\section{Algorithms and Listings}
-
-Algorithms and listings are a special kind of figures. Like all illustrations,
-they should appear floated to the top (preferably) or bottom of the
-page. However, their caption should appear in the header, left-justified and
-enclosed between horizontal lines, as shown in
-Algorithm~\ref{alg:algorithm}. The algorithm body should be terminated with
-another horizontal line. It is up to the authors to decide whether to show line
-numbers or not, how to format comments, etc.
-
-In \LaTeX{} algorithms may be typeset using the \texttt{algorithm} and
-\texttt{algorithmic} packages, but you can also use one of the many other
-packages for the task.
-
-\begin{algorithm}[tb]
-\caption{Example algorithm}
-\label{alg:algorithm}
-\textbf{Input}: Your algorithm's input\\
-\textbf{Parameter}: Optional list of parameters\\
-\textbf{Output}: Your algorithm's output
-\begin{algorithmic}[1] %[1] enables line numbers
-\STATE Let $t=0$.
-\WHILE{condition}
-\STATE Do some action.
-\IF {conditional}
-\STATE Perform task A.
-\ELSE
-\STATE Perform task B.
-\ENDIF
-\ENDWHILE
-\STATE \textbf{return} solution
-\end{algorithmic}
+% WMC
+Weighted model counting (\textsf{WMC})---a weighted generalisation of
+propositional model counting
+($\#\SAT{}$)~\cite{DBLP:journals/ai/ChaviraD08}---has emerged as a powerful
+computational framework for problems in a variety of domains. In particular,
+\textsf{WMC} has been used to perform probabilistic inference for graphical
+models such as Bayesian networks and Markov random
+fields~\cite{DBLP:conf/ecai/BartKLM16,DBLP:conf/ijcai/ChaviraD05,DBLP:conf/sat/ChaviraD06,DBLP:conf/kr/Darwiche02,DBLP:conf/aaai/SangBK05},
+probabilistic programs~\cite{DBLP:journals/pacmpl/HoltzenBM20}, and
+probabilistic logic programs~\cite{DBLP:journals/tplp/FierensBRSGTJR15}. More
+recently, \textsf{WMC} was used in the context of neural-symbolic artificial
+intelligence as well~\cite{DBLP:conf/icml/XuZFLB18}. Extensions of \textsf{WMC}
+add support for continuous variables~\cite{DBLP:conf/ijcai/BellePB15}, infinite
+domains~\cite{DBLP:conf/aaai/Belle17}, and first-order
+logic~\cite{DBLP:conf/ijcai/BroeckTMDR11,DBLP:journals/cacm/GogateD16} and
+generalise the definition to support arbitrary pseudo-Boolean functions instead
+of clauses~\cite{DBLP:conf/sat/DilkasB21}.
+All exact \textsf{WMC} algorithms can be broadly classified as based on
+search~\cite{DBLP:conf/sat/SangBBKP04}, knowledge
+compilation~\cite{DBLP:conf/ecai/Darwiche04,DBLP:conf/ijcai/LagniezM17,DBLP:conf/ijcai/OztokD15},
+or dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}.
+Other approaches to \textsf{WMC} include
+approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and parallel
+algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18}, quantum
+computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model
+counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
+
+% motivation for the problem
+Recent papers that include experimental comparisons of \textsf{WMC}
+algorithms show many of them performing very similarly
+overall~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20} but with
+overwhelming differences when run on specific subsets of
+data~\cite{my_uai_paper,DBLP:conf/sat/DilkasB21,DBLP:conf/ijcai/LagniezM17}.
+Examples of such segregating data sets include bipartite Bayesian networks by
+\citeauthor{DBLP:conf/aaai/SangBK05}~\shortcite{DBLP:conf/aaai/SangBK05} and
+relational Bayesian networks by
+\citeauthor{DBLP:journals/ijar/ChaviraDJ06}~\shortcite{DBLP:journals/ijar/ChaviraDJ06}
+that encode reachability in graphs under node deletion. So far, such performance
+differences remain unexplained. However, knowledge about the nature of these
+differences can inform our choices and aid in further algorithmic developments.
+Moreover, identifying performance predictors of algorithms is often an important
+step in developing a portfolio approach to the
+problem~\cite{DBLP:journals/jair/XuHHL08}. Lastly, if new algorithms are always
+tested on the same set of benchmarks, eventually they may become somewhat fitted
+to the particular characteristics of those instances, leading to algorithms that
+may perform worse when run on new types of
+data~\cite{DBLP:conf/cec/HossainALA10}.
+
+% related work on SAT
+Both theoretical and experimental analysis of \SAT{} (and, to a lesser extent,
+$\#\SAT{}$) algorithms on random instances is a rich area of research spanning
+almost forty years. Variations of some of the first random models ever
+proposed~\cite{DBLP:journals/dam/FrancoP83,DBLP:journals/siamcomp/PurdomB83}
+continue to be instrumental up to this day for, e.g., establishing the location
+of the threshold between satisfiable and unsatisfiable
+instances~\cite{DBLP:conf/focs/AchlioptasM02} and efficiently approximating
+$\#\SAT{}$~\cite{DBLP:conf/icalp/GalanisG0Y20}. Other random models consider
+non-uniform variable frequencies~\cite{DBLP:conf/ijcai/AnsoteguiBL09}, fixing
+the number of times each variable occurs both positively and
+negatively~\cite{DBLP:journals/cpc/Coja-OghlanW18}, and adding other constraints
+such as cardinality and `exclusive or'~\cite{DBLP:conf/ijcai/PoteJM19}. In
+contrast, only one \textsf{WMC} algorithm so far has been analysed using random
+instances~\cite{DBLP:conf/sat/SangBBKP04,DBLP:conf/sat/SangBK05}. Similarly,
+while there is a recent attempt~\cite{DBLP:conf/cp/DilkasB20} to compare
+\textsf{WMC} algorithms on random instances of a particular application of
+\textsf{WMC} (i.e., probabilistic logic programs), it fails to discern any
+meaningful differences among the algorithms. The goal of this paper is to
+explain some of the differences between \textsf{WMC} algorithms via an
+experimental study that uses random instances.
+
+% parameters for SAT
+Experimental work investigating how \SAT{} algorithms behave on random
+instances is typically centred around parameters that describe each instance
+independently of its size. The most well-known parameter is the ratio of clauses
+to variables (i.e., \emph{(clause) density}). Early work in the area
+showed random 3-\SAT{} instances to be at their hardest when density is
+around 4.25~\cite{DBLP:conf/aaai/MitchellSL92}. Later work revealed that the
+interaction between density and empirical hardness is much more
+solver-dependent~\cite{DBLP:journals/constraints/CoarfaDASV03}. Many other
+parameters such as heterogeneity, locality, and modularity have emerged from
+attempts to generate random instances similar to industry benchmarks for
+\SAT{}~\cite{DBLP:conf/ijcai/AnsoteguiBL09,DBLP:conf/tacas/BlasiusFS19,DBLP:journals/ai/Giraldez-CruL16,DBLP:conf/ijcai/Giraldez-CruL17}.
+
+% parameters for WMC
+What parameter(s) are most appropriate to study \textsf{WMC}? Theoretical upper
+bounds on the performance of various \textsf{WMC} algorithms typically include a
+factor exponential in the primal treewidth of the input formula (or a closely
+related
+notion)~\cite{DBLP:journals/jair/BacchusDP09,DBLP:journals/jacm/Darwiche01,DBLP:conf/ecai/Darwiche04,DBLP:conf/sat/SangBBKP04}.
+However---as we show in \cref{sec:model}---instances generated by a standard
+random model for $k$-CNF formulas fail to exhibit enough variance in primal
+treewidth for us to infer its effect on the behaviour of the algorithms.
+Therefore, we present an extension of this model with a parameter that
+influences primal treewidth. The performance of \textsf{WMC} algorithms that use
+data structures called \emph{algebraic decision diagrams}
+(ADDs)~\cite{DBLP:journals/fmsd/BaharFGHMPS97} is also known to depend on the
+numerical values of
+weights~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}. Thus, our random
+model also includes two parameters that control redundancies in these values.
+We also
+investigate the effect of redundant weight values (e.g., having weights set to
+zero and one or having the same weight repeat many times) on the running times
+of the algorithms.
+
+In addition to introducing a new random model for \textsf{WMC} instances, the
+contributions of this paper include several key experimental findings about the
+behaviour of \textsf{WMC} algorithms---namely,
+\textsc{c2d}\footnote{\url{http://reasoning.cs.ucla.edu/c2d/}}~\cite{DBLP:conf/ecai/Darwiche04},
+\textsc{Cachet}\footnote{\url{https://cs.rochester.edu/u/kautz/Cachet/}}~\cite{DBLP:conf/sat/SangBBKP04},
+\textsc{d4}\footnote{\url{https://www.cril.univ-artois.fr/KC/d4.html}}~\cite{DBLP:conf/ijcai/LagniezM17},
+\textsc{DPMC}\footnote{\url{https://github.com/vardigroup/dpmc}}~\cite{DBLP:conf/cp/DudekPV20},
+and
+\textsc{miniC2D}\footnote{\url{http://reasoning.cs.ucla.edu/minic2d/}}~\cite{DBLP:conf/ijcai/OztokD15}---on
+random instances. First, we show that the easy-hard-easy pattern with respect to
+(w.r.t.) density is different for dynamic programming algorithms than it is for
+all other algorithms. Second, we present statistical evidence that all the
+algorithms scale exponentially w.r.t.\ primal treewidth and estimate how the
+base of that exponential changes w.r.t.\ density. Third, we show how the
+performance of ADD-based algorithms gradually improves w.r.t the proportion of
+weights that have repeating values and sharply improves w.r.t.\ the proportion
+of weights set to zero and one.
+
+% 1. Other parameters include structural entropy
+% \cite{DBLP:journals/access/LinWN21}, the proportion of clauses that have at
+% most one negative literal has also been suggested as a parameter of
+% interest~\cite{DBLP:journals/amai/MaarenN05}.
+% 2. Maybe somewhere: relationship between primal treewidth and modularity
+% 3. Just like one might choose a different propositional satisfiability
+% (\SAT{}) solver based on information about the problem instance at hand (e.g.,
+% `is the instance known to be satisfiable?', `was it randomly generated?', `is
+% it an industrial instance?')~\cite{DBLP:journals/jair/XuHHL08},
+% 4. It was also observed that replacing real numbers with addition and
+% multiplication with an arbitrary commutative semiring allows \textsf{WMC} to
+% subsume a variety of other problems such as most probable explanation,
+% shortest path, and gradient
+% computations~\cite{DBLP:journals/ijar/BelleR20,DBLP:journals/japll/KimmigBR17}.
+% 5. Having these parameters in the model allows us to look not just at the
+% effects of density or primal treewidth on the running times of \textsf{WMC}
+% algorithms but also at the interaction between these two parameters of
+% interest.
+
+\section{Preliminaries}\label{sec:prelims}
+
+% \footnote{Also known by many other names such as Gaifman, (variable)
+% interaction, and variable incidence graph.}
+
+By \emph{variable}, we always mean a Boolean variable. A \emph{literal} is
+either a variable (say, $v$) or its negation (denoted $\neg v$), respectively
+called \emph{positive} and \emph{negative} literal. A \emph{clause} is a
+disjunction of literals. A \emph{formula} is any well-formed expression
+consisting of variables, negation, conjunction, and disjunction. A formula is in
+\emph{conjunctive normal form} (CNF) if it is a conjunction of clauses, and it
+is in $k$-CNF if every clause has exactly $k$ literals. While we use the
+set-theoretic notation for CNF formulas (e.g., writing $c \in \phi$ to mean that
+clause $c$ is one of the clauses in formula $\phi$), duplicate clauses are still
+allowed. The \emph{primal graph} of a CNF formula is a graph that has a node for
+every variable, and there is an edge between two variables if they coappear in
+some clause. The \emph{treewidth} of a graph $G$ measures how similar $G$
+is to a tree and is defined as the smallest \emph{width} of any \emph{tree
+  decomposition} of $G$~\cite{DBLP:journals/jct/RobertsonS84}. The \emph{primal
+  treewidth} of a formula is the treewidth of its primal graph.
+
+Given a CNF formula $\phi$, \SAT{} is a decision problem that asks whether there
+exists a way to assign values to all variables in $\phi$ such that $\phi$
+evaluates to true. Such a formula is said to be \emph{satisfiable}; otherwise,
+it is \emph{unsatisfiable}. $\#\SAT{}$ is a problem that asks to count the
+number of such assignments. \textsf{WMC} extends $\#\SAT{}$ with a weight
+function on literals and asks to compute the sum of the weights of the models of
+the given formula, where the weight of a model is the product of the weights of
+the literals in it~\cite{DBLP:journals/ai/ChaviraD08}. For example, the
+\textsf{WMC} of the formula $x \lor y$ with a weight function $w\colon \{\,x, y,
+\neg x, \neg y\,\} \to \mathbb{R}$ defined as $w(x) = 0.3$, $w(y) = 0.2$,
+$w(\neg x) = 0.7$, $w(\neg y) = 0.8$ is $w(x)w(y)+w(x)w(\neg y)+w(\neg x)w(y) =
+0.3 \times 0.2 + 0.3 \times 0.8 + 0.7 \times 0.2 = 0.44$.
+
+\section{Background on \textsf{\textmd{WMC}} Algorithms}\label{sec:background}
+
+As was mentioned in the introduction, all exact \textsf{WMC} algorithms can be
+categorised into three groups as those based on search, knowledge compilation, or
+dynamic programming. \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is the only
+search-based algorithm. It is based on the DPLL search
+procedure~\cite{DBLP:journals/jacm/DavisP60,DBLP:journals/cacm/DavisLL62} that
+underlies most \SAT{} algorithms, combined with component caching and clause
+learning.
+
+\emph{Knowledge compilation} refers to transformations of propositional formulas
+into more restrictive formats that make various operations (such as model
+counting) tractable in the size of the representation
+\cite{DBLP:journals/jair/DarwicheM02}.
+\textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04},
+\textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17}, and
+\textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15}
+are all algorithms of this type. \textsc{c2d} compiles to deterministic
+decomposable negation normal form
+(d-DNNF)~\cite{DBLP:journals/jancl/Darwiche01}. Similarly, \textsc{d4} compiles
+to decision-DNNF (also known as decomposable decision
+graphs)~\cite{DBLP:conf/aaai/FargierM06}. The only difference between d-DNNF and
+decision-DNNF is that decision-DNNF has if-then-else constructions instead of
+disjunctions~\cite{DBLP:conf/ijcai/LagniezM17}. Finally,
+\textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15} compiles to decision-SDDs---a
+subset of sentential decision diagrams (SDDs) that form a subset of
+d-DNNF~\cite{DBLP:conf/ijcai/Darwiche11}.
+
+All the algorithms mentioned above are $\#\SAT{}$ algorithms that were later
+adapted to support weights. Two recently proposed \textsf{WMC} algorithms
+instead use data structures that natively support weights and can thus take
+advantage of redundancies in the numerical values of weights or other numbers.
+These data structures are representations of \emph{pseudo-Boolean functions},
+i.e., functions of the form $f\colon 2^X \to \mathbb{R}$, where $X$ is a set,
+and $2^X$ denotes its powerset. \textsc{ADDMC} is the first such
+algorithm~\cite{DBLP:conf/aaai/DudekPV20}. It uses ADDs to represent
+pseudo-Boolean functions, combining and simplifying them in a bottom-up dynamic
+programming fashion. Since the size of an ADD for $f$ depends on the cardinality
+of the range of $f$ \cite{DBLP:journals/fmsd/BaharFGHMPS97}, the performance of
+the algorithm is sensitive to the numerical values of weights, e.g., to how
+frequently they repeat. \textsc{DPMC} extends \textsc{ADDMC} in two
+ways~\cite{DBLP:conf/cp/DudekPV20}. First, \textsc{DPMC} allows for the order
+and nesting of operations on ADDs to be determined from an
+approximately-minimal-width tree decomposition rather than by heuristics.
+Second, tensors are offered as an alternative to ADDs.
+
+% In all known parameterised complexities of \textsf{WMC} algorithms, the
+% exponential factor is a function of primal treewidth or a closely related
+% parameter. Interestingly, \textsc{c2d} is specifically designed to handle high
+% primal treewidth (which the author refers to as
+% \emph{connectivity}~\cite{DBLP:conf/ijcai/Darwiche99}) and improves upon an
+% earlier algorithm that has $\mathcal{O}(mw2^w)$ time complexity, where $m$ is
+% the number of clauses, and $w$ is the width of the decomposition tree which is
+% known to be at most primal
+% treewidth~\cite{DBLP:journals/jacm/Darwiche01,DBLP:conf/ecai/Darwiche04}. While
+% the complexity of \textsc{Cachet} was not analysed directly, the algorithm is
+% based on component caching which is known to have a
+% $2^{\mathcal{O}(w)}n^{\mathcal{O}(1)}$ time complexity, where $n$ is the number
+% of variables, and $w$ is the branchwidth of the underlying
+% hypergraph~\cite{DBLP:journals/jair/BacchusDP09,DBLP:conf/sat/SangBBKP04}, which
+% is known to be within a constant factor of primal
+% treewidth~\cite{DBLP:journals/jct/RobertsonS91}. Similarly, the complexity of
+% \textsf{DPMC} is not described in the paper, although the authors define a
+% notion of width $w$ that is at most primal treewidth plus one and estimate the
+% running time of the (execution part of the) algorithm to be proportional to
+% $2^w$~\cite{DBLP:conf/cp/DudekPV20}.
+
+\section{Random $k$-CNF Formulas with Varying Primal
+  Treewidth}\label{sec:model}
+
+\paragraph{Notation.}
+For any graph $G$, we write $\mathcal{V}(G)$ for its set of nodes and
+$\mathcal{E}(G)$ for its set of edges. Let $S$ be a finite set. We write
+$\mathcal{U}S$ for the discrete uniform probability distribution on $S$. We
+represent any other probability distribution as a pair $(S, p)$ where $p\colon S
+\to [0, 1]$ is a probability mass function. For any probability distribution
+$\mathcal{P}$, we write $x \leftlsquigarrow \mathcal{P}$ to denote the act of
+sampling $x$ from $\mathcal{P}$.
+
+Our random model is based on the following parameters:
+\begin{itemize*}
+\item the number of variables $\nu \in \mathbb{N}^+$,
+\item density $\mu \in \mathbb{R}_{>0}$,
+\item clause width $\kappa \in \mathbb{N}^+$ (for $k$-CNF formulas, $\kappa =
+  k$),
+\item a parameter $\rho \in [0, 1]$ that influences the primal treewidth of
+  the formula,
+\item the proportion $\delta \in [0, 1]$ of variables $x$ such that $w(x) = 1$
+  and $w(\neg x) = 0$ or $w(x) = 0$ and $w(\neg x) = 1$,
+\item and the proportion $\epsilon \in [0, 1-\delta]$ of variables $x$ such that
+  $w(x) = w(\neg x) = 0.5$.
+\end{itemize*}
+The first three parameters are the standard parameters used to generate random
+$k$-CNF formulas with $\nu\mu$ clauses (up to rounding). We expect to observe
+(possibly different) values of $\mu$ that maximize the running time of each
+algorithm for fixed values of $\nu$ and $\kappa$. Parameters $\delta$ and
+$\epsilon$ control the numerical values of weights and are part of the model
+because the running time of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20}---and
+other algorithms based on ADDs---depends on these values. Weights such as zero
+and one are particularly `simplifying' because they are respectively the
+additive and multiplicative identities. Having them propagate through the
+algorithm reduces the size of many ADDs used by \textsc{DPMC}, making the
+algorithm more efficient. Including many copies of the same weight (e.g., 0.5)
+can similarly simplify ADDs as well. Other \textsf{WMC} algorithms are
+indifferent to the numerical values of weights.
+
+\begin{algorithm}[t]
+  \caption{Generating a random formula}\label{alg:random}
+  \SetKwData{kcnf}{kcnf}
+  \SetKwFunction{NewVariable}{NewVariable}
+  \SetKwProg{Fn}{Function}{:}{}
+  \KwData{$\nu,\kappa \in \mathbb{N}^+$ such that $\kappa < \nu$, $\mu \in
+    \mathbb{R}_{>0}$, $\rho \in [0, 1]$.}
+  \KwResult{A $k$-CNF formula $\phi$.}
+  $\phi \gets \text{empty CNF formula}$\;
+  $G \gets \text{empty graph}$\;
+  \For{$i \gets 1$ \KwTo $\lfloor \nu\mu \rfloor$}{
+    $X \gets \emptyset$\;
+    \For{$j \gets 1$ \KwTo $\kappa$}{
+      $x \gets \NewVariable{$X$, $G$}$\;
+      $\mathcal{V}(G) \gets \mathcal{V}(G) \cup \{\, x \,\}$\;\label{line:7}
+      $\mathcal{E}(G) \gets \mathcal{E}(G) \cup \{\, \{\,x, y\,\} \mid y \in X
+      \,\}$\;\label{line:8}
+      $X \gets X \cup \{\, x \,\}$\;\label{line:9}
+    }
+    $\phi \gets \phi \cup \{\, l \leftlsquigarrow \mathcal{U}\{\, x, \neg x \,\}
+    \mid x \in X \,\}$\;\label{line:construct_clause}
+  }
+  \Return{$\phi$}\;
+  \Fn{\NewVariable{$X$, $G$}}{
+    $N \gets \{\, e \in \mathcal{E}(G) \mid |e \cap X| = 1
+    \,\}$\;\label{line:13}
+    \If{$N = \emptyset$}{
+      \Return{$x \leftlsquigarrow \mathcal{U}(\{\, x_1, x_2, \dots, x_\nu \,\}
+        \setminus X)$}\;
+    }
+    \nosemic\Return{$x \leftlsquigarrow \left(\{\, x_1, x_2, \dots, x_\nu \,\}
+        \setminus X,\vphantom{\frac{|\{\, z \in X \mid \{\,y, z\,\} \in
+            \mathcal{E}(G) \,\}|}{|N|}}\right.$}\;
+      \pushline\dosemic$\left. y \mapsto \frac{1 - \rho}{\nu - |X|} +
+        \rho\frac{|\{\, z \in X \mid \{\,y, z\,\} \in \mathcal{E}(G)
+          \,\}|}{|N|}\right)$\; \label{line:return}
+  }
 \end{algorithm}
 
-\section*{Acknowledgments}
+The process behind generating random $k$-CNF formulas is summarized as
+\cref{alg:random}. For the rest of this section, let $x_1, x_2, \dots, x_\nu$ be
+the variables of the formula under construction. We simultaneously construct
+both formula $\phi$ and its primal graph $G$.\footnote{The idea to directly take
+  the primal graph into consideration while generating the formula is new---cf.
+  random \SAT{} instance generators based on, e.g., adversarial evolution
+  \cite{DBLP:conf/cec/HossainALA10} and community structure
+  \cite{DBLP:journals/ai/Giraldez-CruL16}.} Each iteration of the first for-loop
+adds a clause to $\phi$. This is done by constructing a set $X$ of variables to
+be included in the clause, and then randomly adding either $x$ or $\neg x$ to
+the clause for each $x \in X$ on \cref{line:construct_clause}. Function
+\texttt{NewVariable} randomly selects each new variable $x$, and
+\cref{line:7,line:8,line:9} add $x$ to the graph and the formula while also
+adding edges between $x$ and all the other variables in the clause. To select
+each variable, \cref{line:13} defines set $N$ to contain all edges with exactly
+one endpoint in $X$. The edges that will be added to $G$ by \cref{line:8} will
+form a subset of $N$. If $N = \emptyset$, we select the variable uniformly at
+random (u.a.r.) from all viable candidates. Otherwise, $\rho$ determines how
+much we bias the uniform distribution towards variables that would introduce the
+smallest number of new edges to $G$.
 
-The preparation of these instructions and the \LaTeX{} and Bib\TeX{}
-files that implement them was supported by Schlumberger Palo Alto
-Research, AT\&T Bell Laboratories, and Morgan Kaufmann Publishers.
-Preparation of the Microsoft Word file was supported by IJCAI.  An
-early version of this document was created by Shirley Jowell and Peter
-F. Patel-Schneider.  It was subsequently modified by Jennifer
-Ballentine and Thomas Dean, Bernhard Nebel, Daniel Pagenstecher,
-Kurt Steinkraus, Toby Walsh, and Carles Sierra. The current version
-has been prepared by Marc Pujol-Gonzalez, Francisco Cruz-Mencia, and Diego
-Calvanese.
+When $\rho=0$, \cref{alg:random} reduces to what has become the standard random
+model for $k$-CNF formulas. Equivalently to
+\citeauthor{DBLP:journals/dam/FrancoP83}~\shortcite{DBLP:journals/dam/FrancoP83},
+we independently sample a fixed number of clauses, each clause has no duplicate
+variables, and each variable becomes either a positive or a negative literal
+with equal probabilities. At the other extreme, when $\rho = 1$, the first
+variable of a clause is still chosen u.a.r., but all other variables are chosen
+from those that already coappear in a clause (if possible). The probability that
+a variable is selected to be included in a clause scales linearly w.r.t.\ the
+proportion of edges in $N$ that would be repeatedly added to $G$ if the variable
+$y$ was added to the clause. This is an arbitrary choice (which appears to work
+well, see \cref{sec:remarks}) although alternatives (e.g., exponential scaling)
+could be considered. As long as $\rho < 1$, every $k$-CNF formula retains a
+positive probability of being generated by the algorithm.
+
+To transform the generated formula into a \textsf{WMC} instance, we need
+to define weights on literals.\footnote{Note that algorithms such as
+  \textsc{DPMC} and
+  \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20} support
+  a more flexible way of assigning weights that can lead to significant
+  performance improvements~\cite{my_uai_paper,DBLP:conf/sat/DilkasB21}.} We want
+to partition all variables into three groups: those with weights equal to zero
+and one, those with weights equal to 0.5, and those with arbitrary weights,
+where the size of each group is determined by $\delta$ and $\epsilon$. To do
+this, we sample a permutation $\pi \leftlsquigarrow \mathcal{U}S_\nu$ (where
+$S_\nu$ is the permutation group on $\{1, 2, \dots, \nu \}$), and assign to each
+\emph{variable} $x_n$ a weight drawn u.a.r.\ from
+\begin{itemize*}
+\item $\mathcal{U}\{\,0, 1\,\}$ if $\pi(n) \le \nu\delta$,
+\item $\mathcal{U}\{\,0.5\,\}$ if $\nu\delta < \pi(n) \le \nu\delta +
+  \nu\epsilon$,
+\item and $\mathcal{U}\{\, 0.01, 0.02, \dots, 0.99 \,\}$\footnote{For
+    convenience, we represent $(0, 1)$ as 99 discrete values.} if $\pi(n) >
+  \nu\delta + \nu\epsilon$.
+\end{itemize*}
+We extend these weights to weights on \emph{literals} by choosing the weight of
+each positive literal to be equal to the weight of its variable, and the weight
+of each negative literal to be such that $w(x) + w(\neg x) = 1$ for all
+variables $x$. This restriction is to ensure consistent answers among the
+algorithms.
+
+\begin{example}\label{example:algorithm}
+  Let $\nu = 5$, $\mu = 0.6$, $\kappa = 3$, $\rho = 0.3$, $\delta = 0.4$,
+  and $\epsilon = 0.2$ and consider how \cref{alg:random} generates a random
+  instance. Since $\kappa = 3$, and $\lfloor\nu\mu\rfloor = 3$,
+  the algorithm will generate a 3-CNF formula with three clauses.
+
+  For the first variable of the first clause, we are choosing u.a.r.\ from $\{\,
+  x_1, x_2, \dots, x_5 \,\}$. Suppose the algorithm chooses $x_5$. Graph $G$
+  then gets its first node but no edges. The second variable is chosen u.a.r.
+  from $\{\, x_1, x_2, x_3, x_4 \,\}$. Suppose the second variable is $x_2$.
+  Then $G$ gets another node and its first edge between $x_2$ and $x_5$. The
+  third variable in the first clause is similarly chosen u.a.r.\ from $\{\, x_1,
+  x_3, x_4 \,\}$ because the only edge in $G$ has both endpoints in $X = \{\,
+  x_2, x_5 \,\}$, and so $N = \emptyset$. Suppose the third variable is $x_1$.
+  Graph $G$ becomes a triangle connecting $x_1$, $x_2$, and $x_5$. Each of
+  the three variables is then added to the clause as either a positive or a
+  negative literal (with equal probabilities). Thus, the first clause becomes,
+  e.g., $\neg x_5 \lor x_2 \lor x_1$.
+
+  The first variable of the second clause is chosen u.a.r.\ from $\{\, x_1, x_2,
+  \dots, x_5\,\}$. Suppose it is $x_5$ again. When the function
+  \texttt{NewVariable} tries to choose the second variable, $X = \{\, x_5 \,\}$,
+  and so $N = \{\, \{\, x_1, x_5 \,\}, \{\, x_2, x_5 \,\}\,\}$. The second
+  variable is chosen from the discrete probability distribution
+  \[
+    \Pr(x_1) = \Pr(x_2) = \frac{1 - 0.3}{5 - 1} + 0.3 \times \frac{1}{2} = 0.325
+  \]
+  and
+  \[
+    \Pr(x_3) = \Pr(x_4) = \frac{1 - 0.3}{5 - 1} = 0.175.
+  \]
+
+  We skip the details of how all remaining variables and clauses are selected
+  and consider the weight assignment. First, we shuffle the list of variables
+  and get, e.g., $L = (x_4, x_3, x_2, x_1, x_5)$. This means that the first
+  $\nu\delta = 5 \times 0.4 = 2$ variables of $L$ get weights u.a.r.\ from $\{\,
+  0, 1 \,\}$, the next $\nu\epsilon = 5 \times 0.2 = 1$ variable gets a weight
+  of 0.5, and the remaining two variables get weights u.a.r.\ from $\{\,0.01,
+  0.02, \dots, 0.99 \,\}$. The weight function $w\colon \{\, x_1, x_2, \dots,
+  x_5, \neg x_1, \neg x_2, \dots, \neg x_5\,\} \to [0, 1]$ can then be defined
+  as, e.g., $w(x_4) = w(\neg x_3) = 0$, $w(x_3) = w(\neg x_4) = 1$, $w(x_2) =
+  w(\neg x_2) = 0.5$, $w(x_1) = 0.23$, $w(\neg x_1) = 0.77$, $w(x_5) = 0.18$,
+  and $w(\neg x_5) = 0.82$.
+\end{example}
+
+% \begin{remark}
+%   Note that not having a parameter that in some way influences primal treewidth
+%   is unrealistic for generating instances with a wide range of primal treewidth
+%   values. Without such a parameter (i.e., if $\rho=0$), the variance of primal
+%   treewidth is relatively small compared to the range of values one could
+%   generate by varying $\rho$ between zero and one (evidence for this is in
+%   \cref{sec:remarks}).
+% \end{remark}
+
+% If all weights are different real numbers in $(0, 1)$, then performing
+% addition and multiplication on them is unlikely to result in any duplicates,
+% and the number of nodes in ADDs is maximised.
+
+% i.e., the permutation $\pi$ is
+% \[
+%   \pi =
+%   \begin{pmatrix}
+%     1 & 2 & 3 & 4 & 5\\
+%     4 & 3 & 2 & 1 & 5
+%   \end{pmatrix}
+% \]
+
+% The novel part of the algorithm is centred around \cref{line:return}. 
+
+\subsection{Validating the Model}\label{sec:remarks}
+
+The idea behind our model is that manipulating the value of $\rho$ should allow
+us to generate instances of varying primal treewidth. Is this effect observable
+in practice? In addition, as \textsf{WMC} instances are mostly used for
+probabilistic inference, they tend to be satisfiable. Therefore, we want to
+filter out unsatisfiable instances from those generated by the model and need to
+ensure that the proportion of satisfiable instances remains sufficiently high.
+Given that higher values of $\rho$ can result in constraints on variables being
+more localised and concentrated, we ask: are instances generated with higher
+values of $\rho$ less likely to be satisfiable? To answer both questions, we run
+the following experiment.
+
+\begin{experiment}\label{exp:regular_satisfiability}
+  Fix $\nu = 100, \delta = \epsilon = 0$, and consider random instances with
+  $\mu = 2.5 \times \sqrt{2}^{-5}, 2.5 \times \sqrt{2}^{-4}, \dots, 2.5 \times
+  \sqrt{2}^5$, $\kappa = 2, 3, 4, 5$, and $\rho$ going from 0 to 1 in steps of
+  0.01. For each combination of parameters, we generate ten instances. We check
+  if each instance is satisfiable using
+  \textsc{MiniSat}\footnote{\url{http://minisat.se/MiniSat.html}}~2.2.0~\cite{DBLP:conf/sat/EenS03}
+  and calculate its (approximate) primal treewidth using
+  \textsc{htd}~\cite{DBLP:conf/cpaior/AbseherMW17}.
+\end{experiment}
+
+\begin{figure*}
+  \centering
+  \includegraphics{regular_repetitiveness.pdf}
+  \caption{The relationship between $\rho$ and primal treewidth for various
+    values of $\mu$ and $\kappa$ for $k$-CNF formulas from
+    \cref{exp:regular_satisfiability}. Black points represent individual
+    instances, and blue lines are smoothed means computed using locally weighted
+    smoothing. The values of $\mu$ are rounded to one decimal
+    place.}\label{fig:regular_repetitiveness}
+\end{figure*}
+
+\Cref{fig:regular_repetitiveness} shows the relationship between $\rho$ and
+primal treewidth. Except for when both $\mu$ and $\kappa$ are set to very low
+values (i.e., the formulas are small in both clause width and the number of
+clauses), primal treewidth decreases as $\rho$ increases. This downward trend
+becomes sharper as $\mu$ increases, however, not uniformly: it splits into a
+roughly linear segment that approaches a horizontal line (for most values of
+$\rho$) and a sharply-decreasing segment that approaches a vertical line (when
+$\rho$ is close to one). Higher values of $\kappa$ seem to expedite this
+transition, i.e., with a higher value of $\kappa$, a lower value of $\mu$ is
+sufficient for a smooth downward curve between $\rho$ and primal treewidth to
+turn into a combination of a horizontal and a vertical line. While this
+behaviour may be troublesome when generating formulas with higher values of
+$\mu$ (almost all of which would be unsatisfiable), the relationship between
+$\rho$ and primal treewidth is excellent for generating 3-CNF formulas close to
+and below the satisfiability threshold of
+4.25~\cite{DBLP:journals/ai/CrawfordA96}.
+
+Regarding satisfiability, the proportion of satisfiable 3-CNF formulas drops
+from \SI{63.6}{\percent} when $\rho = 0$ to \SI{50.9}{\percent} when $\rho = 1$,
+so---while $\rho$ does affect satisfiability---the effect is not significant
+enough to influence our experimental setup in the next section.
+
+% It is well-known that there is a sharp transition from satisfiable to
+% unsatisfiable 3-CNF formulas at $\mu = 4.25$ regardless of the value of $\nu$
+% (this is known as the \emph{satisfiability
+% threshold})~\cite{DBLP:journals/ai/CrawfordA96}.
+
+\section{Experimental Results}\label{sec:experiments}
+
+\begin{figure*}
+  \centering
+  \includegraphics{treewidth}
+  \caption{Visualisations of the data from \cref{exp:density}. The top-left plot
+    shows how the running time of each algorithm changes w.r.t.\ density
+    when $\rho = 0$. For each algorithm and value of $\mu$, each line in the
+    top-right plot shows the estimated base of the exponential for a linear
+    model where running time is assumed to scale exponentially w.r.t.\ primal
+    treewidth, and shaded regions show standard error. The two plots at the
+    bottom show changes in the running time of each algorithm w.r.t.
+    primal treewidth for selected fixed values of $\mu$. These values are also
+    marked by dashed vertical lines in the top-left plot.}\label{fig:treewidth}
+\end{figure*}
+
+% the experimental setup
+In this section, we describe three experiments that examine how the running
+times of \textsf{WMC} algorithms change w.r.t.\ parameters of our random model.
+All experiments were run on Intel Xeon~E5--2630 with Scientific Linux~7,
+GCC~10.2.0, Python~3.8.1, R~4.1.0,
+\textsc{c2d}~2.20~\cite{DBLP:conf/ecai/Darwiche04},
+\textsc{Cachet}~1.22~\cite{DBLP:conf/sat/SangBBKP04}, and
+\textsc{htd}~1.2.0~\cite{DBLP:conf/cpaior/AbseherMW17}. With both \textsc{c2d}
+and \textsc{d4}, we use
+\textsc{query-dnnf}\footnote{\url{http://www.cril.univ-artois.fr/kc/d-DNNF-reasoner.html}}
+to compute the numerical answer from the compiled circuit. We omit
+\textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20} from our experiments as it
+exceeds time and memory limits on too many instances; however, observations
+about the behaviour of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} apply to
+\textsc{ADDMC} as well, with the addendum that the tree decomposition implicitly
+used by \textsc{ADDMC} may have a significantly higher width. \textsc{DPMC} is
+run with tree decomposition-based planning and ADD-based execution---the
+combination that was originally found to be most
+effective~\cite{DBLP:conf/cp/DudekPV20}. The tree decomposition is found using
+one iteration of
+\textsc{htd}\footnote{\url{https://github.com/mabseher/htd}}~\cite{DBLP:conf/cpaior/AbseherMW17}.
+We restrict our attention to 3-CNF formulas, generate 100 satisfiable instances
+for each combination of parameters, and run each of the five algorithms with a
+\SI{500}{\second} time limit and an \SI{8}{\gibi\byte} memory limit. While both
+limits are somewhat low, we prioritise large numbers of instances to increase
+the accuracy and reliability of our results. Unless stated otherwise, in each
+plot of this section, lines denote median values, and shaded regions show
+interquartile ranges. We run the following three experiments, setting $\nu = 70$
+in all of them as we found that this produces instances of suitable difficulty.
+
+\begin{experiment}[Density and Primal Treewidth]\label{exp:density}
+  Let $\nu = 70$, $\mu$ go from 1 to 4.3 in steps of 0.3, $\rho$ go from 0 to
+  0.5 in steps of 0.01, and $\delta = \epsilon = 0$.
+\end{experiment}
+
+\begin{experiment}[$\delta$]\label{exp:delta}
+  Let $\nu = 70$, $\mu = 2.2$\footnote{\Cref{exp:density} shows this density to
+    be the most challenging for \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20}.},
+  $\rho = 0$, $\delta$ go from 0 to 1 in steps of 0.01, and $\epsilon = 0$.
+\end{experiment}
+
+\begin{experiment}[$\epsilon$]~\label{exp:epsilon}
+  Same as \cref{exp:delta} but with $\delta = 0$ and $\epsilon$ going from 0 to
+  1 in steps of 0.01.
+\end{experiment}
+
+% c2d and d4 are the most memory-hungry
+In each experiment, the proportion of algorithm runs that timed out never
+exceeded \SI{3.8}{\percent}. While in \cref{exp:density} only \SI{1}{\percent}
+of experimental runs ran out of memory, the same percentage was higher in
+\cref{exp:delta,exp:epsilon}---10 and \SI{12}{\percent}, respectively.
+\textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17} and
+\textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04} are the algorithms that
+experienced the most issues fitting within the memory limit, accounting for
+\SIrange{66}{72}{\percent} and \SIrange{28}{33}{\percent} of such instances,
+respectively. We exclude the runs that terminated early due to running out of
+memory from the rest of our analysis.
+
+% Peaks w.r.t. density: DPMC different from other WMC algorithms which are
+% different from #SAT algorithms
+In \cref{exp:density}, we investigate how the running time of each algorithm
+depends on the density and primal treewidth by varying both $\mu$ and $\rho$.
+The results are in \cref{fig:treewidth}. The first thing to note is that the
+peak hardness w.r.t.\ density occurs at around 1.9 for all algorithms except for
+\textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20}, which peaks at 2.2 instead. This
+finding is consistent with previous work, which shows \textsc{Cachet} to peak at
+1.8~\cite{DBLP:conf/sat/SangBBKP04}.\footnote{For comparison, $\#\SAT{}$
+  algorithms have been observed to peak at densities 1.2 and
+  1.5~\cite{DBLP:conf/aaai/Pehoushek00}.}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{r2}
+  \caption{The coefficients of determination (rounded to one decimal place) of
+    all the linear models fitted for the top-right subplot of
+    \cref{fig:treewidth}}\label{fig:r2}
+\end{figure}
+
+\begin{figure*}
+  \centering
+  \includegraphics{delta_epsilon}
+  \caption{Changes in the running time of each algorithm as a result of changing
+    $\delta$ (on the left-hand side) and $\epsilon$ (on the right-hand side)
+    according to the data from
+    \cref{exp:delta,exp:epsilon}}\label{fig:delta_epsilon}
+\end{figure*}
+
+% DPMC scales worse w.r.t. primal treewidth (across all densities)
+The other question we want to investigate using this experiment is how each
+algorithm scales w.r.t.\ primal treewidth. The two plots at the bottom of
+\cref{fig:treewidth} show this relationship for fixed values of $\mu$, and one
+can see some evidence that the running time of
+\textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} grows faster w.r.t.\ primal treewidth
+than the running time of the other algorithms. The top-right subplot of
+\cref{fig:treewidth} shows how this growth depends on $\mu$. For each algorithm
+and value of $\mu$ in \cref{exp:density}, we select the median runtime for all
+available values of primal treewidth and fit the model $\ln t \sim \alpha w +
+\beta$, where $t$ is the median running time of the algorithm, $w$ is the primal
+treewidth, and $\alpha$ and $\beta$ are parameters.\footnote{Similar statistical
+  analyses have been used to investigate polynomial-to-exponential phase
+  transitions in \SAT{}~\cite{DBLP:journals/constraints/CoarfaDASV03} and the
+  behaviour of \SAT{} solvers on CNF-XOR
+  formulas~\cite{DBLP:conf/ijcai/DudekMV17}.} In other words, this model
+attempts to express median running time as $e^\beta{(e^\alpha)}^w$. We find
+that, indeed, \textsc{DPMC} scales worse w.r.t.\ primal treewidth than any other
+algorithm across all values of $\mu$ and is the only algorithm that does not
+become indifferent to primal treewidth when faced with high-density formulas. A
+second look at the top-left subplot of \cref{fig:treewidth} suggests an
+explanation for the latter observation. The running times of all algorithms
+except for \textsc{DPMC} approach zero when $\mu > 3$ while the median running
+time of \textsc{DPMC} approaches a small non-zero constant instead. This
+observation also explains why \cref{fig:r2} shows that the fitted models fail to
+explain the data for non-ADD algorithms running on high-density instances---the
+running times are too small to be meaningful. In all other cases, an exponential
+relationship between primal treewidth and runtime fits the experimental data
+remarkably well.
+
+% miniC2D is good at low-density high-primal-treewidth instances
+Another thing to note is that \textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15}
+is the only algorithm that exhibits a clear low-high-low pattern in the top
+right subplot of \cref{fig:treewidth}. To a smaller extent, the same may apply
+to \textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04} and
+\textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} as well, although the evidence for
+this is limited due to relatively large gaps between different values of $\mu$
+in \cref{exp:density}. In contrast, the running times of
+\textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} and
+\textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17} remain dependent on primal
+treewidth even when the density of the \textsf{WMC} instance is very low,
+suggesting that \textsc{miniC2D} should have an advantage on low-density
+high-primal-treewidth instances.
+
+% A median instance with all weights equal to 0.5 is about three times easier
+% than a median instance with completely random weights.
+\Cref{exp:delta,exp:epsilon} investigate how changing the numerical values of
+weights can simplify a \textsf{WMC} instance. The results are in
+\cref{fig:delta_epsilon}. As expected, the running time of all algorithms other
+than \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} stay the same regardless of the
+value of $\delta$ or $\epsilon$. The running time of \textsc{DPMC}, however,
+experiences a sharp (exponential?) decline with increasing $\delta$. The decline
+w.r.t. $\epsilon$ is also present, although significantly less pronounced and
+with high variance.
+
+How are these random instances different from real data? As a representative
+sample, we take the \textsf{WMC} encodings of Bayesian networks created using
+the method by \citeauthor{DBLP:conf/aaai/SangBK05}
+\shortcite{DBLP:conf/aaai/SangBK05} as found in the experimental
+setup\footnote{\url{https://github.com/vardigroup/DPMC/releases}} of the
+\textsc{DPMC} paper~\cite{DBLP:conf/cp/DudekPV20}. A typical real \textsf{WMC}
+instance has $\nu = 200$ variables, half of which have equal weights (i.e.,
+$\epsilon = 0.5$), an average clause width of $\kappa = 2.6$, a density of $\mu
+= 2.5$, and a primal treewidth of 28. Our random instances have fewer variables
+and (for the most part) lower density. Another important difference is that our
+instances are in $k$-CNF whereas a typical encoding of a Bayesian network has
+many two-literal clauses mixed with clauses of various longer widths. Despite
+real instances having more variables, their primal treewidth is rather low.
+Perhaps this partially explains why the performance of \textsc{DPMC} is in line
+with the performance of all other algorithms on traditionally-used
+benchmarks~\cite{DBLP:conf/cp/DudekPV20} despite struggling with most of our
+random data.
+
+To sum, we found that \textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04} and
+\textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17} are the most memory-intensive
+algorithms, \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is great on random
+instances in general, \textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15} exceeds
+on low-density high-primal-treewidth instances, and
+\textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} is at its best on low-density
+low-primal-treewidth instances. Furthermore, a median instance with all weights
+equal to each other is about three times easier for \textsc{DPMC} than a median
+instance with random weights. Another important observation is about how peak
+hardness w.r.t. density depends on the algorithm: \textsc{DPMC} peaks at a
+higher density than all other \textsc{WMC} algorithms, which peak at a higher
+density than (some) $\#\SAT{}$ algorithms.
+
+\section{Conclusions and Future Work}
+
+In this paper, we studied the behaviour of and differences among \textsf{WMC}
+algorithms on random instances generated by a standard model for $k$-CNF
+formulas extended with parameters that control primal treewidth and literal
+weights. Among other things, we established statistical evidence for the
+existence of an exponential relationship between primal treewidth and the
+running time of all \textsf{WMC} algorithms. The running time of ADD-based
+algorithms was observed to peak at a higher density, scale worse w.r.t. primal
+treewidth, and depend negatively on repeating weight values compared to
+algorithms based on search or knowledge compilation. These observations can, to
+some degree, be extended to a closely related weighted projected model counting
+algorithm~\cite{DBLP:conf/sat/DudekPV21} as well as to other applications of
+ADDs more generally, e.g., probabilistic
+inference~\cite{DBLP:conf/ijcai/ChaviraD07,DBLP:conf/uai/GogateD11} and
+stochastic planning~\cite{DBLP:conf/uai/HoeySHB99}.
+
+One limitation of our work is that variability in primal treewidth was achieved
+via a parameter, and this could bias randomness in some unexpected way (although
+it is encouraging that there is only a slight decrease in the proportion of
+satisfiable instances between $\rho=0$ and $\rho = 1$). Perhaps a theoretical
+investigation of the proposed model is warranted, including a characterisation
+of how $\rho$ influences primal treewidth and the structure of the primal graph
+more generally. Since treewidth is widely used in parameterised complexity
+\cite{DBLP:series/txcs/DowneyF13}, formally establishing a connection with
+$\rho$ could make our random model useful for a variety of other hard
+computational problems.
+
+To keep the number of experiments feasible, we restricted our attention to 3-CNF
+formulas, although, of course, this is not very representative of real-world
+\textsf{WMC} instances. The model could be adapted to generate non-$k$-CNF
+formulas, and perhaps a more representative structure could be achieved by
+introducing new variables that clauses define to be equivalent to select
+conjunctions of literals as is done in one of the \textsf{WMC} encodings for
+Bayesian networks~\cite{DBLP:conf/kr/Darwiche02}.
+
+% It would also be interesting to see whether \textsf{WMC}
+% algorithms differ in their ability to effectively handle a `shattered' solution
+% space, where most solutions are distant to each other w.r.t. the Hamming
+% distance \cite{DBLP:journals/rsa/AchlioptasCR11,DBLP:conf/ijcai/DudekMV17}.
+
+\section*{Acknowledgements}
+
+The author was supported by the EPSRC Centre for Doctoral Training in Robotics and Autonomous Systems, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016834/1). This work has made use of the resources provided by the Edinburgh Compute and Data Facility (ECDF) (\url{http://www.ecdf.ed.ac.uk/}).
 
 \appendix
 
-\section{\LaTeX{} and Word Style Files}
-\label{stylefiles}
-
-% The \LaTeX{} and Word style files are available at
-% \begin{center}
-%   \url{https://kr2021.kbsg.rwth-aachen.de/downloads/KR22_authors_kit.zip}.
-% \end{center}
-% These style files implement the formatting instructions in this document.
-
-The \LaTeX{} style file is \texttt{kr.sty} and the Bib\TeX{} style file to use
-is \texttt{kr.bst}.  The \LaTeX{} file \texttt{kr-instructions.tex}, containing
-the source of the present document, and the Bib\TeX{} file
-\texttt{kr-sample.bib}, containing some example Bib\TeX{} entries, may serve as
-a formatting sample (these two files are not needed for typesetting your
-paper).  The \LaTeX{} style file is for version 2e of \LaTeX{}, and the
-Bib\TeX{} style file is for version~0.99c (\emph{not} version~0.98i) of
-Bib\TeX{}.  Note that the \texttt{kr.sty} style file differs from the
-\texttt{kr.sty} file used for KR2020 but remains unchanged since then.
-
-The Microsoft Word style file consists of a single file, \texttt{kr21.docx},
-which may serve as a formatting sample for Microsoft Word users.  Please make
-use of the ad-hoc styles that have been defined for the different parts of the
-document, and that are listed in the Styles Pane.  Note that this template
-differs from the one used for KR2020, but remains essentially unchanged since then.
-
-Further information on using these styles for the preparation of papers for
-KR2022 can be obtained by contacting
-\href{mailto:kr.proceedings@confdna.com}{kr.proceedings@confdna.com}.
-
-
-%% The file kr.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{kr}
-\bibliography{kr-sample}
+\bibliography{paper}
 
 \end{document}
 
