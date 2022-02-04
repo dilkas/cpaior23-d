@@ -22,7 +22,7 @@
 \usepackage{complexity}
 \usepackage{MnSymbol}
 \usepackage[binary-units]{siunitx}
-\usepackage[capitalise]{cleveref}
+\usepackage[capitalise,noabbrev]{cleveref}
 \usepackage[inline]{enumitem}
 
 % See https://www.overleaf.com/learn/latex/theorems_and_proofs
@@ -33,8 +33,9 @@
 \theoremstyle{definition}
 \newtheorem{experiment}{Experiment}
 \newtheorem{example}{Example}
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
+% \theoremstyle{remark}
+% \newtheorem*{remark}{Remark}
+
 \Crefname{experiment}{Experiment}{Experiments}
 \sisetup{range-phrase=--}
 \sisetup{range-units=single}
@@ -119,7 +120,7 @@ Recent papers that include experimental comparisons of \textsf{WMC}
 algorithms show many of them performing very similarly
 overall~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20} but with
 overwhelming differences when run on specific subsets of
-data~\cite{my_uai_paper,DBLP:conf/sat/DilkasB21,DBLP:conf/ijcai/LagniezM17}.
+data~\cite{DBLP:conf/uai/DilkasB21,DBLP:conf/sat/DilkasB21,DBLP:conf/ijcai/LagniezM17}.
 Examples of such segregating data sets include bipartite Bayesian networks by
 \citeauthor{DBLP:conf/aaai/SangBK05}~\shortcite{DBLP:conf/aaai/SangBK05} and
 relational Bayesian networks by
@@ -373,9 +374,9 @@ indifferent to the numerical values of weights.
   \SetKwData{kcnf}{kcnf}
   \SetKwFunction{NewVariable}{NewVariable}
   \SetKwProg{Fn}{Function}{:}{}
-  \KwData{$\nu,\kappa \in \mathbb{N}^+$ such that $\kappa < \nu$, $\mu \in
+  \KwIn{$\nu,\kappa \in \mathbb{N}^+$ such that $\kappa < \nu$, $\mu \in
     \mathbb{R}_{>0}$, $\rho \in [0, 1]$.}
-  \KwResult{A $k$-CNF formula $\phi$.}
+  \KwOut{A $k$-CNF formula $\phi$.}
   $\phi \gets \text{empty CNF formula}$\;
   $G \gets \text{empty graph}$\;
   \For{$i \gets 1$ \KwTo $\lfloor \nu\mu \rfloor$}{
@@ -562,7 +563,7 @@ the following experiment.
   \textsc{htd}~\cite{DBLP:conf/cpaior/AbseherMW17}.
 \end{experiment}
 
-\begin{figure*}
+\begin{figure*}[t]
   \centering
   \includegraphics{regular_repetitiveness.pdf}
   \caption{The relationship between $\rho$ and primal treewidth for various
@@ -602,7 +603,7 @@ enough to influence our experimental setup in the next section.
 
 \section{Experimental Results}\label{sec:experiments}
 
-\begin{figure*}
+\begin{figure*}[t]
   \centering
   \includegraphics{treewidth}
   \caption{Visualisations of the data from \cref{exp:density}. The top-left plot
@@ -694,7 +695,7 @@ finding is consistent with previous work, which shows \textsc{Cachet} to peak at
     \cref{fig:treewidth}}\label{fig:r2}
 \end{figure}
 
-\begin{figure*}
+\begin{figure*}[t]
   \centering
   \includegraphics{delta_epsilon}
   \caption{Changes in the running time of each algorithm as a result of changing

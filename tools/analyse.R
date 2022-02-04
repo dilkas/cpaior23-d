@@ -11,9 +11,6 @@ TIMEOUT <- 500
 IQR1 <- 0.25
 IQR2 <- 0.75
 
-# data <- read.csv("../results.csv")
-# data <- read.csv("../experiments/regular2/results.csv")
-
 read_data <- function(filename) {
   data <- read.csv(filename)
   # What proportion of instances run out of memory?
@@ -65,7 +62,8 @@ plot_with_sd <- function(df, x_value, x_label) {
     scale_color_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
-                                     "longdash"))
+                                     "longdash")) +
+    theme_set(theme_gray(base_size = 9))
 }
 fit_model <- function(algorithm, clause_factor) {
   df <- data[data$algorithm == algorithm &
@@ -78,18 +76,16 @@ fit_model <- function(algorithm, clause_factor) {
 }
 
 # First round: density & treewidth
-#data <- read_data("../results.csv")
-data <- read_data("../experiments/regular1/results.csv")
-data <- read_data("../experiments/regular2/results.csv")
-data <- read_data("../experiments/regular3/results.csv")
+data <- read_data("../results/regular1.csv")
 df <- data[data$repetitiveness == 0,] %>% group_by(algorithm, clause_factor)
 p1 <- plot_with_sd(df, "clause_factor", "$\\mu$") +
   geom_vline(xintercept = 1.3, linetype = "dashed") +
-  geom_vline(xintercept = 1.9, linetype = "dashed")
+  geom_vline(xintercept = 1.9, linetype = "dashed") + rremove("ylab")
 df <- data[data$clause_factor == 1.3,] %>% group_by(algorithm, treewidth)
-p2 <- plot_with_sd(df, "treewidth", "Primal treewidth")
+p2 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("ylab") +
+  rremove("xlab")
 df <- data[data$clause_factor == 1.9,] %>% group_by(algorithm, treewidth)
-p3 <- plot_with_sd(df, "treewidth", "Primal treewidth")
+p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("xlab")
 fits <- expand.grid(sort(unique(data$algorithm)), unique(data$clause_factor))
 names(fits) <- c("algorithm", "clause_factor")
 results <- mapply(fit_model, fits$algorithm, fits$clause_factor)
@@ -97,7 +93,7 @@ fits$fit <- exp(results[1,])
 fits$lb <- exp(results[1,] - results[2,])
 fits$ub <- exp(results[1,] + results[2,])
 p4 <- ggplot(fits, aes(clause_factor, fit, color = algorithm, fill = algorithm,
-                       linetyp e= algorithm)) +
+                       linetype = algorithm)) +
   geom_line() +
   geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
   xlab("$\\mu$") +
@@ -108,11 +104,19 @@ p4 <- ggplot(fits, aes(clause_factor, fit, color = algorithm, fill = algorithm,
   scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
                                    "longdash"))
 
-tikz(file = "../paper/treewidth.tex", width = 6.5, height = 2.4375,
+figure <- ggarrange(p1, ggplot() + theme_void(), p4, ggplot() + theme_void(),
+                    ggplot() + theme_void(), ggplot() + theme_void(), p2,
+                    ggplot() + theme_void(), p3, ncol = 3, nrow = 3,
+                    common.legend = TRUE, legend = "right",
+                    labels = c("$\\rho=0$", "", "", "", "", "", "$\\mu=1.3$",
+                               "", "$\\mu=1.9$"), widths = c(1, 0, 1),
+                    heights = c(1, -0.01, 1), label.x = 0.1, label.y = 0.95)
+
+tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
      standAlone = TRUE)
-ggarrange(p1, p4, p2, p3, common.legend = TRUE, legend = "right",
-          labels = c("$\\rho=0$", "", "$\\mu=1.3$", "$\\mu=1.9$"),
-          label.x = 0.1, label.y = 0.95)
+annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
+                                         size = 9),
+                bottom = text_grob("Primal treewidth", size = 9))
 dev.off()
 
 # R^2
