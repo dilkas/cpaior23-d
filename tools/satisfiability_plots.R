@@ -10,7 +10,7 @@ library(ggpubr)
 data <- read.csv("../results/satisfiability.csv")
 data <- data[data$literal_factor > 1,]
 bounds <- t(apply(data, 1, function(x)
-  facet_data(100, as.integer(100 * as.numeric(x[7])), as.integer(x[6]),
+  c(100, as.integer(100 * as.numeric(x[7])), as.integer(x[6]),
              as.numeric(x[1]))))
 data <- cbind(data, bounds = bounds)
 print(data)
@@ -20,7 +20,7 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels) {
   data <- data[data$literal_factor > 1,]
 
   bounds <- t(apply(data, 1, function(x)
-    facet_data(100, as.integer(100 * as.numeric(x[7])), as.integer(x[6]),
+    c(100, as.integer(100 * as.numeric(x[7])), as.integer(x[6]),
                as.numeric(x[1]))))
   data <- cbind(data, bounds = bounds)
 
@@ -41,16 +41,12 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels) {
     scale_y_continuous(breaks = c(0, 50, 100)) +
     xlab("$\\rho$") +
     ylab("Primal treewidth") +
-    geom_ribbon(aes(ymin = bounds.1, ymax = bounds.2), fill = "red") +
-    geom_ribbon(aes(ymin = bounds.3, ymax = bounds.4), fill = "green")
+#    geom_ribbon(aes(ymin = bounds.1, ymax = bounds.2), fill = "red") +
+#    geom_ribbon(aes(ymin = bounds.3, ymax = bounds.4), fill = "green") +
+    theme_set(theme_gray(base_size = 9))
 }
-# tikz(file = "../paper/irregular_repetitiveness.tex", width = 6.5,
-#        height = 7.6, standAlone = TRUE)
-# repetitiveness_facets("../experiments/satisfiability/irregular_results.csv",
-#                         FALSE)
-# dev.off()
-tikz(file = "../paper/regular_repetitiveness.tex", width = 6.5, height = 3.5,
-     standAlone = TRUE)
+tikz(file = "../doc/kr/regular_repetitiveness.tex", width = 6.5,
+     height = 4.516875, standAlone = TRUE)
 repetitiveness_facets("../results/satisfiability.csv", TRUE)
 dev.off()
 

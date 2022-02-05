@@ -124,7 +124,7 @@ r2table <- cbind(fits, r2 = results[3,])
 r2table$r2[r2table$algorithm == "\\textsc{d4}" &
              r2table$clause_factor == 4.3] <- 1
 r2table$clause_factor <- as.factor(r2table$clause_factor)
-tikz(file = "../paper/r2.tex", width = 3, height = 3, standAlone = TRUE)
+tikz(file = "../doc/kr/r2.tex", width = 3, height = 3, standAlone = TRUE)
 ggplot(r2table, aes(algorithm, clause_factor, fill = r2)) + geom_tile() +
   geom_text(aes(label = round(r2, 2))) +
   xlab(NULL) +
@@ -132,6 +132,7 @@ ggplot(r2table, aes(algorithm, clause_factor, fill = r2)) + geom_tile() +
   scale_fill_distiller(palette = "Purples",
                        guide = guide_colorbar(direction = "horizontal")) +
   labs(fill = "$R^2$") +
+  theme_set(theme_gray(base_size = 9)) +
   theme(legend.position = "bottom",
         legend.margin = margin(t = 0, unit = 'cm'))
 dev.off()
@@ -144,15 +145,20 @@ max(fits$fit[fits$algorithm == "\\textsc{c2d}"])
 fit_model("\\textsc{d4}", 4.3)
 
 # Second round: delta & epsilon
-data <- read_data("../experiments/regular2/results.csv")
+data <- read_data("../results/regular2.csv")
 df <- data %>% group_by(algorithm, prop_deterministic)
-p1 <- plot_with_sd(df, "prop_deterministic", "$\\delta$")
-data <- read_data("../experiments/regular3/results.csv")
+p1 <- plot_with_sd(df, "prop_deterministic", "$\\delta$") + ylim(0, TIMEOUT) +
+  rremove("ylab")
+data <- read_data("../results/regular3.csv")
 df <- data %>% group_by(algorithm, prop_equal)
-p2 <- plot_with_sd(df, "prop_equal", "$\\epsilon$")
-tikz(file = "../paper/delta_epsilon.tex", width = 6.5, height = 1.2,
+p2 <- plot_with_sd(df, "prop_equal", "$\\epsilon$") + ylim(0, TIMEOUT) +
+  rremove("ylab")
+figure <- ggarrange(p1, p2, common.legend = TRUE, legend = "right")
+
+tikz(file = "../doc/kr/delta_epsilon.tex", width = 6.5, height = 1.505625,
      standAlone = TRUE)
-ggarrange(p1, p2, common.legend = TRUE, legend = "right")
+annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
+                                         size = 9))
 dev.off()
 
 # ==================== EXTRA STUFF ====================
