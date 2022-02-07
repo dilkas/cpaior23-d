@@ -1,8 +1,8 @@
 import os
 import numpy as np
-import summarizeRuntimes
+import ESA.summarizeRuntimes as summarizeRuntimes
 import copy
-import userDefinitions as ud
+import ESA.userDefinitions as ud
 
 
 def addModelNameToP( md, mn ):
@@ -151,54 +151,54 @@ def genGnuplotFiles(modelNames, statxTrain, statxTest, statyTrain, statyTest, st
         gnuplotFileLine = "#n observed-statistic observed-lower-bound observed-upper-bound "
         for modelName in modelNames:
             gnuplotFileLine += modelName.replace(' ','-') + '-lower-bound ' + modelName.replace(' ','-') + '-upper-bound '
-        print >>gnuplotFile, gnuplotFileLine
+        gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0, len(statxTrain)):
             gnuplotFileLine = "%d %f %f %f" % (statxTrain[i], statyTrain[i], statyTrainBounds[i][0], statyTrainBounds[i][1])
             for j in range(0, len(predTrainLos)):
                 gnuplotFileLine += " %f %f" % (predTrainLos[j][i], predTrainUps[j][i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0, len(statxTest)):
             #We put statyTest[i] here three times because in the case of unknown running times (which is no longer supported),
             #we used to have the best guess estimate first, and then the upper and lower bounds second and third respectively.
             gnuplotFileLine = "%d %f %f %f" % (statxTest[i], statyTest[i], statyTestBounds[i][0], statyTestBounds[i][1])
             for j in range(0, len(predTestLos)):
                 gnuplotFileLine += " %f %f" % (predTestLos[j][i], predTestUps[j][i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
 
 
     with open("gnuplotTrainFile.txt",'w') as gnuplotFile:
         gnuplotFileLine = "#n running-time"
-        print >>gnuplotFile, gnuplotFileLine
+        gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0,len(sizesTrain)):
             gnuplotFileLine = "%d %f" % (sizesTrain[i], flattenedRuntimesTrain[i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
 
     with open("gnuplotTestFile.txt",'w') as gnuplotFile:
         gnuplotFileLine = "#n running-time"
-        print >>gnuplotFile, gnuplotFileLine
+        gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0,len(sizesTest)):
             gnuplotFileLine = "%d %f" % (sizesTest[i], flattenedRuntimesTest[i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
 
     with open("gnuplotResidueFile.txt",'w') as gnuplotFile:
         gnuplotFileLine = "#n"
         for modelName in modelNames:
             gnuplotFileLine += " " + modelName + "-observed 95%-lower-bound 95%-upper-bound"
-        print >>gnuplotFile, gnuplotFileLine
+        gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0,len(statxTrain)):
             gnuplotFileLine = str(statxTrain[i])
             for j in range(0,len(modelNames)):
                 gnuplotFileLine += " " + str(residuesTrain[j][i])
                 gnuplotFileLine += " " + str(iresiduesTrain[j][0][i])
                 gnuplotFileLine += " " + str(iresiduesTrain[j][1][i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
         for i in range(0,len(statxTest)):
             gnuplotFileLine = str(statxTest[i])
             for j in range(0,len(modelNames)):
                 gnuplotFileLine += " " + str(residuesTest[j][i])
                 gnuplotFileLine += " " + str(iresiduesTest[j][0][i])
                 gnuplotFileLine += " " + str(iresiduesTest[j][1][i])
-            print >>gnuplotFile, gnuplotFileLine
+            gnuplotFile.write(gnuplotFileLine + '\n')
             
 
 

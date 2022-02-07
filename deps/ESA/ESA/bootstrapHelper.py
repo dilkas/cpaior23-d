@@ -2,11 +2,11 @@ import os
 import numpy as np
 import math
 import random
-import summarizeRuntimes
-import csvHelper
-import latexHelper
-import modelFittingHelper
-import userDefinitions as ud
+import ESA.summarizeRuntimes as summarizeRuntimes
+import ESA.csvHelper as csvHelper
+import ESA.latexHelper as latexHelper
+import ESA.modelFittingHelper as modelFittingHelper
+import ESA.userDefinitions as ud
 
 
 def makeBootstrapSamples(runtimes, sizes, numBootstrap, window, perInstanceStatistic, numBootstrapPerInstance):
@@ -227,8 +227,12 @@ def getResidueBounds(logger, bstaty, bpreds, alpha):
     iresidues = []
 
     for i in range(0,len(residues)):
-        los = np.apply_along_axis(lambda k: summarizeRuntimes.calStatistic(k,'q' + str(50 - alpha/2.0)),0,residues[i])
-        ups = np.apply_along_axis(lambda k: summarizeRuntimes.calStatistic(k,'q' + str(50 + alpha/2.0)),0,residues[i])
+        if residues[i].shape[1] > 0:
+            los = np.apply_along_axis(lambda k: summarizeRuntimes.calStatistic(k,'q' + str(50 - alpha/2.0)),0,residues[i])
+            ups = np.apply_along_axis(lambda k: summarizeRuntimes.calStatistic(k,'q' + str(50 + alpha/2.0)),0,residues[i])
+        else:
+            los = None
+            ups = None
 
         iresidues.append([los,ups])
 

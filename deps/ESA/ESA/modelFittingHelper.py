@@ -1,10 +1,10 @@
 import sys
 import os
 import math
-import csvHelper
-import latexHelper
+import ESA.csvHelper as csvHelper
+import ESA.latexHelper as latexHelper
 import numpy as np
-import userDefinitions as ud
+import ESA.userDefinitions as ud
 
 
 def adjustResiduals(r,statistic):

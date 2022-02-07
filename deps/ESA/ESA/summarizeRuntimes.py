@@ -2,9 +2,9 @@ import math
 import numpy as np
 import os
 import sys
-import csvHelper
-import latexHelper
-import modelFittingHelper
+import ESA.csvHelper as csvHelper
+import ESA.latexHelper as latexHelper
+import ESA.modelFittingHelper as modelFittingHelper
 import copy as cp 
 
 
@@ -124,7 +124,7 @@ def prepareRuntimesTexTables(logger, sizesTrain, runtimesTrain, sizesTest, runti
     start = int(max(calStatistic(allSizes,'q10')/1.1,min(allSizes)))
     stop = int(min(calStatistic(allSizes,'q90')*1.1,max(allSizes)))
     if(not specificObsvs):
-        obsvs = np.array(range(start,stop,(stop-start)/10))
+        obsvs = np.array(range(start,stop,max(1, (stop-start)//10)))
 
     #print(min(sizesTest))
     #print(str(start) + ' - ' + str(stop))
@@ -172,15 +172,15 @@ def prepareRuntimesTexTables(logger, sizesTrain, runtimesTrain, sizesTest, runti
 
     maxColsPerTable = 4
     with open(dirName+"/"+supportTexFileName, "w") as texFile:
-        numTables = (threshold+maxColsPerTable-1)/maxColsPerTable
-        numCols = (threshold+numTables-1)/numTables
+        numTables = (threshold+maxColsPerTable-1)//maxColsPerTable
+        numCols = (threshold+numTables-1)//numTables
         for i in range(0, numTables):
-            print >>texFile, prepareRuntimesTexTable(i*numCols, min((i+1)*numCols, threshold), obsvs, statw, data['mean'], data['q0.10'], data['q0.25'],data['q0.50'], data['q0.75'], data['q0.90'])
+            texFile.write(prepareRuntimesTexTable(i*numCols, min((i+1)*numCols, threshold), obsvs, statw, data['mean'], data['q0.10'], data['q0.25'],data['q0.50'], data['q0.75'], data['q0.90']) + '\n')
     with open(dirName+"/"+challengeTexFileName, "w") as texFile:
-        numTables = (len(obsvs)-threshold+maxColsPerTable-1)/maxColsPerTable
-        numCols = (len(obsvs)-threshold+numTables-1)/numTables
+        numTables = (len(obsvs)-threshold+maxColsPerTable-1)//maxColsPerTable
+        numCols = (len(obsvs)-threshold+numTables-1)//numTables
         for i in range(0, numTables):
-            print >>texFile, prepareRuntimesTexTable(threshold+i*numCols, min(threshold+(i+1)*numCols, len(obsvs)), obsvs, statw, data['mean'], data['q0.10'], data['q0.25'], data['q0.50'], data['q0.75'], data['q0.90'])
+            texFile.write(prepareRuntimesTexTable(threshold+i*numCols, min(threshold+(i+1)*numCols, len(obsvs)), obsvs, statw, data['mean'], data['q0.10'], data['q0.25'], data['q0.50'], data['q0.75'], data['q0.90']) + '\n')
 
     
 def summarizeRuntimes(logger, sizes, runtimes, numInsts, algName, dirName, statistic, perInstanceStatistic, threshold, numObsv, obsvs, window):
@@ -203,7 +203,7 @@ def summarizeRuntimes(logger, sizes, runtimes, numInsts, algName, dirName, stati
     stop = int(min(calStatistic(sizes,'q90')*1.1,max(sizes)))
     if(obsvs is None):
         specificObsvs = False
-        obsvs = np.array(range(start,stop,(stop-start)/numObsv))
+        obsvs = np.array(range(start,stop + 1,(stop-start + 1)//numObsv))
     else:
         specificObsvs = True
         obsvs = np.array(obsvs)

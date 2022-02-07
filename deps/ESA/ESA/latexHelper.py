@@ -1,5 +1,5 @@
 import math
-import csvHelper
+import ESA.csvHelper as csvHelper
 
 def fillModelRepsWValues( modelRep, valueTuple ):
     while modelRep.find("@@") > -1:
@@ -110,7 +110,7 @@ def genTexTableBootstrapParas(algName, modelNames, modelNumParas, paraLos, paraU
     res += "\\hline \n"
     res += "\\end{tabular} \n"
     with open(texFileName, "w") as texFile:
-        print >>texFile, res
+        texFile.write(res + '\n')
     
 def genTexTableBootstrap(algName, modelNames, sizes, predLos, predUps, statIntervals, obsvLos, obsvUps, texFileName, statistic):
     #Authors: ZM, YP
@@ -134,7 +134,7 @@ def genTexTableBootstrap(algName, modelNames, sizes, predLos, predUps, statInter
         res += "\\end{tabular} \n\n"
 
     with open(texFileName, "w") as texFile:
-        print >>texFile, res
+        texFile.write(res + '\n')
 
 def genParaStr( numPara ):
     res = "a"
@@ -227,7 +227,7 @@ def genTexFile(fileDir, algName, instName, numObsv, sizesTrain, sizesTest, numIn
                         break
                     id = line[stIdx+2:edIdx-2]
                     line = line[0:stIdx] + str(contents[id]) + line[edIdx:]
-                print >>outFile, line.strip()
+                outFile.write(line.strip() + '\n')
 
 
 def makeTableFittedModels(fittedModels, lossesTrain, lossesTest, modelReps, modelNames, algName):
@@ -275,7 +275,7 @@ def genFittedModelsTexTable(algName, modelNames, modelReps, fittedModels, losses
     res += "\\hline \n"
     res += "\end{tabular} \n"
     with open(texFileName, "w") as texFile:
-        print >>texFile, res
+        texFile.write(res + '\n')
 
 
 
@@ -336,7 +336,7 @@ def genBootstrapModelRMSETexTable(algName, modelNames, ilossTrain, ilossTest, te
     res += "\\hline \n"
     res += "\end{tabular} \n"
     with open(texFileName, "w") as texFile:
-        print >>texFile, res
+        texFile.write(res + '\n')
 
     if(len(winners) > 0):
         winnerSelectRule = "The model with the smallest lower bound is shown in boldface, as well as any models with overlapping intervals."

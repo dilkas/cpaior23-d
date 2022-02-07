@@ -1,13 +1,10 @@
 import os
 
 def genCsvRow( data ):
-    res = str( data[0] )
-    for i in range(1, len(data)):
-        res += ","+str(data[i])
-    return res
+    return ','.join([str(x) for x in data])
 
 def genCSV( dirName, fileName, headers, items, data):
     with open(dirName+"/"+fileName, "w") as file:
-        print >>file, ","+genCsvRow(headers)
+        file.write(","+genCsvRow(headers) + '\n')
         for i in range(0, len(data)):
-            print >>file, str(items[i])+","+genCsvRow(data[i])
+            file.write(str(items[i])+","+genCsvRow(data[i]) + '\n')

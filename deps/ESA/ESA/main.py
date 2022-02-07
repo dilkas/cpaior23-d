@@ -8,13 +8,13 @@ import datetime
 
 import numpy as np
 
-import summarizeRuntimes
-import modelFittingHelper
-import bootstrapHelper
-import csvHelper
-import gnuplotHelper
-import latexHelper
-import args
+import ESA.summarizeRuntimes as summarizeRuntimes
+import ESA.modelFittingHelper as modelFittingHelper
+import ESA.bootstrapHelper as bootstrapHelper
+import ESA.csvHelper as csvHelper
+import ESA.gnuplotHelper as gnuplotHelper
+import ESA.latexHelper as latexHelper
+import ESA.args as args
 
 
 #def inputDefToPythonDef( md ):
@@ -192,15 +192,16 @@ def evaluateModelsConsistency(logger, modelNames, statIntervals, obsvLos, obsvUp
                     numStronglyWithinIntervals += 1
                     if size>=largerHalfIdx:
                         numStronglyWithinIntervalsLarger += 1
-                     
-        perAboveIntervals = 1.0*numOverIntervals/(len(statIntervals))
-        perAboveIntervalsLarger = 1.0*numOverIntervalsLarger/(len(statIntervals)-largerHalfIdx)
-        perBelowIntervals = 1.0*numBelowIntervals/(len(statIntervals))
-        perBelowIntervalsLarger = 1.0*numBelowIntervalsLarger/(len(statIntervals)-largerHalfIdx)
-        perStronglyConsistent = 1.0*numStronglyWithinIntervals/(len(statIntervals))
-        perStronglyConsistentLarger = 1.0*numStronglyWithinIntervalsLarger/(len(statIntervals)-largerHalfIdx)
-        perWeaklyConsistent = 1.0*numWeaklyWithinIntervals/(len(statIntervals))
-        perWeaklyConsistentLarger = 1.0*numWeaklyWithinIntervalsLarger/(len(statIntervals)-largerHalfIdx)
+
+        l = max(len(statIntervals), 1)
+        perAboveIntervals = 1.0*numOverIntervals/l
+        perAboveIntervalsLarger = 1.0*numOverIntervalsLarger/(l-largerHalfIdx)
+        perBelowIntervals = 1.0*numBelowIntervals/l
+        perBelowIntervalsLarger = 1.0*numBelowIntervalsLarger/(l-largerHalfIdx)
+        perStronglyConsistent = 1.0*numStronglyWithinIntervals/l
+        perStronglyConsistentLarger = 1.0*numStronglyWithinIntervalsLarger/(l-largerHalfIdx)
+        perWeaklyConsistent = 1.0*numWeaklyWithinIntervals/l
+        perWeaklyConsistentLarger = 1.0*numWeaklyWithinIntervalsLarger/(l-largerHalfIdx)
 
         logger.debug("Percentage above intervals for model " + modelNames[k] + ' - all: ' + str(perAboveIntervals) + '; larger: ' + str(perAboveIntervalsLarger))
         logger.debug("Percentage below intervals for model " + modelNames[k]+ ' - all: ' + str(perBelowIntervals) + '; larger: ' + str(perBelowIntervalsLarger))
