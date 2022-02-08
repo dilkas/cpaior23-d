@@ -7,117 +7,18 @@ library(tikzDevice)
 library(ggpubr)
 library(ggthemes)
 
-TIMEOUT <- 500
-IQR1 <- 0.25
-IQR2 <- 0.75
+source("util.R")
 
-read_data <- function(filename) {
-  data <- read.csv(filename)
-  # What proportion of instances run out of memory?
-  print("ran out of memory")
-  print("overall")
-  overall <- sum(is.na(data$answer) & data$time < TIMEOUT) / nrow(data)
-  print(overall)
-  print("cachet")
-  print(sum(data$algorithm == "cachet" & is.na(data$answer) &
-              data$time < TIMEOUT) / nrow(data) / overall)
-  print("c2d")
-  print(sum(data$algorithm == "c2d" & is.na(data$answer) &
-              data$time < TIMEOUT) / nrow(data) / overall)
-  print("d4")
-  print(sum(data$algorithm == "d4" & is.na(data$answer) &
-              data$time < TIMEOUT) / nrow(data) / overall)
-  print("dpmc")
-  print(sum(data$algorithm == "dpmc" & is.na(data$answer)
-            & data$time < TIMEOUT) / nrow(data) / overall)
-  print("minic2d")
-  print(sum(data$algorithm == "minic2d" & is.na(data$answer)
-            & data$time < TIMEOUT) / nrow(data) / overall)
-  # What proportion of instances time out?
-  print("timed out")
-  print(sum(data$time >= TIMEOUT) / nrow(data))
-  data$time[data$time >= TIMEOUT] <- TIMEOUT
-  data <- data[data$time >= TIMEOUT | !is.na(data$answer),]
-  data$algorithm[data$algorithm == "c2d"] <- "\\textsc{c2d}"
-  data$algorithm[data$algorithm == "cachet"] <- "\\textsc{Cachet}"
-  data$algorithm[data$algorithm == "d4"] <- "\\textsc{d4}"
-  data$algorithm[data$algorithm == "dpmc"] <- "\\textsc{DPMC}"
-  data$algorithm[data$algorithm == "minic2d"] <- "\\textsc{miniC2D}"
-  return(data)
-}
-
-# ==================== Plots ====================
-
-plot_with_sd <- function(df, x_value, x_label) {
-  df <- df %>% summarise(mean = median(time),
-                         lb = unname(quantile(time, IQR1)),
-                         ub = unname(quantile(time, IQR2)))
-  ggplot(df, aes(.data[[x_value]], mean, group = algorithm, colour = algorithm,
-                 fill = algorithm, linetype = algorithm)) +
-    geom_line() +
-    geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
-    xlab(x_label) +
-    ylab("Time (s)") +
-    labs(color = "", fill = "", linetype = "") +
-    scale_color_brewer(palette = "Dark2") +
-    scale_fill_brewer(palette = "Dark2") +
-    scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
-                                     "longdash")) +
-    theme_set(theme_gray(base_size = 9))
-}
-fit_model <- function(algorithm, clause_factor) {
-  df <- data[data$algorithm == algorithm &
-               data$clause_factor == clause_factor,] %>%
-    group_by(treewidth) %>% summarise(time = median(time))
-  model <- lm(log(df$time) ~ df$treewidth)
-  sum <- summary(model)
-  print(sum)
-  return(c(sum$coefficients[2, 1], sum$coefficients[2, 2], sum$r.squared))
-}
-
-# First round: density & treewidth
 data <- read_data("../results/regular1.csv")
-df <- data[data$repetitiveness == 0,] %>% group_by(algorithm, clause_factor)
-p1 <- plot_with_sd(df, "clause_factor", "$\\mu$") +
-  geom_vline(xintercept = 1.3, linetype = "dashed") +
-  geom_vline(xintercept = 1.9, linetype = "dashed") + rremove("ylab")
-df <- data[data$clause_factor == 1.3,] %>% group_by(algorithm, treewidth)
-p2 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("ylab") +
-  rremove("xlab")
-df <- data[data$clause_factor == 1.9,] %>% group_by(algorithm, treewidth)
-p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("xlab")
 fits <- expand.grid(sort(unique(data$algorithm)), unique(data$clause_factor))
 names(fits) <- c("algorithm", "clause_factor")
 results <- mapply(fit_model, fits$algorithm, fits$clause_factor)
 fits$fit <- exp(results[1,])
 fits$lb <- exp(results[1,] - results[2,])
 fits$ub <- exp(results[1,] + results[2,])
-p4 <- ggplot(fits, aes(clause_factor, fit, color = algorithm, fill = algorithm,
-                       linetype = algorithm)) +
-  geom_line() +
-  geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
-  xlab("$\\mu$") +
-  scale_color_brewer(palette = "Dark2") +
-  scale_fill_brewer(palette = "Dark2") +
-  ylab("$e^\\alpha$") +
-  labs(color = "", fill = "", linetype = "") +
-  scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
-                                   "longdash"))
 
-figure <- ggarrange(p1, ggplot() + theme_void(), p4, ggplot() + theme_void(),
-                    ggplot() + theme_void(), ggplot() + theme_void(), p2,
-                    ggplot() + theme_void(), p3, ncol = 3, nrow = 3,
-                    common.legend = TRUE, legend = "right",
-                    labels = c("$\\rho=0$", "", "", "", "", "", "$\\mu=1.3$",
-                               "", "$\\mu=1.9$"), widths = c(1, 0, 1),
-                    heights = c(1, -0.01, 1), label.x = 0.1, label.y = 0.95)
-
-tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
-     standAlone = TRUE)
-annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
-                                         size = 9),
-                bottom = text_grob("Primal treewidth", size = 9))
-dev.off()
+# First round: density & treewidth
+plot_4_plots(data, fits)
 
 # R^2
 r2table <- cbind(fits, r2 = results[3,])
@@ -136,13 +37,6 @@ ggplot(r2table, aes(algorithm, clause_factor, fill = r2)) + geom_tile() +
   theme(legend.position = "bottom",
         legend.margin = margin(t = 0, unit = 'cm'))
 dev.off()
-
-# For manually digging through the numbers
-df <- df %>% summarise(mean = median(time), lb = unname(quantile(time, IQR1)),
-                       ub = unname(quantile(time, IQR2)))
-max(fits$fit[fits$algorithm == "\\textsc{DPMC}"])
-max(fits$fit[fits$algorithm == "\\textsc{c2d}"])
-fit_model("\\textsc{d4}", 4.3)
 
 # Second round: delta & epsilon
 data <- read_data("../results/regular2.csv")
