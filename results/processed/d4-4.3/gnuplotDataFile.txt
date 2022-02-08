@@ -1,0 +1,2 @@
+#n observed-statistic observed-lower-bound observed-upper-bound Exp-lower-bound Exp-upper-bound Poly-lower-bound Poly-upper-bound 
+38 0.080120 0.080031 0.089899 0.080002 0.080007 0.080002 0.080007

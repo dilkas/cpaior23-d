@@ -1,0 +1,14 @@
+fileName: runtimes.csv
+algName: dpmc
+instName: random instances with mu = 1.9
+trainTestSplit: 0.3
+alpha: 95
+numBootstrapSamples: 1001
+numPerInstanceBootstrapSamples: 21
+statistic: median
+perInstanceStatistic: median
+modelFileName: models.txt
+numObservations: 1
+window: 101
+runtimeCutoff: 500
+logLevel: info
