@@ -74,11 +74,10 @@ plot_4_plots <- function(data, fits) {
   data3$algorithm[data3$algorithm == "minic2d"] <- "\\textsc{miniC2D}"
   
   #ylimit <- max(fits$ub, data3$ub)
-  ylimit <- min(fits$lb, data3$lb)
+  #ylimit <- min(fits$lb, data3$lb)
   
   df <- data[data$repetitiveness == 0,] %>% group_by(algorithm, clause_factor)
-  p1 <- plot_with_sd(df, "clause_factor", "$\\mu$") +
-    geom_vline(xintercept = 1.9, linetype = "dashed")
+  p1 <- plot_with_sd(df, "clause_factor", "$\\mu$")
 
   df <- data[data$clause_factor == 1.9,] %>% group_by(algorithm, treewidth)
   p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("ylab")
