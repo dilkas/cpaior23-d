@@ -42,12 +42,12 @@ plot_with_sd <- function(df, x_value, x_label) {
                          lb = unname(quantile(time, IQR1)),
                          ub = unname(quantile(time, IQR2)))
   ggplot(df, aes(.data[[x_value]], mean, group = algorithm, colour = algorithm,
-                 fill = algorithm, linetype = algorithm)) +
+                 fill = algorithm, linetype = algorithm, shape = algorithm)) +
     geom_line() +
     geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
     xlab(x_label) +
     ylab("Time (s)") +
-    labs(color = "", fill = "", linetype = "") +
+    labs(color = "", fill = "", linetype = "", shape = "") +
     scale_color_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
@@ -77,14 +77,19 @@ plot_4_plots <- function(data, fits) {
   #ylimit <- min(fits$lb, data3$lb)
   
   df <- data[data$repetitiveness == 0,] %>% group_by(algorithm, clause_factor)
-  p1 <- plot_with_sd(df, "clause_factor", "$\\mu$")
+  p1 <- plot_with_sd(df, "clause_factor", "$\\mu$") +
+    geom_point()
 
   df <- data[data$clause_factor == 1.9,] %>% group_by(algorithm, treewidth)
-  p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") + rremove("ylab")
+  p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") +
+    geom_point() +
+    rremove("ylab")
   
   p4 <- ggplot(fits, aes(clause_factor, fit, color = algorithm,
-                         fill = algorithm, linetype = algorithm)) +
+                         fill = algorithm, linetype = algorithm,
+                         shape = algorithm)) +
     geom_line() +
+    geom_point() +
     geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
     xlab("$\\mu$") +
     scale_color_brewer(palette = "Dark2") +
@@ -97,8 +102,9 @@ plot_4_plots <- function(data, fits) {
     rremove("xlab")
 
   p5 <- ggplot(data3, aes(mu, base, color = algorithm, fill = algorithm,
-                          linetype = algorithm)) +
+                          linetype = algorithm, shape = algorithm)) +
     geom_line() +
+    geom_point() +
     geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
     xlab("$\\mu$") +
     scale_color_brewer(palette = "Dark2") +

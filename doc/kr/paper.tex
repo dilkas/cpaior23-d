@@ -21,9 +21,8 @@
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{complexity}
 \usepackage{MnSymbol}
-\usepackage[binary-units]{siunitx}
+\usepackage{siunitx}
 \usepackage[capitalise,noabbrev]{cleveref}
-\usepackage[inline]{enumitem}
 
 % See https://www.overleaf.com/learn/latex/theorems_and_proofs
 % for a nice explanation of how to define new theorems, but keep
@@ -105,15 +104,10 @@ domains~\cite{DBLP:conf/aaai/Belle17}, and first-order
 logic~\cite{DBLP:conf/ijcai/BroeckTMDR11,DBLP:journals/cacm/GogateD16} and
 generalise the definition to support arbitrary pseudo-Boolean functions instead
 of clauses~\cite{DBLP:conf/sat/DilkasB21}.
-All exact \textsf{WMC} algorithms can be broadly classified as based on
-search~\cite{DBLP:conf/sat/SangBBKP04}, knowledge
+Exact \textsf{WMC} algorithms can be broadly classified as based on
+search~\cite{DBLP:conf/sat/SangBBKP04,DBLP:conf/ijcai/SharmaRSM19}, knowledge
 compilation~\cite{DBLP:conf/ecai/Darwiche04,DBLP:conf/ijcai/LagniezM17,DBLP:conf/ijcai/OztokD15},
-or dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}.
-Other approaches to \textsf{WMC} include
-approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and parallel
-algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18}, quantum
-computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model
-counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
+dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}. Other alternatives include approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and parallel algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18}, hybrid approaches~\cite{DBLP:conf/sat/HecherTW20}, quantum computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
 
 % motivation for the problem
 Recent papers that include experimental comparisons of \textsf{WMC}
@@ -259,19 +253,13 @@ function on literals and asks to compute the sum of the weights of the models of
 the given formula, where the weight of a model is the product of the weights of
 the literals in it~\cite{DBLP:journals/ai/ChaviraD08}. For example, the
 \textsf{WMC} of the formula $x \lor y$ with a weight function $w\colon \{\,x, y,
-\neg x, \neg y\,\} \to \mathbb{R}$ defined as $w(x) = 0.3$, $w(y) = 0.2$,
+\neg x, \neg y\,\} \to \mathbb{R}_{\ge 0}$ defined as $w(x) = 0.3$, $w(y) = 0.2$,
 $w(\neg x) = 0.7$, $w(\neg y) = 0.8$ is $w(x)w(y)+w(x)w(\neg y)+w(\neg x)w(y) =
 0.3 \times 0.2 + 0.3 \times 0.8 + 0.7 \times 0.2 = 0.44$.
 
 \section{Background on \textsf{\textmd{WMC}} Algorithms}\label{sec:background}
 
-As was mentioned in the introduction, all exact \textsf{WMC} algorithms can be
-categorised into three groups as those based on search, knowledge compilation, or
-dynamic programming. \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is the only
-search-based algorithm. It is based on the DPLL search
-procedure~\cite{DBLP:journals/jacm/DavisP60,DBLP:journals/cacm/DavisLL62} that
-underlies most \SAT{} algorithms, combined with component caching and clause
-learning.
+In this section, we briefly review the three major approaches to \textsf{WMC}---search, knowledge compilation, and dynamic programming---and their corresponding algorithms. The main search-based \textsf{WMC} algorithm \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is based on a conflict-driven clause learning \SAT{} solver \cite{DBLP:conf/dac/MoskewiczMZZM01}, which is then extended with a component caching scheme and adapted to counting.
 
 \emph{Knowledge compilation} refers to transformations of propositional formulas
 into more restrictive formats that make various operations (such as model
@@ -291,44 +279,28 @@ disjunctions~\cite{DBLP:conf/ijcai/LagniezM17}. Finally,
 subset of sentential decision diagrams (SDDs) that form a subset of
 d-DNNF~\cite{DBLP:conf/ijcai/Darwiche11}.
 
-All the algorithms mentioned above are $\#\SAT{}$ algorithms that were later
-adapted to support weights. Two recently proposed \textsf{WMC} algorithms
-instead use data structures that natively support weights and can thus take
-advantage of redundancies in the numerical values of weights or other numbers.
-These data structures are representations of \emph{pseudo-Boolean functions},
-i.e., functions of the form $f\colon 2^X \to \mathbb{R}$, where $X$ is a set,
-and $2^X$ denotes its powerset. \textsc{ADDMC} is the first such
-algorithm~\cite{DBLP:conf/aaai/DudekPV20}. It uses ADDs to represent
-pseudo-Boolean functions, combining and simplifying them in a bottom-up dynamic
-programming fashion. Since the size of an ADD for $f$ depends on the cardinality
-of the range of $f$ \cite{DBLP:journals/fmsd/BaharFGHMPS97}, the performance of
-the algorithm is sensitive to the numerical values of weights, e.g., to how
-frequently they repeat. \textsc{DPMC} extends \textsc{ADDMC} in two
-ways~\cite{DBLP:conf/cp/DudekPV20}. First, \textsc{DPMC} allows for the order
-and nesting of operations on ADDs to be determined from an
-approximately-minimal-width tree decomposition rather than by heuristics.
-Second, tensors are offered as an alternative to ADDs.
+All of the algorithms mentioned above execute in exactly the same way regardless of whether computing \textsf{WMC} or $\#\SAT{}$. Two recent \textsf{WMC} algorithms instead use data structures whose size (and thus the runtime of the algorithm) depends on the numerical values of weights. These data structures are representations of \emph{pseudo-Boolean functions}, i.e., functions of the form $f\colon 2^X \to \mathbb{R}_{\ge 0}$, where $X$ is a set, and $2^X$ denotes its powerset. \textsc{ADDMC} is the first such algorithm~\cite{DBLP:conf/aaai/DudekPV20}. It uses ADDs to represent pseudo-Boolean functions, combining and simplifying them in a bottom-up dynamic programming fashion. Since the size of an ADD for $f$ depends on the cardinality of the range of $f$ \cite{DBLP:journals/fmsd/BaharFGHMPS97}, the performance of the algorithm is sensitive to the numerical values of weights, e.g., to how frequently they repeat. \textsc{DPMC} extends \textsc{ADDMC} in two ways~\cite{DBLP:conf/cp/DudekPV20}. First, \textsc{DPMC} allows for the order and nesting of operations on ADDs to be determined from an approximately-minimal-width tree decomposition rather than by heuristics.\footnote{There is also a recent line of work in using tree decompositions to guide the heuristics of search-based model counters~\cite{DBLP:conf/cp/KorhonenJ21}.} Second, tensors are offered as an alternative to ADDs.
 
-% In all known parameterised complexities of \textsf{WMC} algorithms, the
-% exponential factor is a function of primal treewidth or a closely related
-% parameter. Interestingly, \textsc{c2d} is specifically designed to handle high
-% primal treewidth (which the author refers to as
-% \emph{connectivity}~\cite{DBLP:conf/ijcai/Darwiche99}) and improves upon an
-% earlier algorithm that has $\mathcal{O}(mw2^w)$ time complexity, where $m$ is
-% the number of clauses, and $w$ is the width of the decomposition tree which is
-% known to be at most primal
-% treewidth~\cite{DBLP:journals/jacm/Darwiche01,DBLP:conf/ecai/Darwiche04}. While
-% the complexity of \textsc{Cachet} was not analysed directly, the algorithm is
-% based on component caching which is known to have a
-% $2^{\mathcal{O}(w)}n^{\mathcal{O}(1)}$ time complexity, where $n$ is the number
-% of variables, and $w$ is the branchwidth of the underlying
-% hypergraph~\cite{DBLP:journals/jair/BacchusDP09,DBLP:conf/sat/SangBBKP04}, which
-% is known to be within a constant factor of primal
-% treewidth~\cite{DBLP:journals/jct/RobertsonS91}. Similarly, the complexity of
-% \textsf{DPMC} is not described in the paper, although the authors define a
-% notion of width $w$ that is at most primal treewidth plus one and estimate the
-% running time of the (execution part of the) algorithm to be proportional to
-% $2^w$~\cite{DBLP:conf/cp/DudekPV20}.
+In all known parameterised complexities of \textsf{WMC} algorithms, the
+exponential factor is a function of primal treewidth or a closely related
+parameter. Interestingly, \textsc{c2d} is specifically designed to handle high
+primal treewidth (which the author refers to as
+\emph{connectivity}~\cite{DBLP:conf/ijcai/Darwiche99}) and improves upon an
+earlier algorithm that has $\mathcal{O}(mw2^w)$ time complexity, where $m$ is
+the number of clauses, and $w$ is the width of the decomposition tree which is
+known to be at most primal
+treewidth~\cite{DBLP:journals/jacm/Darwiche01,DBLP:conf/ecai/Darwiche04}. While
+the complexity of \textsc{Cachet} was not analysed directly, the algorithm is
+based on component caching which is known to have a
+$2^{\mathcal{O}(w)}n^{\mathcal{O}(1)}$ time complexity, where $n$ is the number
+of variables, and $w$ is the branchwidth of the underlying
+hypergraph~\cite{DBLP:journals/jair/BacchusDP09,DBLP:conf/sat/SangBBKP04}, which
+is known to be within a constant factor of primal
+treewidth~\cite{DBLP:journals/jct/RobertsonS91}. Similarly, the complexity of
+\textsf{DPMC} is not described in the paper, although the authors define a
+notion of width $w$ that is at most primal treewidth plus one and estimate the
+running time of the (execution part of the) algorithm to be proportional to
+$2^w$~\cite{DBLP:conf/cp/DudekPV20}.
 
 \section{Random $k$-CNF Formulas with Varying Primal
   Treewidth}\label{sec:model}
@@ -340,10 +312,10 @@ $\mathcal{U}S$ for the discrete uniform probability distribution on $S$. We
 represent any other probability distribution as a pair $(S, p)$ where $p\colon S
 \to [0, 1]$ is a probability mass function. For any probability distribution
 $\mathcal{P}$, we write $x \leftlsquigarrow \mathcal{P}$ to denote the act of
-sampling $x$ from $\mathcal{P}$.
+sampling $x$ from $\mathcal{P}$. For instance, $x \leftlsquigarrow (\{\, 1, 2 \,\}, \{\, 1 \mapsto 0.1, 2 \mapsto 0.9 \,\})$ means that $x$ becomes equal to $1$ with probability $0.1$ or to $2$ with probability $0.9$.
 
 Our random model is based on the following parameters:
-\begin{itemize*}
+\begin{itemize}
 \item the number of variables $\nu \in \mathbb{N}^+$,
 \item density $\mu \in \mathbb{R}_{>0}$,
 \item clause width $\kappa \in \mathbb{N}^+$ (for $k$-CNF formulas, $\kappa =
@@ -354,7 +326,7 @@ Our random model is based on the following parameters:
   and $w(\neg x) = 0$ or $w(x) = 0$ and $w(\neg x) = 1$,
 \item and the proportion $\epsilon \in [0, 1-\delta]$ of variables $x$ such that
   $w(x) = w(\neg x) = 0.5$.
-\end{itemize*}
+\end{itemize}
 The first three parameters are the standard parameters used to generate random
 $k$-CNF formulas with $\nu\mu$ clauses (up to rounding). We expect to observe
 (possibly different) values of $\mu$ that maximize the running time of each
@@ -450,14 +422,14 @@ to define weights on literals.\footnote{Note that algorithms such as
   \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20} support
   a more flexible way of assigning weights that can lead to significant
   performance improvements~\cite{DBLP:conf/uai/DilkasB21,DBLP:conf/sat/DilkasB21}.} We want to partition all variables into three groups: those with weights equal to zero and one, those with weights equal to 0.5, and those with arbitrary weights, where the size of each group is determined by $\delta$ and $\epsilon$. To do this, we sample a permutation $\pi \leftlsquigarrow \mathcal{U}S_\nu$ (where $S_\nu$ is the permutation group on $\{1, 2, \dots, \nu \}$), and assign to each \emph{variable} $x_n$ a weight drawn u.a.r.\ from
-\begin{itemize*}
+\begin{itemize}
 \item $\mathcal{U}\{\,0, 1\,\}$ if $\pi(n) \le \nu\delta$,
 \item $\mathcal{U}\{\,0.5\,\}$ if $\nu\delta < \pi(n) \le \nu\delta +
   \nu\epsilon$,
 \item and $\mathcal{U}\{\, 0.01, 0.02, \dots, 0.99 \,\}$\footnote{For
     convenience, we represent $(0, 1)$ as 99 discrete values.} if $\pi(n) >
   \nu\delta + \nu\epsilon$.
-\end{itemize*}
+\end{itemize}
 We extend these weights to weights on \emph{literals} by choosing the weight of
 each positive literal to be equal to the weight of its variable, and the weight
 of each negative literal to be such that $w(x) + w(\neg x) = 1$ for all
@@ -550,11 +522,7 @@ the following experiment.
   Fix $\nu = 100, \delta = \epsilon = 0$, and consider random instances with
   $\mu = 2.5 \times \sqrt{2}^{-5}, 2.5 \times \sqrt{2}^{-4}, \dots, 2.5 \times
   \sqrt{2}^5$, $\kappa = 2, 3, 4, 5$, and $\rho$ going from 0 to 1 in steps of
-  0.01. For each combination of parameters, we generate ten instances. We check
-  if each instance is satisfiable using
-  \textsc{MiniSat}\footnote{\url{http://minisat.se/MiniSat.html}}~2.2.0~\cite{DBLP:conf/sat/EenS03}
-  and calculate its (approximate) primal treewidth using
-  \textsc{htd}~\cite{DBLP:conf/cpaior/AbseherMW17}.
+  0.01. For each combination of parameters, we generate ten instances.\footnote{Since one expects similar values of $\rho$ to produce instances with similar properties, and $\rho$'s are enumerate quite densely, generating only ten instances is sufficient.} We check if each instance is satisfiable using \textsc{MiniSat}\footnote{\url{http://minisat.se/MiniSat.html}}~2.2.0~\cite{DBLP:conf/sat/EenS03} and calculate its (approximate) primal treewidth using \textsc{htd}\footnote{\url{https://github.com/mabseher/htd}}~\cite{DBLP:conf/cpaior/AbseherMW17}.
 \end{experiment}
 
 \begin{figure*}[t]
@@ -611,23 +579,8 @@ times of \textsf{WMC} algorithms change w.r.t.\ parameters of our random model.
 All experiments were run on Intel Xeon~E5--2630 with Scientific Linux~7,
 GCC~10.2.0, Python~3.8.1, R~4.1.0,
 \textsc{c2d}~2.20~\cite{DBLP:conf/ecai/Darwiche04},
-\textsc{Cachet}~1.22~\cite{DBLP:conf/sat/SangBBKP04}, and
-\textsc{htd}~1.2.0~\cite{DBLP:conf/cpaior/AbseherMW17}. With both \textsc{c2d}
-and \textsc{d4}, we use
-\textsc{query-dnnf}\footnote{\url{http://www.cril.univ-artois.fr/kc/d-DNNF-reasoner.html}}
-to compute the numerical answer from the compiled circuit. We omit
-\textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20} from our experiments as it
-exceeds time and memory limits on too many instances; however, observations
-about the behaviour of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} apply to
-\textsc{ADDMC} as well, with the addendum that the tree decomposition implicitly
-used by \textsc{ADDMC} may have a significantly higher width. \textsc{DPMC} is
-run with tree decomposition-based planning and ADD-based execution---the
-combination that was originally found to be most
-effective~\cite{DBLP:conf/cp/DudekPV20}. The tree decomposition is found using
-one iteration of
-\textsc{htd}\footnote{\url{https://github.com/mabseher/htd}}~\cite{DBLP:conf/cpaior/AbseherMW17}.
-We restrict our attention to 3-CNF formulas, generate 100 satisfiable instances
-for each \emph{combination} of parameters, and run each of the five algorithms with a \SI{500}{\second} time limit and an \SI{8}{\gibi\byte} memory limit. While both limits are somewhat low, we prioritise large numbers of instances to increase the accuracy and reliability of our results. Unless stated otherwise, in each plot of this section, lines denote median values, and shaded regions show interquartile ranges. We run the following three experiments, setting $\nu = 70$ in all of them as we found that this produces instances of suitable difficulty.
+\textsc{Cachet}~1.22~\cite{DBLP:conf/sat/SangBBKP04},
+\textsc{htd}~1.2.0~\cite{DBLP:conf/cpaior/AbseherMW17}, and with no additional preprocessing. With both \textsc{c2d} and \textsc{d4}, we use \textsc{query-dnnf}\footnote{\url{http://www.cril.univ-artois.fr/kc/d-DNNF-reasoner.html}} to compute the numerical answer from the compiled circuit. We omit \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20} from our experiments as it exceeds time and memory limits on too many instances; however, observations about the behaviour of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} apply to \textsc{ADDMC} as well, with the addendum that the tree decomposition implicitly used by \textsc{ADDMC} may have a significantly higher width. \textsc{DPMC} is run with tree decomposition-based planning (using one iteration of \textsc{htd}~\cite{DBLP:conf/cpaior/AbseherMW17}) and ADD-based execution---the combination that was originally found to be most effective~\cite{DBLP:conf/cp/DudekPV20}. We restrict our attention to 3-CNF formulas, generate 100 satisfiable instances for each \emph{combination} of parameters, and run each of the five algorithms with a \SI{500}{\second} time limit and an \SI{8}{\gibi\byte} memory limit. While both limits are somewhat low, we prioritise large numbers of instances to increase the accuracy and reliability of our results. Unless stated otherwise, in each plot of this section, lines denote median values, and shaded regions show interquartile ranges. We run the following three experiments, setting $\nu = 70$ in all of them as we found that this produces instances of suitable difficulty.
 
 \begin{experiment}[Density and Primal Treewidth]\label{exp:density}
   Let $\nu = 70$, $\mu$ go from 1 to 4.3 in steps of 0.3, $\rho$ go from 0 to
