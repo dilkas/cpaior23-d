@@ -45,7 +45,10 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels) {
 #    geom_ribbon(aes(ymin = bounds.3, ymax = bounds.4), fill = "green") +
     theme_set(theme_gray(base_size = 9))
 }
-tikz(file = "../doc/kr/regular_repetitiveness.tex", width = 6.5,
+
+# tikz(file = "../doc/kr/regular_repetitiveness.tex", width = 6.5,
+#      height = 4.516875, standAlone = TRUE)
+tikz(file = "../doc/workshop/regular_repetitiveness.tex", width = 4.8,
      height = 4.516875, standAlone = TRUE)
 repetitiveness_facets("../results/satisfiability.csv", TRUE)
 dev.off()

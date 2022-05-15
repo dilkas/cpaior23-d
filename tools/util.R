@@ -128,7 +128,9 @@ plot_4_plots <- function(data, fits) {
                       widths = c(1, 0, 1), heights = c(1, -0.01, 1),
                       label.x = 0.1, label.y = 0.95)
 
-  tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
+  # tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
+  #      standAlone = TRUE)
+  tikz(file = "../doc/workshop/treewidth.tex", width = 4.8, height = 3.9,
        standAlone = TRUE)
   annotate_figure(figure, bottom = text_grob("$\\mu$", size = 9))
   dev.off()

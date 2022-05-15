@@ -49,8 +49,10 @@ p2 <- plot_with_sd(df, "prop_equal", "$\\epsilon$") + ylim(0, TIMEOUT) +
   rremove("ylab")
 figure <- ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 
-tikz(file = "../doc/kr/delta_epsilon.tex", width = 6.5, height = 1.505625,
-     standAlone = TRUE)
+# tikz(file = "../doc/kr/delta_epsilon.tex", width = 6.5, height = 1.505625,
+#      standAlone = TRUE)
+tikz(file = "../doc/workshop/delta_epsilon.tex", width = 4.8,
+     height = 1.505625, standAlone = TRUE)
 annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
                                          size = 9))
 dev.off()
