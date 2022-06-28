@@ -48,8 +48,10 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels) {
 
 # tikz(file = "../doc/kr/regular_repetitiveness.tex", width = 6.5,
 #      height = 4.516875, standAlone = TRUE)
-tikz(file = "../doc/workshop/regular_repetitiveness.tex", width = 4.8,
-     height = 4.516875, standAlone = TRUE)
+#tikz(file = "../doc/workshop/regular_repetitiveness.tex", width = 4.8,
+#     height = 4.516875, standAlone = TRUE)
+tikz(file = "../../annual-report/thesis/chapters/comparison/regular_repetitiveness.tex",
+     width = 5.7, height = 3.1, standAlone = TRUE)
 repetitiveness_facets("../results/satisfiability.csv", TRUE)
 dev.off()
 

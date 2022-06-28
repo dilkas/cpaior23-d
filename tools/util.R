@@ -130,8 +130,10 @@ plot_4_plots <- function(data, fits) {
 
   # tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
   #      standAlone = TRUE)
-  tikz(file = "../doc/workshop/treewidth.tex", width = 4.8, height = 3.9,
-       standAlone = TRUE)
+  #tikz(file = "../doc/workshop/treewidth.tex", width = 4.8, height = 3.9,
+  #     standAlone = TRUE)
+  tikz(file = "../../annual-report/thesis/chapters/comparison/regular_repetitiveness.tex",
+       width = 5.7, height = 3.1, standAlone = TRUE)
   annotate_figure(figure, bottom = text_grob("$\\mu$", size = 9))
   dev.off()
 }

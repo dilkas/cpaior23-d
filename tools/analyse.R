@@ -17,7 +17,9 @@ fits$fit <- exp(results[1,])
 fits$lb <- exp(results[1,] - results[2,])
 fits$ub <- exp(results[1,] + results[2,])
 
-# First round: density & treewidth
+# First round: density & treewidth (treewidth.tex/pdf, from util.R)
+# NB: Calling the function doesn't work for some reason. It must be executed
+# 'by hand'.
 plot_4_plots(data, fits)
 
 # R^2
@@ -25,7 +27,9 @@ r2table <- cbind(fits, r2 = results[3,])
 r2table$r2[r2table$algorithm == "\\textsc{d4}" &
              r2table$clause_factor == 4.3] <- 1
 r2table$clause_factor <- as.factor(r2table$clause_factor)
-tikz(file = "../doc/kr/r2.tex", width = 3, height = 3, standAlone = TRUE)
+#tikz(file = "../doc/kr/r2.tex", width = 3, height = 3, standAlone = TRUE)
+tikz(file = "../../annual-report/thesis/chapters/comparison/r2.tex",
+     width = 3.1, height = 3.1, standAlone = TRUE)
 ggplot(r2table, aes(algorithm, clause_factor, fill = r2)) + geom_tile() +
   geom_text(aes(label = round(r2, 2))) +
   xlab(NULL) +
@@ -47,12 +51,15 @@ data <- read_data("../results/regular3.csv")
 df <- data %>% group_by(algorithm, prop_equal)
 p2 <- plot_with_sd(df, "prop_equal", "$\\epsilon$") + ylim(0, TIMEOUT) +
   rremove("ylab")
-figure <- ggarrange(p1, p2, common.legend = TRUE, legend = "right")
+#figure <- ggarrange(p1, p2, common.legend = TRUE, legend = "right")
+figure <- ggarrange(p1, p2, common.legend = TRUE, legend = "bottom")
 
 # tikz(file = "../doc/kr/delta_epsilon.tex", width = 6.5, height = 1.505625,
 #      standAlone = TRUE)
-tikz(file = "../doc/workshop/delta_epsilon.tex", width = 4.8,
-     height = 1.505625, standAlone = TRUE)
+#tikz(file = "../doc/workshop/delta_epsilon.tex", width = 4.8,
+#     height = 1.505625, standAlone = TRUE)
+tikz(file = "../../annual-report/thesis/chapters/comparison/delta_epsilon.tex",
+     width = 5.7, height = 3.1, standAlone = TRUE)
 annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
                                          size = 9))
 dev.off()
