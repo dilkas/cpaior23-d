@@ -15,7 +15,10 @@ bounds <- t(apply(data, 1, function(x)
 data <- cbind(data, bounds = bounds)
 print(data)
 
-repetitiveness_facets <- function(filename, round_clause_factor_labels) {
+repetitiveness_facets <- function(filename, round_clause_factor_labels,
+                                  kappa_name = "\\kappa", with_mu = TRUE,
+                                  xbreaks = c(0, 0.5, 1),
+                                  ybreaks = c(0, 50, 100)) {
   data <- read.csv(filename)
   data <- data[data$literal_factor > 1,]
 
@@ -29,30 +32,40 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels) {
     data$clause_factor <- factor(data$clause_factor, levels = levels,
                                  labels = round(levels, 1))
   }
-  ggplot(data, aes(repetitiveness, treewidth)) +
+  p <- ggplot(data, aes(repetitiveness, treewidth)) +
     geom_point() +
     geom_smooth(se = FALSE, method = "loess") +
-    facet_grid(literal_factor ~ clause_factor, labeller =
-                 labeller(literal_factor = function(x) paste0("$\\kappa = ",
-                                                              x, "$"),
-                          clause_factor = function(x) paste0("$\\mu = ",
-                                                             x, "$"))) +
-    scale_x_continuous(breaks = c(0, 0.5, 1), labels = c(0, 0.5, 1)) +
-    scale_y_continuous(breaks = c(0, 50, 100)) +
+
+    scale_x_continuous(breaks = xbreaks, labels = xbreaks) +
+    scale_y_continuous(breaks = ybreaks) +
     xlab("$\\rho$") +
     ylab("Primal treewidth") +
-#    geom_ribbon(aes(ymin = bounds.1, ymax = bounds.2), fill = "red") +
-#    geom_ribbon(aes(ymin = bounds.3, ymax = bounds.4), fill = "green") +
     theme_set(theme_gray(base_size = 9))
+  if (with_mu) {
+    p + facet_grid(literal_factor ~ clause_factor,
+                   labeller = labeller(
+                     literal_factor = function(x) paste0("$", kappa_name, " = ", x, "$"),
+                     clause_factor = function(x) paste0("$\\mu = ", x, "$")))
+  } else {
+    p + facet_grid(literal_factor ~ clause_factor, labeller = labeller(
+      literal_factor = function(x) paste0("$", kappa_name, " = ", x, "$"),
+      clause_factor = function(x) x))
+  }
 }
 
 # tikz(file = "../doc/kr/regular_repetitiveness.tex", width = 6.5,
 #      height = 4.516875, standAlone = TRUE)
 #tikz(file = "../doc/workshop/regular_repetitiveness.tex", width = 4.8,
 #     height = 4.516875, standAlone = TRUE)
-tikz(file = "../../annual-report/thesis/chapters/comparison/regular_repetitiveness.tex",
-     width = 5.7, height = 3.1, standAlone = TRUE)
-repetitiveness_facets("../results/satisfiability.csv", TRUE)
+
+#tikz(file = "../../annual-report/thesis/chapters/comparison/regular_repetitiveness.tex",
+#     width = 5.7, height = 3.1, standAlone = TRUE)
+#repetitiveness_facets("../results/satisfiability.csv", TRUE)
+
+tikz(file = "../doc/talk/regular_repetitiveness.tex", width = 4.26,
+     height = 3.3, standAlone = TRUE)
+repetitiveness_facets("../results/satisfiability.csv", TRUE, "k", FALSE,
+                      c(0, 1), c(0, 100))
 dev.off()
 
 # ========== EXTRA STUFF ===========

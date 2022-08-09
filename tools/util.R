@@ -37,13 +37,18 @@ read_data <- function(filename) {
   return(data)
 }
 
-plot_with_sd <- function(df, x_value, x_label) {
+plot_with_sd <- function(df, x_value, x_label, per_algorithm = TRUE) {
   df <- df %>% summarise(mean = median(time),
                          lb = unname(quantile(time, IQR1)),
                          ub = unname(quantile(time, IQR2)))
-  ggplot(df, aes(.data[[x_value]], mean, group = algorithm, colour = algorithm,
-                 fill = algorithm, linetype = algorithm, shape = algorithm)) +
-    geom_line() +
+  if (per_algorithm) {
+    p <- ggplot(df, aes(.data[[x_value]], mean, group = algorithm,
+                        colour = algorithm, fill = algorithm,
+                        linetype = algorithm, shape = algorithm))
+  } else {
+    p <- ggplot(df, aes(.data[[x_value]], mean))
+  }
+    p + geom_line() +
     geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
     xlab(x_label) +
     ylab("Time (s)") +
@@ -82,9 +87,8 @@ plot_4_plots <- function(data, fits) {
 
   df <- data[data$clause_factor == 1.9,] %>% group_by(algorithm, treewidth)
   p3 <- plot_with_sd(df, "treewidth", "Primal treewidth") +
-    geom_point() +
-    rremove("ylab")
-  
+    geom_point()
+
   p4 <- ggplot(fits, aes(clause_factor, fit, color = algorithm,
                          fill = algorithm, linetype = algorithm,
                          shape = algorithm)) +
@@ -95,7 +99,7 @@ plot_4_plots <- function(data, fits) {
     scale_color_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     ylab("Base") +
-    labs(color = "", fill = "", linetype = "") +
+    labs(color = "", fill = "", linetype = "", shape = "") +
     scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
                                      "longdash")) +
     ylim(0.99, 1.8) +
@@ -118,7 +122,8 @@ plot_4_plots <- function(data, fits) {
     rremove("xlab") +
     rremove("ylab")
   
-  figure <- ggarrange(p1, ggplot() + theme_void(), p3, ggplot() + theme_void(),
+  figure <- ggarrange(p1, ggplot() + theme_void(), p3 + rremove("ylab"),
+                      ggplot() + theme_void(),
                       ggplot() + theme_void(), ggplot() + theme_void(),
                       p4, ggplot() + theme_void(), p5,
                       ncol = 3, nrow = 3, common.legend = TRUE,
@@ -127,6 +132,21 @@ plot_4_plots <- function(data, fits) {
                                  "", ""),
                       widths = c(1, 0, 1), heights = c(1, -0.01, 1),
                       label.x = 0.1, label.y = 0.95)
+
+  # for slides
+  tikz(file = "../doc/talk/treewidth.tex", width = 4.26, height = 3.3,
+       standAlone = TRUE)
+  p1 + theme_light()
+  dev.off()
+  tikz(file = "../doc/talk/treewidth2.tex", width = 4.26, height = 3.3,
+       standAlone = TRUE)
+  p3 + theme_light()
+  dev.off()
+
+  tikz(file = "../doc/talk/linearbase.tex", width = 4.26, height = 2.9,
+       standAlone = TRUE)
+  p4 + theme_light() + ylab("$e^\\alpha$")
+  dev.off()
 
   # tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,
   #      standAlone = TRUE)
