@@ -57,18 +57,18 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item A generalisation of propositional model counting ($\#\SAT{}$)
-        \item Applications:
+        \item<2> Applications:
         \begin{itemize}
           \item graphical models
           \item probabilistic programming
           \item neural-symbolic artificial intelligence
         \end{itemize}
-        \item WMC algorithms use:
-        \begin{itemize}
-          \item dynamic programming
-          \item knowledge compilation
-          \item \SAT{} solvers
-        \end{itemize}
+        % \item<2> WMC algorithms use:
+        % \begin{itemize}
+        %   \item dynamic programming
+        %   \item knowledge compilation
+        %   \item \SAT{} solvers
+        % \end{itemize}
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -121,6 +121,7 @@
   \[
     \phi = (\four{} \lor \neg \three{} \lor \one{}) \land (\neg \two{} \lor \four{}) \land (\neg \one{} \lor \two{} \lor \four{})
   \]
+  \pause
   \begin{columns}
     \begin{column}{0.5\textwidth}
       Its primal graph:
@@ -138,6 +139,7 @@
       \end{tikzpicture}
     \end{column}
     \begin{column}{0.5\textwidth}
+      \pause
       Its minimum-width tree decomposition:
 
       \begin{tikzpicture}[every text node part/.style={align=center}]
@@ -149,6 +151,7 @@
   \end{columns}
   \centering
   \vfill
+  \pause
   $\therefore$ the primal treewidth of \structure{$\phi$} is \structure{2}
 \end{frame}
 
@@ -230,7 +233,7 @@
         Let \structure{$n = 5$}, \structure{$k = 3$}, and \structure{$\rho = 0.3$}.
 
         Partial formula:
-        \structure{$(\neg x_{5} \lor x_{2} \lor x_{1}) \land (x_{5} \lor \structure{\mathord{?}} \lor \mathord{?})$}.
+        \structure{$(\neg x_{5} \lor x_{2} \lor x_{1}) \land (x_{5} \lor \alert{\mathord{?}} \lor \mathord{?})$}.
       \end{column}
       \begin{column}{0.21\linewidth}
         Primal graph:
@@ -271,16 +274,16 @@
 
 \begin{frame}{Peak Hardness w.r.t. Density}
   \begin{itemize}
-    \item \textcolor{gray}{\textcite{DBLP:conf/aaai/Pehoushek00}} show some
-          $\#\SAT{}$ algorithms to peak at \structure{$\mu = 1.2$} and
-          \structure{$\mu = 1.9$}
-    \item \textsc{Cachet} is known to peak at \structure{$\mu = 1.8$}
-          \textcolor{gray}{\parencite{DBLP:conf/sat/SangBBKP04}}
     \item In our experiments:
     \begin{itemize}
       \item \textsc{DPMC} peaks at \structure{$\mu = 2.2$}
       \item all other algorithms peak at \structure{$\mu = 1.9$}
     \end{itemize}
+    \item \textsc{Cachet} is known to peak at \structure{$\mu = 1.8$}
+          \textcolor{gray}{\parencite{DBLP:conf/sat/SangBBKP04}}
+    \item \textcolor{gray}{\textcite{DBLP:conf/aaai/Pehoushek00}} show some
+          $\#\SAT{}$ algorithms to peak at \structure{$\mu = 1.2$} and
+          \structure{$\mu = 1.9$}
   \end{itemize}
 \end{frame}
 
@@ -310,10 +313,10 @@
       \item All algorithms scale exponentially w.r.t.\ primal treewidth
       \item The running time of \textsc{DPMC} peaks at a higher density and
             scales worse w.r.t.\ primal treewidth
-            \begin{itemize}
-              \item Related to the complexity of ADD multiplication
-            \end{itemize}
-      \item \textsc{miniC2D} seems to be best at low density high primal
+            % \begin{itemize}
+            %   \item Related to the complexity of ADD multiplication
+            % \end{itemize}
+      \item \textsc{miniC2D} seems to be best on low density high primal
             treewidth instances
     \end{itemize}
   \end{block}
@@ -321,8 +324,8 @@
     \begin{itemize}
       \item A theoretical relationship between \structure{$\rho$} and primal treewidth
       \item Non-$k$-CNF instances
-      \item Similar observations on real data
-      \item SATzilla for WMC
+      % \item Similar observations on real data
+      \item Algorithm portfolios for WMC
     \end{itemize}
   \end{block}
 \end{frame}
