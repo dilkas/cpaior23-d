@@ -30,7 +30,7 @@ exacttw: $(addsuffix /EXACTTREEWIDTH,$(basename $(basename $(wildcard data/*.cac
 sat: $(addsuffix /SAT,$(basename $(basename $(wildcard data/*.cachet.cnf))))
 
 # Compute statistics about Bayesian network WMC encodings
-benchmarks: $(addsuffix /BENCHMARK,$(basename $(wildcard benchmarks/bayes/*.cnf)))
+benchmarks: $(addsuffix /BENCHMARK,$(basename $(wildcard data/*.cnf)))
 
 data/%/TARGET:
 	-cnf="data/$*.cachet.cnf" && $(RUN) -f "%es" bash -c "$(LG) < $$cnf | $(DPMC) --cf=$$cnf" &> results/$*.dpmc

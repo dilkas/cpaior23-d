@@ -1,5 +1,7 @@
 data
-experiments
+experiments/data
+experiments/results
+experiments/results.csv
 
 # History files
 .Rhistory
