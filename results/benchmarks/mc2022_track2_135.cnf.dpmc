@@ -1,0 +1,50 @@
+c ==================================================================
+c DMC: Diagram Model Counter
+c Version v1.0.0, released on 2020/07/20
+c ==================================================================
+
+c Process ID of this main program:
+c pid 209682
+
+c Reading CNF formula...
+
+c Reading join tree...
+c Constructed timer with 3600.000000-second timeout
+c ==================================================================
+c Getting join tree from stdin with 3600.000000-second timeout... (end input with 'Enter' then 'Ctrl d')
+c ------------------------------------------------------------------
+c Received SIGALRM after 3660.838000 seconds since the main programm started
+c Successfully killed planner process with PID 209683
+c ******************************************************************
+c MY_WARNING: missing branch nodes (126442 found, 551805 expected) before current join tree ends on line 126449
+c ******************************************************************
+c ******************************************************************
+c MY_ERROR: no backup join tree
+c ******************************************************************
+terminate called after throwing an instance of 'MyError'
+bash: line 1: 209681 Broken pipe             ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_135.cnf.cachet.cnf
+     209682 Aborted                 (core dumped) | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_135.cnf.cachet.cnf
+Command exited with non-zero status 134
+	Command being timed: "bash -c ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_135.cnf.cachet.cnf | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_135.cnf.cachet.cnf"
+	User time (seconds): 745.19
+	System time (seconds): 35.70
+	Percent of CPU this job got: 21%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01:01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8339740
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 16535147
+	Voluntary context switches: 6032
+	Involuntary context switches: 16766
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 134

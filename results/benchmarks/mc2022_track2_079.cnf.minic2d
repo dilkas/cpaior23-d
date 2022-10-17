@@ -1,0 +1,47 @@
+
+Constructing CNF... DONE
+CNF stats: 
+  Vars=3882 / Clauses=15325
+  CNF Time	0.010s
+Constructing vtree (from primal graph)... DONE
+Vtree stats:
+  Vtree widths: con<=263, c_con=4444 v_con=263
+  Vtree Time	17.520s
+Counting... DONE
+  Learned clauses      	519
+Cache stats:
+  hit rate   	25.7%
+  lookups    	101
+  ent count  	0
+  ent memory 	0.0 KB
+  ht  memory 	152.6 MB
+  clists     	-nan ave, 0 max
+  keys       	-nanb ave, 0.0b max, 10000000.0b min
+Count stats:
+  Count Time	0.080s
+  Count 	0.000
+Total Time: 17.640s
+
+	Command being timed: "../deps/miniC2D/bin/linux/miniC2D -i -W -c data/mc2022_track2_079.cnf.minic2d.cnf"
+	User time (seconds): 36.06
+	System time (seconds): 0.35
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 62260
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 109868
+	Voluntary context switches: 39
+	Involuntary context switches: 1468
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

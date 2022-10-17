@@ -1,0 +1,110 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_173.cnf.cachet.cnf ......
+Number of unit clauses			2011
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added conflict clauses: 9000
+Added conflict clauses: 10000
+Added cache entries: 100000
+Added cache entries: 200000
+Added cache entries: 300000
+Added cache entries: 400000
+Added cache entries: 500000
+Added conflict clauses: 11000
+Added cache entries: 600000
+Added cache entries: 700000
+Added cache entries: 800000
+Added cache entries: 900000
+Added cache entries: 1000000
+Added conflict clauses: 12000
+Added cache entries: 1100000
+Added cache entries: 1200000
+Added cache entries: 1300000
+Removed entries: 100061
+Added cache entries: 1400000
+Added cache entries: 1500000
+Removed entries: 202112
+Added conflict clauses: 13000
+Added cache entries: 1600000
+Removed entries: 317223
+Added cache entries: 1700000
+Removed entries: 400011
+Added cache entries: 1800000
+Removed entries: 500199
+Added cache entries: 1900000
+Removed entries: 600006
+Added cache entries: 2000000
+Removed entries: 700004
+Added cache entries: 2100000
+Added conflict clauses: 14000
+Removed entries: 800005
+Added cache entries: 2200000
+Removed entries: 900009
+Added cache entries: 2300000
+Removed entries: 1000327
+Added cache entries: 2400000
+Removed entries: 1100208
+Added cache entries: 2500000
+Removed entries: 1200308
+Added conflict clauses: 15000
+Added cache entries: 2600000
+Removed entries: 1302083
+Added cache entries: 2700000
+Removed entries: 1400307
+Added cache entries: 2800000
+Removed entries: 1527722
+Added cache entries: 2900000
+Removed entries: 1600000
+Added cache entries: 3000000
+Removed entries: 1700479
+Added cache entries: 3100000
+Added conflict clauses: 16000
+Removed entries: 1801359
+Added cache entries: 3200000
+Removed entries: 1900004
+Added cache entries: 3300000
+Removed entries: 2016979
+Added cache entries: 3400000
+Removed entries: 2100047
+Added cache entries: 3500000
+Removed entries: 2206002
+Added cache entries: 3600000
+Added conflict clauses: 17000
+Removed entries: 2300050
+Added cache entries: 3700000
+Removed entries: 2400000
+Added cache entries: 3800000
+Removed entries: 2501001
+Added cache entries: 3900000
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_173.cnf.cachet.cnf"
+	User time (seconds): 3576.13
+	System time (seconds): 15.37
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 559616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2493178
+	Voluntary context switches: 88
+	Involuntary context switches: 5812
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

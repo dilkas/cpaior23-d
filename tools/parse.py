@@ -2,9 +2,14 @@ import csv
 import glob
 import os
 
+DATA_DIR = "experiments/data"
+RESULTS_DIR = "experiments/results"
+OUTPUT_FILE = "results.csv"
+PARSE_TREEWIDTH = False  # otherwise parses runtime
+
 
 def get_instance_name(filename):
-    return filename[filename.index("/") + 1 : filename.rindex(".")]
+    return filename[filename.rindex("/") + 1 : filename.index(".")]
 
 
 def parse_instance_name(name):
@@ -36,7 +41,7 @@ cnf_data = {}
 sat_data = {}
 tw_data = {}
 
-for cnf_file in glob.glob("data/*.cnf"):
+for cnf_file in glob.glob(DATA_DIR + "/*.cnf"):
     with open(cnf_file) as f:
         for line in f:
             if line.startswith("p"):
@@ -47,13 +52,13 @@ for cnf_file in glob.glob("data/*.cnf"):
                 }
                 break
 
-for sat_file in glob.glob("data/*.sat"):
+for sat_file in glob.glob(DATA_DIR + "/*.sat"):
     with open(sat_file) as f:
         sat_data[get_instance_name(sat_file)] = (
             1 if f.read().split()[-1] != "UNSATISFIABLE" else 0
         )
 
-for tw_file in glob.glob("data/*.tw"):
+for tw_file in glob.glob(DATA_DIR + "/*.tw"):
     with open(tw_file) as f:
         try:
             tw = int(f.read().split()[-1])
@@ -64,12 +69,12 @@ for tw_file in glob.glob("data/*.tw"):
 
 data = []
 fieldnames = set()
-if not (os.path.isdir("results") and os.listdir("results")):
+if PARSE_TREEWIDTH:
     for instance in sat_data.keys() | tw_data.keys():
         data.append(parse_instance_name(instance))
         fieldnames |= set(data[-1].keys())
 else:
-    for solution_file in glob.glob("results/*"):
+    for solution_file in glob.glob(RESULTS_DIR + "/*"):
         instance2 = parse_instance_name(get_instance_name(solution_file))
         instance2["algorithm"] = solution_file[solution_file.rindex(".") + 1 :]
         print("Parsing", solution_file)
@@ -77,11 +82,12 @@ else:
             for line in f:
                 words = line.lstrip().split()
                 if line.lstrip().startswith("Elapsed"):
-                    time_str = words[7]
-                    colon_i = time_str.index(":")
-                    instance2["time"] = 60 * int(time_str[:colon_i]) + float(
-                        time_str[colon_i + 1 :]
-                    )
+                    tokens = words[7].split(":")
+                    instance2["time"] = float(tokens[-1])
+                    if len(tokens) > 1:
+                        instance2["time"] += 60 * int(tokens[-2])
+                    if len(tokens) > 2:
+                        instance2["time"] += 60**2 * int(tokens[-3])
                     break
                 if line.lstrip().startswith("ANSWER:") and instance2["algorithm"] in [
                     "c2d",
@@ -110,7 +116,7 @@ else:
         data.append(instance2)
         fieldnames |= set(instance2.keys())
 
-with open("results.csv", "w") as f:
+with open(OUTPUT_FILE, "w") as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     for d in data:

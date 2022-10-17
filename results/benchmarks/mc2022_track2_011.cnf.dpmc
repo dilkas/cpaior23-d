@@ -1,0 +1,67 @@
+c ==================================================================
+c DMC: Diagram Model Counter
+c Version v1.0.0, released on 2020/07/20
+c ==================================================================
+
+c Process ID of this main program:
+c pid 102364
+
+c Reading CNF formula...
+
+c Reading join tree...
+c Constructed timer with 3600.000000-second timeout
+c ==================================================================
+c Getting join tree from stdin with 3600.000000-second timeout... (end input with 'Enter' then 'Ctrl d')
+c ------------------------------------------------------------------
+c After 0.034000 seconds, finished reading last legal join tree ending on or before line 157 with ADD width 46
+c Remaining duration: 3599.970000 seconds
+c Requested new timeout: 7.03687e+10 seconds -- request declined
+c ------------------------------------------------------------------
+c After 0.039000 seconds, finished reading last legal join tree ending on or before line 312 with ADD width 43
+c Remaining duration: 3599.965000 seconds
+c Requested new timeout: 8.79609e+09 seconds -- request declined
+Tree decomposition stream ended.
+c ------------------------------------------------------------------
+c After 0.063000 seconds, finished reading last legal join tree ending on or before line 466 with ADD width 43
+c Remaining duration: 3599.941000 seconds
+c Requested new timeout: 8.79609e+09 seconds -- request declined
+c ******************************************************************
+c MY_WARNING: alarm should have been disarmed; disarming alarm now
+c ******************************************************************
+c Disarmed alarm
+c ------------------------------------------------------------------
+c After 0.063000 seconds, finished reading last legal join tree ending on or before line 466 with ADD width 43
+c Getting join tree from stdin: done
+c ==================================================================
+
+c Computing output...
+c ------------------------------------------------------------------
+s wmc 4.71521e-05
+c ------------------------------------------------------------------
+
+c ==================================================================
+c seconds                       1514.71
+c ==================================================================
+	Command being timed: "bash -c ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_011.cnf.cachet.cnf | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_011.cnf.cachet.cnf"
+	User time (seconds): 1438.51
+	System time (seconds): 71.63
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:14.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 23886092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 91622098
+	Voluntary context switches: 746
+	Involuntary context switches: 2030
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

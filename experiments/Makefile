@@ -1,8 +1,8 @@
-TIMEOUT = 500
-MAX_MEMORY = 8 # in GB
-MAX_MEMORY_KB = 7549747 # 90% of MAX_MEMORY
+TIMEOUT = 3600
+MAX_MEMORY = 32 # in GB
+MAX_MEMORY_KB = 30198989 # 90% of MAX_MEMORY
 
-CACHET = ../deps/cachet/cachet-wmc
+CACHET = ../deps/cachet/cachet
 WRAPPER = python ../tools/query_wrapper.py -m $(MAX_MEMORY)
 MINIC2D = ../deps/miniC2D/bin/linux/miniC2D -i -W -c
 MINISAT = LD_LIBRARY_PATH="$$LD_LIBRARY_PATH":../deps/minisat/lib ../deps/minisat/bin/minisat

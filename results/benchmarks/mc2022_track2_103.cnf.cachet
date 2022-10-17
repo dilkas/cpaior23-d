@@ -1,0 +1,76 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_103.cnf.cachet.cnf ......
+Number of unit clauses			145
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			2654
+Removed cache entries			0
+Number of cache hits			2387
+Number of pos hits			2387
+Number of neg hits			0
+Number of collisions			0
+
+Cross component implications		ON
+Number of cross implications		0
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		5041
+Number of split components		0
+Number of non-split components		5041
+Number of SAT residual formula		2655
+Number of trivial components		0
+Number of changed components		0
+Number of adjusted components		0
+First component split level		100000
+
+Number of Decisions			2654
+Max Decision Level			29
+Number of Variables			586
+Original Num Clauses			2152
+Original Num Literals			4627
+Added Conflict Clauses			0
+Added Conflict Literals			0
+Deleted Unrelevant clauses		0
+Deleted Unrelevant literals		0
+Number of Implications			162394
+Total Run Time				0.246248
+
+Satisfying probability			0.00281943
+s 714065888964924482675148570044412608853139322963191195231830573126793431676579118518005020354063564302039726038752883710514786293344928443635821161607164015074951760629989376
+Number of solutions 7.14066e+173
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_103.cnf.cachet.cnf"
+	User time (seconds): 0.23
+	System time (seconds): 0.01
+	Percent of CPU this job got: 88%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 43332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1187
+	Voluntary context switches: 10
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

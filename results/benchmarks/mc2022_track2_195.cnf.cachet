@@ -1,0 +1,485 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_195.cnf.cachet.cnf ......
+Number of unit clauses			15
+number of cache hit: 100000, pos_hit = 100000, neg_hit = 0
+number of cache hit: 200000, pos_hit = 200000, neg_hit = 0
+number of cache hit: 300000, pos_hit = 300000, neg_hit = 0
+number of cache hit: 400000, pos_hit = 400000, neg_hit = 0
+number of cache hit: 500000, pos_hit = 500000, neg_hit = 0
+Added cache entries: 100000
+number of cache hit: 600000, pos_hit = 600000, neg_hit = 0
+number of cache hit: 700000, pos_hit = 700000, neg_hit = 0
+number of cache hit: 800000, pos_hit = 800000, neg_hit = 0
+number of cache hit: 900000, pos_hit = 900000, neg_hit = 0
+number of cache hit: 1000000, pos_hit = 1000000, neg_hit = 0
+number of cache hit: 1100000, pos_hit = 1100000, neg_hit = 0
+Added cache entries: 200000
+number of cache hit: 1200000, pos_hit = 1200000, neg_hit = 0
+number of cache hit: 1300000, pos_hit = 1300000, neg_hit = 0
+number of cache hit: 1400000, pos_hit = 1400000, neg_hit = 0
+number of cache hit: 1500000, pos_hit = 1500000, neg_hit = 0
+number of cache hit: 1600000, pos_hit = 1600000, neg_hit = 0
+number of cache hit: 1700000, pos_hit = 1700000, neg_hit = 0
+number of cache hit: 1800000, pos_hit = 1800000, neg_hit = 0
+number of cache hit: 1900000, pos_hit = 1900000, neg_hit = 0
+number of cache hit: 2000000, pos_hit = 2000000, neg_hit = 0
+Added cache entries: 300000
+number of cache hit: 2100000, pos_hit = 2100000, neg_hit = 0
+number of cache hit: 2200000, pos_hit = 2200000, neg_hit = 0
+number of cache hit: 2300000, pos_hit = 2300000, neg_hit = 0
+number of cache hit: 2400000, pos_hit = 2400000, neg_hit = 0
+number of cache hit: 2500000, pos_hit = 2500000, neg_hit = 0
+number of cache hit: 2600000, pos_hit = 2600000, neg_hit = 0
+number of cache hit: 2700000, pos_hit = 2700000, neg_hit = 0
+number of cache hit: 2800000, pos_hit = 2800000, neg_hit = 0
+Added cache entries: 400000
+number of cache hit: 2900000, pos_hit = 2900000, neg_hit = 0
+number of cache hit: 3000000, pos_hit = 3000000, neg_hit = 0
+number of cache hit: 3100000, pos_hit = 3100000, neg_hit = 0
+number of cache hit: 3200000, pos_hit = 3200000, neg_hit = 0
+number of cache hit: 3300000, pos_hit = 3300000, neg_hit = 0
+number of cache hit: 3400000, pos_hit = 3400000, neg_hit = 0
+number of cache hit: 3500000, pos_hit = 3500000, neg_hit = 0
+number of cache hit: 3600000, pos_hit = 3600000, neg_hit = 0
+number of cache hit: 3700000, pos_hit = 3700000, neg_hit = 0
+Added cache entries: 500000
+number of cache hit: 3800000, pos_hit = 3800000, neg_hit = 0
+number of cache hit: 3900000, pos_hit = 3900000, neg_hit = 0
+number of cache hit: 4000000, pos_hit = 4000000, neg_hit = 0
+number of cache hit: 4100000, pos_hit = 4100000, neg_hit = 0
+number of cache hit: 4200000, pos_hit = 4200000, neg_hit = 0
+number of cache hit: 4300000, pos_hit = 4300000, neg_hit = 0
+number of cache hit: 4400000, pos_hit = 4400000, neg_hit = 0
+number of cache hit: 4500000, pos_hit = 4500000, neg_hit = 0
+number of cache hit: 4600000, pos_hit = 4600000, neg_hit = 0
+Added cache entries: 600000
+number of cache hit: 4700000, pos_hit = 4700000, neg_hit = 0
+number of cache hit: 4800000, pos_hit = 4800000, neg_hit = 0
+number of cache hit: 4900000, pos_hit = 4900000, neg_hit = 0
+number of cache hit: 5000000, pos_hit = 5000000, neg_hit = 0
+number of cache hit: 5100000, pos_hit = 5100000, neg_hit = 0
+number of cache hit: 5200000, pos_hit = 5200000, neg_hit = 0
+Added cache entries: 700000
+number of cache hit: 5300000, pos_hit = 5300000, neg_hit = 0
+number of cache hit: 5400000, pos_hit = 5400000, neg_hit = 0
+number of cache hit: 5500000, pos_hit = 5500000, neg_hit = 0
+number of cache hit: 5600000, pos_hit = 5600000, neg_hit = 0
+Added cache entries: 800000
+number of cache hit: 5700000, pos_hit = 5700000, neg_hit = 0
+number of cache hit: 5800000, pos_hit = 5800000, neg_hit = 0
+number of cache hit: 5900000, pos_hit = 5900000, neg_hit = 0
+number of cache hit: 6000000, pos_hit = 6000000, neg_hit = 0
+number of cache hit: 6100000, pos_hit = 6100000, neg_hit = 0
+Added cache entries: 900000
+number of cache hit: 6200000, pos_hit = 6200000, neg_hit = 0
+number of cache hit: 6300000, pos_hit = 6300000, neg_hit = 0
+number of cache hit: 6400000, pos_hit = 6400000, neg_hit = 0
+number of cache hit: 6500000, pos_hit = 6500000, neg_hit = 0
+number of cache hit: 6600000, pos_hit = 6600000, neg_hit = 0
+Added cache entries: 1000000
+number of cache hit: 6700000, pos_hit = 6700000, neg_hit = 0
+number of cache hit: 6800000, pos_hit = 6800000, neg_hit = 0
+number of cache hit: 6900000, pos_hit = 6900000, neg_hit = 0
+number of cache hit: 7000000, pos_hit = 7000000, neg_hit = 0
+number of cache hit: 7100000, pos_hit = 7100000, neg_hit = 0
+number of cache hit: 7200000, pos_hit = 7200000, neg_hit = 0
+Added cache entries: 1100000
+number of cache hit: 7300000, pos_hit = 7300000, neg_hit = 0
+number of cache hit: 7400000, pos_hit = 7400000, neg_hit = 0
+number of cache hit: 7500000, pos_hit = 7500000, neg_hit = 0
+Added conflict clauses: 1000
+number of cache hit: 7600000, pos_hit = 7600000, neg_hit = 0
+number of cache hit: 7700000, pos_hit = 7700000, neg_hit = 0
+number of cache hit: 7800000, pos_hit = 7800000, neg_hit = 0
+number of cache hit: 7900000, pos_hit = 7900000, neg_hit = 0
+Added cache entries: 1200000
+number of cache hit: 8000000, pos_hit = 8000000, neg_hit = 0
+number of cache hit: 8100000, pos_hit = 8100000, neg_hit = 0
+number of cache hit: 8200000, pos_hit = 8200000, neg_hit = 0
+number of cache hit: 8300000, pos_hit = 8300000, neg_hit = 0
+number of cache hit: 8400000, pos_hit = 8400000, neg_hit = 0
+number of cache hit: 8500000, pos_hit = 8500000, neg_hit = 0
+number of cache hit: 8600000, pos_hit = 8600000, neg_hit = 0
+number of cache hit: 8700000, pos_hit = 8700000, neg_hit = 0
+Added cache entries: 1300000
+number of cache hit: 8800000, pos_hit = 8800000, neg_hit = 0
+number of cache hit: 8900000, pos_hit = 8900000, neg_hit = 0
+number of cache hit: 9000000, pos_hit = 9000000, neg_hit = 0
+number of cache hit: 9100000, pos_hit = 9100000, neg_hit = 0
+Removed entries: 100187
+number of cache hit: 9200000, pos_hit = 9200000, neg_hit = 0
+number of cache hit: 9300000, pos_hit = 9300000, neg_hit = 0
+number of cache hit: 9400000, pos_hit = 9400000, neg_hit = 0
+Added cache entries: 1400000
+number of cache hit: 9500000, pos_hit = 9500000, neg_hit = 0
+number of cache hit: 9600000, pos_hit = 9600000, neg_hit = 0
+number of cache hit: 9700000, pos_hit = 9700000, neg_hit = 0
+number of cache hit: 9800000, pos_hit = 9800000, neg_hit = 0
+number of cache hit: 9900000, pos_hit = 9900000, neg_hit = 0
+number of cache hit: 10000000, pos_hit = 10000000, neg_hit = 0
+number of cache hit: 10100000, pos_hit = 10100000, neg_hit = 0
+Removed entries: 200959
+number of cache hit: 10200000, pos_hit = 10200000, neg_hit = 0
+Added cache entries: 1500000
+number of cache hit: 10300000, pos_hit = 10300000, neg_hit = 0
+number of cache hit: 10400000, pos_hit = 10400000, neg_hit = 0
+number of cache hit: 10500000, pos_hit = 10500000, neg_hit = 0
+number of cache hit: 10600000, pos_hit = 10600000, neg_hit = 0
+number of cache hit: 10700000, pos_hit = 10700000, neg_hit = 0
+number of cache hit: 10800000, pos_hit = 10800000, neg_hit = 0
+number of cache hit: 10900000, pos_hit = 10900000, neg_hit = 0
+number of cache hit: 11000000, pos_hit = 11000000, neg_hit = 0
+Removed entries: 300166
+Added cache entries: 1600000
+number of cache hit: 11100000, pos_hit = 11100000, neg_hit = 0
+number of cache hit: 11200000, pos_hit = 11200000, neg_hit = 0
+number of cache hit: 11300000, pos_hit = 11300000, neg_hit = 0
+number of cache hit: 11400000, pos_hit = 11400000, neg_hit = 0
+number of cache hit: 11500000, pos_hit = 11500000, neg_hit = 0
+number of cache hit: 11600000, pos_hit = 11600000, neg_hit = 0
+number of cache hit: 11700000, pos_hit = 11700000, neg_hit = 0
+Removed entries: 543242
+Removed entries: 543243
+number of cache hit: 11800000, pos_hit = 11800000, neg_hit = 0
+Added cache entries: 1700000
+number of cache hit: 11900000, pos_hit = 11900000, neg_hit = 0
+number of cache hit: 12000000, pos_hit = 12000000, neg_hit = 0
+number of cache hit: 12100000, pos_hit = 12100000, neg_hit = 0
+number of cache hit: 12200000, pos_hit = 12200000, neg_hit = 0
+number of cache hit: 12300000, pos_hit = 12300000, neg_hit = 0
+number of cache hit: 12400000, pos_hit = 12400000, neg_hit = 0
+number of cache hit: 12500000, pos_hit = 12500000, neg_hit = 0
+Added cache entries: 1800000
+number of cache hit: 12600000, pos_hit = 12600000, neg_hit = 0
+Removed entries: 600001
+number of cache hit: 12700000, pos_hit = 12700000, neg_hit = 0
+number of cache hit: 12800000, pos_hit = 12800000, neg_hit = 0
+number of cache hit: 12900000, pos_hit = 12900000, neg_hit = 0
+number of cache hit: 13000000, pos_hit = 13000000, neg_hit = 0
+number of cache hit: 13100000, pos_hit = 13100000, neg_hit = 0
+number of cache hit: 13200000, pos_hit = 13200000, neg_hit = 0
+number of cache hit: 13300000, pos_hit = 13300000, neg_hit = 0
+Added cache entries: 1900000
+number of cache hit: 13400000, pos_hit = 13400000, neg_hit = 0
+number of cache hit: 13500000, pos_hit = 13500000, neg_hit = 0
+number of cache hit: 13600000, pos_hit = 13600000, neg_hit = 0
+number of cache hit: 13700000, pos_hit = 13700000, neg_hit = 0
+number of cache hit: 13800000, pos_hit = 13800000, neg_hit = 0
+Removed entries: 713259
+number of cache hit: 13900000, pos_hit = 13900000, neg_hit = 0
+number of cache hit: 14000000, pos_hit = 14000000, neg_hit = 0
+number of cache hit: 14100000, pos_hit = 14100000, neg_hit = 0
+Added cache entries: 2000000
+number of cache hit: 14200000, pos_hit = 14200000, neg_hit = 0
+number of cache hit: 14300000, pos_hit = 14300000, neg_hit = 0
+number of cache hit: 14400000, pos_hit = 14400000, neg_hit = 0
+number of cache hit: 14500000, pos_hit = 14500000, neg_hit = 0
+number of cache hit: 14600000, pos_hit = 14600000, neg_hit = 0
+number of cache hit: 14700000, pos_hit = 14700000, neg_hit = 0
+number of cache hit: 14800000, pos_hit = 14800000, neg_hit = 0
+number of cache hit: 14900000, pos_hit = 14900000, neg_hit = 0
+Removed entries: 800000
+number of cache hit: 15000000, pos_hit = 15000000, neg_hit = 0
+Added cache entries: 2100000
+number of cache hit: 15100000, pos_hit = 15100000, neg_hit = 0
+number of cache hit: 15200000, pos_hit = 15200000, neg_hit = 0
+number of cache hit: 15300000, pos_hit = 15300000, neg_hit = 0
+number of cache hit: 15400000, pos_hit = 15400000, neg_hit = 0
+number of cache hit: 15500000, pos_hit = 15500000, neg_hit = 0
+Removed entries: 905870
+number of cache hit: 15600000, pos_hit = 15600000, neg_hit = 0
+number of cache hit: 15700000, pos_hit = 15700000, neg_hit = 0
+number of cache hit: 15800000, pos_hit = 15800000, neg_hit = 0
+number of cache hit: 15900000, pos_hit = 15900000, neg_hit = 0
+Added cache entries: 2200000
+number of cache hit: 16000000, pos_hit = 16000000, neg_hit = 0
+number of cache hit: 16100000, pos_hit = 16100000, neg_hit = 0
+number of cache hit: 16200000, pos_hit = 16200000, neg_hit = 0
+number of cache hit: 16300000, pos_hit = 16300000, neg_hit = 0
+number of cache hit: 16400000, pos_hit = 16400000, neg_hit = 0
+Removed entries: 1000242
+number of cache hit: 16500000, pos_hit = 16500000, neg_hit = 0
+number of cache hit: 16600000, pos_hit = 16600000, neg_hit = 0
+Added cache entries: 2300000
+number of cache hit: 16700000, pos_hit = 16700000, neg_hit = 0
+number of cache hit: 16800000, pos_hit = 16800000, neg_hit = 0
+number of cache hit: 16900000, pos_hit = 16900000, neg_hit = 0
+number of cache hit: 17000000, pos_hit = 17000000, neg_hit = 0
+number of cache hit: 17100000, pos_hit = 17100000, neg_hit = 0
+number of cache hit: 17200000, pos_hit = 17200000, neg_hit = 0
+number of cache hit: 17300000, pos_hit = 17300000, neg_hit = 0
+Removed entries: 1101408
+number of cache hit: 17400000, pos_hit = 17400000, neg_hit = 0
+Added cache entries: 2400000
+number of cache hit: 17500000, pos_hit = 17500000, neg_hit = 0
+number of cache hit: 17600000, pos_hit = 17600000, neg_hit = 0
+number of cache hit: 17700000, pos_hit = 17700000, neg_hit = 0
+number of cache hit: 17800000, pos_hit = 17800000, neg_hit = 0
+number of cache hit: 17900000, pos_hit = 17900000, neg_hit = 0
+number of cache hit: 18000000, pos_hit = 18000000, neg_hit = 0
+Removed entries: 1200223
+number of cache hit: 18100000, pos_hit = 18100000, neg_hit = 0
+Added cache entries: 2500000
+number of cache hit: 18200000, pos_hit = 18200000, neg_hit = 0
+number of cache hit: 18300000, pos_hit = 18300000, neg_hit = 0
+number of cache hit: 18400000, pos_hit = 18400000, neg_hit = 0
+Removed entries: 1300028
+number of cache hit: 18500000, pos_hit = 18500000, neg_hit = 0
+number of cache hit: 18600000, pos_hit = 18600000, neg_hit = 0
+Added cache entries: 2600000
+number of cache hit: 18700000, pos_hit = 18700000, neg_hit = 0
+number of cache hit: 18800000, pos_hit = 18800000, neg_hit = 0
+number of cache hit: 18900000, pos_hit = 18900000, neg_hit = 0
+Removed entries: 1406266
+number of cache hit: 19000000, pos_hit = 19000000, neg_hit = 0
+Added cache entries: 2700000
+number of cache hit: 19100000, pos_hit = 19100000, neg_hit = 0
+number of cache hit: 19200000, pos_hit = 19200000, neg_hit = 0
+Removed entries: 1500848
+number of cache hit: 19300000, pos_hit = 19300000, neg_hit = 0
+number of cache hit: 19400000, pos_hit = 19400000, neg_hit = 0
+number of cache hit: 19500000, pos_hit = 19500000, neg_hit = 0
+Added cache entries: 2800000
+number of cache hit: 19600000, pos_hit = 19600000, neg_hit = 0
+number of cache hit: 19700000, pos_hit = 19700000, neg_hit = 0
+number of cache hit: 19800000, pos_hit = 19800000, neg_hit = 0
+number of cache hit: 19900000, pos_hit = 19900000, neg_hit = 0
+number of cache hit: 20000000, pos_hit = 20000000, neg_hit = 0
+Added cache entries: 2900000
+number of cache hit: 20100000, pos_hit = 20100000, neg_hit = 0
+Removed entries: 1600002
+number of cache hit: 20200000, pos_hit = 20200000, neg_hit = 0
+number of cache hit: 20300000, pos_hit = 20300000, neg_hit = 0
+number of cache hit: 20400000, pos_hit = 20400000, neg_hit = 0
+number of cache hit: 20500000, pos_hit = 20500000, neg_hit = 0
+Added cache entries: 3000000
+number of cache hit: 20600000, pos_hit = 20600000, neg_hit = 0
+number of cache hit: 20700000, pos_hit = 20700000, neg_hit = 0
+number of cache hit: 20800000, pos_hit = 20800000, neg_hit = 0
+Removed entries: 1708465
+number of cache hit: 20900000, pos_hit = 20900000, neg_hit = 0
+number of cache hit: 21000000, pos_hit = 21000000, neg_hit = 0
+number of cache hit: 21100000, pos_hit = 21100000, neg_hit = 0
+number of cache hit: 21200000, pos_hit = 21200000, neg_hit = 0
+number of cache hit: 21300000, pos_hit = 21300000, neg_hit = 0
+Added cache entries: 3100000
+number of cache hit: 21400000, pos_hit = 21400000, neg_hit = 0
+number of cache hit: 21500000, pos_hit = 21500000, neg_hit = 0
+number of cache hit: 21600000, pos_hit = 21600000, neg_hit = 0
+Removed entries: 1800816
+number of cache hit: 21700000, pos_hit = 21700000, neg_hit = 0
+number of cache hit: 21800000, pos_hit = 21800000, neg_hit = 0
+number of cache hit: 21900000, pos_hit = 21900000, neg_hit = 0
+number of cache hit: 22000000, pos_hit = 22000000, neg_hit = 0
+number of cache hit: 22100000, pos_hit = 22100000, neg_hit = 0
+Added cache entries: 3200000
+number of cache hit: 22200000, pos_hit = 22200000, neg_hit = 0
+number of cache hit: 22300000, pos_hit = 22300000, neg_hit = 0
+Removed entries: 1900011
+number of cache hit: 22400000, pos_hit = 22400000, neg_hit = 0
+number of cache hit: 22500000, pos_hit = 22500000, neg_hit = 0
+number of cache hit: 22600000, pos_hit = 22600000, neg_hit = 0
+number of cache hit: 22700000, pos_hit = 22700000, neg_hit = 0
+number of cache hit: 22800000, pos_hit = 22800000, neg_hit = 0
+Added cache entries: 3300000
+number of cache hit: 22900000, pos_hit = 22900000, neg_hit = 0
+number of cache hit: 23000000, pos_hit = 23000000, neg_hit = 0
+Removed entries: 2000000
+number of cache hit: 23100000, pos_hit = 23100000, neg_hit = 0
+number of cache hit: 23200000, pos_hit = 23200000, neg_hit = 0
+number of cache hit: 23300000, pos_hit = 23300000, neg_hit = 0
+number of cache hit: 23400000, pos_hit = 23400000, neg_hit = 0
+number of cache hit: 23500000, pos_hit = 23500000, neg_hit = 0
+Added cache entries: 3400000
+number of cache hit: 23600000, pos_hit = 23600000, neg_hit = 0
+number of cache hit: 23700000, pos_hit = 23700000, neg_hit = 0
+number of cache hit: 23800000, pos_hit = 23800000, neg_hit = 0
+Removed entries: 2100133
+number of cache hit: 23900000, pos_hit = 23900000, neg_hit = 0
+number of cache hit: 24000000, pos_hit = 24000000, neg_hit = 0
+Added conflict clauses: 2000
+number of cache hit: 24100000, pos_hit = 24100000, neg_hit = 0
+number of cache hit: 24200000, pos_hit = 24200000, neg_hit = 0
+number of cache hit: 24300000, pos_hit = 24300000, neg_hit = 0
+Added cache entries: 3500000
+Removed entries: 2202794
+number of cache hit: 24400000, pos_hit = 24400000, neg_hit = 0
+number of cache hit: 24500000, pos_hit = 24500000, neg_hit = 0
+number of cache hit: 24600000, pos_hit = 24600000, neg_hit = 0
+number of cache hit: 24700000, pos_hit = 24700000, neg_hit = 0
+number of cache hit: 24800000, pos_hit = 24800000, neg_hit = 0
+number of cache hit: 24900000, pos_hit = 24900000, neg_hit = 0
+number of cache hit: 25000000, pos_hit = 25000000, neg_hit = 0
+number of cache hit: 25100000, pos_hit = 25100000, neg_hit = 0
+Added cache entries: 3600000
+number of cache hit: 25200000, pos_hit = 25200000, neg_hit = 0
+number of cache hit: 25300000, pos_hit = 25300000, neg_hit = 0
+Removed entries: 2300009
+number of cache hit: 25400000, pos_hit = 25400000, neg_hit = 0
+number of cache hit: 25500000, pos_hit = 25500000, neg_hit = 0
+number of cache hit: 25600000, pos_hit = 25600000, neg_hit = 0
+number of cache hit: 25700000, pos_hit = 25700000, neg_hit = 0
+number of cache hit: 25800000, pos_hit = 25800000, neg_hit = 0
+number of cache hit: 25900000, pos_hit = 25900000, neg_hit = 0
+Added cache entries: 3700000
+number of cache hit: 26000000, pos_hit = 26000000, neg_hit = 0
+number of cache hit: 26100000, pos_hit = 26100000, neg_hit = 0
+number of cache hit: 26200000, pos_hit = 26200000, neg_hit = 0
+number of cache hit: 26300000, pos_hit = 26300000, neg_hit = 0
+Removed entries: 2400005
+number of cache hit: 26400000, pos_hit = 26400000, neg_hit = 0
+number of cache hit: 26500000, pos_hit = 26500000, neg_hit = 0
+number of cache hit: 26600000, pos_hit = 26600000, neg_hit = 0
+number of cache hit: 26700000, pos_hit = 26700000, neg_hit = 0
+number of cache hit: 26800000, pos_hit = 26800000, neg_hit = 0
+Added cache entries: 3800000
+number of cache hit: 26900000, pos_hit = 26900000, neg_hit = 0
+Removed entries: 2503371
+number of cache hit: 27000000, pos_hit = 27000000, neg_hit = 0
+number of cache hit: 27100000, pos_hit = 27100000, neg_hit = 0
+Removed entries: 2600131
+number of cache hit: 27200000, pos_hit = 27200000, neg_hit = 0
+number of cache hit: 27300000, pos_hit = 27300000, neg_hit = 0
+number of cache hit: 27400000, pos_hit = 27400000, neg_hit = 0
+number of cache hit: 27500000, pos_hit = 27500000, neg_hit = 0
+Added cache entries: 3900000
+number of cache hit: 27600000, pos_hit = 27600000, neg_hit = 0
+number of cache hit: 27700000, pos_hit = 27700000, neg_hit = 0
+number of cache hit: 27800000, pos_hit = 27800000, neg_hit = 0
+number of cache hit: 27900000, pos_hit = 27900000, neg_hit = 0
+number of cache hit: 28000000, pos_hit = 28000000, neg_hit = 0
+number of cache hit: 28100000, pos_hit = 28100000, neg_hit = 0
+Removed entries: 2712338
+Added cache entries: 4000000
+number of cache hit: 28200000, pos_hit = 28200000, neg_hit = 0
+number of cache hit: 28300000, pos_hit = 28300000, neg_hit = 0
+number of cache hit: 28400000, pos_hit = 28400000, neg_hit = 0
+number of cache hit: 28500000, pos_hit = 28500000, neg_hit = 0
+number of cache hit: 28600000, pos_hit = 28600000, neg_hit = 0
+number of cache hit: 28700000, pos_hit = 28700000, neg_hit = 0
+Removed entries: 2800070
+number of cache hit: 28800000, pos_hit = 28800000, neg_hit = 0
+number of cache hit: 28900000, pos_hit = 28900000, neg_hit = 0
+Added cache entries: 4100000
+number of cache hit: 29000000, pos_hit = 29000000, neg_hit = 0
+number of cache hit: 29100000, pos_hit = 29100000, neg_hit = 0
+number of cache hit: 29200000, pos_hit = 29200000, neg_hit = 0
+number of cache hit: 29300000, pos_hit = 29300000, neg_hit = 0
+number of cache hit: 29400000, pos_hit = 29400000, neg_hit = 0
+number of cache hit: 29500000, pos_hit = 29500000, neg_hit = 0
+number of cache hit: 29600000, pos_hit = 29600000, neg_hit = 0
+number of cache hit: 29700000, pos_hit = 29700000, neg_hit = 0
+Added cache entries: 4200000
+number of cache hit: 29800000, pos_hit = 29800000, neg_hit = 0
+Removed entries: 2900012
+number of cache hit: 29900000, pos_hit = 29900000, neg_hit = 0
+number of cache hit: 30000000, pos_hit = 30000000, neg_hit = 0
+number of cache hit: 30100000, pos_hit = 30100000, neg_hit = 0
+number of cache hit: 30200000, pos_hit = 30200000, neg_hit = 0
+number of cache hit: 30300000, pos_hit = 30300000, neg_hit = 0
+number of cache hit: 30400000, pos_hit = 30400000, neg_hit = 0
+number of cache hit: 30500000, pos_hit = 30500000, neg_hit = 0
+Added cache entries: 4300000
+number of cache hit: 30600000, pos_hit = 30600000, neg_hit = 0
+number of cache hit: 30700000, pos_hit = 30700000, neg_hit = 0
+Removed entries: 3000016
+number of cache hit: 30800000, pos_hit = 30800000, neg_hit = 0
+number of cache hit: 30900000, pos_hit = 30900000, neg_hit = 0
+number of cache hit: 31000000, pos_hit = 31000000, neg_hit = 0
+number of cache hit: 31100000, pos_hit = 31100000, neg_hit = 0
+number of cache hit: 31200000, pos_hit = 31200000, neg_hit = 0
+number of cache hit: 31300000, pos_hit = 31300000, neg_hit = 0
+Added cache entries: 4400000
+number of cache hit: 31400000, pos_hit = 31400000, neg_hit = 0
+number of cache hit: 31500000, pos_hit = 31500000, neg_hit = 0
+Removed entries: 3100406
+number of cache hit: 31600000, pos_hit = 31600000, neg_hit = 0
+number of cache hit: 31700000, pos_hit = 31700000, neg_hit = 0
+number of cache hit: 31800000, pos_hit = 31800000, neg_hit = 0
+number of cache hit: 31900000, pos_hit = 31900000, neg_hit = 0
+number of cache hit: 32000000, pos_hit = 32000000, neg_hit = 0
+Added cache entries: 4500000
+Removed entries: 3201245
+number of cache hit: 32100000, pos_hit = 32100000, neg_hit = 0
+number of cache hit: 32200000, pos_hit = 32200000, neg_hit = 0
+number of cache hit: 32300000, pos_hit = 32300000, neg_hit = 0
+number of cache hit: 32400000, pos_hit = 32400000, neg_hit = 0
+Removed entries: 3303100
+number of cache hit: 32500000, pos_hit = 32500000, neg_hit = 0
+Added cache entries: 4600000
+number of cache hit: 32600000, pos_hit = 32600000, neg_hit = 0
+number of cache hit: 32700000, pos_hit = 32700000, neg_hit = 0
+number of cache hit: 32800000, pos_hit = 32800000, neg_hit = 0
+number of cache hit: 32900000, pos_hit = 32900000, neg_hit = 0
+Added cache entries: 4700000
+number of cache hit: 33000000, pos_hit = 33000000, neg_hit = 0
+Removed entries: 3413838
+number of cache hit: 33100000, pos_hit = 33100000, neg_hit = 0
+number of cache hit: 33200000, pos_hit = 33200000, neg_hit = 0
+Removed entries: 3523062
+number of cache hit: 33300000, pos_hit = 33300000, neg_hit = 0
+number of cache hit: 33400000, pos_hit = 33400000, neg_hit = 0
+Added cache entries: 4800000
+number of cache hit: 33500000, pos_hit = 33500000, neg_hit = 0
+number of cache hit: 33600000, pos_hit = 33600000, neg_hit = 0
+number of cache hit: 33700000, pos_hit = 33700000, neg_hit = 0
+Removed entries: 3604702
+number of cache hit: 33800000, pos_hit = 33800000, neg_hit = 0
+number of cache hit: 33900000, pos_hit = 33900000, neg_hit = 0
+Added cache entries: 4900000
+number of cache hit: 34000000, pos_hit = 34000000, neg_hit = 0
+number of cache hit: 34100000, pos_hit = 34100000, neg_hit = 0
+number of cache hit: 34200000, pos_hit = 34200000, neg_hit = 0
+number of cache hit: 34300000, pos_hit = 34300000, neg_hit = 0
+number of cache hit: 34400000, pos_hit = 34400000, neg_hit = 0
+number of cache hit: 34500000, pos_hit = 34500000, neg_hit = 0
+Added conflict clauses: 3000
+number of cache hit: 34600000, pos_hit = 34600000, neg_hit = 0
+Added cache entries: 5000000
+Removed entries: 3707571
+number of cache hit: 34700000, pos_hit = 34700000, neg_hit = 0
+number of cache hit: 34800000, pos_hit = 34800000, neg_hit = 0
+Removed entries: 3855539
+number of cache hit: 34900000, pos_hit = 34900000, neg_hit = 0
+number of cache hit: 35000000, pos_hit = 35000000, neg_hit = 0
+number of cache hit: 35100000, pos_hit = 35100000, neg_hit = 0
+Removed entries: 3903448
+number of cache hit: 35200000, pos_hit = 35200000, neg_hit = 0
+number of cache hit: 35300000, pos_hit = 35300000, neg_hit = 0
+Added cache entries: 5100000
+number of cache hit: 35400000, pos_hit = 35400000, neg_hit = 0
+number of cache hit: 35500000, pos_hit = 35500000, neg_hit = 0
+number of cache hit: 35600000, pos_hit = 35600000, neg_hit = 0
+number of cache hit: 35700000, pos_hit = 35700000, neg_hit = 0
+number of cache hit: 35800000, pos_hit = 35800000, neg_hit = 0
+number of cache hit: 35900000, pos_hit = 35900000, neg_hit = 0
+Added cache entries: 5200000
+Removed entries: 4016872
+number of cache hit: 36000000, pos_hit = 36000000, neg_hit = 0
+number of cache hit: 36100000, pos_hit = 36100000, neg_hit = 0
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_195.cnf.cachet.cnf"
+	User time (seconds): 3573.06
+	System time (seconds): 18.34
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 365996
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3832217
+	Voluntary context switches: 11
+	Involuntary context switches: 11761
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,253 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_157.cnf.cachet.cnf ......
+Number of unit clauses			10
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added cache entries: 100000
+Added conflict clauses: 9000
+Added conflict clauses: 10000
+Added conflict clauses: 11000
+Added cache entries: 200000
+Added conflict clauses: 12000
+Added conflict clauses: 13000
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+Added cache entries: 300000
+Added conflict clauses: 16000
+Added conflict clauses: 17000
+Added conflict clauses: 18000
+Added conflict clauses: 19000
+Added cache entries: 400000
+Added conflict clauses: 20000
+Added conflict clauses: 21000
+Added cache entries: 500000
+Added conflict clauses: 22000
+Added conflict clauses: 23000
+Added cache entries: 600000
+Added conflict clauses: 24000
+Added conflict clauses: 25000
+Added cache entries: 700000
+Added conflict clauses: 26000
+number of cache hit: 100000, pos_hit = 100000, neg_hit = 0
+Added conflict clauses: 27000
+Added conflict clauses: 28000
+Added cache entries: 800000
+Added conflict clauses: 29000
+Added conflict clauses: 30000
+Added cache entries: 900000
+Added conflict clauses: 31000
+Added conflict clauses: 32000
+Added cache entries: 1000000
+Added conflict clauses: 33000
+Added conflict clauses: 34000
+number of cache hit: 200000, pos_hit = 200000, neg_hit = 0
+Added cache entries: 1100000
+Added conflict clauses: 35000
+Added conflict clauses: 36000
+Added cache entries: 1200000
+Added conflict clauses: 37000
+Added conflict clauses: 38000
+Added cache entries: 1300000
+Added conflict clauses: 39000
+Removed entries: 105001
+Added conflict clauses: 40000
+Added cache entries: 1400000
+number of cache hit: 300000, pos_hit = 300000, neg_hit = 0
+Added conflict clauses: 41000
+Added conflict clauses: 42000
+Added cache entries: 1500000
+Removed entries: 206421
+Added conflict clauses: 43000
+Added cache entries: 1600000
+Added conflict clauses: 44000
+Removed entries: 300012
+Added conflict clauses: 45000
+number of cache hit: 400000, pos_hit = 400000, neg_hit = 0
+Added cache entries: 1700000
+Added conflict clauses: 46000
+Removed entries: 412095
+Added conflict clauses: 47000
+Added cache entries: 1800000
+Added conflict clauses: 48000
+Removed entries: 500822
+Added cache entries: 1900000
+Added conflict clauses: 49000
+number of cache hit: 500000, pos_hit = 500000, neg_hit = 0
+Removed entries: 600007
+Added conflict clauses: 50000
+Added cache entries: 2000000
+Added conflict clauses: 51000
+Removed entries: 700016
+Added cache entries: 2100000
+Added conflict clauses: 52000
+Added conflict clauses: 53000
+Removed entries: 800010
+number of cache hit: 600000, pos_hit = 600000, neg_hit = 0
+Added cache entries: 2200000
+Added conflict clauses: 54000
+Removed entries: 901381
+Added cache entries: 2300000
+Added conflict clauses: 55000
+Removed entries: 1000002
+Added conflict clauses: 56000
+Added cache entries: 2400000
+Added conflict clauses: 57000
+Removed entries: 1100010
+Added conflict clauses: 58000
+Added cache entries: 2500000
+number of cache hit: 700000, pos_hit = 700000, neg_hit = 0
+Added conflict clauses: 59000
+Removed entries: 1208852
+Added cache entries: 2600000
+Added conflict clauses: 60000
+Removed entries: 1300087
+Added cache entries: 2700000
+Added conflict clauses: 61000
+Added conflict clauses: 62000
+Added conflict clauses: 63000
+Removed entries: 1406141
+Added cache entries: 2800000
+number of cache hit: 800000, pos_hit = 800000, neg_hit = 0
+Added conflict clauses: 64000
+Added conflict clauses: 65000
+Removed entries: 1500222
+Added cache entries: 2900000
+Added conflict clauses: 66000
+Removed entries: 1600001
+Added conflict clauses: 67000
+Added cache entries: 3000000
+number of cache hit: 900000, pos_hit = 900000, neg_hit = 0
+Added conflict clauses: 68000
+Removed entries: 1700937
+Added cache entries: 3100000
+Added conflict clauses: 69000
+Removed entries: 1801645
+Added cache entries: 3200000
+Added conflict clauses: 70000
+Removed entries: 1902878
+number of cache hit: 1000000, pos_hit = 1000000, neg_hit = 0
+Added cache entries: 3300000
+Added conflict clauses: 71000
+Removed entries: 2025330
+Added conflict clauses: 72000
+Added cache entries: 3400000
+Added conflict clauses: 73000
+Removed entries: 2103385
+Added conflict clauses: 74000
+Added cache entries: 3500000
+number of cache hit: 1100000, pos_hit = 1100000, neg_hit = 0
+Added conflict clauses: 75000
+Removed entries: 2202871
+Added cache entries: 3600000
+Added conflict clauses: 76000
+Removed entries: 2302693
+Added cache entries: 3700000
+number of cache hit: 1200000, pos_hit = 1200000, neg_hit = 0
+Added conflict clauses: 77000
+Removed entries: 2400027
+Added cache entries: 3800000
+Added conflict clauses: 78000
+Added cache entries: 3900000
+Added conflict clauses: 79000
+Removed entries: 2500144
+Added conflict clauses: 80000
+number of cache hit: 1300000, pos_hit = 1300000, neg_hit = 0
+Added cache entries: 4000000
+Removed entries: 2600018
+Added conflict clauses: 81000
+Added cache entries: 4100000
+Removed entries: 2707118
+Added conflict clauses: 82000
+number of cache hit: 1400000, pos_hit = 1400000, neg_hit = 0
+Added cache entries: 4200000
+Removed entries: 2800444
+Added conflict clauses: 83000
+Removed entries: 2952994
+Added cache entries: 4300000
+Added conflict clauses: 84000
+Removed entries: 3000000
+Added cache entries: 4400000
+Added conflict clauses: 85000
+Removed entries: 3100913
+number of cache hit: 1500000, pos_hit = 1500000, neg_hit = 0
+Added cache entries: 4500000
+Added conflict clauses: 86000
+Removed entries: 3210089
+Added cache entries: 4600000
+Added conflict clauses: 87000
+Removed entries: 3301341
+number of cache hit: 1600000, pos_hit = 1600000, neg_hit = 0
+Added cache entries: 4700000
+Added conflict clauses: 88000
+Removed entries: 3402154
+Added cache entries: 4800000
+Removed entries: 3500022
+number of cache hit: 1700000, pos_hit = 1700000, neg_hit = 0
+Added cache entries: 4900000
+Added conflict clauses: 89000
+Removed entries: 3600128
+Added cache entries: 5000000
+Added conflict clauses: 90000
+Removed entries: 3704375
+number of cache hit: 1800000, pos_hit = 1800000, neg_hit = 0
+Added conflict clauses: 91000
+Added cache entries: 5100000
+Removed entries: 3800003
+Added cache entries: 5200000
+Added conflict clauses: 92000
+Removed entries: 3900112
+Added cache entries: 5300000
+number of cache hit: 1900000, pos_hit = 1900000, neg_hit = 0
+Added conflict clauses: 93000
+Removed entries: 4000012
+Added cache entries: 5400000
+Added conflict clauses: 94000
+Removed entries: 4100322
+Added cache entries: 5500000
+Added conflict clauses: 95000
+number of cache hit: 2000000, pos_hit = 2000000, neg_hit = 0
+Removed entries: 4200007
+Added conflict clauses: 96000
+Added cache entries: 5600000
+Removed entries: 4300064
+Added cache entries: 5700000
+number of cache hit: 2100000, pos_hit = 2100000, neg_hit = 0
+Removed entries: 4400015
+Added conflict clauses: 97000
+Added cache entries: 5800000
+Removed entries: 4500189
+number of cache hit: 2200000, pos_hit = 2200000, neg_hit = 0
+Added cache entries: 5900000
+Added conflict clauses: 98000
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_157.cnf.cachet.cnf"
+	User time (seconds): 3575.00
+	System time (seconds): 16.44
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 322484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3415500
+	Voluntary context switches: 10
+	Involuntary context switches: 6471
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -15,6 +15,7 @@ for filename in os.listdir(DATA_DIR):
         continue
     cachet = []
     minic2d = []
+    weights_file = []
     weights = {}
     with open(DATA_DIR + "/" + filename) as instance:
         for line in instance:
@@ -38,9 +39,15 @@ for filename in os.listdir(DATA_DIR):
             weights[-variable] = new_negative_weight
             cachet.append("w {} {}\n".format(variable, new_positive_weight))
         minic2d_weights += [str(weights[variable]), str(weights[-variable])]
+        weights_file += [
+            "{} {}\n".format(variable, weights[variable]),
+            "-{} {}\n".format(variable, weights[-variable]),
+        ]
     minic2d.append("c weights " + " ".join(minic2d_weights) + "\n")
 
     with open(DATA_DIR + "/" + filename + ".cachet.cnf", "w") as output:
         output.writelines(cachet)
     with open(DATA_DIR + "/" + filename + ".minic2d.cnf", "w") as output:
         output.writelines(minic2d)
+    with open(DATA_DIR + "/" + filename + ".minic2d.cnf.weights", "w") as output:
+        output.writelines(weights_file)

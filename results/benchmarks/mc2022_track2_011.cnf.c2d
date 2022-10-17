@@ -1,0 +1,50 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 200 vars 523 clauses (0 eclauses)
+23 unit clauses, 400 binary clauses, max clause size: 5
+Generating dtree...(hgr 523->523): *.....*.......*..........
+Sum Cluster=47, cutset=32, context=44, separator=34 done.
+Max Cluster=45, Cutset=31, Context=42, Separator=33, Height=14
+Compiling...2.5.10.13.14.16. [64 MBs] 17.18.20.22.24.26.27. [64 MBs] 30.31.33.35.37.38.39.40. [64 MBs] 41.42.43.44.46.48.49.50. [64 MBs] 52.53.55.57.59.60. [64 MBs] 62.64.65.67.68. [64 MBs] 69.70.72.73. [64 MBs] 74.76.77.79.80.81.82. [64 MBs] 83.84.85.86.87.88.89. [64 MBs] 90.91.92.93. [64 MBs] 94.95.96.97.98. [64 MBs] 99.done.
+Cache memory: 132.9 MB / Cache count: 2631401
+NNF memory: 718.2 MB
+Learned clauses: 0
+Compile Time: 183.990s / Pre-Processing: 0.810s / Post-Processing: 0.370s
+
+1.0% of nodes, and 1.0% of edges are dead.
+Saving 29689606 nodes and 69503229 edges...done.
+
+Total Time: 198.230s
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: 'yet...'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_011.cnf.minic2d.cnf"
+	User time (seconds): 243.22
+	System time (seconds): 51.49
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:55.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28226312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7625801
+	Voluntary context switches: 430
+	Involuntary context switches: 459
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

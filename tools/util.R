@@ -1,9 +1,13 @@
+library(dplyr)
+library(ggplot2)
+
 TIMEOUT <- 500
 IQR1 <- 0.25
 IQR2 <- 0.75
 
 read_data <- function(filename) {
   data <- read.csv(filename)
+  data$time[is.na(data$time) | data$time >= TIMEOUT] <- TIMEOUT
   # What proportion of instances run out of memory?
   print("ran out of memory")
   print("overall")
@@ -38,15 +42,16 @@ read_data <- function(filename) {
 }
 
 plot_with_sd <- function(df, x_value, x_label, per_algorithm = TRUE) {
-  df <- df %>% summarise(mean = median(time),
-                         lb = unname(quantile(time, IQR1)),
-                         ub = unname(quantile(time, IQR2)))
+  df <- df %>% group_by_at(c("algorithm", x_value)) %>%
+    summarise(median = median(time), lb = unname(quantile(time, IQR1)),
+              ub = unname(quantile(time, IQR2)))
+  print(df)
   if (per_algorithm) {
-    p <- ggplot(df, aes(.data[[x_value]], mean, group = algorithm,
+    p <- ggplot(df, aes(.data[[x_value]], median, group = algorithm,
                         colour = algorithm, fill = algorithm,
                         linetype = algorithm, shape = algorithm))
   } else {
-    p <- ggplot(df, aes(.data[[x_value]], mean))
+    p <- ggplot(df, aes(.data[[x_value]], median))
   }
     p + geom_line() +
     geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +

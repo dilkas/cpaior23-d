@@ -1,0 +1,1254 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_151.cnf.cachet.cnf ......
+Number of unit clauses			41
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added conflict clauses: 9000
+number of cache hit: 100000, pos_hit = 99992, neg_hit = 8
+Added conflict clauses: 10000
+Added conflict clauses: 11000
+Added conflict clauses: 12000
+Added conflict clauses: 13000
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+Added conflict clauses: 16000
+Added conflict clauses: 17000
+Added conflict clauses: 18000
+number of cache hit: 200000, pos_hit = 199985, neg_hit = 15
+Added cache entries: 100000
+Added conflict clauses: 19000
+Added conflict clauses: 20000
+Added conflict clauses: 21000
+Added conflict clauses: 22000
+Added conflict clauses: 23000
+Added conflict clauses: 24000
+Added conflict clauses: 25000
+Added conflict clauses: 26000
+Added conflict clauses: 27000
+number of cache hit: 300000, pos_hit = 299982, neg_hit = 18
+Added conflict clauses: 28000
+Added conflict clauses: 29000
+Added conflict clauses: 30000
+Added conflict clauses: 31000
+Added conflict clauses: 32000
+Added conflict clauses: 33000
+Added conflict clauses: 34000
+number of cache hit: 400000, pos_hit = 399977, neg_hit = 23
+Added conflict clauses: 35000
+Added conflict clauses: 36000
+Added cache entries: 200000
+Added conflict clauses: 37000
+Added conflict clauses: 38000
+Added conflict clauses: 39000
+Added conflict clauses: 40000
+number of cache hit: 500000, pos_hit = 499964, neg_hit = 36
+Added conflict clauses: 41000
+Added conflict clauses: 42000
+Added conflict clauses: 43000
+Added conflict clauses: 44000
+number of cache hit: 600000, pos_hit = 599955, neg_hit = 45
+Added conflict clauses: 45000
+Added conflict clauses: 46000
+Added conflict clauses: 47000
+Added conflict clauses: 48000
+number of cache hit: 700000, pos_hit = 699953, neg_hit = 47
+Added cache entries: 300000
+Added conflict clauses: 49000
+Added conflict clauses: 50000
+Added conflict clauses: 51000
+Added conflict clauses: 52000
+number of cache hit: 800000, pos_hit = 799950, neg_hit = 50
+Added conflict clauses: 53000
+Added conflict clauses: 54000
+Added conflict clauses: 55000
+number of cache hit: 900000, pos_hit = 899947, neg_hit = 53
+Added conflict clauses: 56000
+Added conflict clauses: 57000
+Added conflict clauses: 58000
+Added cache entries: 400000
+Added conflict clauses: 59000
+Added conflict clauses: 60000
+number of cache hit: 1000000, pos_hit = 999945, neg_hit = 55
+Added conflict clauses: 61000
+Added conflict clauses: 62000
+Added conflict clauses: 63000
+Added conflict clauses: 64000
+Added conflict clauses: 65000
+Added conflict clauses: 66000
+Added conflict clauses: 67000
+number of cache hit: 1100000, pos_hit = 1099939, neg_hit = 61
+Added conflict clauses: 68000
+Added conflict clauses: 69000
+Added conflict clauses: 70000
+Added conflict clauses: 71000
+Added conflict clauses: 72000
+number of cache hit: 1200000, pos_hit = 1199898, neg_hit = 102
+Added cache entries: 500000
+Added conflict clauses: 73000
+Added conflict clauses: 74000
+Added conflict clauses: 75000
+number of cache hit: 1300000, pos_hit = 1299895, neg_hit = 105
+Added conflict clauses: 76000
+Added conflict clauses: 77000
+Added conflict clauses: 78000
+Added conflict clauses: 79000
+number of cache hit: 1400000, pos_hit = 1399892, neg_hit = 108
+Added conflict clauses: 80000
+Added conflict clauses: 81000
+Added conflict clauses: 82000
+Added cache entries: 600000
+Added conflict clauses: 83000
+number of cache hit: 1500000, pos_hit = 1499892, neg_hit = 108
+Added conflict clauses: 84000
+Added conflict clauses: 85000
+Added conflict clauses: 86000
+Added conflict clauses: 87000
+number of cache hit: 1600000, pos_hit = 1599884, neg_hit = 116
+Added conflict clauses: 88000
+Added conflict clauses: 89000
+Added conflict clauses: 90000
+Added conflict clauses: 91000
+number of cache hit: 1700000, pos_hit = 1699880, neg_hit = 120
+Added conflict clauses: 92000
+Added conflict clauses: 93000
+Added cache entries: 700000
+Added conflict clauses: 94000
+Added conflict clauses: 95000
+number of cache hit: 1800000, pos_hit = 1799878, neg_hit = 122
+Added conflict clauses: 96000
+Added conflict clauses: 97000
+Added conflict clauses: 98000
+number of cache hit: 1900000, pos_hit = 1899876, neg_hit = 124
+Added conflict clauses: 99000
+Added conflict clauses: 100000
+Added conflict clauses: 101000
+Added conflict clauses: 102000
+number of cache hit: 2000000, pos_hit = 1999874, neg_hit = 126
+Added cache entries: 800000
+Added conflict clauses: 103000
+Added conflict clauses: 104000
+Added conflict clauses: 105000
+number of cache hit: 2100000, pos_hit = 2099872, neg_hit = 128
+Added conflict clauses: 106000
+Added conflict clauses: 107000
+Added conflict clauses: 108000
+number of cache hit: 2200000, pos_hit = 2199872, neg_hit = 128
+Added conflict clauses: 109000
+Added conflict clauses: 110000
+Added conflict clauses: 111000
+Added conflict clauses: 112000
+Added conflict clauses: 113000
+Added conflict clauses: 114000
+Added conflict clauses: 115000
+Added conflict clauses: 116000
+Added cache entries: 900000
+Added conflict clauses: 117000
+number of cache hit: 2300000, pos_hit = 2299864, neg_hit = 136
+Added conflict clauses: 118000
+Added conflict clauses: 119000
+Added conflict clauses: 120000
+Added conflict clauses: 121000
+number of cache hit: 2400000, pos_hit = 2399862, neg_hit = 138
+Added conflict clauses: 122000
+Added conflict clauses: 123000
+number of cache hit: 2500000, pos_hit = 2499862, neg_hit = 138
+Added cache entries: 1000000
+Added conflict clauses: 124000
+Added conflict clauses: 125000
+Added conflict clauses: 126000
+number of cache hit: 2600000, pos_hit = 2599861, neg_hit = 139
+Added conflict clauses: 127000
+Added conflict clauses: 128000
+Added conflict clauses: 129000
+number of cache hit: 2700000, pos_hit = 2699860, neg_hit = 140
+Added conflict clauses: 130000
+Added cache entries: 1100000
+Added conflict clauses: 131000
+Added conflict clauses: 132000
+Added conflict clauses: 133000
+number of cache hit: 2800000, pos_hit = 2799858, neg_hit = 142
+Added conflict clauses: 134000
+Added conflict clauses: 135000
+number of cache hit: 2900000, pos_hit = 2899858, neg_hit = 142
+Added conflict clauses: 136000
+Added conflict clauses: 137000
+Added cache entries: 1200000
+Added conflict clauses: 138000
+Added conflict clauses: 139000
+number of cache hit: 3000000, pos_hit = 2999856, neg_hit = 144
+Added conflict clauses: 140000
+Added conflict clauses: 141000
+Added conflict clauses: 142000
+Added conflict clauses: 143000
+Added conflict clauses: 144000
+Added conflict clauses: 145000
+Added conflict clauses: 146000
+Added conflict clauses: 147000
+Added conflict clauses: 148000
+Added conflict clauses: 149000
+Added conflict clauses: 150000
+Added conflict clauses: 151000
+Added conflict clauses: 152000
+Added conflict clauses: 153000
+Added conflict clauses: 154000
+Added conflict clauses: 155000
+Added conflict clauses: 156000
+Added conflict clauses: 157000
+Added conflict clauses: 158000
+Added conflict clauses: 159000
+Added conflict clauses: 160000
+Added conflict clauses: 161000
+Added conflict clauses: 162000
+Added conflict clauses: 163000
+Added conflict clauses: 164000
+Added conflict clauses: 165000
+Added conflict clauses: 166000
+Added conflict clauses: 167000
+Added conflict clauses: 168000
+Added conflict clauses: 169000
+Added conflict clauses: 170000
+Added conflict clauses: 171000
+Added conflict clauses: 172000
+Added conflict clauses: 173000
+Added conflict clauses: 174000
+Added conflict clauses: 175000
+Added conflict clauses: 176000
+Added conflict clauses: 177000
+Added conflict clauses: 178000
+Added cache entries: 1300000
+Added conflict clauses: 179000
+number of cache hit: 3100000, pos_hit = 3099579, neg_hit = 421
+Added conflict clauses: 180000
+Removed entries: 100285
+Added conflict clauses: 181000
+Added conflict clauses: 182000
+number of cache hit: 3200000, pos_hit = 3199579, neg_hit = 421
+Added conflict clauses: 183000
+Added conflict clauses: 184000
+Added conflict clauses: 185000
+number of cache hit: 3300000, pos_hit = 3299568, neg_hit = 432
+Added conflict clauses: 186000
+Added cache entries: 1400000
+Added conflict clauses: 187000
+Added conflict clauses: 188000
+Added conflict clauses: 189000
+number of cache hit: 3400000, pos_hit = 3399565, neg_hit = 435
+Removed entries: 200013
+Added conflict clauses: 190000
+Added conflict clauses: 191000
+Added conflict clauses: 192000
+number of cache hit: 3500000, pos_hit = 3499564, neg_hit = 436
+Added conflict clauses: 193000
+Added conflict clauses: 194000
+Added conflict clauses: 195000
+Added conflict clauses: 196000
+Added conflict clauses: 197000
+Added cache entries: 1500000
+Added conflict clauses: 198000
+Added conflict clauses: 199000
+Added conflict clauses: 200000
+Added conflict clauses: 201000
+number of cache hit: 3600000, pos_hit = 3599550, neg_hit = 450
+Added conflict clauses: 202000
+Added conflict clauses: 203000
+Added conflict clauses: 204000
+Added conflict clauses: 205000
+Added conflict clauses: 206000
+number of cache hit: 3700000, pos_hit = 3699549, neg_hit = 451
+Added conflict clauses: 207000
+Removed entries: 314113
+Added conflict clauses: 208000
+Added conflict clauses: 209000
+Added cache entries: 1600000
+Added conflict clauses: 210000
+Added conflict clauses: 211000
+Added conflict clauses: 212000
+number of cache hit: 3800000, pos_hit = 3799545, neg_hit = 455
+Added conflict clauses: 213000
+Added conflict clauses: 214000
+Removed entries: 419329
+Added conflict clauses: 215000
+Added conflict clauses: 216000
+Added conflict clauses: 217000
+number of cache hit: 3900000, pos_hit = 3899540, neg_hit = 460
+Added conflict clauses: 218000
+Added conflict clauses: 219000
+Added conflict clauses: 220000
+Added conflict clauses: 221000
+Added cache entries: 1700000
+Added conflict clauses: 222000
+Added conflict clauses: 223000
+number of cache hit: 4000000, pos_hit = 3999533, neg_hit = 467
+Added conflict clauses: 224000
+Added conflict clauses: 225000
+Added conflict clauses: 226000
+Removed entries: 500681
+Added conflict clauses: 227000
+Added conflict clauses: 228000
+Added conflict clauses: 229000
+number of cache hit: 4100000, pos_hit = 4099518, neg_hit = 482
+Added conflict clauses: 230000
+Added conflict clauses: 231000
+Added conflict clauses: 232000
+Added conflict clauses: 233000
+Added cache entries: 1800000
+number of cache hit: 4200000, pos_hit = 4199514, neg_hit = 486
+Added conflict clauses: 234000
+Removed entries: 603369
+Added conflict clauses: 235000
+Added conflict clauses: 236000
+Added conflict clauses: 237000
+number of cache hit: 4300000, pos_hit = 4299511, neg_hit = 489
+Added conflict clauses: 238000
+Added conflict clauses: 239000
+Added conflict clauses: 240000
+Added conflict clauses: 241000
+Added conflict clauses: 242000
+number of cache hit: 4400000, pos_hit = 4399506, neg_hit = 494
+Added conflict clauses: 243000
+Added conflict clauses: 244000
+Added conflict clauses: 245000
+Added conflict clauses: 246000
+Added conflict clauses: 247000
+Added cache entries: 1900000
+Added conflict clauses: 248000
+Added conflict clauses: 249000
+Removed entries: 700466
+Added conflict clauses: 250000
+Added conflict clauses: 251000
+Added conflict clauses: 252000
+Added conflict clauses: 253000
+Added conflict clauses: 254000
+number of cache hit: 4500000, pos_hit = 4499474, neg_hit = 526
+Added conflict clauses: 255000
+Added conflict clauses: 256000
+Added conflict clauses: 257000
+Added conflict clauses: 258000
+number of cache hit: 4600000, pos_hit = 4599472, neg_hit = 528
+Added conflict clauses: 259000
+Added cache entries: 2000000
+Added conflict clauses: 260000
+Added conflict clauses: 261000
+Added conflict clauses: 262000
+Added conflict clauses: 263000
+Added conflict clauses: 264000
+number of cache hit: 4700000, pos_hit = 4699462, neg_hit = 538
+Added conflict clauses: 265000
+Added conflict clauses: 266000
+Removed entries: 800000
+Added conflict clauses: 267000
+Added conflict clauses: 268000
+Added conflict clauses: 269000
+number of cache hit: 4800000, pos_hit = 4799461, neg_hit = 539
+Added conflict clauses: 270000
+Added conflict clauses: 271000
+Added conflict clauses: 272000
+Added cache entries: 2100000
+Added conflict clauses: 273000
+Added conflict clauses: 274000
+number of cache hit: 4900000, pos_hit = 4899455, neg_hit = 545
+Added conflict clauses: 275000
+Added conflict clauses: 276000
+Removed entries: 900384
+Added conflict clauses: 277000
+Added conflict clauses: 278000
+Added conflict clauses: 279000
+number of cache hit: 5000000, pos_hit = 4999452, neg_hit = 548
+Added conflict clauses: 280000
+Added conflict clauses: 281000
+Added conflict clauses: 282000
+Added conflict clauses: 283000
+Added cache entries: 2200000
+Added conflict clauses: 284000
+number of cache hit: 5100000, pos_hit = 5099450, neg_hit = 550
+Added conflict clauses: 285000
+Added conflict clauses: 286000
+Added conflict clauses: 287000
+Added conflict clauses: 288000
+Added conflict clauses: 289000
+Added conflict clauses: 290000
+Added conflict clauses: 291000
+Added conflict clauses: 292000
+Added conflict clauses: 293000
+Added conflict clauses: 294000
+Added conflict clauses: 295000
+number of cache hit: 5200000, pos_hit = 5199438, neg_hit = 562
+Removed entries: 1000388
+Added conflict clauses: 296000
+Added conflict clauses: 297000
+Added conflict clauses: 298000
+Added conflict clauses: 299000
+Added cache entries: 2300000
+Removed entries: 1181690
+Added conflict clauses: 300000
+number of cache hit: 5300000, pos_hit = 5299436, neg_hit = 564
+Added conflict clauses: 301000
+Added conflict clauses: 302000
+Added conflict clauses: 303000
+Added conflict clauses: 304000
+number of cache hit: 5400000, pos_hit = 5399436, neg_hit = 564
+Removed entries: 1200237
+Added conflict clauses: 305000
+Added conflict clauses: 306000
+Added conflict clauses: 307000
+Added cache entries: 2400000
+Added conflict clauses: 308000
+number of cache hit: 5500000, pos_hit = 5499436, neg_hit = 564
+Added conflict clauses: 309000
+Added conflict clauses: 310000
+Added conflict clauses: 311000
+Added conflict clauses: 312000
+number of cache hit: 5600000, pos_hit = 5599433, neg_hit = 567
+Added conflict clauses: 313000
+Added conflict clauses: 314000
+Added conflict clauses: 315000
+Added conflict clauses: 316000
+number of cache hit: 5700000, pos_hit = 5699432, neg_hit = 568
+Added conflict clauses: 317000
+Added cache entries: 2500000
+Added conflict clauses: 318000
+Added conflict clauses: 319000
+Added conflict clauses: 320000
+Removed entries: 1300420
+number of cache hit: 5800000, pos_hit = 5799428, neg_hit = 572
+Added conflict clauses: 321000
+Added conflict clauses: 322000
+Added conflict clauses: 323000
+Added conflict clauses: 324000
+Added conflict clauses: 325000
+number of cache hit: 5900000, pos_hit = 5899427, neg_hit = 573
+Added conflict clauses: 326000
+Added cache entries: 2600000
+Added conflict clauses: 327000
+Added conflict clauses: 328000
+Added conflict clauses: 329000
+Removed entries: 1400129
+number of cache hit: 6000000, pos_hit = 5999423, neg_hit = 577
+Added conflict clauses: 330000
+Added conflict clauses: 331000
+Added conflict clauses: 332000
+Added conflict clauses: 333000
+number of cache hit: 6100000, pos_hit = 6099421, neg_hit = 579
+Added conflict clauses: 334000
+Added conflict clauses: 335000
+Added conflict clauses: 336000
+Added cache entries: 2700000
+Added conflict clauses: 337000
+number of cache hit: 6200000, pos_hit = 6199421, neg_hit = 579
+Added conflict clauses: 338000
+Removed entries: 1500000
+Added conflict clauses: 339000
+Added conflict clauses: 340000
+number of cache hit: 6300000, pos_hit = 6299418, neg_hit = 582
+Added conflict clauses: 341000
+Added conflict clauses: 342000
+Added conflict clauses: 343000
+Added conflict clauses: 344000
+Added conflict clauses: 345000
+Added conflict clauses: 346000
+Added conflict clauses: 347000
+Added cache entries: 2800000
+Added conflict clauses: 348000
+Added conflict clauses: 349000
+number of cache hit: 6400000, pos_hit = 6399409, neg_hit = 591
+Added conflict clauses: 350000
+Added conflict clauses: 351000
+Added conflict clauses: 352000
+Added conflict clauses: 353000
+number of cache hit: 6500000, pos_hit = 6499405, neg_hit = 595
+Removed entries: 1600008
+Added conflict clauses: 354000
+Added conflict clauses: 355000
+Added conflict clauses: 356000
+Added cache entries: 2900000
+Added conflict clauses: 357000
+number of cache hit: 6600000, pos_hit = 6599404, neg_hit = 596
+Added conflict clauses: 358000
+Added conflict clauses: 359000
+Added conflict clauses: 360000
+Removed entries: 1718806
+Added conflict clauses: 361000
+number of cache hit: 6700000, pos_hit = 6699402, neg_hit = 598
+Added conflict clauses: 362000
+Added conflict clauses: 363000
+Added conflict clauses: 364000
+Added conflict clauses: 365000
+Added conflict clauses: 366000
+Added cache entries: 3000000
+number of cache hit: 6800000, pos_hit = 6799397, neg_hit = 603
+Added conflict clauses: 367000
+Removed entries: 1800024
+Added conflict clauses: 368000
+Added conflict clauses: 369000
+Added conflict clauses: 370000
+Added conflict clauses: 371000
+number of cache hit: 6900000, pos_hit = 6899386, neg_hit = 614
+Added conflict clauses: 372000
+Added conflict clauses: 373000
+Added conflict clauses: 374000
+Added conflict clauses: 375000
+number of cache hit: 7000000, pos_hit = 6999383, neg_hit = 617
+Added cache entries: 3100000
+Added conflict clauses: 376000
+Removed entries: 1905105
+Added conflict clauses: 377000
+Added conflict clauses: 378000
+Added conflict clauses: 379000
+number of cache hit: 7100000, pos_hit = 7099382, neg_hit = 618
+Added conflict clauses: 380000
+Added conflict clauses: 381000
+Added conflict clauses: 382000
+Added conflict clauses: 383000
+Added conflict clauses: 384000
+Added conflict clauses: 385000
+number of cache hit: 7200000, pos_hit = 7199370, neg_hit = 630
+Added cache entries: 3200000
+Removed entries: 2003915
+Added conflict clauses: 386000
+Added conflict clauses: 387000
+Added conflict clauses: 388000
+Added conflict clauses: 389000
+number of cache hit: 7300000, pos_hit = 7299361, neg_hit = 639
+Added conflict clauses: 390000
+Added conflict clauses: 391000
+Added conflict clauses: 392000
+Added conflict clauses: 393000
+Added conflict clauses: 394000
+number of cache hit: 7400000, pos_hit = 7399361, neg_hit = 639
+Added conflict clauses: 395000
+Added cache entries: 3300000
+Added conflict clauses: 396000
+Added conflict clauses: 397000
+Added conflict clauses: 398000
+Added conflict clauses: 399000
+number of cache hit: 7500000, pos_hit = 7499356, neg_hit = 644
+Added conflict clauses: 400000
+Removed entries: 2100011
+Added conflict clauses: 401000
+Added conflict clauses: 402000
+Added conflict clauses: 403000
+Added conflict clauses: 404000
+number of cache hit: 7600000, pos_hit = 7599352, neg_hit = 648
+Added conflict clauses: 405000
+Added cache entries: 3400000
+Added conflict clauses: 406000
+Added conflict clauses: 407000
+Added conflict clauses: 408000
+Added conflict clauses: 409000
+Added conflict clauses: 410000
+number of cache hit: 7700000, pos_hit = 7699349, neg_hit = 651
+Added conflict clauses: 411000
+Added conflict clauses: 412000
+Added conflict clauses: 413000
+Removed entries: 2200299
+Added conflict clauses: 414000
+number of cache hit: 7800000, pos_hit = 7799346, neg_hit = 654
+Added conflict clauses: 415000
+Added conflict clauses: 416000
+Added cache entries: 3500000
+Added conflict clauses: 417000
+Added conflict clauses: 418000
+number of cache hit: 7900000, pos_hit = 7899345, neg_hit = 655
+Added conflict clauses: 419000
+Added conflict clauses: 420000
+Added conflict clauses: 421000
+Added conflict clauses: 422000
+Removed entries: 2300001
+Added conflict clauses: 423000
+number of cache hit: 8000000, pos_hit = 7999337, neg_hit = 663
+Added conflict clauses: 424000
+Added conflict clauses: 425000
+Added cache entries: 3600000
+Added conflict clauses: 426000
+Added conflict clauses: 427000
+Added conflict clauses: 428000
+Added conflict clauses: 429000
+number of cache hit: 8100000, pos_hit = 8099334, neg_hit = 666
+Added conflict clauses: 430000
+Added conflict clauses: 431000
+Removed entries: 2400012
+Added conflict clauses: 432000
+Added conflict clauses: 433000
+Added conflict clauses: 434000
+number of cache hit: 8200000, pos_hit = 8199328, neg_hit = 672
+Added conflict clauses: 435000
+Added conflict clauses: 436000
+Added conflict clauses: 437000
+Added conflict clauses: 438000
+Added conflict clauses: 439000
+Added cache entries: 3700000
+Added conflict clauses: 440000
+Added conflict clauses: 441000
+Added conflict clauses: 442000
+Added conflict clauses: 443000
+number of cache hit: 8300000, pos_hit = 8299305, neg_hit = 695
+Added conflict clauses: 444000
+Added conflict clauses: 445000
+Added conflict clauses: 446000
+Added conflict clauses: 447000
+number of cache hit: 8400000, pos_hit = 8399302, neg_hit = 698
+Removed entries: 2500155
+Added conflict clauses: 448000
+Added conflict clauses: 449000
+Added conflict clauses: 450000
+Added conflict clauses: 451000
+Added cache entries: 3800000
+Added conflict clauses: 452000
+Added conflict clauses: 453000
+Added conflict clauses: 454000
+Added conflict clauses: 455000
+Added conflict clauses: 456000
+Added conflict clauses: 457000
+Added conflict clauses: 458000
+Added conflict clauses: 459000
+Added conflict clauses: 460000
+Added conflict clauses: 461000
+Added conflict clauses: 462000
+Added conflict clauses: 463000
+Added conflict clauses: 464000
+Added conflict clauses: 465000
+Added conflict clauses: 466000
+Added conflict clauses: 467000
+Added conflict clauses: 468000
+Added conflict clauses: 469000
+Added conflict clauses: 470000
+Added conflict clauses: 471000
+Added conflict clauses: 472000
+Added conflict clauses: 473000
+Added conflict clauses: 474000
+Added conflict clauses: 475000
+Added conflict clauses: 476000
+Added conflict clauses: 477000
+Added conflict clauses: 478000
+Added conflict clauses: 479000
+Added conflict clauses: 480000
+Added conflict clauses: 481000
+Added conflict clauses: 482000
+Added conflict clauses: 483000
+Added conflict clauses: 484000
+Added conflict clauses: 485000
+Added conflict clauses: 486000
+Added conflict clauses: 487000
+Added conflict clauses: 488000
+Added conflict clauses: 489000
+Added conflict clauses: 490000
+Added conflict clauses: 491000
+Added conflict clauses: 492000
+Added conflict clauses: 493000
+Added conflict clauses: 494000
+Added conflict clauses: 495000
+Added conflict clauses: 496000
+Added conflict clauses: 497000
+Added conflict clauses: 498000
+Added conflict clauses: 499000
+Added conflict clauses: 500000
+Added conflict clauses: 501000
+Added conflict clauses: 502000
+Added conflict clauses: 503000
+Added conflict clauses: 504000
+Added conflict clauses: 505000
+Added conflict clauses: 506000
+Added conflict clauses: 507000
+Added conflict clauses: 508000
+Added conflict clauses: 509000
+Added conflict clauses: 510000
+Added conflict clauses: 511000
+Added conflict clauses: 512000
+Added conflict clauses: 513000
+Added conflict clauses: 514000
+Added conflict clauses: 515000
+Added conflict clauses: 516000
+Added conflict clauses: 517000
+Added conflict clauses: 518000
+Added conflict clauses: 519000
+Added conflict clauses: 520000
+Added conflict clauses: 521000
+Added conflict clauses: 522000
+Added conflict clauses: 523000
+Added conflict clauses: 524000
+Removed entries: 2600005
+Added conflict clauses: 525000
+Added conflict clauses: 526000
+Added conflict clauses: 527000
+Added conflict clauses: 528000
+Added conflict clauses: 529000
+Added conflict clauses: 530000
+Added conflict clauses: 531000
+Added conflict clauses: 532000
+Added conflict clauses: 533000
+Added conflict clauses: 534000
+Added conflict clauses: 535000
+Added conflict clauses: 536000
+Added conflict clauses: 537000
+Added conflict clauses: 538000
+Added conflict clauses: 539000
+Added conflict clauses: 540000
+Added conflict clauses: 541000
+Added conflict clauses: 542000
+Added conflict clauses: 543000
+Added cache entries: 3900000
+Added conflict clauses: 544000
+Added conflict clauses: 545000
+Added conflict clauses: 546000
+Added conflict clauses: 547000
+Added conflict clauses: 548000
+Added conflict clauses: 549000
+Added conflict clauses: 550000
+Added conflict clauses: 551000
+Added conflict clauses: 552000
+Added conflict clauses: 553000
+Added conflict clauses: 554000
+Added conflict clauses: 555000
+Added conflict clauses: 556000
+Added conflict clauses: 557000
+Added conflict clauses: 558000
+Added conflict clauses: 559000
+Added conflict clauses: 560000
+Added conflict clauses: 561000
+Added conflict clauses: 562000
+Added conflict clauses: 563000
+Added conflict clauses: 564000
+Added conflict clauses: 565000
+Added conflict clauses: 566000
+Added conflict clauses: 567000
+Added conflict clauses: 568000
+Added conflict clauses: 569000
+Added conflict clauses: 570000
+Added conflict clauses: 571000
+Added conflict clauses: 572000
+Added conflict clauses: 573000
+Added conflict clauses: 574000
+Added conflict clauses: 575000
+Added conflict clauses: 576000
+Added conflict clauses: 577000
+Added conflict clauses: 578000
+Added conflict clauses: 579000
+Added conflict clauses: 580000
+Added conflict clauses: 581000
+Added conflict clauses: 582000
+Added conflict clauses: 583000
+Added conflict clauses: 584000
+Added conflict clauses: 585000
+Added conflict clauses: 586000
+Added conflict clauses: 587000
+Added conflict clauses: 588000
+Added conflict clauses: 589000
+Removed entries: 2714634
+Added conflict clauses: 590000
+Added conflict clauses: 591000
+Added conflict clauses: 592000
+Added conflict clauses: 593000
+Added conflict clauses: 594000
+Added conflict clauses: 595000
+Added conflict clauses: 596000
+Added conflict clauses: 597000
+Added conflict clauses: 598000
+Added conflict clauses: 599000
+Added conflict clauses: 600000
+Added conflict clauses: 601000
+Added conflict clauses: 602000
+Added conflict clauses: 603000
+Added conflict clauses: 604000
+Added conflict clauses: 605000
+Added conflict clauses: 606000
+Added conflict clauses: 607000
+Added conflict clauses: 608000
+number of cache hit: 8500000, pos_hit = 8498243, neg_hit = 1757
+Added conflict clauses: 609000
+Added conflict clauses: 610000
+Added conflict clauses: 611000
+Added cache entries: 4000000
+Added conflict clauses: 612000
+number of cache hit: 8600000, pos_hit = 8598240, neg_hit = 1760
+Added conflict clauses: 613000
+Added conflict clauses: 614000
+Removed entries: 2800011
+Added conflict clauses: 615000
+Added conflict clauses: 616000
+number of cache hit: 8700000, pos_hit = 8698237, neg_hit = 1763
+Added conflict clauses: 617000
+Added conflict clauses: 618000
+Added cache entries: 4100000
+Added conflict clauses: 619000
+Added conflict clauses: 620000
+number of cache hit: 8800000, pos_hit = 8798236, neg_hit = 1764
+Added conflict clauses: 621000
+Added conflict clauses: 622000
+Added conflict clauses: 623000
+Removed entries: 2900123
+Added conflict clauses: 624000
+number of cache hit: 8900000, pos_hit = 8898236, neg_hit = 1764
+Added conflict clauses: 625000
+Added conflict clauses: 626000
+Added conflict clauses: 627000
+Added cache entries: 4200000
+Added conflict clauses: 628000
+Added conflict clauses: 629000
+Added conflict clauses: 630000
+number of cache hit: 9000000, pos_hit = 8998230, neg_hit = 1770
+Added conflict clauses: 631000
+Added conflict clauses: 632000
+Added conflict clauses: 633000
+Added conflict clauses: 634000
+Removed entries: 3000005
+Added conflict clauses: 635000
+number of cache hit: 9100000, pos_hit = 9098185, neg_hit = 1815
+Added conflict clauses: 636000
+Added cache entries: 4300000
+Added conflict clauses: 637000
+Added conflict clauses: 638000
+Added conflict clauses: 639000
+Added conflict clauses: 640000
+number of cache hit: 9200000, pos_hit = 9198184, neg_hit = 1816
+Added conflict clauses: 641000
+Removed entries: 3138114
+Added conflict clauses: 642000
+number of cache hit: 9300000, pos_hit = 9298179, neg_hit = 1821
+Added conflict clauses: 643000
+Added cache entries: 4400000
+Added conflict clauses: 644000
+Added conflict clauses: 645000
+number of cache hit: 9400000, pos_hit = 9398178, neg_hit = 1822
+Added conflict clauses: 646000
+Added conflict clauses: 647000
+Removed entries: 3200610
+Added conflict clauses: 648000
+Added conflict clauses: 649000
+number of cache hit: 9500000, pos_hit = 9498175, neg_hit = 1825
+Removed entries: 3332134
+Added conflict clauses: 650000
+Added cache entries: 4500000
+Added conflict clauses: 651000
+Added conflict clauses: 652000
+number of cache hit: 9600000, pos_hit = 9598174, neg_hit = 1826
+Added conflict clauses: 653000
+Added conflict clauses: 654000
+Removed entries: 3400002
+Added conflict clauses: 655000
+number of cache hit: 9700000, pos_hit = 9698174, neg_hit = 1826
+Added conflict clauses: 656000
+Added cache entries: 4600000
+Added conflict clauses: 657000
+Added conflict clauses: 658000
+Added conflict clauses: 659000
+number of cache hit: 9800000, pos_hit = 9798167, neg_hit = 1833
+Added conflict clauses: 660000
+Added conflict clauses: 661000
+Added conflict clauses: 662000
+Added conflict clauses: 663000
+Added conflict clauses: 664000
+Added conflict clauses: 665000
+Added conflict clauses: 666000
+Added conflict clauses: 667000
+Added conflict clauses: 668000
+Added conflict clauses: 669000
+number of cache hit: 9900000, pos_hit = 9898161, neg_hit = 1839
+Added conflict clauses: 670000
+Added cache entries: 4700000
+Added conflict clauses: 671000
+Added conflict clauses: 672000
+Added conflict clauses: 673000
+number of cache hit: 10000000, pos_hit = 9998157, neg_hit = 1843
+Added conflict clauses: 674000
+Added conflict clauses: 675000
+Removed entries: 3500000
+Added conflict clauses: 676000
+Added conflict clauses: 677000
+number of cache hit: 10100000, pos_hit = 10098154, neg_hit = 1846
+Added conflict clauses: 678000
+Added conflict clauses: 679000
+Added conflict clauses: 680000
+Added cache entries: 4800000
+Added conflict clauses: 681000
+Added conflict clauses: 682000
+number of cache hit: 10200000, pos_hit = 10198153, neg_hit = 1847
+Added conflict clauses: 683000
+Added conflict clauses: 684000
+Added conflict clauses: 685000
+Removed entries: 3600019
+Added conflict clauses: 686000
+Added conflict clauses: 687000
+Added conflict clauses: 688000
+number of cache hit: 10300000, pos_hit = 10298147, neg_hit = 1853
+Added conflict clauses: 689000
+Added conflict clauses: 690000
+Added cache entries: 4900000
+Added conflict clauses: 691000
+Added conflict clauses: 692000
+Added conflict clauses: 693000
+number of cache hit: 10400000, pos_hit = 10398143, neg_hit = 1857
+Added conflict clauses: 694000
+Removed entries: 3754214
+Added conflict clauses: 695000
+Added conflict clauses: 696000
+Removed entries: 3837811
+Added conflict clauses: 697000
+Added conflict clauses: 698000
+Added conflict clauses: 699000
+number of cache hit: 10500000, pos_hit = 10498139, neg_hit = 1861
+Added conflict clauses: 700000
+Added conflict clauses: 701000
+Added conflict clauses: 702000
+Added cache entries: 5000000
+Added conflict clauses: 703000
+Added conflict clauses: 704000
+Removed entries: 3907777
+Added conflict clauses: 705000
+Added conflict clauses: 706000
+number of cache hit: 10600000, pos_hit = 10598133, neg_hit = 1867
+Added conflict clauses: 707000
+Added conflict clauses: 708000
+Added conflict clauses: 709000
+Added conflict clauses: 710000
+Added conflict clauses: 711000
+number of cache hit: 10700000, pos_hit = 10698131, neg_hit = 1869
+Added conflict clauses: 712000
+Added cache entries: 5100000
+Added conflict clauses: 713000
+Added conflict clauses: 714000
+Added conflict clauses: 715000
+Added conflict clauses: 716000
+Added conflict clauses: 717000
+Added conflict clauses: 718000
+Added conflict clauses: 719000
+number of cache hit: 10800000, pos_hit = 10798130, neg_hit = 1870
+Removed entries: 4000346
+Added conflict clauses: 720000
+Added conflict clauses: 721000
+Added conflict clauses: 722000
+number of cache hit: 10900000, pos_hit = 10898128, neg_hit = 1872
+Added conflict clauses: 723000
+Added cache entries: 5200000
+Added conflict clauses: 724000
+Added conflict clauses: 725000
+Added conflict clauses: 726000
+Added conflict clauses: 727000
+number of cache hit: 11000000, pos_hit = 10998126, neg_hit = 1874
+Added conflict clauses: 728000
+Removed entries: 4100890
+Added conflict clauses: 729000
+Added conflict clauses: 730000
+Added conflict clauses: 731000
+Added conflict clauses: 732000
+Added conflict clauses: 733000
+Added conflict clauses: 734000
+Added conflict clauses: 735000
+Added cache entries: 5300000
+number of cache hit: 11100000, pos_hit = 11098121, neg_hit = 1879
+Added conflict clauses: 736000
+Added conflict clauses: 737000
+Added conflict clauses: 738000
+Added conflict clauses: 739000
+number of cache hit: 11200000, pos_hit = 11198120, neg_hit = 1880
+Added conflict clauses: 740000
+Added conflict clauses: 741000
+Added conflict clauses: 742000
+Added conflict clauses: 743000
+Added conflict clauses: 744000
+Added cache entries: 5400000
+number of cache hit: 11300000, pos_hit = 11298117, neg_hit = 1883
+Added conflict clauses: 745000
+Removed entries: 4227022
+Added conflict clauses: 746000
+Added conflict clauses: 747000
+Added conflict clauses: 748000
+number of cache hit: 11400000, pos_hit = 11398114, neg_hit = 1886
+Added conflict clauses: 749000
+Added conflict clauses: 750000
+Added conflict clauses: 751000
+Added conflict clauses: 752000
+Added conflict clauses: 753000
+Added cache entries: 5500000
+number of cache hit: 11500000, pos_hit = 11498112, neg_hit = 1888
+Added conflict clauses: 754000
+Added conflict clauses: 755000
+Added conflict clauses: 756000
+Removed entries: 4300027
+Added conflict clauses: 757000
+number of cache hit: 11600000, pos_hit = 11598111, neg_hit = 1889
+Added conflict clauses: 758000
+Added conflict clauses: 759000
+Added conflict clauses: 760000
+Added conflict clauses: 761000
+number of cache hit: 11700000, pos_hit = 11698110, neg_hit = 1890
+Added cache entries: 5600000
+Added conflict clauses: 762000
+Added conflict clauses: 763000
+Added conflict clauses: 764000
+Added conflict clauses: 765000
+Added conflict clauses: 766000
+number of cache hit: 11800000, pos_hit = 11798103, neg_hit = 1897
+Added conflict clauses: 767000
+Removed entries: 4400000
+Added conflict clauses: 768000
+Added conflict clauses: 769000
+Added conflict clauses: 770000
+Added conflict clauses: 771000
+Added cache entries: 5700000
+number of cache hit: 11900000, pos_hit = 11898100, neg_hit = 1900
+Added conflict clauses: 772000
+Removed entries: 4501304
+Added conflict clauses: 773000
+Added conflict clauses: 774000
+Removed entries: 4632112
+Added conflict clauses: 775000
+number of cache hit: 12000000, pos_hit = 11998098, neg_hit = 1902
+Added conflict clauses: 776000
+Added conflict clauses: 777000
+Added conflict clauses: 778000
+Added conflict clauses: 779000
+number of cache hit: 12100000, pos_hit = 12098096, neg_hit = 1904
+Added cache entries: 5800000
+Added conflict clauses: 780000
+Added conflict clauses: 781000
+Added conflict clauses: 782000
+Added conflict clauses: 783000
+number of cache hit: 12200000, pos_hit = 12198094, neg_hit = 1906
+Added conflict clauses: 784000
+Added conflict clauses: 785000
+Added conflict clauses: 786000
+Added conflict clauses: 787000
+number of cache hit: 12300000, pos_hit = 12298093, neg_hit = 1907
+Removed entries: 4710673
+Added cache entries: 5900000
+Added conflict clauses: 788000
+Added conflict clauses: 789000
+Added conflict clauses: 790000
+Added conflict clauses: 791000
+number of cache hit: 12400000, pos_hit = 12398091, neg_hit = 1909
+Added conflict clauses: 792000
+Added conflict clauses: 793000
+Added conflict clauses: 794000
+Added conflict clauses: 795000
+Added conflict clauses: 796000
+Added conflict clauses: 797000
+Added conflict clauses: 798000
+number of cache hit: 12500000, pos_hit = 12498077, neg_hit = 1923
+Added conflict clauses: 799000
+Added cache entries: 6000000
+Added conflict clauses: 800000
+Added conflict clauses: 801000
+Added conflict clauses: 802000
+Removed entries: 4800002
+number of cache hit: 12600000, pos_hit = 12598072, neg_hit = 1928
+Added conflict clauses: 803000
+Added conflict clauses: 804000
+Added conflict clauses: 805000
+Added conflict clauses: 806000
+Added conflict clauses: 807000
+Added conflict clauses: 808000
+number of cache hit: 12700000, pos_hit = 12698070, neg_hit = 1930
+Added conflict clauses: 809000
+Added cache entries: 6100000
+Added conflict clauses: 810000
+Removed entries: 4912531
+Added conflict clauses: 811000
+Added conflict clauses: 812000
+number of cache hit: 12800000, pos_hit = 12798067, neg_hit = 1933
+Added conflict clauses: 813000
+Added conflict clauses: 814000
+Added conflict clauses: 815000
+Added conflict clauses: 816000
+Added conflict clauses: 817000
+Added conflict clauses: 818000
+number of cache hit: 12900000, pos_hit = 12898061, neg_hit = 1939
+Added cache entries: 6200000
+Added conflict clauses: 819000
+Added conflict clauses: 820000
+Removed entries: 5003597
+Added conflict clauses: 821000
+Added conflict clauses: 822000
+Added conflict clauses: 823000
+number of cache hit: 13000000, pos_hit = 12998058, neg_hit = 1942
+Added conflict clauses: 824000
+Added conflict clauses: 825000
+Added conflict clauses: 826000
+number of cache hit: 13100000, pos_hit = 13098053, neg_hit = 1947
+Added conflict clauses: 827000
+Added conflict clauses: 828000
+Added cache entries: 6300000
+Added conflict clauses: 829000
+Added conflict clauses: 830000
+Added conflict clauses: 831000
+number of cache hit: 13200000, pos_hit = 13198049, neg_hit = 1951
+Added conflict clauses: 832000
+Added conflict clauses: 833000
+Added conflict clauses: 834000
+Removed entries: 5100004
+Added conflict clauses: 835000
+number of cache hit: 13300000, pos_hit = 13298036, neg_hit = 1964
+Added conflict clauses: 836000
+Added cache entries: 6400000
+Added conflict clauses: 837000
+Added conflict clauses: 838000
+number of cache hit: 13400000, pos_hit = 13398035, neg_hit = 1965
+Added conflict clauses: 839000
+Added conflict clauses: 840000
+Removed entries: 5214159
+Added conflict clauses: 841000
+Added conflict clauses: 842000
+Added conflict clauses: 843000
+Added conflict clauses: 844000
+number of cache hit: 13500000, pos_hit = 13498029, neg_hit = 1971
+Added conflict clauses: 845000
+Added conflict clauses: 846000
+Added cache entries: 6500000
+Added conflict clauses: 847000
+Added conflict clauses: 848000
+Added conflict clauses: 849000
+number of cache hit: 13600000, pos_hit = 13598029, neg_hit = 1971
+Added conflict clauses: 850000
+Added conflict clauses: 851000
+Added conflict clauses: 852000
+Added conflict clauses: 853000
+Removed entries: 5300079
+Added conflict clauses: 854000
+Added conflict clauses: 855000
+Added conflict clauses: 856000
+Added conflict clauses: 857000
+Added conflict clauses: 858000
+Added conflict clauses: 859000
+Added conflict clauses: 860000
+Added conflict clauses: 861000
+Added conflict clauses: 862000
+Added conflict clauses: 863000
+Added conflict clauses: 864000
+Added conflict clauses: 865000
+Added conflict clauses: 866000
+Added conflict clauses: 867000
+Added conflict clauses: 868000
+Added conflict clauses: 869000
+Added conflict clauses: 870000
+Added conflict clauses: 871000
+Added conflict clauses: 872000
+Added conflict clauses: 873000
+Added conflict clauses: 874000
+Added conflict clauses: 875000
+Added conflict clauses: 876000
+Added conflict clauses: 877000
+Added conflict clauses: 878000
+Added conflict clauses: 879000
+Added conflict clauses: 880000
+Added conflict clauses: 881000
+Added conflict clauses: 882000
+Added conflict clauses: 883000
+Added conflict clauses: 884000
+Added conflict clauses: 885000
+Added conflict clauses: 886000
+Added conflict clauses: 887000
+Added cache entries: 6600000
+Added conflict clauses: 888000
+Added conflict clauses: 889000
+Added conflict clauses: 890000
+Added conflict clauses: 891000
+Added conflict clauses: 892000
+Added conflict clauses: 893000
+Added conflict clauses: 894000
+number of cache hit: 13700000, pos_hit = 13697867, neg_hit = 2133
+Added conflict clauses: 895000
+Added conflict clauses: 896000
+Added conflict clauses: 897000
+Added conflict clauses: 898000
+Removed entries: 5400558
+Added conflict clauses: 899000
+Added conflict clauses: 900000
+number of cache hit: 13800000, pos_hit = 13797865, neg_hit = 2135
+Added conflict clauses: 901000
+Added conflict clauses: 902000
+Added conflict clauses: 903000
+Added cache entries: 6700000
+Added conflict clauses: 904000
+Added conflict clauses: 905000
+Added conflict clauses: 906000
+number of cache hit: 13900000, pos_hit = 13897862, neg_hit = 2138
+Added conflict clauses: 907000
+Added conflict clauses: 908000
+Removed entries: 5500003
+Added conflict clauses: 909000
+Added conflict clauses: 910000
+Added conflict clauses: 911000
+number of cache hit: 14000000, pos_hit = 13997861, neg_hit = 2139
+Added conflict clauses: 912000
+Added cache entries: 6800000
+Added conflict clauses: 913000
+Added conflict clauses: 914000
+Added conflict clauses: 915000
+number of cache hit: 14100000, pos_hit = 14097859, neg_hit = 2141
+Added conflict clauses: 916000
+Removed entries: 5601894
+Added conflict clauses: 917000
+Added conflict clauses: 918000
+number of cache hit: 14200000, pos_hit = 14197859, neg_hit = 2141
+Added cache entries: 6900000
+Added conflict clauses: 919000
+Added conflict clauses: 920000
+Added conflict clauses: 921000
+number of cache hit: 14300000, pos_hit = 14297855, neg_hit = 2145
+Added conflict clauses: 922000
+Removed entries: 5701513
+Added conflict clauses: 923000
+Added conflict clauses: 924000
+number of cache hit: 14400000, pos_hit = 14397851, neg_hit = 2149
+Added cache entries: 7000000
+Added conflict clauses: 925000
+Removed entries: 5806298
+Added conflict clauses: 926000
+Added conflict clauses: 927000
+Added conflict clauses: 928000
+Added conflict clauses: 929000
+Added conflict clauses: 930000
+Added conflict clauses: 931000
+Added conflict clauses: 932000
+Added conflict clauses: 933000
+Added conflict clauses: 934000
+Added conflict clauses: 935000
+number of cache hit: 14500000, pos_hit = 14497843, neg_hit = 2157
+Added conflict clauses: 936000
+Added conflict clauses: 937000
+Added conflict clauses: 938000
+Added conflict clauses: 939000
+Added cache entries: 7100000
+Added conflict clauses: 940000
+number of cache hit: 14600000, pos_hit = 14597842, neg_hit = 2158
+Added conflict clauses: 941000
+Removed entries: 5906185
+Added conflict clauses: 942000
+Added conflict clauses: 943000
+Added conflict clauses: 944000
+number of cache hit: 14700000, pos_hit = 14697842, neg_hit = 2158
+Added conflict clauses: 945000
+Added conflict clauses: 946000
+Added cache entries: 7200000
+Added conflict clauses: 947000
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_151.cnf.cachet.cnf"
+	User time (seconds): 3571.53
+	System time (seconds): 19.94
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 414912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3798632
+	Voluntary context switches: 31
+	Involuntary context switches: 5977
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

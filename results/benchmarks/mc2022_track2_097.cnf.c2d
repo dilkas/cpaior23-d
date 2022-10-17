@@ -1,0 +1,34 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 249 vars 1162 clauses (0 eclauses)
+0 unit clauses, 0 binary clauses, max clause size: 3
+Generating dtree...(hgr 1162->1160): ***..........*...........
+Sum Cluster=203, cutset=162, context=198, separator=191 done.
+Max Cluster=201, Cutset=161, Context=196, Separator=190, Height=13
+Compiling...1.ANSWER: 0.01438234
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_097.cnf.minic2d.cnf"
+	User time (seconds): 3583.07
+	System time (seconds): 8.55
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 629616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3369938
+	Voluntary context switches: 345
+	Involuntary context switches: 4778
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

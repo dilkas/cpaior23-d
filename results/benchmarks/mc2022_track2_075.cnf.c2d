@@ -1,0 +1,43 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 3766 vars 8732 clauses (0 eclauses)
+15 unit clauses, 6924 binary clauses, max clause size: 3
+Generating dtree...(hgr 8732->6433): Wrong cut! 1 0
+**..*...*..Wrong cut! 2 1
+...*..........
+Sum Cluster=58, cutset=22, context=46, separator=26 done.
+Max Cluster=56, Cutset=21, Context=45, Separator=25, Height=24
+Compiling... [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 1.ERROR: could not open file
+ERROR: load a graph first
+ERROR: load a graph first
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: '>'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_075.cnf.minic2d.cnf"
+	User time (seconds): 3308.50
+	System time (seconds): 283.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3215088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1623506
+	Voluntary context switches: 290
+	Involuntary context switches: 7943
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

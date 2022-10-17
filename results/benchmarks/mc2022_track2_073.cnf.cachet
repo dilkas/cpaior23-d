@@ -1,0 +1,82 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_073.cnf.cachet.cnf ......
+Number of unit clauses			0
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			59562
+Removed cache entries			0
+Number of cache hits			13308
+Number of pos hits			13308
+Number of neg hits			0
+Number of collisions			347
+
+Cross component implications		ON
+Number of cross implications		2
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		97326
+Number of split components		6905
+Number of non-split components		83181
+Number of SAT residual formula		53164
+Number of trivial components		24447
+Number of changed components		0
+Number of adjusted components		39
+First component split level		13
+
+Number of Decisions			59571
+Max Decision Level			163
+Number of Variables			348
+Original Num Clauses			5734
+Original Num Literals			29340
+Added Conflict Clauses			6399
+Added Conflict Literals			197760
+Deleted Unrelevant clauses		178
+Deleted Unrelevant literals		8358
+Number of Implications			668228
+Total Run Time				4.24955
+
+Satisfying probability			0.0249669
+s 14315373499439418407311449145298841247556817730215943411828352949045565032688396417137171768580845338624
+Number of solutions 1.43154e+103
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_073.cnf.cachet.cnf"
+	User time (seconds): 4.10
+	System time (seconds): 0.15
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 62368
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39384
+	Voluntary context switches: 9
+	Involuntary context switches: 217
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

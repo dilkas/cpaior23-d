@@ -1,0 +1,94 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_117.cnf.cachet.cnf ......
+Number of unit clauses			7
+number of cache hit: 100000, pos_hit = 100000, neg_hit = 0
+number of cache hit: 200000, pos_hit = 200000, neg_hit = 0
+Added cache entries: 100000
+number of cache hit: 300000, pos_hit = 300000, neg_hit = 0
+number of cache hit: 400000, pos_hit = 400000, neg_hit = 0
+Added cache entries: 200000
+number of cache hit: 500000, pos_hit = 500000, neg_hit = 0
+number of cache hit: 600000, pos_hit = 600000, neg_hit = 0
+number of cache hit: 700000, pos_hit = 699987, neg_hit = 13
+Added cache entries: 300000
+number of cache hit: 800000, pos_hit = 799987, neg_hit = 13
+number of cache hit: 900000, pos_hit = 899981, neg_hit = 19
+Added cache entries: 400000
+number of cache hit: 1000000, pos_hit = 999981, neg_hit = 19
+number of cache hit: 1100000, pos_hit = 1099981, neg_hit = 19
+number of cache hit: 1200000, pos_hit = 1199865, neg_hit = 135
+Added cache entries: 500000
+number of cache hit: 1300000, pos_hit = 1299865, neg_hit = 135
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			539945
+Removed cache entries			0
+Number of cache hits			1355362
+Number of pos hits			1355223
+Number of neg hits			139
+Number of collisions			51289
+
+Cross component implications		ON
+Number of cross implications		35
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		1895329
+Number of split components		508274
+Number of non-split components		556150
+Number of SAT residual formula		539826
+Number of trivial components		22
+Number of changed components		0
+Number of adjusted components		486
+First component split level		0
+
+Number of Decisions			539945
+Max Decision Level			469
+Number of Variables			9386
+Original Num Clauses			20635
+Original Num Literals			44561
+Added Conflict Clauses			120
+Added Conflict Literals			616
+Deleted Unrelevant clauses		0
+Deleted Unrelevant literals		0
+Number of Implications			35511610
+Total Run Time				49.0294
+
+Satisfying probability			0.497995
+s inf
+Number of solutions 1.46139e+2825
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_117.cnf.cachet.cnf"
+	User time (seconds): 48.33
+	System time (seconds): 0.73
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:49.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 150504
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 80894
+	Voluntary context switches: 11
+	Involuntary context switches: 105
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

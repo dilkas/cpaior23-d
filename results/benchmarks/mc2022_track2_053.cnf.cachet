@@ -1,0 +1,125 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_053.cnf.cachet.cnf ......
+Number of unit clauses			17
+number of cache hit: 100000, pos_hit = 100000, neg_hit = 0
+number of cache hit: 200000, pos_hit = 200000, neg_hit = 0
+number of cache hit: 300000, pos_hit = 300000, neg_hit = 0
+number of cache hit: 400000, pos_hit = 400000, neg_hit = 0
+Added cache entries: 100000
+number of cache hit: 500000, pos_hit = 500000, neg_hit = 0
+number of cache hit: 600000, pos_hit = 600000, neg_hit = 0
+number of cache hit: 700000, pos_hit = 700000, neg_hit = 0
+number of cache hit: 800000, pos_hit = 800000, neg_hit = 0
+Added cache entries: 200000
+number of cache hit: 900000, pos_hit = 900000, neg_hit = 0
+number of cache hit: 1000000, pos_hit = 1000000, neg_hit = 0
+number of cache hit: 1100000, pos_hit = 1100000, neg_hit = 0
+number of cache hit: 1200000, pos_hit = 1200000, neg_hit = 0
+number of cache hit: 1300000, pos_hit = 1300000, neg_hit = 0
+Added cache entries: 300000
+number of cache hit: 1400000, pos_hit = 1400000, neg_hit = 0
+number of cache hit: 1500000, pos_hit = 1500000, neg_hit = 0
+number of cache hit: 1600000, pos_hit = 1600000, neg_hit = 0
+number of cache hit: 1700000, pos_hit = 1700000, neg_hit = 0
+number of cache hit: 1800000, pos_hit = 1800000, neg_hit = 0
+number of cache hit: 1900000, pos_hit = 1900000, neg_hit = 0
+Added cache entries: 400000
+number of cache hit: 2000000, pos_hit = 2000000, neg_hit = 0
+number of cache hit: 2100000, pos_hit = 2100000, neg_hit = 0
+number of cache hit: 2200000, pos_hit = 2200000, neg_hit = 0
+number of cache hit: 2300000, pos_hit = 2300000, neg_hit = 0
+number of cache hit: 2400000, pos_hit = 2400000, neg_hit = 0
+Added cache entries: 500000
+number of cache hit: 2500000, pos_hit = 2500000, neg_hit = 0
+number of cache hit: 2600000, pos_hit = 2600000, neg_hit = 0
+number of cache hit: 2700000, pos_hit = 2700000, neg_hit = 0
+number of cache hit: 2800000, pos_hit = 2800000, neg_hit = 0
+number of cache hit: 2900000, pos_hit = 2900000, neg_hit = 0
+Added cache entries: 600000
+number of cache hit: 3000000, pos_hit = 3000000, neg_hit = 0
+number of cache hit: 3100000, pos_hit = 3100000, neg_hit = 0
+number of cache hit: 3200000, pos_hit = 3200000, neg_hit = 0
+number of cache hit: 3300000, pos_hit = 3300000, neg_hit = 0
+number of cache hit: 3400000, pos_hit = 3400000, neg_hit = 0
+Added cache entries: 700000
+number of cache hit: 3500000, pos_hit = 3500000, neg_hit = 0
+number of cache hit: 3600000, pos_hit = 3600000, neg_hit = 0
+number of cache hit: 3700000, pos_hit = 3700000, neg_hit = 0
+number of cache hit: 3800000, pos_hit = 3800000, neg_hit = 0
+number of cache hit: 3900000, pos_hit = 3900000, neg_hit = 0
+Added cache entries: 800000
+number of cache hit: 4000000, pos_hit = 4000000, neg_hit = 0
+number of cache hit: 4100000, pos_hit = 4100000, neg_hit = 0
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			843982
+Removed cache entries			0
+Number of cache hits			4159152
+Number of pos hits			4159152
+Number of neg hits			0
+Number of collisions			262098
+
+Cross component implications		ON
+Number of cross implications		0
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		5802061
+Number of split components		1323364
+Number of non-split components		364099
+Number of SAT residual formula		843983
+Number of trivial components		798927
+Number of changed components		0
+Number of adjusted components		89
+First component split level		1
+
+Number of Decisions			843982
+Max Decision Level			138
+Number of Variables			1291
+Original Num Clauses			3045
+Original Num Literals			6281
+Added Conflict Clauses			0
+Added Conflict Literals			0
+Deleted Unrelevant clauses		0
+Deleted Unrelevant literals		0
+Number of Implications			25423498
+Total Run Time				78.7608
+
+Satisfying probability			2.57022e-06
+s inf
+Number of solutions 1.09571e+383
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_053.cnf.cachet.cnf"
+	User time (seconds): 77.32
+	System time (seconds): 1.46
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:19.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 202880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 105490
+	Voluntary context switches: 10
+	Involuntary context switches: 111
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

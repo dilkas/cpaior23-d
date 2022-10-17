@@ -1,0 +1,78 @@
+c ==================================================================
+c DMC: Diagram Model Counter
+c Version v1.0.0, released on 2020/07/20
+c ==================================================================
+
+c Process ID of this main program:
+c pid 132924
+
+c Reading CNF formula...
+
+c Reading join tree...
+c Constructed timer with 3600.000000-second timeout
+c ==================================================================
+c Getting join tree from stdin with 3600.000000-second timeout... (end input with 'Enter' then 'Ctrl d')
+c ------------------------------------------------------------------
+c After 1.310000 seconds, finished reading last legal join tree ending on or before line 801 with ADD width 44
+c Remaining duration: 3599.677000 seconds
+c Requested new timeout: 1.75922e+10 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.367000 seconds, finished reading last legal join tree ending on or before line 1607 with ADD width 39
+c Remaining duration: 3599.620000 seconds
+c Requested new timeout: 5.49756e+08 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.430000 seconds, finished reading last legal join tree ending on or before line 2413 with ADD width 37
+c Remaining duration: 3599.557000 seconds
+c Requested new timeout: 1.37439e+08 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.545000 seconds, finished reading last legal join tree ending on or before line 3341 with ADD width 29
+c Remaining duration: 3599.442000 seconds
+c Requested new timeout: 536871 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.618000 seconds, finished reading last legal join tree ending on or before line 4268 with ADD width 29
+c Remaining duration: 3599.369000 seconds
+c Requested new timeout: 536871 seconds -- request declined
+Tree decomposition stream ended.
+c ******************************************************************
+c MY_WARNING: alarm should have been disarmed; disarming alarm now
+c ******************************************************************
+c Disarmed alarm
+c ------------------------------------------------------------------
+c After 1.620000 seconds, finished reading last legal join tree ending on or before line 4268 with ADD width 29
+c Getting join tree from stdin: done
+c ==================================================================
+
+c Computing output...
+c ******************************************************************
+c MY_WARNING: floating-point underflow may have occured
+c ******************************************************************
+c ------------------------------------------------------------------
+s wmc 0
+c ------------------------------------------------------------------
+
+c ==================================================================
+c seconds                       1.898
+c ==================================================================
+	Command being timed: "bash -c ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_059.cnf.cachet.cnf | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_059.cnf.cachet.cnf"
+	User time (seconds): 0.70
+	System time (seconds): 0.03
+	Percent of CPU this job got: 35%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 24108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11441
+	Voluntary context switches: 154
+	Involuntary context switches: 100
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,50 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 267 vars 2746 clauses (0 eclauses)
+0 unit clauses, 2496 binary clauses, max clause size: 32
+Generating dtree...(hgr 2746->2746): **.*....................*
+Sum Cluster=93, cutset=54, context=89, separator=87 done.
+Max Cluster=91, Cutset=53, Context=87, Separator=86, Height=14
+Compiling...48. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 49. [64 MBs] 62. [64 MBs]  [64 MBs]  [64 MBs] 64.67.71.74.84.85.86.87.93.96. [64 MBs] 98.99. [64 MBs]  [64 MBs] done.
+Cache memory: 156.2 MB / Cache count: 3655341
+NNF memory: 922.6 MB
+Learned clauses: 15148
+Compile Time: 495.390s / Pre-Processing: 2.300s / Post-Processing: 0.560s
+
+1.0% of nodes, and 1.0% of edges are dead.
+Saving 38919600 nodes and 84745880 edges...done.
+
+Total Time: 519.940s
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: 'yet...'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_123.cnf.minic2d.cnf"
+	User time (seconds): 552.48
+	System time (seconds): 99.73
+	Percent of CPU this job got: 95%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:19.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28495180
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9020254
+	Voluntary context switches: 964
+	Involuntary context switches: 1470
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

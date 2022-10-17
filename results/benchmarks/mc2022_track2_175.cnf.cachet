@@ -1,0 +1,912 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_175.cnf.cachet.cnf ......
+Number of unit clauses			2051
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+number of cache hit: 100000, pos_hit = 99876, neg_hit = 124
+number of cache hit: 200000, pos_hit = 199873, neg_hit = 127
+Added conflict clauses: 4000
+number of cache hit: 300000, pos_hit = 299767, neg_hit = 233
+number of cache hit: 400000, pos_hit = 399765, neg_hit = 235
+Added conflict clauses: 5000
+Added cache entries: 100000
+number of cache hit: 500000, pos_hit = 499763, neg_hit = 237
+number of cache hit: 600000, pos_hit = 599763, neg_hit = 237
+Added cache entries: 200000
+number of cache hit: 700000, pos_hit = 699761, neg_hit = 239
+number of cache hit: 800000, pos_hit = 799761, neg_hit = 239
+Added conflict clauses: 6000
+Added cache entries: 300000
+number of cache hit: 900000, pos_hit = 899761, neg_hit = 239
+Added cache entries: 400000
+number of cache hit: 1000000, pos_hit = 999761, neg_hit = 239
+Added cache entries: 500000
+number of cache hit: 1100000, pos_hit = 1099761, neg_hit = 239
+Added cache entries: 600000
+number of cache hit: 1200000, pos_hit = 1199761, neg_hit = 239
+Added cache entries: 700000
+number of cache hit: 1300000, pos_hit = 1299761, neg_hit = 239
+Added cache entries: 800000
+number of cache hit: 1400000, pos_hit = 1399761, neg_hit = 239
+Added cache entries: 900000
+number of cache hit: 1500000, pos_hit = 1499761, neg_hit = 239
+Added cache entries: 1000000
+number of cache hit: 1600000, pos_hit = 1599761, neg_hit = 239
+Added cache entries: 1100000
+number of cache hit: 1700000, pos_hit = 1699761, neg_hit = 239
+Added cache entries: 1200000
+number of cache hit: 1800000, pos_hit = 1799761, neg_hit = 239
+Added cache entries: 1300000
+Removed entries: 101131
+number of cache hit: 1900000, pos_hit = 1899761, neg_hit = 239
+Added cache entries: 1400000
+number of cache hit: 2000000, pos_hit = 1999761, neg_hit = 239
+Added cache entries: 1500000
+Removed entries: 200847
+number of cache hit: 2100000, pos_hit = 2099761, neg_hit = 239
+Added cache entries: 1600000
+number of cache hit: 2200000, pos_hit = 2199761, neg_hit = 239
+Removed entries: 329281
+Added cache entries: 1700000
+Removed entries: 400018
+number of cache hit: 2300000, pos_hit = 2299761, neg_hit = 239
+Added cache entries: 1800000
+number of cache hit: 2400000, pos_hit = 2399761, neg_hit = 239
+Removed entries: 500003
+Added cache entries: 1900000
+number of cache hit: 2500000, pos_hit = 2499761, neg_hit = 239
+Removed entries: 600020
+Added cache entries: 2000000
+number of cache hit: 2600000, pos_hit = 2599761, neg_hit = 239
+Removed entries: 700716
+Added cache entries: 2100000
+number of cache hit: 2700000, pos_hit = 2699761, neg_hit = 239
+Removed entries: 801724
+Added cache entries: 2200000
+number of cache hit: 2800000, pos_hit = 2799761, neg_hit = 239
+Added cache entries: 2300000
+Removed entries: 900056
+number of cache hit: 2900000, pos_hit = 2899761, neg_hit = 239
+Added cache entries: 2400000
+Removed entries: 1005105
+number of cache hit: 3000000, pos_hit = 2999761, neg_hit = 239
+Added cache entries: 2500000
+Removed entries: 1100192
+number of cache hit: 3100000, pos_hit = 3099761, neg_hit = 239
+Added cache entries: 2600000
+Removed entries: 1200136
+number of cache hit: 3200000, pos_hit = 3199761, neg_hit = 239
+Removed entries: 1300064
+Removed entries: 1430515
+Added cache entries: 2700000
+number of cache hit: 3300000, pos_hit = 3299761, neg_hit = 239
+Added cache entries: 2800000
+number of cache hit: 3400000, pos_hit = 3399761, neg_hit = 239
+Removed entries: 1500000
+Added cache entries: 2900000
+number of cache hit: 3500000, pos_hit = 3499761, neg_hit = 239
+Removed entries: 1600017
+Removed entries: 1764080
+Added cache entries: 3000000
+number of cache hit: 3600000, pos_hit = 3599761, neg_hit = 239
+Removed entries: 1801433
+Added cache entries: 3100000
+number of cache hit: 3700000, pos_hit = 3699761, neg_hit = 239
+Removed entries: 1900001
+Added cache entries: 3200000
+number of cache hit: 3800000, pos_hit = 3799761, neg_hit = 239
+Removed entries: 2000001
+Added cache entries: 3300000
+number of cache hit: 3900000, pos_hit = 3899761, neg_hit = 239
+Added cache entries: 3400000
+number of cache hit: 4000000, pos_hit = 3999761, neg_hit = 239
+Removed entries: 2100000
+Added cache entries: 3500000
+number of cache hit: 4100000, pos_hit = 4099761, neg_hit = 239
+Removed entries: 2380515
+Removed entries: 2380522
+Added cache entries: 3600000
+Removed entries: 2400021
+number of cache hit: 4200000, pos_hit = 4199761, neg_hit = 239
+Added cache entries: 3700000
+number of cache hit: 4300000, pos_hit = 4299761, neg_hit = 239
+Added cache entries: 3800000
+Removed entries: 2512312
+number of cache hit: 4400000, pos_hit = 4399761, neg_hit = 239
+Added cache entries: 3900000
+Removed entries: 2600050
+number of cache hit: 4500000, pos_hit = 4499761, neg_hit = 239
+Added cache entries: 4000000
+number of cache hit: 4600000, pos_hit = 4599761, neg_hit = 239
+Removed entries: 2700105
+Added cache entries: 4100000
+number of cache hit: 4700000, pos_hit = 4699761, neg_hit = 239
+Removed entries: 2800044
+Added cache entries: 4200000
+number of cache hit: 4800000, pos_hit = 4799761, neg_hit = 239
+Added cache entries: 4300000
+Removed entries: 2900000
+number of cache hit: 4900000, pos_hit = 4899761, neg_hit = 239
+Removed entries: 3002556
+Added cache entries: 4400000
+number of cache hit: 5000000, pos_hit = 4999761, neg_hit = 239
+Added cache entries: 4500000
+Removed entries: 3100154
+number of cache hit: 5100000, pos_hit = 5099761, neg_hit = 239
+Added cache entries: 4600000
+Removed entries: 3200142
+number of cache hit: 5200000, pos_hit = 5199761, neg_hit = 239
+Added cache entries: 4700000
+Removed entries: 3300162
+number of cache hit: 5300000, pos_hit = 5299761, neg_hit = 239
+Added cache entries: 4800000
+number of cache hit: 5400000, pos_hit = 5399761, neg_hit = 239
+Removed entries: 3403705
+Added cache entries: 4900000
+number of cache hit: 5500000, pos_hit = 5499761, neg_hit = 239
+Removed entries: 3504665
+Added cache entries: 5000000
+Removed entries: 3600000
+number of cache hit: 5600000, pos_hit = 5599761, neg_hit = 239
+Removed entries: 3715471
+Removed entries: 3806134
+Added cache entries: 5100000
+number of cache hit: 5700000, pos_hit = 5699761, neg_hit = 239
+Removed entries: 3900006
+Added cache entries: 5200000
+number of cache hit: 5800000, pos_hit = 5799761, neg_hit = 239
+Removed entries: 4000022
+Added cache entries: 5300000
+number of cache hit: 5900000, pos_hit = 5899761, neg_hit = 239
+Removed entries: 4100006
+Added cache entries: 5400000
+number of cache hit: 6000000, pos_hit = 5999761, neg_hit = 239
+Added cache entries: 5500000
+number of cache hit: 6100000, pos_hit = 6099761, neg_hit = 239
+Removed entries: 4200212
+Added cache entries: 5600000
+number of cache hit: 6200000, pos_hit = 6199761, neg_hit = 239
+Removed entries: 4302680
+Added cache entries: 5700000
+number of cache hit: 6300000, pos_hit = 6299761, neg_hit = 239
+Removed entries: 4529479
+Removed entries: 4529494
+Added cache entries: 5800000
+number of cache hit: 6400000, pos_hit = 6399761, neg_hit = 239
+Added cache entries: 5900000
+Removed entries: 4600009
+number of cache hit: 6500000, pos_hit = 6499761, neg_hit = 239
+Added cache entries: 6000000
+number of cache hit: 6600000, pos_hit = 6599761, neg_hit = 239
+Removed entries: 4700006
+Added cache entries: 6100000
+number of cache hit: 6700000, pos_hit = 6699761, neg_hit = 239
+Removed entries: 4800002
+Added cache entries: 6200000
+number of cache hit: 6800000, pos_hit = 6799761, neg_hit = 239
+Added cache entries: 6300000
+Removed entries: 4902072
+number of cache hit: 6900000, pos_hit = 6899761, neg_hit = 239
+Removed entries: 5000001
+Added cache entries: 6400000
+number of cache hit: 7000000, pos_hit = 6999761, neg_hit = 239
+Added cache entries: 6500000
+Removed entries: 5100009
+number of cache hit: 7100000, pos_hit = 7099761, neg_hit = 239
+Added cache entries: 6600000
+number of cache hit: 7200000, pos_hit = 7199761, neg_hit = 239
+Removed entries: 5200001
+Added cache entries: 6700000
+Removed entries: 5300025
+Removed entries: 5542827
+Removed entries: 5542828
+number of cache hit: 7300000, pos_hit = 7299761, neg_hit = 239
+Added cache entries: 6800000
+number of cache hit: 7400000, pos_hit = 7399761, neg_hit = 239
+Removed entries: 5609445
+Added cache entries: 6900000
+number of cache hit: 7500000, pos_hit = 7499761, neg_hit = 239
+Added cache entries: 7000000
+Removed entries: 5713808
+number of cache hit: 7600000, pos_hit = 7599761, neg_hit = 239
+Added cache entries: 7100000
+Removed entries: 5801932
+number of cache hit: 7700000, pos_hit = 7699761, neg_hit = 239
+Added cache entries: 7200000
+number of cache hit: 7800000, pos_hit = 7799761, neg_hit = 239
+Removed entries: 5900006
+Added cache entries: 7300000
+Removed entries: 6000009
+number of cache hit: 7900000, pos_hit = 7899761, neg_hit = 239
+Added cache entries: 7400000
+number of cache hit: 8000000, pos_hit = 7999761, neg_hit = 239
+Removed entries: 6100013
+Added cache entries: 7500000
+number of cache hit: 8100000, pos_hit = 8099761, neg_hit = 239
+Added cache entries: 7600000
+Removed entries: 6200000
+number of cache hit: 8200000, pos_hit = 8199761, neg_hit = 239
+Added cache entries: 7700000
+Removed entries: 6300106
+number of cache hit: 8300000, pos_hit = 8299761, neg_hit = 239
+Removed entries: 6400000
+Removed entries: 6515693
+Added cache entries: 7800000
+number of cache hit: 8400000, pos_hit = 8399761, neg_hit = 239
+Added cache entries: 7900000
+Removed entries: 6600420
+number of cache hit: 8500000, pos_hit = 8499761, neg_hit = 239
+Added cache entries: 8000000
+number of cache hit: 8600000, pos_hit = 8599761, neg_hit = 239
+Removed entries: 6700003
+Added cache entries: 8100000
+number of cache hit: 8700000, pos_hit = 8699761, neg_hit = 239
+Removed entries: 6801837
+Added cache entries: 8200000
+number of cache hit: 8800000, pos_hit = 8799761, neg_hit = 239
+Removed entries: 6904620
+Added cache entries: 8300000
+number of cache hit: 8900000, pos_hit = 8899761, neg_hit = 239
+Removed entries: 7000010
+Added cache entries: 8400000
+number of cache hit: 9000000, pos_hit = 8999761, neg_hit = 239
+Removed entries: 7101980
+Added cache entries: 8500000
+number of cache hit: 9100000, pos_hit = 9099761, neg_hit = 239
+Added cache entries: 8600000
+Removed entries: 7200110
+number of cache hit: 9200000, pos_hit = 9199761, neg_hit = 239
+Removed entries: 7300202
+Added cache entries: 8700000
+Removed entries: 7480439
+number of cache hit: 9300000, pos_hit = 9299761, neg_hit = 239
+Removed entries: 7500331
+Added cache entries: 8800000
+number of cache hit: 9400000, pos_hit = 9399761, neg_hit = 239
+Added cache entries: 8900000
+Removed entries: 7600091
+number of cache hit: 9500000, pos_hit = 9499761, neg_hit = 239
+Removed entries: 7707601
+Added cache entries: 9000000
+number of cache hit: 9600000, pos_hit = 9599761, neg_hit = 239
+Added cache entries: 9100000
+Removed entries: 7800011
+number of cache hit: 9700000, pos_hit = 9699761, neg_hit = 239
+Added cache entries: 9200000
+number of cache hit: 9800000, pos_hit = 9799761, neg_hit = 239
+Removed entries: 7900363
+Added cache entries: 9300000
+number of cache hit: 9900000, pos_hit = 9899761, neg_hit = 239
+Removed entries: 8052419
+Removed entries: 8146539
+Added cache entries: 9400000
+number of cache hit: 10000000, pos_hit = 9999761, neg_hit = 239
+Removed entries: 8200043
+Added cache entries: 9500000
+number of cache hit: 10100000, pos_hit = 10099761, neg_hit = 239
+Added cache entries: 9600000
+number of cache hit: 10200000, pos_hit = 10199761, neg_hit = 239
+Removed entries: 8300009
+Added cache entries: 9700000
+number of cache hit: 10300000, pos_hit = 10299761, neg_hit = 239
+Removed entries: 8470833
+Added cache entries: 9800000
+Removed entries: 8501931
+number of cache hit: 10400000, pos_hit = 10399761, neg_hit = 239
+Added cache entries: 9900000
+number of cache hit: 10500000, pos_hit = 10499761, neg_hit = 239
+Removed entries: 8600006
+Added cache entries: 10000000
+number of cache hit: 10600000, pos_hit = 10599761, neg_hit = 239
+Removed entries: 8703510
+Added cache entries: 10100000
+number of cache hit: 10700000, pos_hit = 10699761, neg_hit = 239
+Added cache entries: 10200000
+Removed entries: 8800020
+number of cache hit: 10800000, pos_hit = 10799761, neg_hit = 239
+Removed entries: 8900012
+Added cache entries: 10300000
+number of cache hit: 10900000, pos_hit = 10899761, neg_hit = 239
+Added cache entries: 10400000
+Removed entries: 9000017
+number of cache hit: 11000000, pos_hit = 10999761, neg_hit = 239
+Added cache entries: 10500000
+Removed entries: 9105289
+number of cache hit: 11100000, pos_hit = 11099761, neg_hit = 239
+Removed entries: 9207969
+Added cache entries: 10600000
+number of cache hit: 11200000, pos_hit = 11199761, neg_hit = 239
+Removed entries: 9300014
+Added cache entries: 10700000
+number of cache hit: 11300000, pos_hit = 11299761, neg_hit = 239
+Added cache entries: 10800000
+Removed entries: 9400064
+number of cache hit: 11400000, pos_hit = 11399761, neg_hit = 239
+Removed entries: 9500013
+Added cache entries: 10900000
+number of cache hit: 11500000, pos_hit = 11499761, neg_hit = 239
+Added cache entries: 11000000
+Removed entries: 9600007
+number of cache hit: 11600000, pos_hit = 11599761, neg_hit = 239
+Added cache entries: 11100000
+Removed entries: 9700009
+number of cache hit: 11700000, pos_hit = 11699761, neg_hit = 239
+Added cache entries: 11200000
+Removed entries: 9800134
+number of cache hit: 11800000, pos_hit = 11799761, neg_hit = 239
+Added cache entries: 11300000
+Removed entries: 9900020
+number of cache hit: 11900000, pos_hit = 11899761, neg_hit = 239
+Removed entries: 10002710
+Added cache entries: 11400000
+number of cache hit: 12000000, pos_hit = 11999761, neg_hit = 239
+Removed entries: 10122813
+Added cache entries: 11500000
+Removed entries: 10200144
+number of cache hit: 12100000, pos_hit = 12099761, neg_hit = 239
+Added cache entries: 11600000
+Removed entries: 10344408
+number of cache hit: 12200000, pos_hit = 12199761, neg_hit = 239
+Added cache entries: 11700000
+Removed entries: 10400003
+number of cache hit: 12300000, pos_hit = 12299761, neg_hit = 239
+Added cache entries: 11800000
+number of cache hit: 12400000, pos_hit = 12399761, neg_hit = 239
+Removed entries: 10500001
+Added cache entries: 11900000
+number of cache hit: 12500000, pos_hit = 12499761, neg_hit = 239
+Removed entries: 10600000
+Added cache entries: 12000000
+number of cache hit: 12600000, pos_hit = 12599761, neg_hit = 239
+Added cache entries: 12100000
+Removed entries: 10700112
+number of cache hit: 12700000, pos_hit = 12699761, neg_hit = 239
+Removed entries: 10800005
+Added cache entries: 12200000
+number of cache hit: 12800000, pos_hit = 12799761, neg_hit = 239
+Removed entries: 10900990
+Added cache entries: 12300000
+number of cache hit: 12900000, pos_hit = 12899761, neg_hit = 239
+Added cache entries: 12400000
+Removed entries: 11001329
+number of cache hit: 13000000, pos_hit = 12999761, neg_hit = 239
+Added cache entries: 12500000
+Removed entries: 11101936
+number of cache hit: 13100000, pos_hit = 13099761, neg_hit = 239
+Added cache entries: 12600000
+Removed entries: 11209098
+number of cache hit: 13200000, pos_hit = 13199761, neg_hit = 239
+Added cache entries: 12700000
+Removed entries: 11300637
+number of cache hit: 13300000, pos_hit = 13299761, neg_hit = 239
+Added cache entries: 12800000
+number of cache hit: 13400000, pos_hit = 13399761, neg_hit = 239
+Removed entries: 11400001
+Added cache entries: 12900000
+number of cache hit: 13500000, pos_hit = 13499761, neg_hit = 239
+Removed entries: 11500008
+Added cache entries: 13000000
+Removed entries: 11606990
+number of cache hit: 13600000, pos_hit = 13599761, neg_hit = 239
+Added cache entries: 13100000
+Removed entries: 11700011
+number of cache hit: 13700000, pos_hit = 13699761, neg_hit = 239
+Removed entries: 11800092
+Added cache entries: 13200000
+number of cache hit: 13800000, pos_hit = 13799761, neg_hit = 239
+Removed entries: 11901849
+Added cache entries: 13300000
+number of cache hit: 13900000, pos_hit = 13899761, neg_hit = 239
+Removed entries: 12000095
+Added cache entries: 13400000
+Removed entries: 12108436
+number of cache hit: 14000000, pos_hit = 13999761, neg_hit = 239
+Added cache entries: 13500000
+Removed entries: 12200104
+number of cache hit: 14100000, pos_hit = 14099761, neg_hit = 239
+Added cache entries: 13600000
+number of cache hit: 14200000, pos_hit = 14199761, neg_hit = 239
+Removed entries: 12300044
+Added cache entries: 13700000
+number of cache hit: 14300000, pos_hit = 14299761, neg_hit = 239
+Removed entries: 12400000
+Added cache entries: 13800000
+number of cache hit: 14400000, pos_hit = 14399761, neg_hit = 239
+Removed entries: 12513405
+Added cache entries: 13900000
+number of cache hit: 14500000, pos_hit = 14499761, neg_hit = 239
+Removed entries: 12600810
+Added cache entries: 14000000
+number of cache hit: 14600000, pos_hit = 14599761, neg_hit = 239
+Removed entries: 12708923
+Added cache entries: 14100000
+number of cache hit: 14700000, pos_hit = 14699761, neg_hit = 239
+Added cache entries: 14200000
+Removed entries: 12802275
+number of cache hit: 14800000, pos_hit = 14799761, neg_hit = 239
+Added cache entries: 14300000
+Removed entries: 12900039
+number of cache hit: 14900000, pos_hit = 14899761, neg_hit = 239
+Removed entries: 13001294
+Added cache entries: 14400000
+number of cache hit: 15000000, pos_hit = 14999761, neg_hit = 239
+Removed entries: 13101802
+Added cache entries: 14500000
+number of cache hit: 15100000, pos_hit = 15099761, neg_hit = 239
+Removed entries: 13205602
+Added cache entries: 14600000
+number of cache hit: 15200000, pos_hit = 15199761, neg_hit = 239
+Removed entries: 13301223
+Added cache entries: 14700000
+number of cache hit: 15300000, pos_hit = 15299761, neg_hit = 239
+Removed entries: 13403115
+Added cache entries: 14800000
+number of cache hit: 15400000, pos_hit = 15399761, neg_hit = 239
+Removed entries: 13500003
+Added cache entries: 14900000
+number of cache hit: 15500000, pos_hit = 15499761, neg_hit = 239
+Removed entries: 13600156
+Added cache entries: 15000000
+number of cache hit: 15600000, pos_hit = 15599761, neg_hit = 239
+Added cache entries: 15100000
+Removed entries: 13700000
+number of cache hit: 15700000, pos_hit = 15699761, neg_hit = 239
+Removed entries: 13801347
+Added cache entries: 15200000
+number of cache hit: 15800000, pos_hit = 15799761, neg_hit = 239
+Removed entries: 13900014
+Added cache entries: 15300000
+number of cache hit: 15900000, pos_hit = 15899761, neg_hit = 239
+Added cache entries: 15400000
+Removed entries: 14000051
+number of cache hit: 16000000, pos_hit = 15999761, neg_hit = 239
+Added cache entries: 15500000
+Removed entries: 14100006
+number of cache hit: 16100000, pos_hit = 16099761, neg_hit = 239
+Removed entries: 14200149
+Added cache entries: 15600000
+number of cache hit: 16200000, pos_hit = 16199761, neg_hit = 239
+Removed entries: 14330456
+Added cache entries: 15700000
+number of cache hit: 16300000, pos_hit = 16299761, neg_hit = 239
+Removed entries: 14407916
+Added cache entries: 15800000
+number of cache hit: 16400000, pos_hit = 16399761, neg_hit = 239
+Removed entries: 14500014
+Added cache entries: 15900000
+number of cache hit: 16500000, pos_hit = 16499761, neg_hit = 239
+Removed entries: 14620613
+Added cache entries: 16000000
+Removed entries: 14700012
+number of cache hit: 16600000, pos_hit = 16599761, neg_hit = 239
+Added cache entries: 16100000
+number of cache hit: 16700000, pos_hit = 16699761, neg_hit = 239
+Removed entries: 14805879
+Added cache entries: 16200000
+number of cache hit: 16800000, pos_hit = 16799761, neg_hit = 239
+Removed entries: 14978344
+Removed entries: 15000147
+Added cache entries: 16300000
+number of cache hit: 16900000, pos_hit = 16899761, neg_hit = 239
+Removed entries: 15100646
+Added cache entries: 16400000
+number of cache hit: 17000000, pos_hit = 16999761, neg_hit = 239
+Added cache entries: 16500000
+number of cache hit: 17100000, pos_hit = 17099761, neg_hit = 239
+Removed entries: 15211209
+Added cache entries: 16600000
+number of cache hit: 17200000, pos_hit = 17199761, neg_hit = 239
+Removed entries: 15304385
+Added cache entries: 16700000
+number of cache hit: 17300000, pos_hit = 17299761, neg_hit = 239
+Added cache entries: 16800000
+Removed entries: 15400129
+number of cache hit: 17400000, pos_hit = 17399761, neg_hit = 239
+Added cache entries: 16900000
+Removed entries: 15504444
+number of cache hit: 17500000, pos_hit = 17499761, neg_hit = 239
+Removed entries: 15682816
+Added cache entries: 17000000
+Removed entries: 15705361
+number of cache hit: 17600000, pos_hit = 17599761, neg_hit = 239
+Added cache entries: 17100000
+number of cache hit: 17700000, pos_hit = 17699761, neg_hit = 239
+Removed entries: 15810433
+Added cache entries: 17200000
+number of cache hit: 17800000, pos_hit = 17799761, neg_hit = 239
+Removed entries: 15900629
+Added cache entries: 17300000
+Removed entries: 16016826
+number of cache hit: 17900000, pos_hit = 17899761, neg_hit = 239
+Removed entries: 16143632
+Added cache entries: 17400000
+number of cache hit: 18000000, pos_hit = 17999761, neg_hit = 239
+Added cache entries: 17500000
+Removed entries: 16200471
+number of cache hit: 18100000, pos_hit = 18099761, neg_hit = 239
+Added cache entries: 17600000
+number of cache hit: 18200000, pos_hit = 18199761, neg_hit = 239
+Removed entries: 16303847
+Added cache entries: 17700000
+number of cache hit: 18300000, pos_hit = 18299761, neg_hit = 239
+Removed entries: 16441010
+Added cache entries: 17800000
+number of cache hit: 18400000, pos_hit = 18399761, neg_hit = 239
+Removed entries: 16500059
+Added cache entries: 17900000
+number of cache hit: 18500000, pos_hit = 18499761, neg_hit = 239
+Removed entries: 16600090
+Added cache entries: 18000000
+Removed entries: 16700006
+number of cache hit: 18600000, pos_hit = 18599761, neg_hit = 239
+Added cache entries: 18100000
+Removed entries: 16800111
+number of cache hit: 18700000, pos_hit = 18699761, neg_hit = 239
+Added cache entries: 18200000
+Removed entries: 16918804
+number of cache hit: 18800000, pos_hit = 18799761, neg_hit = 239
+Added cache entries: 18300000
+number of cache hit: 18900000, pos_hit = 18899761, neg_hit = 239
+Removed entries: 17000036
+Added cache entries: 18400000
+number of cache hit: 19000000, pos_hit = 18999761, neg_hit = 239
+Removed entries: 17100000
+Added cache entries: 18500000
+number of cache hit: 19100000, pos_hit = 19099761, neg_hit = 239
+Added cache entries: 18600000
+Removed entries: 17254314
+number of cache hit: 19200000, pos_hit = 19199761, neg_hit = 239
+Removed entries: 17300006
+Added cache entries: 18700000
+number of cache hit: 19300000, pos_hit = 19299761, neg_hit = 239
+Removed entries: 17400007
+Added cache entries: 18800000
+number of cache hit: 19400000, pos_hit = 19399761, neg_hit = 239
+Removed entries: 17510268
+Added cache entries: 18900000
+number of cache hit: 19500000, pos_hit = 19499761, neg_hit = 239
+Removed entries: 17600414
+Added cache entries: 19000000
+Removed entries: 17705420
+number of cache hit: 19600000, pos_hit = 19599761, neg_hit = 239
+Added cache entries: 19100000
+Removed entries: 17800092
+number of cache hit: 19700000, pos_hit = 19699761, neg_hit = 239
+Added cache entries: 19200000
+number of cache hit: 19800000, pos_hit = 19799761, neg_hit = 239
+Removed entries: 17900019
+Removed entries: 18109394
+Removed entries: 18109402
+Added cache entries: 19300000
+number of cache hit: 19900000, pos_hit = 19899761, neg_hit = 239
+Added cache entries: 19400000
+number of cache hit: 20000000, pos_hit = 19999761, neg_hit = 239
+Added cache entries: 19500000
+Removed entries: 18200006
+number of cache hit: 20100000, pos_hit = 20099761, neg_hit = 239
+Added cache entries: 19600000
+number of cache hit: 20200000, pos_hit = 20199761, neg_hit = 239
+Removed entries: 18300719
+Added cache entries: 19700000
+Removed entries: 18400117
+number of cache hit: 20300000, pos_hit = 20299761, neg_hit = 239
+Added cache entries: 19800000
+number of cache hit: 20400000, pos_hit = 20399761, neg_hit = 239
+Removed entries: 18500002
+Added cache entries: 19900000
+number of cache hit: 20500000, pos_hit = 20499761, neg_hit = 239
+Removed entries: 18600009
+Added cache entries: 20000000
+number of cache hit: 20600000, pos_hit = 20599761, neg_hit = 239
+Removed entries: 18706535
+Added cache entries: 20100000
+number of cache hit: 20700000, pos_hit = 20699761, neg_hit = 239
+Added cache entries: 20200000
+Removed entries: 18800167
+number of cache hit: 20800000, pos_hit = 20799761, neg_hit = 239
+Added cache entries: 20300000
+Removed entries: 18909153
+number of cache hit: 20900000, pos_hit = 20899761, neg_hit = 239
+Removed entries: 19184720
+Removed entries: 19184723
+Added cache entries: 20400000
+Removed entries: 19200232
+number of cache hit: 21000000, pos_hit = 20999761, neg_hit = 239
+Added cache entries: 20500000
+number of cache hit: 21100000, pos_hit = 21099761, neg_hit = 239
+Added cache entries: 20600000
+number of cache hit: 21200000, pos_hit = 21199761, neg_hit = 239
+Removed entries: 19301451
+Added cache entries: 20700000
+number of cache hit: 21300000, pos_hit = 21299761, neg_hit = 239
+Removed entries: 19400001
+Added cache entries: 20800000
+number of cache hit: 21400000, pos_hit = 21399761, neg_hit = 239
+Removed entries: 19501607
+Added cache entries: 20900000
+number of cache hit: 21500000, pos_hit = 21499761, neg_hit = 239
+Added cache entries: 21000000
+Removed entries: 19600231
+number of cache hit: 21600000, pos_hit = 21599761, neg_hit = 239
+Added cache entries: 21100000
+number of cache hit: 21700000, pos_hit = 21699761, neg_hit = 239
+Removed entries: 19700012
+Added cache entries: 21200000
+Removed entries: 19800481
+number of cache hit: 21800000, pos_hit = 21799761, neg_hit = 239
+Added cache entries: 21300000
+Removed entries: 19900000
+number of cache hit: 21900000, pos_hit = 21899761, neg_hit = 239
+Added cache entries: 21400000
+Removed entries: 20000515
+number of cache hit: 22000000, pos_hit = 21999761, neg_hit = 239
+Added cache entries: 21500000
+Removed entries: 20103718
+number of cache hit: 22100000, pos_hit = 22099761, neg_hit = 239
+Added cache entries: 21600000
+number of cache hit: 22200000, pos_hit = 22199761, neg_hit = 239
+Removed entries: 20201412
+Added cache entries: 21700000
+Removed entries: 20300000
+number of cache hit: 22300000, pos_hit = 22299761, neg_hit = 239
+Added cache entries: 21800000
+Removed entries: 20405074
+number of cache hit: 22400000, pos_hit = 22399761, neg_hit = 239
+Added cache entries: 21900000
+number of cache hit: 22500000, pos_hit = 22499761, neg_hit = 239
+Removed entries: 20500103
+Removed entries: 20600906
+Added cache entries: 22000000
+number of cache hit: 22600000, pos_hit = 22599761, neg_hit = 239
+Added cache entries: 22100000
+Removed entries: 20700705
+number of cache hit: 22700000, pos_hit = 22699761, neg_hit = 239
+Added cache entries: 22200000
+Removed entries: 20800001
+number of cache hit: 22800000, pos_hit = 22799761, neg_hit = 239
+Removed entries: 20902574
+Added cache entries: 22300000
+number of cache hit: 22900000, pos_hit = 22899761, neg_hit = 239
+Added cache entries: 22400000
+Removed entries: 21003742
+number of cache hit: 23000000, pos_hit = 22999761, neg_hit = 239
+Removed entries: 21124180
+Added cache entries: 22500000
+number of cache hit: 23100000, pos_hit = 23099761, neg_hit = 239
+Removed entries: 21200035
+Added cache entries: 22600000
+number of cache hit: 23200000, pos_hit = 23199761, neg_hit = 239
+Added cache entries: 22700000
+Removed entries: 21300048
+number of cache hit: 23300000, pos_hit = 23299761, neg_hit = 239
+Added cache entries: 22800000
+number of cache hit: 23400000, pos_hit = 23399761, neg_hit = 239
+Removed entries: 21400015
+Added cache entries: 22900000
+Removed entries: 21500014
+number of cache hit: 23500000, pos_hit = 23499761, neg_hit = 239
+Added cache entries: 23000000
+Removed entries: 21600005
+number of cache hit: 23600000, pos_hit = 23599761, neg_hit = 239
+Added cache entries: 23100000
+Removed entries: 21707154
+number of cache hit: 23700000, pos_hit = 23699761, neg_hit = 239
+Added cache entries: 23200000
+Removed entries: 21800018
+number of cache hit: 23800000, pos_hit = 23799761, neg_hit = 239
+Added cache entries: 23300000
+number of cache hit: 23900000, pos_hit = 23899761, neg_hit = 239
+Removed entries: 21901597
+Added cache entries: 23400000
+Removed entries: 22000054
+number of cache hit: 24000000, pos_hit = 23999761, neg_hit = 239
+Added cache entries: 23500000
+number of cache hit: 24100000, pos_hit = 24099761, neg_hit = 239
+Removed entries: 22100000
+Added cache entries: 23600000
+number of cache hit: 24200000, pos_hit = 24199761, neg_hit = 239
+Removed entries: 22200017
+Added cache entries: 23700000
+number of cache hit: 24300000, pos_hit = 24299761, neg_hit = 239
+Removed entries: 22300022
+Added cache entries: 23800000
+number of cache hit: 24400000, pos_hit = 24399761, neg_hit = 239
+Removed entries: 22400260
+Removed entries: 22536302
+Added cache entries: 23900000
+number of cache hit: 24500000, pos_hit = 24499761, neg_hit = 239
+Removed entries: 22600919
+Added cache entries: 24000000
+number of cache hit: 24600000, pos_hit = 24599761, neg_hit = 239
+Removed entries: 22700020
+Added cache entries: 24100000
+number of cache hit: 24700000, pos_hit = 24699761, neg_hit = 239
+Removed entries: 22800021
+Added cache entries: 24200000
+Removed entries: 22942569
+number of cache hit: 24800000, pos_hit = 24799761, neg_hit = 239
+Removed entries: 23007596
+Added cache entries: 24300000
+number of cache hit: 24900000, pos_hit = 24899761, neg_hit = 239
+Removed entries: 23100001
+Added cache entries: 24400000
+number of cache hit: 25000000, pos_hit = 24999761, neg_hit = 239
+Added cache entries: 24500000
+number of cache hit: 25100000, pos_hit = 25099761, neg_hit = 239
+Removed entries: 23200243
+Added cache entries: 24600000
+number of cache hit: 25200000, pos_hit = 25199761, neg_hit = 239
+Removed entries: 23300068
+Added cache entries: 24700000
+number of cache hit: 25300000, pos_hit = 25299761, neg_hit = 239
+Removed entries: 23419741
+Added cache entries: 24800000
+Removed entries: 23506322
+number of cache hit: 25400000, pos_hit = 25399761, neg_hit = 239
+Added cache entries: 24900000
+Removed entries: 23600007
+number of cache hit: 25500000, pos_hit = 25499761, neg_hit = 239
+Added cache entries: 25000000
+number of cache hit: 25600000, pos_hit = 25599761, neg_hit = 239
+Removed entries: 23703814
+Added cache entries: 25100000
+number of cache hit: 25700000, pos_hit = 25699761, neg_hit = 239
+Removed entries: 23800035
+Added cache entries: 25200000
+number of cache hit: 25800000, pos_hit = 25799761, neg_hit = 239
+Added cache entries: 25300000
+Removed entries: 23900036
+number of cache hit: 25900000, pos_hit = 25899761, neg_hit = 239
+Added cache entries: 25400000
+Removed entries: 24001019
+number of cache hit: 26000000, pos_hit = 25999761, neg_hit = 239
+Added cache entries: 25500000
+Removed entries: 24100045
+number of cache hit: 26100000, pos_hit = 26099761, neg_hit = 239
+Added cache entries: 25600000
+Removed entries: 24200003
+number of cache hit: 26200000, pos_hit = 26199761, neg_hit = 239
+Added cache entries: 25700000
+number of cache hit: 26300000, pos_hit = 26299761, neg_hit = 239
+Removed entries: 24300068
+Added cache entries: 25800000
+number of cache hit: 26400000, pos_hit = 26399761, neg_hit = 239
+Removed entries: 24400005
+Added cache entries: 25900000
+number of cache hit: 26500000, pos_hit = 26499761, neg_hit = 239
+Removed entries: 24500037
+Added cache entries: 26000000
+number of cache hit: 26600000, pos_hit = 26599761, neg_hit = 239
+Removed entries: 24603604
+Added cache entries: 26100000
+number of cache hit: 26700000, pos_hit = 26699761, neg_hit = 239
+Removed entries: 24700196
+Added cache entries: 26200000
+number of cache hit: 26800000, pos_hit = 26799761, neg_hit = 239
+Removed entries: 24811739
+Added cache entries: 26300000
+Removed entries: 24902010
+number of cache hit: 26900000, pos_hit = 26899761, neg_hit = 239
+Added cache entries: 26400000
+number of cache hit: 27000000, pos_hit = 26999761, neg_hit = 239
+Removed entries: 25002903
+Removed entries: 25100124
+Added cache entries: 26500000
+number of cache hit: 27100000, pos_hit = 27099761, neg_hit = 239
+Added cache entries: 26600000
+Removed entries: 25200012
+number of cache hit: 27200000, pos_hit = 27199761, neg_hit = 239
+Added cache entries: 26700000
+number of cache hit: 27300000, pos_hit = 27299761, neg_hit = 239
+Removed entries: 25300030
+Added cache entries: 26800000
+number of cache hit: 27400000, pos_hit = 27399761, neg_hit = 239
+Removed entries: 25419169
+Added cache entries: 26900000
+number of cache hit: 27500000, pos_hit = 27499761, neg_hit = 239
+Removed entries: 25500043
+Added cache entries: 27000000
+number of cache hit: 27600000, pos_hit = 27599761, neg_hit = 239
+Removed entries: 25600205
+Added cache entries: 27100000
+Removed entries: 25702613
+number of cache hit: 27700000, pos_hit = 27699761, neg_hit = 239
+Added cache entries: 27200000
+number of cache hit: 27800000, pos_hit = 27799761, neg_hit = 239
+Removed entries: 25800000
+Added cache entries: 27300000
+Removed entries: 25905939
+number of cache hit: 27900000, pos_hit = 27899761, neg_hit = 239
+Added cache entries: 27400000
+Removed entries: 26062896
+number of cache hit: 28000000, pos_hit = 27999761, neg_hit = 239
+Removed entries: 26100029
+Added cache entries: 27500000
+number of cache hit: 28100000, pos_hit = 28099761, neg_hit = 239
+Added cache entries: 27600000
+Removed entries: 26200000
+number of cache hit: 28200000, pos_hit = 28199761, neg_hit = 239
+Added cache entries: 27700000
+Removed entries: 26303637
+number of cache hit: 28300000, pos_hit = 28299761, neg_hit = 239
+Removed entries: 26430008
+Added cache entries: 27800000
+number of cache hit: 28400000, pos_hit = 28399761, neg_hit = 239
+Removed entries: 26511632
+Added cache entries: 27900000
+Removed entries: 26601603
+number of cache hit: 28500000, pos_hit = 28499761, neg_hit = 239
+Added cache entries: 28000000
+number of cache hit: 28600000, pos_hit = 28599761, neg_hit = 239
+Removed entries: 26700001
+Added cache entries: 28100000
+number of cache hit: 28700000, pos_hit = 28699761, neg_hit = 239
+Removed entries: 26800000
+Added cache entries: 28200000
+number of cache hit: 28800000, pos_hit = 28799761, neg_hit = 239
+Removed entries: 26900010
+Added cache entries: 28300000
+number of cache hit: 28900000, pos_hit = 28899761, neg_hit = 239
+Removed entries: 27000789
+Removed entries: 27209910
+Removed entries: 27209913
+Added cache entries: 28400000
+number of cache hit: 29000000, pos_hit = 28999761, neg_hit = 239
+Added cache entries: 28500000
+Removed entries: 27315251
+number of cache hit: 29100000, pos_hit = 29099761, neg_hit = 239
+Added cache entries: 28600000
+number of cache hit: 29200000, pos_hit = 29199761, neg_hit = 239
+Added cache entries: 28700000
+number of cache hit: 29300000, pos_hit = 29299761, neg_hit = 239
+Removed entries: 27402225
+Added cache entries: 28800000
+number of cache hit: 29400000, pos_hit = 29399761, neg_hit = 239
+Removed entries: 27500000
+Added cache entries: 28900000
+number of cache hit: 29500000, pos_hit = 29499761, neg_hit = 239
+Removed entries: 27600001
+Added cache entries: 29000000
+number of cache hit: 29600000, pos_hit = 29599761, neg_hit = 239
+Removed entries: 27703249
+Added cache entries: 29100000
+number of cache hit: 29700000, pos_hit = 29699761, neg_hit = 239
+Added cache entries: 29200000
+number of cache hit: 29800000, pos_hit = 29799761, neg_hit = 239
+Removed entries: 27800036
+Removed entries: 27901490
+Added cache entries: 29300000
+number of cache hit: 29900000, pos_hit = 29899761, neg_hit = 239
+Added cache entries: 29400000
+Removed entries: 28000187
+number of cache hit: 30000000, pos_hit = 29999761, neg_hit = 239
+Added cache entries: 29500000
+Removed entries: 28100099
+number of cache hit: 30100000, pos_hit = 30099761, neg_hit = 239
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_175.cnf.cachet.cnf"
+	User time (seconds): 3540.76
+	System time (seconds): 50.69
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 292504
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3568185
+	Voluntary context switches: 51
+	Involuntary context switches: 4932
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

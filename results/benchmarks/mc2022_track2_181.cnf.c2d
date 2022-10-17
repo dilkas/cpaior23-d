@@ -1,0 +1,41 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 520 vars 2216 clauses (0 eclauses)
+6 unit clauses, 260 binary clauses, max clause size: 4
+Generating dtree...(hgr 2216->916): **.......................
+Sum Cluster=175, cutset=133, context=163, separator=147 done.
+Max Cluster=174, Cutset=132, Context=162, Separator=146, Height=17
+Compiling...Invalid NNF header
+ERROR: load a graph first
+ERROR: load a graph first
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: '>'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_181.cnf.minic2d.cnf"
+	User time (seconds): 3581.20
+	System time (seconds): 10.36
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 830496
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5536336
+	Voluntary context switches: 537
+	Involuntary context switches: 8203
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

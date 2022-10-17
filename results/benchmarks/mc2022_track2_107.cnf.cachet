@@ -1,0 +1,289 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_107.cnf.cachet.cnf ......
+Number of unit clauses			6
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added conflict clauses: 9000
+Added conflict clauses: 10000
+Added conflict clauses: 11000
+Added conflict clauses: 12000
+Added conflict clauses: 13000
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+Added conflict clauses: 16000
+Added conflict clauses: 17000
+Added conflict clauses: 18000
+Added conflict clauses: 19000
+Added conflict clauses: 20000
+Added conflict clauses: 21000
+Added conflict clauses: 22000
+Added conflict clauses: 23000
+Added conflict clauses: 24000
+Added conflict clauses: 25000
+Added conflict clauses: 26000
+Added conflict clauses: 27000
+Added conflict clauses: 28000
+Added conflict clauses: 29000
+Added conflict clauses: 30000
+Added conflict clauses: 31000
+Added conflict clauses: 32000
+Added conflict clauses: 33000
+Added conflict clauses: 34000
+Added conflict clauses: 35000
+Added conflict clauses: 36000
+Added conflict clauses: 37000
+Added conflict clauses: 38000
+Added conflict clauses: 39000
+Added conflict clauses: 40000
+Added conflict clauses: 41000
+Added conflict clauses: 42000
+Added conflict clauses: 43000
+Added conflict clauses: 44000
+Added conflict clauses: 45000
+Added conflict clauses: 46000
+Added conflict clauses: 47000
+Added conflict clauses: 48000
+Added conflict clauses: 49000
+Added conflict clauses: 50000
+Added conflict clauses: 51000
+Added conflict clauses: 52000
+Added conflict clauses: 53000
+Added conflict clauses: 54000
+Added conflict clauses: 55000
+Added conflict clauses: 56000
+Added conflict clauses: 57000
+Added conflict clauses: 58000
+Added conflict clauses: 59000
+Added conflict clauses: 60000
+Added conflict clauses: 61000
+Added conflict clauses: 62000
+Added conflict clauses: 63000
+Added conflict clauses: 64000
+Added conflict clauses: 65000
+Added conflict clauses: 66000
+Added conflict clauses: 67000
+Added conflict clauses: 68000
+Added conflict clauses: 69000
+Added conflict clauses: 70000
+Added conflict clauses: 71000
+Added conflict clauses: 72000
+Added conflict clauses: 73000
+Added conflict clauses: 74000
+Added conflict clauses: 75000
+Added conflict clauses: 76000
+Added conflict clauses: 77000
+Added conflict clauses: 78000
+Added conflict clauses: 79000
+Added conflict clauses: 80000
+Added conflict clauses: 81000
+Added conflict clauses: 82000
+Added conflict clauses: 83000
+Added conflict clauses: 84000
+Added conflict clauses: 85000
+Added conflict clauses: 86000
+Added conflict clauses: 87000
+Added conflict clauses: 88000
+Added conflict clauses: 89000
+Added conflict clauses: 90000
+Added conflict clauses: 91000
+Added conflict clauses: 92000
+Added conflict clauses: 93000
+Added conflict clauses: 94000
+Added conflict clauses: 95000
+Added conflict clauses: 96000
+Added conflict clauses: 97000
+Added conflict clauses: 98000
+Added conflict clauses: 99000
+Added cache entries: 100000
+Added conflict clauses: 100000
+Added conflict clauses: 101000
+Added conflict clauses: 102000
+Added conflict clauses: 103000
+Added conflict clauses: 104000
+Added conflict clauses: 105000
+Added conflict clauses: 106000
+Added conflict clauses: 107000
+Added conflict clauses: 108000
+Added conflict clauses: 109000
+Added conflict clauses: 110000
+Added conflict clauses: 111000
+Added conflict clauses: 112000
+Added conflict clauses: 113000
+Added conflict clauses: 114000
+Added conflict clauses: 115000
+Added conflict clauses: 116000
+Added conflict clauses: 117000
+Added conflict clauses: 118000
+Added conflict clauses: 119000
+Added conflict clauses: 120000
+Added conflict clauses: 121000
+Added conflict clauses: 122000
+Added conflict clauses: 123000
+Added conflict clauses: 124000
+Added conflict clauses: 125000
+Added conflict clauses: 126000
+Added conflict clauses: 127000
+Added conflict clauses: 128000
+Added conflict clauses: 129000
+Added conflict clauses: 130000
+Added conflict clauses: 131000
+Added conflict clauses: 132000
+Added conflict clauses: 133000
+Added conflict clauses: 134000
+Added conflict clauses: 135000
+Added conflict clauses: 136000
+Added conflict clauses: 137000
+Added conflict clauses: 138000
+Added conflict clauses: 139000
+Added conflict clauses: 140000
+Added conflict clauses: 141000
+Added conflict clauses: 142000
+Added conflict clauses: 143000
+Added conflict clauses: 144000
+Added conflict clauses: 145000
+Added conflict clauses: 146000
+Added conflict clauses: 147000
+Added conflict clauses: 148000
+Added conflict clauses: 149000
+Added conflict clauses: 150000
+Added conflict clauses: 151000
+Added conflict clauses: 152000
+Added conflict clauses: 153000
+Added conflict clauses: 154000
+Added conflict clauses: 155000
+Added conflict clauses: 156000
+Added conflict clauses: 157000
+Added conflict clauses: 158000
+Added conflict clauses: 159000
+Added conflict clauses: 160000
+Added conflict clauses: 161000
+Added conflict clauses: 162000
+Added conflict clauses: 163000
+Added conflict clauses: 164000
+Added conflict clauses: 165000
+Added conflict clauses: 166000
+Added conflict clauses: 167000
+Added conflict clauses: 168000
+Added conflict clauses: 169000
+Added conflict clauses: 170000
+Added conflict clauses: 171000
+Added conflict clauses: 172000
+Added conflict clauses: 173000
+Added conflict clauses: 174000
+Added conflict clauses: 175000
+Added conflict clauses: 176000
+Added conflict clauses: 177000
+Added conflict clauses: 178000
+Added conflict clauses: 179000
+Added conflict clauses: 180000
+Added conflict clauses: 181000
+Added conflict clauses: 182000
+Added conflict clauses: 183000
+Added conflict clauses: 184000
+Added conflict clauses: 185000
+Added conflict clauses: 186000
+Added conflict clauses: 187000
+Added conflict clauses: 188000
+Added conflict clauses: 189000
+Added conflict clauses: 190000
+Added conflict clauses: 191000
+Added conflict clauses: 192000
+Added conflict clauses: 193000
+Added conflict clauses: 194000
+Added conflict clauses: 195000
+Added conflict clauses: 196000
+Added conflict clauses: 197000
+Added conflict clauses: 198000
+Added conflict clauses: 199000
+Added cache entries: 200000
+Added conflict clauses: 200000
+Added conflict clauses: 201000
+Added conflict clauses: 202000
+Added conflict clauses: 203000
+Added conflict clauses: 204000
+Added conflict clauses: 205000
+Added conflict clauses: 206000
+Added conflict clauses: 207000
+Added conflict clauses: 208000
+Added conflict clauses: 209000
+Added conflict clauses: 210000
+Added conflict clauses: 211000
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			211963
+Removed cache entries			96
+Number of cache hits			1154
+Number of pos hits			1131
+Number of neg hits			23
+Number of collisions			4334
+
+Cross component implications		ON
+Number of cross implications		115
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		213863
+Number of split components		1030
+Number of non-split components		211438
+Number of SAT residual formula		833
+Number of trivial components		5
+Number of changed components		2
+Number of adjusted components		68
+First component split level		12
+
+Number of Decisions			212500
+Max Decision Level			96
+Number of Variables			320
+Original Num Clauses			1366
+Original Num Literals			5126
+Added Conflict Clauses			211265
+Added Conflict Literals			5171471
+Deleted Unrelevant clauses		25927
+Deleted Unrelevant literals		849422
+Number of Implications			14168678
+Total Run Time				62.5453
+
+Satisfying probability			3.15232
+s 6733307962390747166221915605761116431718565337313498958659461368121830790729812188752623517564928
+Number of solutions 6.73331e+96
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_107.cnf.cachet.cnf"
+	User time (seconds): 62.26
+	System time (seconds): 0.29
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:02.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 123452
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 43714
+	Voluntary context switches: 17
+	Involuntary context switches: 133
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

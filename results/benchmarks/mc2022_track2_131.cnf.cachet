@@ -1,0 +1,89 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_131.cnf.cachet.cnf ......
+Number of unit clauses			943
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added cache entries: 100000
+Added cache entries: 200000
+Added cache entries: 300000
+Added cache entries: 400000
+Added cache entries: 500000
+Added cache entries: 600000
+Added cache entries: 700000
+Added cache entries: 800000
+Added cache entries: 900000
+Added cache entries: 1000000
+Added cache entries: 1100000
+Added cache entries: 1200000
+Removed entries: 110036
+Added cache entries: 1300000
+Added cache entries: 1400000
+Removed entries: 200000
+Added cache entries: 1500000
+Removed entries: 300057
+Added cache entries: 1600000
+Removed entries: 400665
+Added cache entries: 1700000
+Added cache entries: 1800000
+Removed entries: 500001
+Added cache entries: 1900000
+Removed entries: 600002
+Added cache entries: 2000000
+Removed entries: 700083
+Removed entries: 833273
+Added cache entries: 2100000
+Removed entries: 903547
+Added cache entries: 2200000
+Removed entries: 1000447
+Added cache entries: 2300000
+Added cache entries: 2400000
+Removed entries: 1100024
+Added cache entries: 2500000
+Removed entries: 1200000
+Added cache entries: 2600000
+Removed entries: 1350857
+Added cache entries: 2700000
+Removed entries: 1404363
+Added cache entries: 2800000
+Removed entries: 1500007
+Added cache entries: 2900000
+Removed entries: 1600024
+Added cache entries: 3000000
+Removed entries: 1700618
+Added cache entries: 3100000
+Removed entries: 1910853
+Removed entries: 1910857
+Added cache entries: 3200000
+Removed entries: 2000421
+Added cache entries: 3300000
+Removed entries: 2116108
+Removed entries: 2248564
+Added cache entries: 3400000
+Removed entries: 2315964
+Added cache entries: 3500000
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_131.cnf.cachet.cnf"
+	User time (seconds): 3578.42
+	System time (seconds): 13.03
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 305740
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2439865
+	Voluntary context switches: 12
+	Involuntary context switches: 5033
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

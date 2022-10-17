@@ -1,0 +1,42 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 200 vars 499 clauses (0 eclauses)
+0 unit clauses, 399 binary clauses, max clause size: 5
+Generating dtree...(hgr 499->499): *.*............*...*.*...
+Sum Cluster=45, cutset=35, context=40, separator=35 done.
+Max Cluster=43, Cutset=34, Context=39, Separator=34, Height=13
+Compiling... [64 MBs]  [64 MBs] 1. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 2. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 3. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 4. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 5. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 6. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [8 MBs]  [2 MBs]  [1 MBs]  [1 MBs] 
+Out of memory for storing NNF.ERROR: could not open file
+ERROR: load a graph first
+ERROR: load a graph first
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: '>'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_003.cnf.minic2d.cnf"
+	User time (seconds): 1549.12
+	System time (seconds): 364.84
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:10.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4050004
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3476952
+	Voluntary context switches: 292
+	Involuntary context switches: 3053
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

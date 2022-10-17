@@ -1,0 +1,193 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_085.cnf.cachet.cnf ......
+Number of unit clauses			0
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added conflict clauses: 9000
+Added conflict clauses: 10000
+Added conflict clauses: 11000
+Added conflict clauses: 12000
+Added conflict clauses: 13000
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+Added conflict clauses: 16000
+Added conflict clauses: 17000
+Added conflict clauses: 18000
+Added conflict clauses: 19000
+Added conflict clauses: 20000
+Added conflict clauses: 21000
+Added conflict clauses: 22000
+Added conflict clauses: 23000
+Added conflict clauses: 24000
+Added conflict clauses: 25000
+Added conflict clauses: 26000
+Added conflict clauses: 27000
+Added conflict clauses: 28000
+Added conflict clauses: 29000
+Added conflict clauses: 30000
+Added conflict clauses: 31000
+Added conflict clauses: 32000
+Added conflict clauses: 33000
+Added conflict clauses: 34000
+Added conflict clauses: 35000
+Added conflict clauses: 36000
+Added conflict clauses: 37000
+Added conflict clauses: 38000
+Added conflict clauses: 39000
+Added conflict clauses: 40000
+Added conflict clauses: 41000
+Added conflict clauses: 42000
+Added conflict clauses: 43000
+Added conflict clauses: 44000
+Added conflict clauses: 45000
+Added conflict clauses: 46000
+Added conflict clauses: 47000
+Added conflict clauses: 48000
+Added conflict clauses: 49000
+Added conflict clauses: 50000
+Added conflict clauses: 51000
+Added conflict clauses: 52000
+Added conflict clauses: 53000
+Added conflict clauses: 54000
+Added conflict clauses: 55000
+Added conflict clauses: 56000
+Added conflict clauses: 57000
+Added conflict clauses: 58000
+Added conflict clauses: 59000
+Added conflict clauses: 60000
+Added conflict clauses: 61000
+Added conflict clauses: 62000
+Added conflict clauses: 63000
+Added conflict clauses: 64000
+Added conflict clauses: 65000
+Added conflict clauses: 66000
+Added conflict clauses: 67000
+Added conflict clauses: 68000
+Added conflict clauses: 69000
+Added conflict clauses: 70000
+Added conflict clauses: 71000
+Added conflict clauses: 72000
+Added conflict clauses: 73000
+Added conflict clauses: 74000
+Added conflict clauses: 75000
+Added conflict clauses: 76000
+Added conflict clauses: 77000
+Added conflict clauses: 78000
+Added conflict clauses: 79000
+Added conflict clauses: 80000
+Added conflict clauses: 81000
+Added conflict clauses: 82000
+Added conflict clauses: 83000
+Added conflict clauses: 84000
+Added conflict clauses: 85000
+Added conflict clauses: 86000
+Added conflict clauses: 87000
+Added conflict clauses: 88000
+Added conflict clauses: 89000
+Added conflict clauses: 90000
+Added conflict clauses: 91000
+Added conflict clauses: 92000
+Added conflict clauses: 93000
+Added conflict clauses: 94000
+Added conflict clauses: 95000
+Added conflict clauses: 96000
+Added conflict clauses: 97000
+Added conflict clauses: 98000
+Added conflict clauses: 99000
+Added cache entries: 100000
+Added conflict clauses: 100000
+Added conflict clauses: 101000
+Added conflict clauses: 102000
+Added conflict clauses: 103000
+Added conflict clauses: 104000
+Added conflict clauses: 105000
+Added conflict clauses: 106000
+Added conflict clauses: 107000
+Added conflict clauses: 108000
+Added conflict clauses: 109000
+Added conflict clauses: 110000
+Added conflict clauses: 111000
+Added conflict clauses: 112000
+Added conflict clauses: 113000
+Added conflict clauses: 114000
+Added conflict clauses: 115000
+Added conflict clauses: 116000
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			116944
+Removed cache entries			12
+Number of cache hits			113
+Number of pos hits			0
+Number of neg hits			113
+Number of collisions			1380
+
+Cross component implications		ON
+Number of cross implications		105
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		120182
+Number of split components		332
+Number of non-split components		116932
+Number of SAT residual formula		24
+Number of trivial components		2178
+Number of changed components		15
+Number of adjusted components		23
+First component split level		11
+
+Number of Decisions			117124
+Max Decision Level			202
+Number of Variables			824
+Original Num Clauses			19478
+Original Num Literals			70200
+Added Conflict Clauses			116803
+Added Conflict Literals			5430148
+Deleted Unrelevant clauses		76713
+Deleted Unrelevant literals		4310747
+Number of Implications			11455211
+Total Run Time				178.435
+
+Satisfying probability			0.000357419
+s 39984664542225029918968618030695261348511124943968015668907708330541718011457672425585694152712758676274776879993400868860364201179560501755980197774511041494808485189035791670237205916240331378189920330529600041947269824305823778591327299567616
+Number of solutions 3.99847e+244
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_085.cnf.cachet.cnf"
+	User time (seconds): 178.06
+	System time (seconds): 0.39
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:58.92
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 101636
+	Voluntary context switches: 27
+	Involuntary context switches: 323
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

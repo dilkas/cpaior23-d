@@ -1,0 +1,44 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 2701 vars 29534 clauses (0 eclauses)
+51 unit clauses, 29052 binary clauses, max clause size: 6
+Generating dtree...(hgr 29534->29529): **......*........*..*....
+Sum Cluster=347, cutset=225, context=332, separator=263 done.
+Max Cluster=346, Cutset=224, Context=331, Separator=262, Height=24
+Compiling...9.50.60.78.92.97.98.99. [64 MBs]  [64 MBs]  [64 MBs] done.
+Cache memory: 17.1 MB / Cache count: 48409
+NNF memory: 220.8 MB
+Learned clauses: 24982
+Compile Time: 235.970s / Pre-Processing: 22.020s / Post-Processing: 0.040s
+
+0.5% of nodes, and 0.3% of edges are dead.
+Saving 498979 nodes and 14261660 edges...done.
+
+Total Time: 259.690s
+ANSWER: 3.207367e-09
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_199.cnf.minic2d.cnf"
+	User time (seconds): 309.12
+	System time (seconds): 18.74
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:28.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14770512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7807102
+	Voluntary context switches: 323
+	Involuntary context switches: 496
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

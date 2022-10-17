@@ -1,0 +1,40 @@
+c WARNING: for repeatability, setting FPU to use double precision
+c Problem Statistics:
+c
+c [33mBenchmark Information[0m
+c Number of variables: 2701
+c Number of clauses: 11211
+c Number of literals: 23023
+c Parse time: 0.00
+c
+c [33md-DNNF Information[0m
+c Number of nodes: 100078
+c Number of edges: 268486
+c 
+c Final time: 21.402723
+c 
+s 724152621485436659540387630662916505600
+ANSWER: 1.447615e-13
+	Command being timed: "python ../tools/query_wrapper.py -m 32 d4 data/mc2022_track2_183.cnf.minic2d.cnf"
+	User time (seconds): 37.37
+	System time (seconds): 16.32
+	Percent of CPU this job got: 87%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1956936
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 987110
+	Voluntary context switches: 255
+	Involuntary context switches: 99
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

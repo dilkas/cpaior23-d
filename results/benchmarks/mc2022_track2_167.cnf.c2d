@@ -1,0 +1,42 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 729 vars 10530 clauses (0 eclauses)
+0 unit clauses, 10206 binary clauses, max clause size: 9
+Generating dtree...(hgr 10530->10530): **.**...*......*.........
+Sum Cluster=394, cutset=240, context=357, separator=262 done.
+Max Cluster=393, Cutset=239, Context=356, Separator=260, Height=19
+Compiling... [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  >>Cache filled<<  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [16 MBs]  [16 MBs]  [8 MBs]  [2 MBs]  [1 MBs] 
+Out of memory for storing NNF.Invalid NNF header
+ERROR: load a graph first
+ERROR: load a graph first
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: '>'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_167.cnf.minic2d.cnf"
+	User time (seconds): 3237.52
+	System time (seconds): 37.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 54:45.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4043300
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3416187
+	Voluntary context switches: 699
+	Involuntary context switches: 5082
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

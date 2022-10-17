@@ -1,0 +1,40 @@
+c WARNING: for repeatability, setting FPU to use double precision
+c Problem Statistics:
+c
+c [33mBenchmark Information[0m
+c Number of variables: 2501
+c Number of clauses: 2436
+c Number of literals: 8020
+c Parse time: 0.00
+c
+c [33md-DNNF Information[0m
+c Number of nodes: 3026609
+c Number of edges: 6375666
+c 
+c Final time: 235.635356
+c 
+s 427712014047151254204225987634689354904859402063747942625598138878407426697153714990861522524247419058697657525162198682668476909720545758093122898104285145324207801913143247368517440364658999709147687964377873557737527279728607699078757412882396407317016260915109510753097495457616864329338685504981624638081226158829251325139326918154634754735733481125641624319205529356457323328540777011816456479270780827832953699406317546436205663382460114551860427237682386936824611513278156664818830628755057538879589831768445728452312895728022063184213920622626785842461618784155110906131436876066717696
+ANSWER: 3.423881e-298
+	Command being timed: "python ../tools/query_wrapper.py -m 32 d4 data/mc2022_track2_061.cnf.minic2d.cnf"
+	User time (seconds): 435.56
+	System time (seconds): 143.46
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:43.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25780340
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 20364394
+	Voluntary context switches: 5972
+	Involuntary context switches: 1120
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

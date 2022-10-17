@@ -1,0 +1,41 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 140 vars 350 clauses (0 eclauses)
+0 unit clauses, 280 binary clauses, max clause size: 5
+Generating dtree...(hgr 350->350): ***..........*...........
+Sum Cluster=34, cutset=24, context=30, separator=24 done.
+Max Cluster=33, Cutset=23, Context=28, Separator=23, Height=11
+Compiling...1.2.3.4.5.6.7. [64 MBs] 8.9.10.11. [64 MBs] 12.14.15. [64 MBs] 16.17.18. [64 MBs] 19.20. [64 MBs] 21. [64 MBs] 22. [64 MBs] 23. [64 MBs] 24. [64 MBs]  [64 MBs] 25.26.27.28. [64 MBs] 29.30.31.32. [64 MBs] 33.34.35. [64 MBs] 36. [64 MBs] 37. [64 MBs] 38.39.40. [64 MBs] 41.42. [64 MBs]  [64 MBs] 43. [64 MBs] 44. [64 MBs] 45. [64 MBs] 46. [64 MBs]  [64 MBs]  [64 MBs] 47. [64 MBs] 48. [64 MBs] 49. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 50.51.52. [64 MBs] 53.54.55.56. [64 MBs] 57.58.59. [64 MBs] 60. [64 MBs] 61. [64 MBs] 62.63. [64 MBs] 64.65. [64 MBs] 66. [64 MBs] 67. [64 MBs]  [64 MBs] 68. [64 MBs]  [64 MBs] 69. [64 MBs] 70. [64 MBs] 71. [64 MBs] 72. [64 MBs] 73. [64 MBs]  [64 MBs] 74. [64 MBs]  [64 MBs]  [64 MBs]  [64 MBs] 75.76.77. [64 MBs] 78. [64 MBs] 79. [8 MBs]  [4 MBs]  [4 MBs]  [2 MBs]  [2 MBs]  [1 MBs]  [1 MBs] 
+Out of memory for storing NNF.terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: 'yet...'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_001.cnf.minic2d.cnf"
+	User time (seconds): 1558.67
+	System time (seconds): 279.36
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 30:44.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 24437048
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8384120
+	Voluntary context switches: 331
+	Involuntary context switches: 3405
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

@@ -1,0 +1,336 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_123.cnf.cachet.cnf ......
+Number of unit clauses			0
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added cache entries: 100000
+Added conflict clauses: 7000
+Added cache entries: 200000
+Added cache entries: 300000
+Added cache entries: 400000
+Added conflict clauses: 8000
+Added cache entries: 500000
+Added cache entries: 600000
+Added cache entries: 700000
+Added cache entries: 800000
+Added conflict clauses: 9000
+Added cache entries: 900000
+number of cache hit: 100000, pos_hit = 99976, neg_hit = 24
+Added cache entries: 1000000
+Added cache entries: 1100000
+Added cache entries: 1200000
+Added cache entries: 1300000
+Removed entries: 100001
+Added conflict clauses: 10000
+Added cache entries: 1400000
+Removed entries: 200792
+Added cache entries: 1500000
+Removed entries: 315162
+Added cache entries: 1600000
+Removed entries: 412577
+Added conflict clauses: 11000
+Added cache entries: 1700000
+Removed entries: 501097
+number of cache hit: 200000, pos_hit = 199976, neg_hit = 24
+Added cache entries: 1800000
+Removed entries: 600020
+Added cache entries: 1900000
+Removed entries: 700077
+Added cache entries: 2000000
+Removed entries: 800005
+Added cache entries: 2100000
+Removed entries: 900013
+Added cache entries: 2200000
+Added conflict clauses: 12000
+Removed entries: 1000000
+Added cache entries: 2300000
+Removed entries: 1100045
+Added cache entries: 2400000
+Removed entries: 1209192
+Added cache entries: 2500000
+Removed entries: 1305423
+Added cache entries: 2600000
+Removed entries: 1400002
+Added cache entries: 2700000
+number of cache hit: 300000, pos_hit = 299976, neg_hit = 24
+Removed entries: 1500347
+Added cache entries: 2800000
+Removed entries: 1601321
+Added cache entries: 2900000
+Removed entries: 1700122
+Added cache entries: 3000000
+Removed entries: 1818543
+Added conflict clauses: 13000
+Added cache entries: 3100000
+Removed entries: 1900007
+Added cache entries: 3200000
+Removed entries: 2008904
+Added cache entries: 3300000
+Removed entries: 2100015
+Added cache entries: 3400000
+Removed entries: 2200132
+Added cache entries: 3500000
+Removed entries: 2300002
+Added conflict clauses: 14000
+Added cache entries: 3600000
+Removed entries: 2401324
+number of cache hit: 400000, pos_hit = 399976, neg_hit = 24
+Added cache entries: 3700000
+Removed entries: 2511673
+Added cache entries: 3800000
+Removed entries: 2600023
+Removed entries: 2736379
+Added cache entries: 3900000
+Added cache entries: 4000000
+Removed entries: 2800207
+Added conflict clauses: 15000
+Added cache entries: 4100000
+Removed entries: 2962779
+Removed entries: 3001000
+Added cache entries: 4200000
+Added cache entries: 4300000
+Removed entries: 3100378
+Added cache entries: 4400000
+Removed entries: 3205870
+Added conflict clauses: 16000
+Added cache entries: 4500000
+number of cache hit: 500000, pos_hit = 499976, neg_hit = 24
+Removed entries: 3330522
+Added cache entries: 4600000
+Removed entries: 3401378
+Added cache entries: 4700000
+Removed entries: 3500013
+Added cache entries: 4800000
+Removed entries: 3625656
+Added cache entries: 4900000
+Removed entries: 3700007
+Added cache entries: 5000000
+Removed entries: 3800111
+Added cache entries: 5100000
+Added conflict clauses: 17000
+Removed entries: 3900004
+Added cache entries: 5200000
+Removed entries: 4003782
+Added cache entries: 5300000
+Removed entries: 4100528
+Added cache entries: 5400000
+Removed entries: 4200659
+Added cache entries: 5500000
+number of cache hit: 600000, pos_hit = 599976, neg_hit = 24
+Removed entries: 4300000
+Added cache entries: 5600000
+Removed entries: 4412445
+Added cache entries: 5700000
+Removed entries: 4500115
+Added cache entries: 5800000
+Removed entries: 4600672
+Added cache entries: 5900000
+Added conflict clauses: 18000
+Removed entries: 4726366
+Added cache entries: 6000000
+Removed entries: 4811634
+Added cache entries: 6100000
+Removed entries: 4900649
+Added cache entries: 6200000
+Removed entries: 5000494
+Removed entries: 5120464
+Added cache entries: 6300000
+Removed entries: 5208937
+Added cache entries: 6400000
+Removed entries: 5300015
+number of cache hit: 700000, pos_hit = 699976, neg_hit = 24
+Added cache entries: 6500000
+Added conflict clauses: 19000
+Added cache entries: 6600000
+Removed entries: 5413157
+Removed entries: 5510087
+Added cache entries: 6700000
+Added cache entries: 6800000
+Removed entries: 5600032
+Removed entries: 5787102
+Added cache entries: 6900000
+Removed entries: 5800010
+Added cache entries: 7000000
+Added cache entries: 7100000
+Removed entries: 5900368
+Added cache entries: 7200000
+Removed entries: 6000034
+Added cache entries: 7300000
+Removed entries: 6100003
+number of cache hit: 800000, pos_hit = 799976, neg_hit = 24
+Added conflict clauses: 20000
+Added cache entries: 7400000
+Removed entries: 6200932
+Added cache entries: 7500000
+Removed entries: 6308580
+Removed entries: 6400003
+Added cache entries: 7600000
+Added cache entries: 7700000
+Removed entries: 6500051
+Added cache entries: 7800000
+Removed entries: 6600754
+Added cache entries: 7900000
+Removed entries: 6700011
+Added cache entries: 8000000
+Removed entries: 6800046
+Added cache entries: 8100000
+Removed entries: 6900400
+Added cache entries: 8200000
+Removed entries: 7000101
+number of cache hit: 900000, pos_hit = 899976, neg_hit = 24
+Added cache entries: 8300000
+Removed entries: 7109247
+Added cache entries: 8400000
+Removed entries: 7200116
+Added cache entries: 8500000
+Added conflict clauses: 21000
+Removed entries: 7300007
+Added cache entries: 8600000
+Removed entries: 7400021
+Added cache entries: 8700000
+Removed entries: 7500539
+Added cache entries: 8800000
+Removed entries: 7603836
+Added cache entries: 8900000
+Removed entries: 7704262
+Added cache entries: 9000000
+Removed entries: 7800033
+Added cache entries: 9100000
+Removed entries: 7900010
+Added cache entries: 9200000
+Removed entries: 8001384
+Added cache entries: 9300000
+number of cache hit: 1000000, pos_hit = 999976, neg_hit = 24
+Removed entries: 8102963
+Added cache entries: 9400000
+Removed entries: 8213041
+Added conflict clauses: 22000
+Added cache entries: 9500000
+Removed entries: 8300095
+Added cache entries: 9600000
+Removed entries: 8418254
+Added cache entries: 9700000
+Removed entries: 8504103
+Added cache entries: 9800000
+Removed entries: 8600415
+Removed entries: 8735572
+Added cache entries: 9900000
+Removed entries: 8800077
+Added cache entries: 10000000
+Removed entries: 8905005
+Added cache entries: 10100000
+Added cache entries: 10200000
+number of cache hit: 1100000, pos_hit = 1099976, neg_hit = 24
+Removed entries: 9000006
+Removed entries: 9126300
+Added cache entries: 10300000
+Removed entries: 9200000
+Added cache entries: 10400000
+Added cache entries: 10500000
+Added conflict clauses: 23000
+Removed entries: 9307906
+Added cache entries: 10600000
+Removed entries: 9400180
+Added cache entries: 10700000
+Removed entries: 9500005
+Added cache entries: 10800000
+Removed entries: 9600559
+Added cache entries: 10900000
+Removed entries: 9700003
+Added cache entries: 11000000
+Removed entries: 9801902
+Added cache entries: 11100000
+Removed entries: 9900001
+Added cache entries: 11200000
+Removed entries: 10000009
+Added cache entries: 11300000
+Removed entries: 10100027
+Added cache entries: 11400000
+Removed entries: 10206872
+number of cache hit: 1200000, pos_hit = 1199976, neg_hit = 24
+Removed entries: 10326300
+Added cache entries: 11500000
+Removed entries: 10412390
+Added cache entries: 11600000
+Removed entries: 10508115
+Added conflict clauses: 24000
+Added cache entries: 11700000
+Removed entries: 10602070
+Added cache entries: 11800000
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			11829685
+Removed cache entries			10628792
+Number of cache hits			1232733
+Number of pos hits			1232709
+Number of neg hits			24
+Number of collisions			2303929
+
+Cross component implications		ON
+Number of cross implications		193
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		24217105
+Number of split components		3457944
+Number of non-split components		15778119
+Number of SAT residual formula		11805289
+Number of trivial components		11154387
+Number of changed components		33
+Number of adjusted components		14384
+First component split level		4
+
+Number of Decisions			11829880
+Max Decision Level			147
+Number of Variables			267
+Original Num Clauses			2746
+Original Num Literals			12267
+Added Conflict Clauses			24354
+Added Conflict Literals			759417
+Deleted Unrelevant clauses		780
+Deleted Unrelevant literals		37216
+Number of Implications			33872202
+Total Run Time				175.725
+
+Satisfying probability			1.79704e-17
+s 4261544727740401859118072944645527178536970782100556020505903104
+Number of solutions 4.26154e+63
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_123.cnf.cachet.cnf"
+	User time (seconds): 158.57
+	System time (seconds): 17.19
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:57.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 283504
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 372578
+	Voluntary context switches: 20
+	Involuntary context switches: 409
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,71 @@
+c ==================================================================
+c DMC: Diagram Model Counter
+c Version v1.0.0, released on 2020/07/20
+c ==================================================================
+
+c Process ID of this main program:
+c pid 171699
+
+c Reading CNF formula...
+
+c Reading join tree...
+c Constructed timer with 3600.000000-second timeout
+c ==================================================================
+c Getting join tree from stdin with 3600.000000-second timeout... (end input with 'Enter' then 'Ctrl d')
+c ------------------------------------------------------------------
+c After 0.022000 seconds, finished reading last legal join tree ending on or before line 70 with ADD width 72
+c Remaining duration: 3599.983000 seconds
+c Requested new timeout: 4.72237e+18 seconds -- request declined
+c ------------------------------------------------------------------
+c After 0.032000 seconds, finished reading last legal join tree ending on or before line 133 with ADD width 64
+c Remaining duration: 3599.973000 seconds
+c Requested new timeout: 1.84467e+16 seconds -- request declined
+c ------------------------------------------------------------------
+c After 0.067000 seconds, finished reading last legal join tree ending on or before line 197 with ADD width 64
+c Remaining duration: 3599.938000 seconds
+c Requested new timeout: 1.84467e+16 seconds -- request declined
+Tree decomposition stream ended.
+c ------------------------------------------------------------------
+c After 0.073000 seconds, finished reading last legal join tree ending on or before line 260 with ADD width 64
+c Remaining duration: 3599.932000 seconds
+c Requested new timeout: 1.84467e+16 seconds -- request declined
+c ******************************************************************
+c MY_WARNING: alarm should have been disarmed; disarming alarm now
+c ******************************************************************
+c Disarmed alarm
+c ------------------------------------------------------------------
+c After 0.074000 seconds, finished reading last legal join tree ending on or before line 260 with ADD width 64
+c Getting join tree from stdin: done
+c ==================================================================
+
+c Computing output...
+c ------------------------------------------------------------------
+s wmc 0.135055
+c ------------------------------------------------------------------
+
+c ==================================================================
+c seconds                       245.301
+c ==================================================================
+	Command being timed: "bash -c ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_019.cnf.cachet.cnf | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_019.cnf.cachet.cnf"
+	User time (seconds): 242.02
+	System time (seconds): 2.69
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:05.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2311184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1554364
+	Voluntary context switches: 76
+	Involuntary context switches: 327
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

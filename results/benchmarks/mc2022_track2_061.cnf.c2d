@@ -1,0 +1,50 @@
+
+c2d compiler version 2.20
+Copyright (c) Automated Reasoning Group, UCLA 2004-2005
+Licensed only for non-commercial, research and educational use
+
+Loaded cnf: 2501 vars 2437 clauses (0 eclauses)
+1 unit clauses, 64 binary clauses, max clause size: 4
+Generating dtree...(hgr 2437->832): *..........*...........*.
+Sum Cluster=37, cutset=18, context=30, separator=20 done.
+Max Cluster=35, Cutset=17, Context=28, Separator=19, Height=21
+Compiling...2.6.7.12. [64 MBs] 13.17.25.26. [64 MBs] 27.28.34.37.38.39.45.51. [64 MBs] 55.59.65.78.84.92.98.done.
+Cache memory: 12.4 MB / Cache count: 151544
+NNF memory: 228.2 MB
+Learned clauses: 385
+Compile Time: 102.670s / Pre-Processing: 2.650s / Post-Processing: 0.050s
+
+1.0% of nodes, and 1.0% of edges are dead.
+Saving 9027368 nodes and 20935419 edges...done.
+
+Total Time: 109.590s
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+Traceback (most recent call last):
+  File "../tools/query_wrapper.py", line 50, in <module>
+    print("ANSWER:", float(output.decode('utf-8').split()[-1]))
+ValueError: could not convert string to float: 'yet...'
+Command exited with non-zero status 1
+	Command being timed: "python ../tools/query_wrapper.py -m 32 c2d data/mc2022_track2_061.cnf.minic2d.cnf"
+	User time (seconds): 189.12
+	System time (seconds): 22.91
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:34.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28400904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7474518
+	Voluntary context switches: 1932
+	Involuntary context switches: 331
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

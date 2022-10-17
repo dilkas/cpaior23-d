@@ -1,0 +1,116 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_199.cnf.cachet.cnf ......
+Number of unit clauses			51
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+number of cache hit: 100000, pos_hit = 99999, neg_hit = 1
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added cache entries: 100000
+Added conflict clauses: 9000
+number of cache hit: 200000, pos_hit = 199999, neg_hit = 1
+Added conflict clauses: 10000
+number of cache hit: 300000, pos_hit = 299999, neg_hit = 1
+Added conflict clauses: 11000
+Added conflict clauses: 12000
+Added cache entries: 200000
+number of cache hit: 400000, pos_hit = 399999, neg_hit = 1
+Added conflict clauses: 13000
+number of cache hit: 500000, pos_hit = 499999, neg_hit = 1
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+number of cache hit: 600000, pos_hit = 599999, neg_hit = 1
+Added cache entries: 300000
+Added conflict clauses: 16000
+number of cache hit: 700000, pos_hit = 699999, neg_hit = 1
+number of cache hit: 800000, pos_hit = 799999, neg_hit = 1
+Added conflict clauses: 17000
+Added cache entries: 400000
+number of cache hit: 900000, pos_hit = 899999, neg_hit = 1
+Added conflict clauses: 18000
+number of cache hit: 1000000, pos_hit = 999999, neg_hit = 1
+Added conflict clauses: 19000
+Added cache entries: 500000
+number of cache hit: 1100000, pos_hit = 1099999, neg_hit = 1
+Added conflict clauses: 20000
+number of cache hit: 1200000, pos_hit = 1199999, neg_hit = 1
+Added cache entries: 600000
+Added conflict clauses: 21000
+number of cache hit: 1300000, pos_hit = 1299999, neg_hit = 1
+
+Learning				ON
+Approximate hashing			ON
+Multiple precision			OFF
+Static ordering				OFF
+Dynamic heuristic			VSADS
+
+Cache table size			5242880
+Oldest age allowed			1048576
+Max cache entries			20971520
+Added cache entries			654138
+Removed cache entries			11
+Number of cache hits			1389226
+Number of pos hits			1389225
+Number of neg hits			1
+Number of collisions			83437
+
+Cross component implications		ON
+Number of cross implications		20607
+Backtrack factor			2
+Number of far backtrack			0
+
+Number of total components		2261927
+Number of split components		518230
+Number of non-split components		723603
+Number of SAT residual formula		632163
+Number of trivial components		218539
+Number of changed components		30
+Number of adjusted components		920
+First component split level		6
+
+Number of Decisions			654126
+Max Decision Level			142
+Number of Variables			2701
+Original Num Clauses			29534
+Original Num Literals			59897
+Added Conflict Clauses			21951
+Added Conflict Literals			187795
+Deleted Unrelevant clauses		230
+Deleted Unrelevant literals		3282
+Number of Implications			39391726
+Total Run Time				63.4679
+
+Satisfying probability			9.42724e-15
+s inf
+Number of solutions 1.13868e+799
+
+
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_199.cnf.cachet.cnf"
+	User time (seconds): 62.51
+	System time (seconds): 0.97
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:03.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 197376
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 123272
+	Voluntary context switches: 17
+	Involuntary context switches: 142
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

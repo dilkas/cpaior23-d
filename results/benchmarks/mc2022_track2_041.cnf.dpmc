@@ -1,0 +1,82 @@
+c ==================================================================
+c DMC: Diagram Model Counter
+c Version v1.0.0, released on 2020/07/20
+c ==================================================================
+
+c Process ID of this main program:
+c pid 243739
+
+c Reading CNF formula...
+
+c Reading join tree...
+c Constructed timer with 3600.000000-second timeout
+c ==================================================================
+c Getting join tree from stdin with 3600.000000-second timeout... (end input with 'Enter' then 'Ctrl d')
+c ------------------------------------------------------------------
+c After 0.810000 seconds, finished reading last legal join tree ending on or before line 721 with ADD width 44
+c Remaining duration: 3599.210000 seconds
+c Requested new timeout: 1.75922e+10 seconds -- request declined
+c ------------------------------------------------------------------
+c After 0.871000 seconds, finished reading last legal join tree ending on or before line 1454 with ADD width 43
+c Remaining duration: 3599.149000 seconds
+c Requested new timeout: 8.79609e+09 seconds -- request declined
+c ------------------------------------------------------------------
+c After 0.989000 seconds, finished reading last legal join tree ending on or before line 2348 with ADD width 41
+c Remaining duration: 3599.031000 seconds
+c Requested new timeout: 2.19902e+09 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.090000 seconds, finished reading last legal join tree ending on or before line 3240 with ADD width 37
+c Remaining duration: 3598.930000 seconds
+c Requested new timeout: 1.37439e+08 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.192000 seconds, finished reading last legal join tree ending on or before line 4141 with ADD width 34
+c Remaining duration: 3598.828000 seconds
+c Requested new timeout: 1.71799e+07 seconds -- request declined
+c ------------------------------------------------------------------
+c After 1.284000 seconds, finished reading last legal join tree ending on or before line 5041 with ADD width 34
+c Remaining duration: 3598.736000 seconds
+c Requested new timeout: 1.71799e+07 seconds -- request declined
+Tree decomposition stream ended.
+c ******************************************************************
+c MY_WARNING: alarm should have been disarmed; disarming alarm now
+c ******************************************************************
+c Disarmed alarm
+c ------------------------------------------------------------------
+c After 1.286000 seconds, finished reading last legal join tree ending on or before line 5041 with ADD width 34
+c Getting join tree from stdin: done
+c ==================================================================
+
+c Computing output...
+c ******************************************************************
+c MY_WARNING: floating-point underflow may have occured
+c ******************************************************************
+c ------------------------------------------------------------------
+s wmc 0
+c ------------------------------------------------------------------
+
+c ==================================================================
+c seconds                       1.675
+c ==================================================================
+	Command being timed: "bash -c ../deps/DPMC/lg/build/lg "../deps/DPMC/lg/solvers/htd-master/bin/htd_main --opt width --iterations 1 --strategy challenge --print-progress --preprocessing full" < data/mc2022_track2_041.cnf.cachet.cnf | ../deps/DPMC/DMC/dmc --jf=- --pf=1e-3 --jw=3600 --cf=data/mc2022_track2_041.cnf.cachet.cnf"
+	User time (seconds): 0.98
+	System time (seconds): 0.07
+	Percent of CPU this job got: 33%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28180
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 31871
+	Voluntary context switches: 200
+	Involuntary context switches: 149
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

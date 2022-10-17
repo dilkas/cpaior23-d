@@ -1,0 +1,869 @@
+cachet version 1.21, December 2005
+copyright 2005, University of Washington
+incorporating code from zchaff, copyright 2004, Princeton University
+Solving data/mc2022_track2_065.cnf.cachet.cnf ......
+Number of unit clauses			1
+Added conflict clauses: 1000
+Added conflict clauses: 2000
+Added conflict clauses: 3000
+Added conflict clauses: 4000
+Added conflict clauses: 5000
+Added conflict clauses: 6000
+Added conflict clauses: 7000
+Added conflict clauses: 8000
+Added conflict clauses: 9000
+Added conflict clauses: 10000
+Added conflict clauses: 11000
+Added conflict clauses: 12000
+Added conflict clauses: 13000
+Added conflict clauses: 14000
+Added conflict clauses: 15000
+Added conflict clauses: 16000
+Added conflict clauses: 17000
+Added conflict clauses: 18000
+Added conflict clauses: 19000
+Added conflict clauses: 20000
+Added conflict clauses: 21000
+Added conflict clauses: 22000
+Added conflict clauses: 23000
+Added conflict clauses: 24000
+Added conflict clauses: 25000
+Added conflict clauses: 26000
+Added conflict clauses: 27000
+Added conflict clauses: 28000
+Added conflict clauses: 29000
+Added conflict clauses: 30000
+Added conflict clauses: 31000
+Added conflict clauses: 32000
+Added conflict clauses: 33000
+Added conflict clauses: 34000
+Added conflict clauses: 35000
+Added conflict clauses: 36000
+Added conflict clauses: 37000
+Added conflict clauses: 38000
+Added conflict clauses: 39000
+Added conflict clauses: 40000
+Added conflict clauses: 41000
+Added conflict clauses: 42000
+Added conflict clauses: 43000
+Added conflict clauses: 44000
+Added conflict clauses: 45000
+Added conflict clauses: 46000
+Added conflict clauses: 47000
+number of cache hit: 100000, pos_hit = 99989, neg_hit = 11
+number of cache hit: 200000, pos_hit = 199989, neg_hit = 11
+Added cache entries: 100000
+Added conflict clauses: 48000
+number of cache hit: 300000, pos_hit = 299989, neg_hit = 11
+number of cache hit: 400000, pos_hit = 399989, neg_hit = 11
+number of cache hit: 500000, pos_hit = 499989, neg_hit = 11
+Added conflict clauses: 49000
+number of cache hit: 600000, pos_hit = 599989, neg_hit = 11
+Added cache entries: 200000
+number of cache hit: 700000, pos_hit = 699989, neg_hit = 11
+number of cache hit: 800000, pos_hit = 799989, neg_hit = 11
+number of cache hit: 900000, pos_hit = 899989, neg_hit = 11
+Added conflict clauses: 50000
+number of cache hit: 1000000, pos_hit = 999989, neg_hit = 11
+Added conflict clauses: 51000
+Added cache entries: 300000
+Added conflict clauses: 52000
+number of cache hit: 1100000, pos_hit = 1099989, neg_hit = 11
+number of cache hit: 1200000, pos_hit = 1199989, neg_hit = 11
+number of cache hit: 1300000, pos_hit = 1299989, neg_hit = 11
+Added conflict clauses: 53000
+number of cache hit: 1400000, pos_hit = 1399989, neg_hit = 11
+Added cache entries: 400000
+Added conflict clauses: 54000
+number of cache hit: 1500000, pos_hit = 1499989, neg_hit = 11
+Added conflict clauses: 55000
+number of cache hit: 1600000, pos_hit = 1599989, neg_hit = 11
+Added conflict clauses: 56000
+number of cache hit: 1700000, pos_hit = 1699989, neg_hit = 11
+Added conflict clauses: 57000
+number of cache hit: 1800000, pos_hit = 1799989, neg_hit = 11
+Added cache entries: 500000
+Added conflict clauses: 58000
+number of cache hit: 1900000, pos_hit = 1899989, neg_hit = 11
+Added conflict clauses: 59000
+number of cache hit: 2000000, pos_hit = 1999989, neg_hit = 11
+number of cache hit: 2100000, pos_hit = 2099989, neg_hit = 11
+Added cache entries: 600000
+number of cache hit: 2200000, pos_hit = 2199989, neg_hit = 11
+number of cache hit: 2300000, pos_hit = 2299989, neg_hit = 11
+Added conflict clauses: 60000
+number of cache hit: 2400000, pos_hit = 2399989, neg_hit = 11
+number of cache hit: 2500000, pos_hit = 2499989, neg_hit = 11
+Added conflict clauses: 61000
+Added cache entries: 700000
+number of cache hit: 2600000, pos_hit = 2599989, neg_hit = 11
+number of cache hit: 2700000, pos_hit = 2699989, neg_hit = 11
+Added conflict clauses: 62000
+number of cache hit: 2800000, pos_hit = 2799989, neg_hit = 11
+number of cache hit: 2900000, pos_hit = 2899989, neg_hit = 11
+Added cache entries: 800000
+number of cache hit: 3000000, pos_hit = 2999989, neg_hit = 11
+number of cache hit: 3100000, pos_hit = 3099989, neg_hit = 11
+Added conflict clauses: 63000
+number of cache hit: 3200000, pos_hit = 3199989, neg_hit = 11
+number of cache hit: 3300000, pos_hit = 3299989, neg_hit = 11
+Added cache entries: 900000
+number of cache hit: 3400000, pos_hit = 3399989, neg_hit = 11
+Added conflict clauses: 64000
+number of cache hit: 3500000, pos_hit = 3499989, neg_hit = 11
+number of cache hit: 3600000, pos_hit = 3599989, neg_hit = 11
+Added conflict clauses: 65000
+Added cache entries: 1000000
+number of cache hit: 3700000, pos_hit = 3699989, neg_hit = 11
+number of cache hit: 3800000, pos_hit = 3799989, neg_hit = 11
+number of cache hit: 3900000, pos_hit = 3899989, neg_hit = 11
+Added conflict clauses: 66000
+number of cache hit: 4000000, pos_hit = 3999989, neg_hit = 11
+Added cache entries: 1100000
+Added conflict clauses: 67000
+number of cache hit: 4100000, pos_hit = 4099989, neg_hit = 11
+Added conflict clauses: 68000
+number of cache hit: 4200000, pos_hit = 4199989, neg_hit = 11
+number of cache hit: 4300000, pos_hit = 4299989, neg_hit = 11
+Added cache entries: 1200000
+Added conflict clauses: 69000
+number of cache hit: 4400000, pos_hit = 4399989, neg_hit = 11
+Removed entries: 100292
+number of cache hit: 4500000, pos_hit = 4499989, neg_hit = 11
+Added conflict clauses: 70000
+number of cache hit: 4600000, pos_hit = 4599989, neg_hit = 11
+Added cache entries: 1300000
+number of cache hit: 4700000, pos_hit = 4699989, neg_hit = 11
+Added conflict clauses: 71000
+number of cache hit: 4800000, pos_hit = 4799989, neg_hit = 11
+number of cache hit: 4900000, pos_hit = 4899989, neg_hit = 11
+Removed entries: 207253
+number of cache hit: 5000000, pos_hit = 4999989, neg_hit = 11
+Added cache entries: 1400000
+number of cache hit: 5100000, pos_hit = 5099989, neg_hit = 11
+Added conflict clauses: 72000
+number of cache hit: 5200000, pos_hit = 5199989, neg_hit = 11
+number of cache hit: 5300000, pos_hit = 5299989, neg_hit = 11
+number of cache hit: 5400000, pos_hit = 5399989, neg_hit = 11
+Removed entries: 324390
+Added cache entries: 1500000
+number of cache hit: 5500000, pos_hit = 5499989, neg_hit = 11
+Added conflict clauses: 73000
+Removed entries: 426178
+Added conflict clauses: 74000
+number of cache hit: 5600000, pos_hit = 5599989, neg_hit = 11
+number of cache hit: 5700000, pos_hit = 5699989, neg_hit = 11
+Added cache entries: 1600000
+number of cache hit: 5800000, pos_hit = 5799989, neg_hit = 11
+Removed entries: 502407
+Added conflict clauses: 75000
+number of cache hit: 5900000, pos_hit = 5899989, neg_hit = 11
+number of cache hit: 6000000, pos_hit = 5999989, neg_hit = 11
+Added cache entries: 1700000
+number of cache hit: 6100000, pos_hit = 6099989, neg_hit = 11
+Added conflict clauses: 76000
+number of cache hit: 6200000, pos_hit = 6199989, neg_hit = 11
+Removed entries: 633668
+number of cache hit: 6300000, pos_hit = 6299989, neg_hit = 11
+Added cache entries: 1800000
+number of cache hit: 6400000, pos_hit = 6399989, neg_hit = 11
+number of cache hit: 6500000, pos_hit = 6499989, neg_hit = 11
+Removed entries: 712649
+number of cache hit: 6600000, pos_hit = 6599989, neg_hit = 11
+Added conflict clauses: 77000
+number of cache hit: 6700000, pos_hit = 6699989, neg_hit = 11
+Added cache entries: 1900000
+number of cache hit: 6800000, pos_hit = 6799989, neg_hit = 11
+Added conflict clauses: 78000
+number of cache hit: 6900000, pos_hit = 6899989, neg_hit = 11
+Added conflict clauses: 79000
+number of cache hit: 7000000, pos_hit = 6999989, neg_hit = 11
+Added cache entries: 2000000
+Removed entries: 802219
+number of cache hit: 7100000, pos_hit = 7099989, neg_hit = 11
+Added conflict clauses: 80000
+number of cache hit: 7200000, pos_hit = 7199989, neg_hit = 11
+number of cache hit: 7300000, pos_hit = 7299989, neg_hit = 11
+Added cache entries: 2100000
+number of cache hit: 7400000, pos_hit = 7399989, neg_hit = 11
+Removed entries: 900064
+Added conflict clauses: 81000
+number of cache hit: 7500000, pos_hit = 7499989, neg_hit = 11
+number of cache hit: 7600000, pos_hit = 7599989, neg_hit = 11
+number of cache hit: 7700000, pos_hit = 7699989, neg_hit = 11
+Added cache entries: 2200000
+number of cache hit: 7800000, pos_hit = 7799989, neg_hit = 11
+number of cache hit: 7900000, pos_hit = 7899989, neg_hit = 11
+Added conflict clauses: 82000
+Removed entries: 1000000
+number of cache hit: 8000000, pos_hit = 7999989, neg_hit = 11
+number of cache hit: 8100000, pos_hit = 8099989, neg_hit = 11
+Added cache entries: 2300000
+number of cache hit: 8200000, pos_hit = 8199989, neg_hit = 11
+Removed entries: 1100591
+number of cache hit: 8300000, pos_hit = 8299989, neg_hit = 11
+Removed entries: 1200169
+Added conflict clauses: 83000
+number of cache hit: 8400000, pos_hit = 8399989, neg_hit = 11
+Added cache entries: 2400000
+number of cache hit: 8500000, pos_hit = 8499989, neg_hit = 11
+number of cache hit: 8600000, pos_hit = 8599989, neg_hit = 11
+number of cache hit: 8700000, pos_hit = 8699989, neg_hit = 11
+Added cache entries: 2500000
+number of cache hit: 8800000, pos_hit = 8799989, neg_hit = 11
+Added conflict clauses: 84000
+Removed entries: 1304652
+number of cache hit: 8900000, pos_hit = 8899989, neg_hit = 11
+number of cache hit: 9000000, pos_hit = 8999989, neg_hit = 11
+number of cache hit: 9100000, pos_hit = 9099989, neg_hit = 11
+Added cache entries: 2600000
+number of cache hit: 9200000, pos_hit = 9199989, neg_hit = 11
+Removed entries: 1400002
+Added conflict clauses: 85000
+number of cache hit: 9300000, pos_hit = 9299989, neg_hit = 11
+Removed entries: 1545126
+number of cache hit: 9400000, pos_hit = 9399989, neg_hit = 11
+Added conflict clauses: 86000
+number of cache hit: 9500000, pos_hit = 9499989, neg_hit = 11
+Added cache entries: 2700000
+number of cache hit: 9600000, pos_hit = 9599989, neg_hit = 11
+number of cache hit: 9700000, pos_hit = 9699989, neg_hit = 11
+number of cache hit: 9800000, pos_hit = 9799989, neg_hit = 11
+Added cache entries: 2800000
+number of cache hit: 9900000, pos_hit = 9899989, neg_hit = 11
+Removed entries: 1600041
+number of cache hit: 10000000, pos_hit = 9999989, neg_hit = 11
+Removed entries: 1714915
+number of cache hit: 10100000, pos_hit = 10099989, neg_hit = 11
+Added conflict clauses: 87000
+number of cache hit: 10200000, pos_hit = 10199989, neg_hit = 11
+Added cache entries: 2900000
+number of cache hit: 10300000, pos_hit = 10299989, neg_hit = 11
+number of cache hit: 10400000, pos_hit = 10399989, neg_hit = 11
+number of cache hit: 10500000, pos_hit = 10499989, neg_hit = 11
+Removed entries: 1800711
+Added cache entries: 3000000
+Added conflict clauses: 88000
+number of cache hit: 10600000, pos_hit = 10599989, neg_hit = 11
+number of cache hit: 10700000, pos_hit = 10699989, neg_hit = 11
+Added conflict clauses: 89000
+number of cache hit: 10800000, pos_hit = 10799989, neg_hit = 11
+Added cache entries: 3100000
+Added conflict clauses: 90000
+Removed entries: 1900060
+number of cache hit: 10900000, pos_hit = 10899989, neg_hit = 11
+number of cache hit: 11000000, pos_hit = 10999989, neg_hit = 11
+Added conflict clauses: 91000
+number of cache hit: 11100000, pos_hit = 11099989, neg_hit = 11
+Added cache entries: 3200000
+number of cache hit: 11200000, pos_hit = 11199989, neg_hit = 11
+Added conflict clauses: 92000
+number of cache hit: 11300000, pos_hit = 11299989, neg_hit = 11
+Removed entries: 2000013
+number of cache hit: 11400000, pos_hit = 11399989, neg_hit = 11
+Added conflict clauses: 93000
+number of cache hit: 11500000, pos_hit = 11499989, neg_hit = 11
+Added cache entries: 3300000
+Added conflict clauses: 94000
+number of cache hit: 11600000, pos_hit = 11599989, neg_hit = 11
+Added conflict clauses: 95000
+number of cache hit: 11700000, pos_hit = 11699989, neg_hit = 11
+Removed entries: 2100030
+number of cache hit: 11800000, pos_hit = 11799989, neg_hit = 11
+Added conflict clauses: 96000
+Added cache entries: 3400000
+number of cache hit: 11900000, pos_hit = 11899989, neg_hit = 11
+Added conflict clauses: 97000
+number of cache hit: 12000000, pos_hit = 11999989, neg_hit = 11
+Removed entries: 2200004
+Added conflict clauses: 98000
+number of cache hit: 12100000, pos_hit = 12099989, neg_hit = 11
+Removed entries: 2349638
+Added cache entries: 3500000
+number of cache hit: 12200000, pos_hit = 12199989, neg_hit = 11
+number of cache hit: 12300000, pos_hit = 12299989, neg_hit = 11
+Added conflict clauses: 99000
+number of cache hit: 12400000, pos_hit = 12399989, neg_hit = 11
+number of cache hit: 12500000, pos_hit = 12499989, neg_hit = 11
+Added conflict clauses: 100000
+Added cache entries: 3600000
+number of cache hit: 12600000, pos_hit = 12599989, neg_hit = 11
+Removed entries: 2400003
+number of cache hit: 12700000, pos_hit = 12699989, neg_hit = 11
+Added conflict clauses: 101000
+number of cache hit: 12800000, pos_hit = 12799989, neg_hit = 11
+number of cache hit: 12900000, pos_hit = 12899989, neg_hit = 11
+number of cache hit: 13000000, pos_hit = 12999989, neg_hit = 11
+Added conflict clauses: 102000
+Added cache entries: 3700000
+number of cache hit: 13100000, pos_hit = 13099989, neg_hit = 11
+Removed entries: 2509658
+number of cache hit: 13200000, pos_hit = 13199989, neg_hit = 11
+Added conflict clauses: 103000
+number of cache hit: 13300000, pos_hit = 13299989, neg_hit = 11
+Added conflict clauses: 104000
+Removed entries: 2634195
+Added cache entries: 3800000
+number of cache hit: 13400000, pos_hit = 13399989, neg_hit = 11
+number of cache hit: 13500000, pos_hit = 13499989, neg_hit = 11
+Added conflict clauses: 105000
+number of cache hit: 13600000, pos_hit = 13599989, neg_hit = 11
+Added conflict clauses: 106000
+number of cache hit: 13700000, pos_hit = 13699989, neg_hit = 11
+Added cache entries: 3900000
+number of cache hit: 13800000, pos_hit = 13799989, neg_hit = 11
+Removed entries: 2700040
+Added conflict clauses: 107000
+number of cache hit: 13900000, pos_hit = 13899989, neg_hit = 11
+number of cache hit: 14000000, pos_hit = 13999989, neg_hit = 11
+Added conflict clauses: 108000
+Added cache entries: 4000000
+number of cache hit: 14100000, pos_hit = 14099989, neg_hit = 11
+number of cache hit: 14200000, pos_hit = 14199989, neg_hit = 11
+Removed entries: 2800015
+Added conflict clauses: 109000
+number of cache hit: 14300000, pos_hit = 14299989, neg_hit = 11
+number of cache hit: 14400000, pos_hit = 14399989, neg_hit = 11
+Added conflict clauses: 110000
+Added cache entries: 4100000
+number of cache hit: 14500000, pos_hit = 14499989, neg_hit = 11
+Removed entries: 2905049
+number of cache hit: 14600000, pos_hit = 14599989, neg_hit = 11
+number of cache hit: 14700000, pos_hit = 14699989, neg_hit = 11
+Added conflict clauses: 111000
+number of cache hit: 14800000, pos_hit = 14799989, neg_hit = 11
+Added conflict clauses: 112000
+Added cache entries: 4200000
+number of cache hit: 14900000, pos_hit = 14899989, neg_hit = 11
+number of cache hit: 15000000, pos_hit = 14999989, neg_hit = 11
+Removed entries: 3000456
+Added conflict clauses: 113000
+number of cache hit: 15100000, pos_hit = 15099989, neg_hit = 11
+number of cache hit: 15200000, pos_hit = 15199989, neg_hit = 11
+Added cache entries: 4300000
+number of cache hit: 15300000, pos_hit = 15299989, neg_hit = 11
+Removed entries: 3100625
+number of cache hit: 15400000, pos_hit = 15399989, neg_hit = 11
+Added conflict clauses: 114000
+number of cache hit: 15500000, pos_hit = 15499989, neg_hit = 11
+number of cache hit: 15600000, pos_hit = 15599989, neg_hit = 11
+Added cache entries: 4400000
+Added conflict clauses: 115000
+number of cache hit: 15700000, pos_hit = 15699989, neg_hit = 11
+number of cache hit: 15800000, pos_hit = 15799989, neg_hit = 11
+Removed entries: 3200006
+number of cache hit: 15900000, pos_hit = 15899989, neg_hit = 11
+Added conflict clauses: 116000
+Added cache entries: 4500000
+number of cache hit: 16000000, pos_hit = 15999989, neg_hit = 11
+Removed entries: 3304954
+number of cache hit: 16100000, pos_hit = 16099989, neg_hit = 11
+number of cache hit: 16200000, pos_hit = 16199989, neg_hit = 11
+Added conflict clauses: 117000
+number of cache hit: 16300000, pos_hit = 16299989, neg_hit = 11
+Added cache entries: 4600000
+number of cache hit: 16400000, pos_hit = 16399989, neg_hit = 11
+Added conflict clauses: 118000
+Removed entries: 3400000
+number of cache hit: 16500000, pos_hit = 16499989, neg_hit = 11
+number of cache hit: 16600000, pos_hit = 16599989, neg_hit = 11
+Added conflict clauses: 119000
+Removed entries: 3513355
+Added cache entries: 4700000
+number of cache hit: 16700000, pos_hit = 16699989, neg_hit = 11
+Added conflict clauses: 120000
+number of cache hit: 16800000, pos_hit = 16799989, neg_hit = 11
+Added conflict clauses: 121000
+number of cache hit: 16900000, pos_hit = 16899989, neg_hit = 11
+Removed entries: 3606354
+number of cache hit: 17000000, pos_hit = 16999989, neg_hit = 11
+Removed entries: 3710434
+Added cache entries: 4800000
+number of cache hit: 17100000, pos_hit = 17099989, neg_hit = 11
+number of cache hit: 17200000, pos_hit = 17199989, neg_hit = 11
+Added conflict clauses: 122000
+number of cache hit: 17300000, pos_hit = 17299989, neg_hit = 11
+Added cache entries: 4900000
+number of cache hit: 17400000, pos_hit = 17399989, neg_hit = 11
+number of cache hit: 17500000, pos_hit = 17499989, neg_hit = 11
+number of cache hit: 17600000, pos_hit = 17599989, neg_hit = 11
+Added conflict clauses: 123000
+number of cache hit: 17700000, pos_hit = 17699989, neg_hit = 11
+number of cache hit: 17800000, pos_hit = 17799989, neg_hit = 11
+Added cache entries: 5000000
+Removed entries: 3800001
+number of cache hit: 17900000, pos_hit = 17899989, neg_hit = 11
+Added conflict clauses: 124000
+number of cache hit: 18000000, pos_hit = 17999989, neg_hit = 11
+number of cache hit: 18100000, pos_hit = 18099989, neg_hit = 11
+Added cache entries: 5100000
+number of cache hit: 18200000, pos_hit = 18199989, neg_hit = 11
+number of cache hit: 18300000, pos_hit = 18299989, neg_hit = 11
+Removed entries: 3900226
+number of cache hit: 18400000, pos_hit = 18399989, neg_hit = 11
+number of cache hit: 18500000, pos_hit = 18499989, neg_hit = 11
+Added cache entries: 5200000
+Added conflict clauses: 125000
+number of cache hit: 18600000, pos_hit = 18599989, neg_hit = 11
+Removed entries: 4002104
+number of cache hit: 18700000, pos_hit = 18699989, neg_hit = 11
+number of cache hit: 18800000, pos_hit = 18799989, neg_hit = 11
+Added cache entries: 5300000
+number of cache hit: 18900000, pos_hit = 18899989, neg_hit = 11
+number of cache hit: 19000000, pos_hit = 18999989, neg_hit = 11
+Removed entries: 4100005
+number of cache hit: 19100000, pos_hit = 19099989, neg_hit = 11
+Added cache entries: 5400000
+number of cache hit: 19200000, pos_hit = 19199989, neg_hit = 11
+Added conflict clauses: 126000
+number of cache hit: 19300000, pos_hit = 19299989, neg_hit = 11
+Removed entries: 4202099
+number of cache hit: 19400000, pos_hit = 19399989, neg_hit = 11
+number of cache hit: 19500000, pos_hit = 19499989, neg_hit = 11
+Added cache entries: 5500000
+Added conflict clauses: 127000
+number of cache hit: 19600000, pos_hit = 19599989, neg_hit = 11
+Removed entries: 4300030
+number of cache hit: 19700000, pos_hit = 19699989, neg_hit = 11
+number of cache hit: 19800000, pos_hit = 19799989, neg_hit = 11
+Added cache entries: 5600000
+number of cache hit: 19900000, pos_hit = 19899989, neg_hit = 11
+number of cache hit: 20000000, pos_hit = 19999989, neg_hit = 11
+Removed entries: 4403026
+number of cache hit: 20100000, pos_hit = 20099989, neg_hit = 11
+Added conflict clauses: 128000
+number of cache hit: 20200000, pos_hit = 20199989, neg_hit = 11
+Added cache entries: 5700000
+number of cache hit: 20300000, pos_hit = 20299989, neg_hit = 11
+Removed entries: 4500050
+number of cache hit: 20400000, pos_hit = 20399989, neg_hit = 11
+Added conflict clauses: 129000
+number of cache hit: 20500000, pos_hit = 20499989, neg_hit = 11
+Added cache entries: 5800000
+number of cache hit: 20600000, pos_hit = 20599989, neg_hit = 11
+Removed entries: 4602759
+number of cache hit: 20700000, pos_hit = 20699989, neg_hit = 11
+number of cache hit: 20800000, pos_hit = 20799989, neg_hit = 11
+Added conflict clauses: 130000
+number of cache hit: 20900000, pos_hit = 20899989, neg_hit = 11
+Added cache entries: 5900000
+Removed entries: 4700017
+number of cache hit: 21000000, pos_hit = 20999989, neg_hit = 11
+number of cache hit: 21100000, pos_hit = 21099989, neg_hit = 11
+number of cache hit: 21200000, pos_hit = 21199989, neg_hit = 11
+number of cache hit: 21300000, pos_hit = 21299989, neg_hit = 11
+Added cache entries: 6000000
+number of cache hit: 21400000, pos_hit = 21399989, neg_hit = 11
+Added conflict clauses: 131000
+number of cache hit: 21500000, pos_hit = 21499989, neg_hit = 11
+Removed entries: 4800026
+number of cache hit: 21600000, pos_hit = 21599989, neg_hit = 11
+number of cache hit: 21700000, pos_hit = 21699989, neg_hit = 11
+Added cache entries: 6100000
+number of cache hit: 21800000, pos_hit = 21799989, neg_hit = 11
+number of cache hit: 21900000, pos_hit = 21899989, neg_hit = 11
+Removed entries: 4919506
+number of cache hit: 22000000, pos_hit = 21999989, neg_hit = 11
+Added cache entries: 6200000
+Removed entries: 5019795
+number of cache hit: 22100000, pos_hit = 22099989, neg_hit = 11
+number of cache hit: 22200000, pos_hit = 22199989, neg_hit = 11
+Added conflict clauses: 132000
+number of cache hit: 22300000, pos_hit = 22299989, neg_hit = 11
+number of cache hit: 22400000, pos_hit = 22399989, neg_hit = 11
+Added cache entries: 6300000
+number of cache hit: 22500000, pos_hit = 22499989, neg_hit = 11
+number of cache hit: 22600000, pos_hit = 22599989, neg_hit = 11
+Removed entries: 5100013
+number of cache hit: 22700000, pos_hit = 22699989, neg_hit = 11
+number of cache hit: 22800000, pos_hit = 22799989, neg_hit = 11
+number of cache hit: 22900000, pos_hit = 22899989, neg_hit = 11
+Added cache entries: 6400000
+number of cache hit: 23000000, pos_hit = 22999989, neg_hit = 11
+number of cache hit: 23100000, pos_hit = 23099989, neg_hit = 11
+Removed entries: 5200005
+number of cache hit: 23200000, pos_hit = 23199989, neg_hit = 11
+number of cache hit: 23300000, pos_hit = 23299989, neg_hit = 11
+Added conflict clauses: 133000
+Added cache entries: 6500000
+number of cache hit: 23400000, pos_hit = 23399989, neg_hit = 11
+number of cache hit: 23500000, pos_hit = 23499989, neg_hit = 11
+number of cache hit: 23600000, pos_hit = 23599989, neg_hit = 11
+Removed entries: 5300209
+number of cache hit: 23700000, pos_hit = 23699989, neg_hit = 11
+Added cache entries: 6600000
+number of cache hit: 23800000, pos_hit = 23799989, neg_hit = 11
+Removed entries: 5400004
+number of cache hit: 23900000, pos_hit = 23899989, neg_hit = 11
+Added conflict clauses: 134000
+number of cache hit: 24000000, pos_hit = 23999989, neg_hit = 11
+Added cache entries: 6700000
+Added conflict clauses: 135000
+number of cache hit: 24100000, pos_hit = 24099989, neg_hit = 11
+number of cache hit: 24200000, pos_hit = 24199989, neg_hit = 11
+number of cache hit: 24300000, pos_hit = 24299989, neg_hit = 11
+Added conflict clauses: 136000
+Removed entries: 5500002
+Added cache entries: 6800000
+number of cache hit: 24400000, pos_hit = 24399989, neg_hit = 11
+Added conflict clauses: 137000
+number of cache hit: 24500000, pos_hit = 24499989, neg_hit = 11
+number of cache hit: 24600000, pos_hit = 24599989, neg_hit = 11
+Added conflict clauses: 138000
+number of cache hit: 24700000, pos_hit = 24699989, neg_hit = 11
+Removed entries: 5600060
+Added cache entries: 6900000
+number of cache hit: 24800000, pos_hit = 24799989, neg_hit = 11
+Added conflict clauses: 139000
+number of cache hit: 24900000, pos_hit = 24899989, neg_hit = 11
+number of cache hit: 25000000, pos_hit = 24999989, neg_hit = 11
+Removed entries: 5739816
+Removed entries: 5831874
+Added cache entries: 7000000
+Added conflict clauses: 140000
+number of cache hit: 25100000, pos_hit = 25099989, neg_hit = 11
+number of cache hit: 25200000, pos_hit = 25199989, neg_hit = 11
+number of cache hit: 25300000, pos_hit = 25299989, neg_hit = 11
+Added conflict clauses: 141000
+number of cache hit: 25400000, pos_hit = 25399989, neg_hit = 11
+Added cache entries: 7100000
+number of cache hit: 25500000, pos_hit = 25499989, neg_hit = 11
+Removed entries: 6019401
+Removed entries: 6019483
+Added conflict clauses: 142000
+number of cache hit: 25600000, pos_hit = 25599989, neg_hit = 11
+number of cache hit: 25700000, pos_hit = 25699989, neg_hit = 11
+number of cache hit: 25800000, pos_hit = 25799989, neg_hit = 11
+Added conflict clauses: 143000
+Added cache entries: 7200000
+number of cache hit: 25900000, pos_hit = 25899989, neg_hit = 11
+number of cache hit: 26000000, pos_hit = 25999989, neg_hit = 11
+Added conflict clauses: 144000
+number of cache hit: 26100000, pos_hit = 26099989, neg_hit = 11
+Added cache entries: 7300000
+number of cache hit: 26200000, pos_hit = 26199989, neg_hit = 11
+Removed entries: 6100331
+number of cache hit: 26300000, pos_hit = 26299989, neg_hit = 11
+Added conflict clauses: 145000
+number of cache hit: 26400000, pos_hit = 26399989, neg_hit = 11
+number of cache hit: 26500000, pos_hit = 26499989, neg_hit = 11
+Added cache entries: 7400000
+number of cache hit: 26600000, pos_hit = 26599989, neg_hit = 11
+number of cache hit: 26700000, pos_hit = 26699989, neg_hit = 11
+Added conflict clauses: 146000
+Removed entries: 6203250
+number of cache hit: 26800000, pos_hit = 26799989, neg_hit = 11
+Added cache entries: 7500000
+number of cache hit: 26900000, pos_hit = 26899989, neg_hit = 11
+number of cache hit: 27000000, pos_hit = 26999989, neg_hit = 11
+Removed entries: 6300003
+number of cache hit: 27100000, pos_hit = 27099989, neg_hit = 11
+Added conflict clauses: 147000
+Added cache entries: 7600000
+number of cache hit: 27200000, pos_hit = 27199989, neg_hit = 11
+number of cache hit: 27300000, pos_hit = 27299989, neg_hit = 11
+Added conflict clauses: 148000
+Removed entries: 6400442
+number of cache hit: 27400000, pos_hit = 27399989, neg_hit = 11
+Added cache entries: 7700000
+number of cache hit: 27500000, pos_hit = 27499989, neg_hit = 11
+Added conflict clauses: 149000
+number of cache hit: 27600000, pos_hit = 27599989, neg_hit = 11
+number of cache hit: 27700000, pos_hit = 27699989, neg_hit = 11
+Added conflict clauses: 150000
+Removed entries: 6508706
+Added cache entries: 7800000
+number of cache hit: 27800000, pos_hit = 27799989, neg_hit = 11
+number of cache hit: 27900000, pos_hit = 27899989, neg_hit = 11
+Added conflict clauses: 151000
+Removed entries: 6697461
+Removed entries: 6700214
+number of cache hit: 28000000, pos_hit = 27999989, neg_hit = 11
+number of cache hit: 28100000, pos_hit = 28099989, neg_hit = 11
+Added cache entries: 7900000
+Added conflict clauses: 152000
+Removed entries: 6828797
+number of cache hit: 28200000, pos_hit = 28199989, neg_hit = 11
+Added conflict clauses: 153000
+number of cache hit: 28300000, pos_hit = 28299989, neg_hit = 11
+number of cache hit: 28400000, pos_hit = 28399989, neg_hit = 11
+Added cache entries: 8000000
+number of cache hit: 28500000, pos_hit = 28499989, neg_hit = 11
+Added conflict clauses: 154000
+number of cache hit: 28600000, pos_hit = 28599989, neg_hit = 11
+number of cache hit: 28700000, pos_hit = 28699989, neg_hit = 11
+Added cache entries: 8100000
+Removed entries: 6900003
+number of cache hit: 28800000, pos_hit = 28799989, neg_hit = 11
+number of cache hit: 28900000, pos_hit = 28899989, neg_hit = 11
+number of cache hit: 29000000, pos_hit = 28999989, neg_hit = 11
+Added cache entries: 8200000
+number of cache hit: 29100000, pos_hit = 29099989, neg_hit = 11
+Removed entries: 7001430
+number of cache hit: 29200000, pos_hit = 29199989, neg_hit = 11
+number of cache hit: 29300000, pos_hit = 29299989, neg_hit = 11
+Added cache entries: 8300000
+number of cache hit: 29400000, pos_hit = 29399989, neg_hit = 11
+Added conflict clauses: 155000
+number of cache hit: 29500000, pos_hit = 29499989, neg_hit = 11
+Removed entries: 7108960
+number of cache hit: 29600000, pos_hit = 29599989, neg_hit = 11
+Added cache entries: 8400000
+number of cache hit: 29700000, pos_hit = 29699989, neg_hit = 11
+number of cache hit: 29800000, pos_hit = 29799989, neg_hit = 11
+Removed entries: 7204838
+number of cache hit: 29900000, pos_hit = 29899989, neg_hit = 11
+Removed entries: 7300861
+Added cache entries: 8500000
+number of cache hit: 30000000, pos_hit = 29999989, neg_hit = 11
+number of cache hit: 30100000, pos_hit = 30099989, neg_hit = 11
+number of cache hit: 30200000, pos_hit = 30199989, neg_hit = 11
+Added cache entries: 8600000
+number of cache hit: 30300000, pos_hit = 30299989, neg_hit = 11
+Removed entries: 7403213
+number of cache hit: 30400000, pos_hit = 30399989, neg_hit = 11
+number of cache hit: 30500000, pos_hit = 30499989, neg_hit = 11
+Added cache entries: 8700000
+number of cache hit: 30600000, pos_hit = 30599989, neg_hit = 11
+Added conflict clauses: 156000
+number of cache hit: 30700000, pos_hit = 30699989, neg_hit = 11
+Removed entries: 7500083
+Removed entries: 7614710
+number of cache hit: 30800000, pos_hit = 30799989, neg_hit = 11
+number of cache hit: 30900000, pos_hit = 30899989, neg_hit = 11
+Added cache entries: 8800000
+number of cache hit: 31000000, pos_hit = 30999989, neg_hit = 11
+number of cache hit: 31100000, pos_hit = 31099989, neg_hit = 11
+Added cache entries: 8900000
+number of cache hit: 31200000, pos_hit = 31199989, neg_hit = 11
+Removed entries: 7703747
+number of cache hit: 31300000, pos_hit = 31299989, neg_hit = 11
+number of cache hit: 31400000, pos_hit = 31399989, neg_hit = 11
+Added cache entries: 9000000
+number of cache hit: 31500000, pos_hit = 31499989, neg_hit = 11
+Removed entries: 7800002
+number of cache hit: 31600000, pos_hit = 31599989, neg_hit = 11
+number of cache hit: 31700000, pos_hit = 31699989, neg_hit = 11
+Added cache entries: 9100000
+number of cache hit: 31800000, pos_hit = 31799989, neg_hit = 11
+Removed entries: 7900065
+number of cache hit: 31900000, pos_hit = 31899989, neg_hit = 11
+number of cache hit: 32000000, pos_hit = 31999989, neg_hit = 11
+Added conflict clauses: 157000
+Added cache entries: 9200000
+number of cache hit: 32100000, pos_hit = 32099989, neg_hit = 11
+Added conflict clauses: 158000
+number of cache hit: 32200000, pos_hit = 32199989, neg_hit = 11
+Removed entries: 8001557
+Added conflict clauses: 159000
+number of cache hit: 32300000, pos_hit = 32299989, neg_hit = 11
+Added cache entries: 9300000
+number of cache hit: 32400000, pos_hit = 32399989, neg_hit = 11
+Added conflict clauses: 160000
+number of cache hit: 32500000, pos_hit = 32499989, neg_hit = 11
+Added conflict clauses: 161000
+number of cache hit: 32600000, pos_hit = 32599989, neg_hit = 11
+Removed entries: 8109162
+Added cache entries: 9400000
+number of cache hit: 32700000, pos_hit = 32699989, neg_hit = 11
+Added conflict clauses: 162000
+number of cache hit: 32800000, pos_hit = 32799989, neg_hit = 11
+number of cache hit: 32900000, pos_hit = 32899989, neg_hit = 11
+Removed entries: 8200015
+Added cache entries: 9500000
+number of cache hit: 33000000, pos_hit = 32999989, neg_hit = 11
+number of cache hit: 33100000, pos_hit = 33099989, neg_hit = 11
+number of cache hit: 33200000, pos_hit = 33199989, neg_hit = 11
+Added cache entries: 9600000
+number of cache hit: 33300000, pos_hit = 33299989, neg_hit = 11
+Added conflict clauses: 163000
+Removed entries: 8300179
+number of cache hit: 33400000, pos_hit = 33399989, neg_hit = 11
+number of cache hit: 33500000, pos_hit = 33499989, neg_hit = 11
+Added cache entries: 9700000
+number of cache hit: 33600000, pos_hit = 33599989, neg_hit = 11
+Removed entries: 8410098
+number of cache hit: 33700000, pos_hit = 33699989, neg_hit = 11
+number of cache hit: 33800000, pos_hit = 33799989, neg_hit = 11
+Removed entries: 8500067
+Added cache entries: 9800000
+number of cache hit: 33900000, pos_hit = 33899989, neg_hit = 11
+Added conflict clauses: 164000
+number of cache hit: 34000000, pos_hit = 33999989, neg_hit = 11
+number of cache hit: 34100000, pos_hit = 34099989, neg_hit = 11
+number of cache hit: 34200000, pos_hit = 34199989, neg_hit = 11
+Removed entries: 8608069
+Added cache entries: 9900000
+Added conflict clauses: 165000
+number of cache hit: 34300000, pos_hit = 34299989, neg_hit = 11
+Removed entries: 8701024
+number of cache hit: 34400000, pos_hit = 34399989, neg_hit = 11
+number of cache hit: 34500000, pos_hit = 34499989, neg_hit = 11
+Added cache entries: 10000000
+Added conflict clauses: 166000
+number of cache hit: 34600000, pos_hit = 34599989, neg_hit = 11
+number of cache hit: 34700000, pos_hit = 34699989, neg_hit = 11
+number of cache hit: 34800000, pos_hit = 34799989, neg_hit = 11
+Removed entries: 8800587
+Added cache entries: 10100000
+number of cache hit: 34900000, pos_hit = 34899989, neg_hit = 11
+number of cache hit: 35000000, pos_hit = 34999989, neg_hit = 11
+Added conflict clauses: 167000
+number of cache hit: 35100000, pos_hit = 35099989, neg_hit = 11
+Added conflict clauses: 168000
+Added cache entries: 10200000
+number of cache hit: 35200000, pos_hit = 35199989, neg_hit = 11
+Removed entries: 8900445
+Added conflict clauses: 169000
+number of cache hit: 35300000, pos_hit = 35299989, neg_hit = 11
+number of cache hit: 35400000, pos_hit = 35399989, neg_hit = 11
+Removed entries: 9189367
+Removed entries: 9189369
+Added cache entries: 10300000
+number of cache hit: 35500000, pos_hit = 35499989, neg_hit = 11
+Removed entries: 9206400
+number of cache hit: 35600000, pos_hit = 35599989, neg_hit = 11
+Added conflict clauses: 170000
+number of cache hit: 35700000, pos_hit = 35699989, neg_hit = 11
+Added cache entries: 10400000
+number of cache hit: 35800000, pos_hit = 35799989, neg_hit = 11
+number of cache hit: 35900000, pos_hit = 35899989, neg_hit = 11
+Added conflict clauses: 171000
+Removed entries: 9307890
+number of cache hit: 36000000, pos_hit = 35999989, neg_hit = 11
+Added cache entries: 10500000
+number of cache hit: 36100000, pos_hit = 36099989, neg_hit = 11
+number of cache hit: 36200000, pos_hit = 36199989, neg_hit = 11
+number of cache hit: 36300000, pos_hit = 36299989, neg_hit = 11
+Added conflict clauses: 172000
+Removed entries: 9410421
+number of cache hit: 36400000, pos_hit = 36399989, neg_hit = 11
+Added cache entries: 10600000
+number of cache hit: 36500000, pos_hit = 36499989, neg_hit = 11
+Added conflict clauses: 173000
+number of cache hit: 36600000, pos_hit = 36599989, neg_hit = 11
+number of cache hit: 36700000, pos_hit = 36699989, neg_hit = 11
+Added cache entries: 10700000
+Removed entries: 9500011
+number of cache hit: 36800000, pos_hit = 36799989, neg_hit = 11
+number of cache hit: 36900000, pos_hit = 36899989, neg_hit = 11
+number of cache hit: 37000000, pos_hit = 36999989, neg_hit = 11
+Added cache entries: 10800000
+Added conflict clauses: 174000
+Removed entries: 9687865
+number of cache hit: 37100000, pos_hit = 37099989, neg_hit = 11
+number of cache hit: 37200000, pos_hit = 37199989, neg_hit = 11
+Removed entries: 9700917
+number of cache hit: 37300000, pos_hit = 37299989, neg_hit = 11
+Added cache entries: 10900000
+Added conflict clauses: 175000
+number of cache hit: 37400000, pos_hit = 37399989, neg_hit = 11
+number of cache hit: 37500000, pos_hit = 37499989, neg_hit = 11
+Added conflict clauses: 176000
+number of cache hit: 37600000, pos_hit = 37599989, neg_hit = 11
+Added cache entries: 11000000
+number of cache hit: 37700000, pos_hit = 37699989, neg_hit = 11
+Removed entries: 9800414
+number of cache hit: 37800000, pos_hit = 37799989, neg_hit = 11
+Added conflict clauses: 177000
+number of cache hit: 37900000, pos_hit = 37899989, neg_hit = 11
+Added cache entries: 11100000
+number of cache hit: 38000000, pos_hit = 37999989, neg_hit = 11
+number of cache hit: 38100000, pos_hit = 38099989, neg_hit = 11
+number of cache hit: 38200000, pos_hit = 38199989, neg_hit = 11
+Removed entries: 9900000
+Added conflict clauses: 178000
+number of cache hit: 38300000, pos_hit = 38299989, neg_hit = 11
+Added cache entries: 11200000
+number of cache hit: 38400000, pos_hit = 38399989, neg_hit = 11
+number of cache hit: 38500000, pos_hit = 38499989, neg_hit = 11
+Removed entries: 10000429
+Added conflict clauses: 179000
+number of cache hit: 38600000, pos_hit = 38599989, neg_hit = 11
+Added cache entries: 11300000
+number of cache hit: 38700000, pos_hit = 38699989, neg_hit = 11
+Removed entries: 10144082
+number of cache hit: 38800000, pos_hit = 38799989, neg_hit = 11
+Added conflict clauses: 180000
+Removed entries: 10210860
+number of cache hit: 38900000, pos_hit = 38899989, neg_hit = 11
+Added cache entries: 11400000
+number of cache hit: 39000000, pos_hit = 38999989, neg_hit = 11
+Added conflict clauses: 181000
+number of cache hit: 39100000, pos_hit = 39099989, neg_hit = 11
+number of cache hit: 39200000, pos_hit = 39199989, neg_hit = 11
+number of cache hit: 39300000, pos_hit = 39299989, neg_hit = 11
+Removed entries: 10300730
+Added cache entries: 11500000
+Added conflict clauses: 182000
+number of cache hit: 39400000, pos_hit = 39399989, neg_hit = 11
+Removed entries: 10402781
+number of cache hit: 39500000, pos_hit = 39499989, neg_hit = 11
+Added conflict clauses: 183000
+Added cache entries: 11600000
+number of cache hit: 39600000, pos_hit = 39599989, neg_hit = 11
+number of cache hit: 39700000, pos_hit = 39699989, neg_hit = 11
+number of cache hit: 39800000, pos_hit = 39799989, neg_hit = 11
+number of cache hit: 39900000, pos_hit = 39899989, neg_hit = 11
+Added cache entries: 11700000
+Added conflict clauses: 184000
+Removed entries: 10501416
+number of cache hit: 40000000, pos_hit = 39999989, neg_hit = 11
+number of cache hit: 40100000, pos_hit = 40099989, neg_hit = 11
+number of cache hit: 40200000, pos_hit = 40199989, neg_hit = 11
+Added conflict clauses: 185000
+Added cache entries: 11800000
+number of cache hit: 40300000, pos_hit = 40299989, neg_hit = 11
+Removed entries: 10600147
+number of cache hit: 40400000, pos_hit = 40399989, neg_hit = 11
+number of cache hit: 40500000, pos_hit = 40499989, neg_hit = 11
+Added cache entries: 11900000
+Added conflict clauses: 186000
+Removed entries: 10700670
+number of cache hit: 40600000, pos_hit = 40599989, neg_hit = 11
+number of cache hit: 40700000, pos_hit = 40699989, neg_hit = 11
+Removed entries: 10800065
+Added cache entries: 12000000
+number of cache hit: 40800000, pos_hit = 40799989, neg_hit = 11
+number of cache hit: 40900000, pos_hit = 40899989, neg_hit = 11
+Added conflict clauses: 187000
+number of cache hit: 41000000, pos_hit = 40999989, neg_hit = 11
+Added cache entries: 12100000
+number of cache hit: 41100000, pos_hit = 41099989, neg_hit = 11
+Removed entries: 10902673
+number of cache hit: 41200000, pos_hit = 41199989, neg_hit = 11
+number of cache hit: 41300000, pos_hit = 41299989, neg_hit = 11
+Added cache entries: 12200000
+Added conflict clauses: 188000
+number of cache hit: 41400000, pos_hit = 41399989, neg_hit = 11
+number of cache hit: 41500000, pos_hit = 41499989, neg_hit = 11
+Removed entries: 11000023
+Added conflict clauses: 189000
+number of cache hit: 41600000, pos_hit = 41599989, neg_hit = 11
+Added cache entries: 12300000
+number of cache hit: 41700000, pos_hit = 41699989, neg_hit = 11
+Added conflict clauses: 190000
+Command terminated by signal 9
+	Command being timed: "../deps/cachet/cachet data/mc2022_track2_065.cnf.cachet.cnf"
+	User time (seconds): 3569.04
+	System time (seconds): 22.39
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 329180
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1766550
+	Voluntary context switches: 155
+	Involuntary context switches: 5777
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,40 @@
+c WARNING: for repeatability, setting FPU to use double precision
+c Problem Statistics:
+c
+c [33mBenchmark Information[0m
+c Number of variables: 3256
+c Number of clauses: 2898
+c Number of literals: 9176
+c Parse time: 0.00
+c
+c [33md-DNNF Information[0m
+c Number of nodes: 10809
+c Number of edges: 25012
+c 
+c Final time: 1.531959
+c 
+s 724117445804728835911287500726326296099862876649060167847719721169780095504111443068622994400580132147789018403725232296197693297186013820239059939244355741475352655547112387572032135834146178659240693252953064163962559254652459356681924446580843418909719060556740771258335470811868714951989386973265860075851756595500977624681002091859028795862126778538981552407743843579832066446031916210049322621786191751246150005271121979413533517628060618259578566965834929830107277089197415324577895760869454819765629044506052012813714182414078963169045157018177376892825360853919490476297892759442381106545166034425203373242375390187617553436533691704463435905237930784508751254133028550627817421057440872857379749842544327799953645651266316738227928629309740913258870720430459970387968
+ANSWER: 0.0
+	Command being timed: "python ../tools/query_wrapper.py -m 32 d4 data/mc2022_track2_041.cnf.minic2d.cnf"
+	User time (seconds): 2.56
+	System time (seconds): 0.81
+	Percent of CPU this job got: 77%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 109984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 36943
+	Voluntary context switches: 221
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
