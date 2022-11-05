@@ -17,7 +17,7 @@
 %\theoremstyle{definition}
 %\newtheorem{experiment}{Experiment}
 %\newtheorem{example}{Example}
-\spnewtheorem{experiment}{Experiment}{\bfseries}{\itshape}
+\spnewtheorem{experiment}{Experiment}{\bfseries}{\rmfamily}
 
 \Crefname{experiment}{Experiment}{Experiments}
 \Crefname{line}{line}{lines}
@@ -66,6 +66,11 @@
   how much determinism or redundancy there is in the numerical values of
   weights.
 \end{abstract}
+% TODO: update the abstract, the introduction, and the conclusions to reflect the new info
+% TODO: incorporate thesis corrections
+% TODO: emphasise the potential for a portfolio (CPAIOR cares about that)
+% TODO: take reviewer feedback into consideration
+% TODO: use a grammarly on the new paragraphs
 
 \section{Introduction}
 
@@ -85,11 +90,16 @@ add support for continuous variables~\cite{DBLP:conf/ijcai/BellePB15}, infinite
 domains~\cite{DBLP:conf/aaai/Belle17}, and first-order
 logic~\cite{DBLP:conf/ijcai/BroeckTMDR11,DBLP:journals/cacm/GogateD16} and
 generalise the definition to support arbitrary pseudo-Boolean functions instead
-of clauses~\cite{DBLP:conf/sat/DilkasB21}.
-Exact \textsf{WMC} algorithms can be broadly classified as based on
+of clauses~\cite{DBLP:conf/sat/DilkasB21}. Exact \textsf{WMC} algorithms can be
+broadly classified as based on
 search~\cite{DBLP:conf/sat/SangBBKP04,DBLP:conf/ijcai/SharmaRSM19}, knowledge
-compilation~\cite{DBLP:conf/ecai/Darwiche04,DBLP:conf/ijcai/LagniezM17,DBLP:conf/ijcai/OztokD15}, and
-dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}. Other alternatives include approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and parallel algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18}, hybrid approaches~\cite{DBLP:conf/sat/HecherTW20}, quantum computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
+compilation~\cite{DBLP:conf/ecai/Darwiche04,DBLP:conf/ijcai/LagniezM17,DBLP:conf/ijcai/OztokD15},
+and dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}.
+Other alternatives include approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and
+parallel algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18},
+hybrid approaches~\cite{DBLP:conf/sat/HecherTW20}, quantum
+computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model
+counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
 
 % motivation for the problem
 Recent papers that include experimental comparisons of \textsf{WMC}
@@ -241,27 +251,49 @@ $w(\neg x) = 0.7$, $w(\neg y) = 0.8$ is $w(x)w(y)+w(x)w(\neg y)+w(\neg x)w(y) =
 
 \section{Background on \textsf{\textmd{WMC}} Algorithms}\label{sec:background}
 
-In this section, we briefly review the three major approaches to \textsf{WMC}---search, knowledge compilation, and dynamic programming---and their corresponding algorithms. The main search-based \textsf{WMC} algorithm \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is based on a conflict-driven clause learning \SAT{} solver \cite{DBLP:conf/dac/MoskewiczMZZM01}, which is then extended with a component caching scheme and adapted to counting.
+In this section, we briefly review the three major approaches to
+\textsf{WMC}---search, knowledge compilation, and dynamic programming---and
+their corresponding algorithms. The main search-based \textsf{WMC} algorithm
+\textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} is based on a conflict-driven
+clause learning \SAT{} solver~\cite{DBLP:conf/dac/MoskewiczMZZM01}, which is
+then extended with a component caching scheme and adapted to counting.
 
 \emph{Knowledge compilation} refers to transformations of propositional formulas
 into more restrictive formats that make various operations (such as model
-counting) tractable in the size of the representation
-\cite{DBLP:journals/jair/DarwicheM02}.
+counting) tractable in the size of the
+representation~\cite{DBLP:journals/jair/DarwicheM02}.
 \textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04},
 \textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17}, and
-\textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15}
-are all algorithms of this type. \textsc{c2d} compiles to deterministic
-decomposable negation normal form
+\textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15} are all algorithms of this
+type. \textsc{c2d} compiles to deterministic decomposable negation normal form
 (d-DNNF)~\cite{DBLP:journals/jancl/Darwiche01}. Similarly, \textsc{d4} compiles
 to decision-DNNF (also known as decomposable decision
 graphs)~\cite{DBLP:conf/aaai/FargierM06}. The only difference between d-DNNF and
 decision-DNNF is that decision-DNNF has if-then-else constructions instead of
-disjunctions~\cite{DBLP:conf/ijcai/LagniezM17}. Finally,
-\textsc{miniC2D} compiles to decision-SDDs---a
-subset of sentential decision diagrams (SDDs) that form a subset of
-d-DNNF~\cite{DBLP:conf/ijcai/Darwiche11}.
+disjunctions~\cite{DBLP:conf/ijcai/LagniezM17}. Finally, \textsc{miniC2D}
+compiles to decision-SDDs---a subset of sentential decision diagrams (SDDs) that
+form a subset of d-DNNF~\cite{DBLP:conf/ijcai/Darwiche11}.
 
-All of the algorithms mentioned above execute in exactly the same way regardless of whether computing \textsf{WMC} or $\#\SAT{}$. Two recent \textsf{WMC} algorithms instead use data structures whose size (and thus the runtime of the algorithm) depends on the numerical values of weights. These data structures are representations of \emph{pseudo-Boolean functions}, i.e., functions of the form $f\colon 2^X \to \mathbb{R}_{\ge 0}$, where $X$ is a set, and $2^X$ denotes its powerset. \textsc{ADDMC} is the first such algorithm~\cite{DBLP:conf/aaai/DudekPV20}. It uses ADDs to represent pseudo-Boolean functions, combining and simplifying them in a bottom-up dynamic programming fashion. Since the size of an ADD for $f$ depends on the cardinality of the range of $f$ \cite{DBLP:journals/fmsd/BaharFGHMPS97}, the performance of the algorithm is sensitive to the numerical values of weights, e.g., to how frequently they repeat. \textsc{DPMC} extends \textsc{ADDMC} in two ways~\cite{DBLP:conf/cp/DudekPV20}. First, \textsc{DPMC} allows for the order and nesting of operations on ADDs to be determined from an approximately-minimal-width tree decomposition rather than by heuristics.\footnote{There is also a recent line of work in using tree decompositions to guide the heuristics of search-based model counters~\cite{DBLP:conf/cp/KorhonenJ21}.} Second, tensors are offered as an alternative to ADDs.
+All of the algorithms mentioned above execute in exactly the same way regardless
+of whether computing \textsf{WMC} or $\#\SAT{}$. Two recent \textsf{WMC}
+algorithms instead use data structures whose size (and thus the runtime of the
+algorithm) depends on the numerical values of weights. These data structures are
+representations of \emph{pseudo-Boolean functions}, i.e., functions of the form
+$f\colon 2^X \to \mathbb{R}_{\ge 0}$, where $X$ is a set, and $2^X$ denotes its
+powerset. \textsc{ADDMC} is the first such
+algorithm~\cite{DBLP:conf/aaai/DudekPV20}. It uses ADDs to represent
+pseudo-Boolean functions, combining and simplifying them in a bottom-up dynamic
+programming fashion. Since the size of an ADD for $f$ depends on the cardinality
+of the range of $f$~\cite{DBLP:journals/fmsd/BaharFGHMPS97}, the performance of
+the algorithm is sensitive to the numerical values of weights, e.g., to how
+frequently they repeat. \textsc{DPMC} extends \textsc{ADDMC} in two
+ways~\cite{DBLP:conf/cp/DudekPV20}. First, \textsc{DPMC} allows for the order
+and nesting of operations on ADDs to be determined from an
+approximately-minimal-width tree decomposition rather than by
+heuristics.\footnote{There is also a recent line of work in using tree
+  decompositions to guide the heuristics of search-based model
+  counters~\cite{DBLP:conf/cp/KorhonenJ21}.} Second, tensors are offered as an
+alternative to ADDs.
 
 In all known parameterised complexities of \textsf{WMC} algorithms, the
 exponential factor is a function of primal treewidth or a closely related
@@ -284,17 +316,19 @@ notion of width $w$ that is at most primal treewidth plus one and estimate the
 running time of the (execution part of the) algorithm to be proportional to
 $2^w$~\cite{DBLP:conf/cp/DudekPV20}.
 
-\section{Random $k$-CNF Formulas with Varying Primal
-  Treewidth}\label{sec:model}
+\section{Random $k$-CNF Formulas with Varying Primal Treewidth}\label{sec:model}
 
 \paragraph{Notation.}
 For any graph $G$, we write $\mathcal{V}(G)$ for its set of nodes and
 $\mathcal{E}(G)$ for its set of edges. Let $S$ be a finite set. We write
 $\mathcal{U}S$ for the discrete uniform probability distribution on $S$. We
-represent any other probability distribution as a pair $(S, p)$ where $p\colon S
-\to [0, 1]$ is a probability mass function. For any probability distribution
-$\mathcal{P}$, we write $x \leftlsquigarrow \mathcal{P}$ to denote the act of
-sampling $x$ from $\mathcal{P}$. For instance, $x \leftlsquigarrow (\{\, 1, 2 \,\}, \{\, 1 \mapsto 0.1, 2 \mapsto 0.9 \,\})$ means that $x$ becomes equal to $1$ with probability $0.1$ or to $2$ with probability $0.9$.
+represent any other probability distribution as a pair $(S, p)$ where
+$p\colon S \to [0, 1]$ is a probability mass function. For any probability
+distribution $\mathcal{P}$, we write $x \leftlsquigarrow \mathcal{P}$ to denote
+the act of sampling $x$ from $\mathcal{P}$. For instance,
+$x \leftlsquigarrow (\{\, 1, 2 \,\}, \{\, 1 \mapsto 0.1, 2 \mapsto 0.9 \,\})$
+means that $x$ becomes equal to $1$ with probability $0.1$ or to $2$ with
+probability $0.9$.
 
 Our random model is based on the following parameters:
 \begin{itemize}
@@ -367,13 +401,13 @@ The process behind generating random $k$-CNF formulas is summarized as
 the variables of the formula under construction. We simultaneously construct
 both formula $\phi$ and its primal graph $G$.\footnote{The idea to directly take
   the primal graph into consideration while generating the formula is new---cf.
-  random \SAT{} instance generators based on, e.g., adversarial evolution
-  \cite{DBLP:conf/cec/HossainALA10} and community structure
-  \cite{DBLP:journals/ai/Giraldez-CruL16}.} Each iteration of the first for-loop
-adds a clause to $\phi$. This is done by constructing a set $X$ of variables to
-be included in the clause, and then randomly adding either $x$ or $\neg x$ to
-the clause for each $x \in X$ on \cref{line:construct_clause}. Function
-\texttt{NewVariable} randomly selects each new variable $x$, and
+  random \SAT{} instance generators based on, e.g., adversarial
+  evolution~\cite{DBLP:conf/cec/HossainALA10} and community
+  structure~\cite{DBLP:journals/ai/Giraldez-CruL16}.} Each iteration of the
+first for-loop adds a clause to $\phi$. This is done by constructing a set $X$
+of variables to be included in the clause, and then randomly adding either $x$
+or $\neg x$ to the clause for each $x \in X$ on \cref{line:construct_clause}.
+Function \texttt{NewVariable} randomly selects each new variable $x$, and
 \cref{line:7,line:8,line:9} add $x$ to the graph and the formula while also
 adding edges between $x$ and all the other variables in the clause. To select
 each variable, \cref{line:13} defines set $N$ to contain all edges with exactly
@@ -398,12 +432,18 @@ well, see \cref{sec:remarks}) although alternatives (e.g., exponential scaling)
 could be considered. As long as $\rho < 1$, every $k$-CNF formula retains a
 positive probability of being generated by the algorithm.
 
-To transform the generated formula into a \textsf{WMC} instance, we need
-to define weights on literals.\footnote{Note that algorithms such as
-  \textsc{DPMC} and
-  \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20} support
-  a more flexible way of assigning weights that can lead to significant
-  performance improvements~\cite{DBLP:conf/uai/DilkasB21,DBLP:conf/sat/DilkasB21}.} We want to partition all variables into three groups: those with weights equal to zero and one, those with weights equal to 0.5, and those with arbitrary weights, where the size of each group is determined by $\delta$ and $\epsilon$. To do this, we sample a permutation $\pi \leftlsquigarrow \mathcal{U}S_\nu$ (where $S_\nu$ is the permutation group on $\{1, 2, \dots, \nu \}$), and assign to each \emph{variable} $x_n$ a weight drawn u.a.r.\ from
+To transform the generated formula into a \textsf{WMC} instance, we need to
+define weights on literals.\footnote{Note that algorithms such as \textsc{DPMC}
+  and \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}
+  support a more flexible way of assigning weights that can lead to significant
+  performance
+  improvements~\cite{DBLP:conf/uai/DilkasB21,DBLP:conf/sat/DilkasB21}.} We want
+to partition all variables into three groups: those with weights equal to zero
+and one, those with weights equal to 0.5, and those with arbitrary weights,
+where the size of each group is determined by $\delta$ and $\epsilon$. To do
+this, we sample a permutation $\pi \leftlsquigarrow \mathcal{U}S_\nu$ (where
+$S_\nu$ is the permutation group on $\{1, 2, \dots, \nu \}$), and assign to each
+\emph{variable} $x_n$ a weight drawn u.a.r.\ from
 \begin{itemize}
 \item $\mathcal{U}\{\,0, 1\,\}$ if $\pi(n) \le \nu\delta$,
 \item $\mathcal{U}\{\,0.5\,\}$ if $\nu\delta < \pi(n) \le \nu\delta +
@@ -502,12 +542,29 @@ the following experiment.
 
 \begin{experiment}\label{exp:regular_satisfiability}
   We fix $\nu = 100, \delta = \epsilon = 0$, and consider random instances with
-  $\mu = 2.5 \times \sqrt{2}^{-5}, 2.5 \times \sqrt{2}^{-4}, \dots, 2.5 \times
-  \sqrt{2}^5$, $\kappa = 2, 3, 4, 5$, and $\rho$ going from 0 to 1 in steps of
-  0.01. For each combination of parameters, we generate ten instances.\footnote{Since one expects similar values of $\rho$ to produce instances with similar properties, and $\rho$'s are enumerate quite densely, generating only ten instances is sufficient.} We check if each instance is satisfiable using \textsc{MiniSat}\footnote{\url{http://minisat.se/MiniSat.html}}~2.2.0~\cite{DBLP:conf/sat/EenS03} and calculate its (approximate) primal treewidth using \textsc{htd}\footnote{\url{https://github.com/mabseher/htd}}~\cite{DBLP:conf/cpaior/AbseherMW17}.
+  $\mu = 2.5 \times \sqrt{2}^{-5}, 2.5 \times \sqrt{2}^{-4}, \dots, 2.5 \times \sqrt{2}^5$,
+  $\kappa = 2, 3, 4, 5$, and $\rho$ going from 0 to 1 in steps of 0.01. For each
+  combination of parameters, we generate ten instances.\footnote{Since one
+    expects similar values of $\rho$ to produce instances with similar
+    properties, and $\rho$'s are enumerate quite densely, generating only ten
+    instances is sufficient.} We check if each instance is satisfiable using
+  \textsc{MiniSat}\footnote{\url{http://minisat.se/MiniSat.html}}~2.2.0~\cite{DBLP:conf/sat/EenS03}
+  and calculate its (approximate) primal treewidth using
+  \textsc{htd}\footnote{\url{https://github.com/mabseher/htd}}~\cite{DBLP:conf/cpaior/AbseherMW17}.
 \end{experiment}
 
-\begin{figure*}[t]
+\begin{remark}
+  Here and henceforth, we use \textsc{htd} to provide heuristic upper bounds on
+  true treewidth as exact computation would make the experiments significantly
+  more time-consuming. However, we compared the accuracy of \textsc{htd} with
+  another treewidth algorithm
+  \textsc{Jdrasil}\footnote{\url{https://maxbannach.github.io/Jdrasil/}}~\cite{DBLP:conf/wea/BannachBE17}
+  (set to compute exact values) on \SI{3}{\percent} of our random instances. The
+  difference between the upper bound produced by \textsc{htd} and the exact
+  value was never higher than 4 and at most 2 in \SI{85}{\percent} of all cases.
+\end{remark}
+
+\begin{figure}[t]
   \centering
   \includegraphics{regular_repetitiveness.pdf}
   \caption{The relationship between $\rho$ and primal treewidth for various
@@ -516,7 +573,7 @@ the following experiment.
     instances, and blue lines are smoothed means computed using locally weighted
     smoothing. The values of $\mu$ are rounded to one decimal
     place.}\label{fig:regular_repetitiveness}
-\end{figure*}
+\end{figure}
 
 \Cref{fig:regular_repetitiveness} shows the relationship between $\rho$ and
 primal treewidth. Except for when both $\mu$ and $\kappa$ are set to very low
@@ -547,22 +604,41 @@ enough to influence our experimental setup in the next section.
 
 \section{Experimental Results}\label{sec:experiments}
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics{treewidth}
-  \caption[Visualisations of the data from \cref{exp:density}. The top-left plot shows how the running time of each algorithm changes w.r.t.\ density when $\rho = 0$. The top-right plot shows changes in the running time of each algorithm w.r.t.\ primal treewidth with $\mu$ fixed at $1.9$. The plots at the bottom show how the estimated base of the exponential relationship between primal treewidth and the runtime of each algorithm depends on $\mu$. The bottom-left plot is for the simple linear model (with shaded regions showing standard error), and the bottom-right plot uses the estimates provided by ESA (with shaded regions showing \SI{95}{\percent} confidence intervals).]%
-          {Visualisations of the data from \cref{exp:density}. The top-left plot shows how the running time of each algorithm changes w.r.t.\ density when $\rho = 0$. The top-right plot shows changes in the running time of each algorithm w.r.t.\ primal treewidth with $\mu$ fixed at $1.9$. The plots at the bottom show how the estimated base of the exponential relationship between primal treewidth and the runtime of each algorithm depends on $\mu$. The bottom-left plot is for the simple linear model (with shaded regions showing standard error), and the bottom-right plot uses the estimates provided by ESA \protect{\cite{DBLP:conf/gecco/PushakH20}} (with shaded regions showing \SI{95}{\percent} confidence intervals).}
-  \label{fig:treewidth}
-\end{figure*}
+In \cref{sec:random_experiments}, we examine how the running times of
+\textsf{WMC} algorithms change w.r.t.\ the parameters of our random model. Then,
+in \cref{sec:benchmark_experiments}, we run an experiment with \textsf{WMC}
+competition benchmarks to check whether the conclusions drawn from random
+instances apply to real data.
+
+For all of these experiments, we use Scientific Linux~7, GCC~10.2.0,
+Python~3.8.1, R~4.1.0, \textsc{c2d}~2.20~\cite{DBLP:conf/ecai/Darwiche04},
+\textsc{Cachet}~1.22~\cite{DBLP:conf/sat/SangBBKP04},
+\textsc{htd}~1.2.0~\cite{DBLP:conf/cpaior/AbseherMW17}, and perform no
+preprocessing. With both \textsc{c2d} and
+\textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17}, we use
+\textsc{query-dnnf}\footnote{\url{http://www.cril.univ-artois.fr/kc/d-DNNF-reasoner.html}}
+to compute the numerical answer from the compiled circuit. We omit
+\textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20} from our experiments as it
+exceeds time and memory limits on too many instances; however, observations
+about the behaviour of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} apply to
+\textsc{ADDMC} as well, with the addendum that the tree decomposition implicitly
+used by \textsc{ADDMC} may have a significantly higher width. \textsc{DPMC} is
+run with tree decomposition-based planning (using one iteration of \textsc{htd})
+and ADD-based execution---the combination that was originally found to be most
+effective.
+
+\subsection{Experiments on Random Instances}\label{sec:random_experiments}
 
 % the experimental setup
-In this section, we describe three experiments that examine how the running
-times of \textsf{WMC} algorithms change w.r.t.\ parameters of our random model.
-All experiments were run on Intel Xeon~E5--2630 with Scientific Linux~7,
-GCC~10.2.0, Python~3.8.1, R~4.1.0,
-\textsc{c2d}~2.20~\cite{DBLP:conf/ecai/Darwiche04},
-\textsc{Cachet}~1.22~\cite{DBLP:conf/sat/SangBBKP04},
-\textsc{htd}~1.2.0~\cite{DBLP:conf/cpaior/AbseherMW17}, and with no additional preprocessing. With both \textsc{c2d} and \textsc{d4}, we use \textsc{query-dnnf}\footnote{\url{http://www.cril.univ-artois.fr/kc/d-DNNF-reasoner.html}} to compute the numerical answer from the compiled circuit. We omit \textsc{ADDMC}~\cite{DBLP:conf/aaai/DudekPV20} from our experiments as it exceeds time and memory limits on too many instances; however, observations about the behaviour of \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} apply to \textsc{ADDMC} as well, with the addendum that the tree decomposition implicitly used by \textsc{ADDMC} may have a significantly higher width. \textsc{DPMC} is run with tree decomposition-based planning (using one iteration of \textsc{htd}) and ADD-based execution---the combination that was originally found to be most effective. We restrict our attention to 3-CNF formulas, generate 100 satisfiable instances for each \emph{combination} of parameters, and run each of the five algorithms with a \SI{500}{\second} time limit and an \SI{8}{\gibi\byte} memory limit. While both limits are somewhat low, we prioritise large numbers of instances to increase the accuracy and reliability of our results. Unless stated otherwise, in each plot of this section, lines denote median values, and shaded regions show interquartile ranges. We run the following three experiments, setting $\nu = 70$ in all of them as we found that this produces instances of suitable difficulty.
+We restrict our attention to 3-CNF formulas, generate 100 satisfiable instances
+for each \emph{combination} of parameters, and run each of the five algorithms
+with a \SI{500}{\second} time limit and an \SI{8}{\gibi\byte} memory limit on
+Intel Xeon~E5--2630. While both limits are somewhat low, we prioritise large
+numbers of instances to increase the accuracy and reliability of our results.
+Unless stated otherwise, in each plot of this section, lines denote median
+values, and shaded regions show interquartile ranges. We run the following three
+experiments, setting $\nu = 70$ in all of them as we found that this produces
+instances of suitable difficulty.
 
 \begin{experiment}[Density and Primal Treewidth]\label{exp:density}
   Let $\nu = 70$, $\mu$ go from 1 to 4.3 in steps of 0.3, $\rho$ go from 0 to
@@ -592,13 +668,64 @@ experienced the most issues fitting within the memory limit, accounting for
 respectively. We exclude the runs that terminated early due to running out of
 memory from the rest of our analysis.
 
+\begin{figure}[t]
+  \centering
+  \includegraphics{treewidth}
+  \caption[Visualisations of the data from \cref{exp:density}. The top-left plot
+  shows how the running time of each algorithm changes w.r.t.\ density when
+  $\rho = 0$. The top-right plot shows changes in the running time of each
+  algorithm w.r.t.\ primal treewidth with $\mu$ fixed at $1.9$. The plots at the
+  bottom show how the estimated base of the exponential relationship between
+  primal treewidth and the runtime of each algorithm depends on $\mu$. The
+  bottom-left plot is for the simple linear model (with shaded regions showing
+  standard error), and the bottom-right plot uses the estimates provided by ESA
+  (with shaded regions showing \SI{95}{\percent} confidence intervals).]%
+  {Visualisations of the data from \cref{exp:density}. The top-left plot shows
+    how the running time of each algorithm changes w.r.t.\ density when
+    $\rho = 0$. The top-right plot shows changes in the running time of each
+    algorithm w.r.t.\ primal treewidth with $\mu$ fixed at $1.9$. The plots at
+    the bottom show how the estimated base of the exponential relationship
+    between primal treewidth and the runtime of each algorithm depends on $\mu$.
+    The bottom-left plot is for the simple linear model (with shaded regions
+    showing standard error), and the bottom-right plot uses the estimates
+    provided by ESA \protect{\cite{DBLP:conf/gecco/PushakH20}} (with shaded
+    regions showing \SI{95}{\percent} confidence
+    intervals).}\label{fig:treewidth}
+\end{figure}
+
 % Peaks w.r.t. density: DPMC different from other WMC algorithms which are
 % different from #SAT algorithms
 In \cref{exp:density}, we investigate how the running time of each algorithm
 depends on the density and primal treewidth by varying both $\mu$ and $\rho$.
 The results are in \cref{fig:treewidth}. The first thing to note is that the
 peak hardness w.r.t.\ density occurs at around 1.9 for all algorithms except for
-\textsc{DPMC}, which peaks at 2.2 instead.\footnote{While exact values might be hard to read from the plot, they are confirmed by numerical data.} This finding is consistent with previous work, which shows \textsc{Cachet} to peak at 1.8~\cite{DBLP:conf/sat/SangBBKP04}.\footnote{For comparison, $\#\SAT{}$ algorithms have been observed to peak at densities 1.2 and 1.5~\cite{DBLP:conf/aaai/Pehoushek00}.}
+\textsc{DPMC}, which peaks at 2.2 instead.\footnote{While exact values might be
+  hard to read from the plot, they are confirmed by numerical data.} This
+finding is consistent with previous work, which shows \textsc{Cachet} to peak at
+1.8~\cite{DBLP:conf/sat/SangBBKP04}.\footnote{For comparison, $\#\SAT{}$
+  algorithms have been observed to peak at densities 1.2 and
+  1.5~\cite{DBLP:conf/aaai/Pehoushek00}.}
+
+The other question we want to investigate using this experiment is how each
+algorithm scales w.r.t.\ primal treewidth. The top-right plot in
+\cref{fig:treewidth} shows this relationship for a fixed value of $\mu$, and one
+can see some evidence that the running time of \textsc{DPMC} grows faster
+w.r.t.\ primal treewidth than the running time of the other algorithms. We use
+two statistical techniques to quantify this growth: a simple linear regression
+model and the empirical scaling analyzer
+(ESA)~v2\footnote{\url{https://github.com/YashaPushak/ESA}}~\cite{DBLP:conf/gecco/PushakH20}.
+In both cases, for each algorithm and value of $\mu$ in \cref{exp:density}, we
+select the median runtime for all available values of primal treewidth. In the
+former case, we fit the model $\ln t \sim \alpha w + \beta$, where $t$ is the
+median running time of the algorithm, $w$ is the primal treewidth, and $\alpha$
+and $\beta$ are parameters.\footnote{Similar statistical analyses have been used
+  to investigate polynomial-to-exponential phase transitions in
+  \SAT{}~\cite{DBLP:journals/constraints/CoarfaDASV03} and the behaviour of
+  \SAT{} solvers on CNF-XOR formulas~\cite{DBLP:conf/ijcai/DudekMV17}.} In other
+words, this model attempts to express median running time as
+$e^\beta{(e^\alpha)}^w$. In the latter case, we run ESA with 1001 bootstrap
+samples, a window of 101, and use the first \SI{30}{\percent} of the data for
+training.
 
 \begin{figure}[t]
   \centering
@@ -608,41 +735,120 @@ peak hardness w.r.t.\ density occurs at around 1.9 for all algorithms except for
     \cref{fig:treewidth}}\label{fig:r2}
 \end{figure}
 
-\begin{figure*}[t]
+% DPMC scales worse w.r.t. primal treewidth (across all densities)
+The results of both models are qualitatively the same (with the exception of
+\textsc{DPMC} run on instances with $\mu = 1$) and are displayed at the bottom
+of \cref{fig:treewidth}. We find that, indeed, \textsc{DPMC} scales worse
+w.r.t.\ primal treewidth than any other algorithm across all values of $\mu$ and
+is the only algorithm that does not become indifferent to primal treewidth when
+faced with high-density formulas. A second look at the top-left subplot of
+\cref{fig:treewidth} suggests an explanation for the latter observation. The
+running times of all algorithms except for \textsc{DPMC} approach zero when
+$\mu > 3$ while the median running time of \textsc{DPMC} approaches a small
+non-zero constant instead. This observation also explains why \cref{fig:r2}
+shows that the fitted models fail to explain the data for non-ADD algorithms
+running on high-density instances---the running times are too small to be
+meaningful. In all other cases, an exponential relationship between primal
+treewidth and runtime fits the experimental data remarkably well.
+
+% miniC2D is good at low-density high-primal-treewidth instances
+Another thing to note is that \textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15}
+is the only algorithm that exhibits a clear low-high-low pattern in the bottom
+subplots of \cref{fig:treewidth}. To a smaller extent, the same may apply to
+\textsc{c2d} and \textsc{DPMC} as well, although the evidence for this is
+limited due to relatively large gaps between different values of $\mu$ in
+\cref{exp:density}. In contrast, the running times of \textsc{Cachet} and
+\textsc{d4} remain dependent on primal treewidth even when the density of the
+\textsf{WMC} instance is very low, suggesting that \textsc{miniC2D} should have
+an advantage on low-density high-primal-treewidth instances.
+
+\begin{figure}[t]
   \centering
   \includegraphics{delta_epsilon}
   \caption{Changes in the running time of each algorithm as a result of changing
     $\delta$ (on the left-hand side) and $\epsilon$ (on the right-hand side)
     according to the data from
     \cref{exp:delta,exp:epsilon}}\label{fig:delta_epsilon}
-\end{figure*}
-
-The other question we want to investigate using this experiment is how each algorithm scales w.r.t.\ primal treewidth. The top-right plot in \cref{fig:treewidth} shows this relationship for a fixed value of $\mu$, and one can see some evidence that the running time of \textsc{DPMC} grows faster w.r.t.\ primal treewidth than the running time of the other algorithms. We use two statistical techniques to quantify this growth: a simple linear regression model and the empirical scaling analyzer (ESA)~v2\footnote{\url{https://github.com/YashaPushak/ESA}}~\cite{DBLP:conf/gecco/PushakH20}. In both cases, for each algorithm and value of $\mu$ in \cref{exp:density}, we select the median runtime for all available values of primal treewidth. In the former case, we fit the model $\ln t \sim \alpha w + \beta$, where $t$ is the median running time of the algorithm, $w$ is the primal treewidth, and $\alpha$ and $\beta$ are parameters.\footnote{Similar statistical analyses have been used to investigate polynomial-to-exponential phase transitions in \SAT{}~\cite{DBLP:journals/constraints/CoarfaDASV03} and the behaviour of \SAT{} solvers on CNF-XOR formulas~\cite{DBLP:conf/ijcai/DudekMV17}.} In other words, this model attempts to express median running time as $e^\beta{(e^\alpha)}^w$. In the latter case, we run ESA with 1001 bootstrap samples, a window of 101, and use the first \SI{30}{\percent} of the data for training.
-
-% DPMC scales worse w.r.t. primal treewidth (across all densities)
-The results of both models are qualitatively the same (with the exception of \textsc{DPMC} run on instances with $\mu = 1$) and are displayed at the bottom of \cref{fig:treewidth}. We find that, indeed, \textsc{DPMC} scales worse w.r.t.\ primal treewidth than any other algorithm across all values of $\mu$ and is the only algorithm that does not become indifferent to primal treewidth when faced with high-density formulas. A second look at the top-left subplot of \cref{fig:treewidth} suggests an explanation for the latter observation. The running times of all algorithms except for \textsc{DPMC} approach zero when $\mu > 3$ while the median running time of \textsc{DPMC} approaches a small non-zero constant instead. This observation also explains why \cref{fig:r2} shows that the fitted models fail to explain the data for non-ADD algorithms running on high-density instances---the running times are too small to be meaningful. In all other cases, an exponential relationship between primal treewidth and runtime fits the experimental data remarkably well.
-
-% miniC2D is good at low-density high-primal-treewidth instances
-Another thing to note is that \textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15} is the only algorithm that exhibits a clear low-high-low pattern in the bottom subplots of \cref{fig:treewidth}. To a smaller extent, the same may apply to \textsc{c2d} and \textsc{DPMC} as well, although the evidence for this is limited due to relatively large gaps between different values of $\mu$ in \cref{exp:density}. In contrast, the running times of \textsc{Cachet} and \textsc{d4} remain dependent on primal treewidth even when the density of the \textsf{WMC} instance is very low, suggesting that \textsc{miniC2D} should have an advantage on low-density high-primal-treewidth instances.
+\end{figure}
 
 % A median instance with all weights equal to 0.5 is about three times easier
 % than a median instance with completely random weights.
-Finally, \cref{exp:delta,exp:epsilon} investigate how changing the numerical values of weights can simplify a \textsf{WMC} instance. The results are in plotted \cref{fig:delta_epsilon}. As expected, the running time of all algorithms other than \textsc{DPMC} stay the same regardless of the value of $\delta$ or $\epsilon$. The running time of \textsc{DPMC}, however, experiences a sharp (exponential?) decline with increasing $\delta$. The decline w.r.t. $\epsilon$ is also present, although significantly less pronounced and with high variance.
+Finally, \cref{exp:delta,exp:epsilon} investigate how changing the numerical
+values of weights can simplify a \textsf{WMC} instance. The results are plotted
+in \cref{fig:delta_epsilon}. As expected, the running time of all algorithms
+other than \textsc{DPMC} stay the same regardless of the value of $\delta$ or
+$\epsilon$. The running time of \textsc{DPMC}, however, experiences a sharp
+(exponential?) decline with increasing $\delta$. The decline w.r.t. $\epsilon$
+is also present, although significantly less pronounced and with high variance.
 
-How are these random instances different from real data? As a representative sample, we take the \textsf{WMC} encodings of Bayesian networks created using the method by Sang et al.~\cite{DBLP:conf/aaai/SangBK05} as found in the experimental setup\footnote{\url{https://github.com/vardigroup/DPMC/releases}} of the \textsc{DPMC} paper~\cite{DBLP:conf/cp/DudekPV20}. A typical \textsf{WMC} instance has $\nu = 200$ variables, half of which have equal weights (i.e., $\epsilon = 0.5$), an average clause width of $\kappa = 2.6$, a density of $\mu = 2.5$, and a primal treewidth of 28. Our random instances have fewer variables and (for the most part) lower density. Another important difference is that our instances are in $k$-CNF whereas a typical encoding of a Bayesian network has many two-literal clauses mixed with clauses of various longer widths. Despite real instances having more variables, their primal treewidth is rather low. Perhaps this partially explains why the performance of \textsc{DPMC} is in line with the performance of all other algorithms on traditionally-used benchmarks~\cite{DBLP:conf/cp/DudekPV20} despite struggling with most of our random data.
+How are these random instances different from real data? As a representative
+sample, we take the \textsf{WMC} encodings of Bayesian networks created using
+the method by Sang et al.~\cite{DBLP:conf/aaai/SangBK05} as found in the
+experimental setup\footnote{\url{https://github.com/vardigroup/DPMC/releases}}
+of the \textsc{DPMC} paper~\cite{DBLP:conf/cp/DudekPV20}. A typical \textsf{WMC}
+instance has $\nu = 200$ variables, half of which have equal weights (i.e.,
+$\epsilon = 0.5$), an average clause width of $\kappa = 2.6$, a density of
+$\mu = 2.5$, and a primal treewidth of 28. Our random instances have fewer
+variables and (for the most part) lower density. Another important difference is
+that our instances are in $k$-CNF whereas a typical encoding of a Bayesian
+network has many two-literal clauses mixed with clauses of various longer
+widths. Despite real instances having more variables, their primal treewidth is
+rather low. Perhaps this partially explains why the performance of \textsc{DPMC}
+is in line with the performance of all other algorithms on traditionally-used
+benchmarks~\cite{DBLP:conf/cp/DudekPV20} despite struggling with most of our
+random data.
 
-To sum, we found that \textsc{c2d} and
-\textsc{d4} are the most memory-intensive
-algorithms, \textsc{Cachet} is great on random
-instances in general, \textsc{miniC2D} exceeds
-on low-density high-primal-treewidth instances, and
-\textsc{DPMC} is at its best on low-density
-low-primal-treewidth instances. Furthermore, a median instance with all weights
-equal to each other is about three times easier for \textsc{DPMC} than a median
-instance with random weights. Another important observation is about how peak
-hardness w.r.t. density depends on the algorithm: \textsc{DPMC} peaks at a
-higher density than all other \textsc{WMC} algorithms, which peak at a higher
-density than (some) $\#\SAT{}$ algorithms.
+To sum, we found that \textsc{c2d} and \textsc{d4} are the most memory-intensive
+algorithms, \textsc{Cachet} is great on random instances in general,
+\textsc{miniC2D} exceeds on low-density high-primal-treewidth instances, and
+\textsc{DPMC} is at its best on low-density low-primal-treewidth instances.
+Furthermore, a median instance with all weights equal to each other is about
+three times easier for \textsc{DPMC} than a median instance with random weights.
+Another important observation is about how peak hardness w.r.t.\ density depends
+on the algorithm: \textsc{DPMC} peaks at a higher density than all other
+\textsf{WMC} algorithms, which peak at a higher density than (some) $\#\SAT{}$
+algorithms.
+
+\subsection{Experiments on Competition
+  Benchmarks}\label{sec:benchmark_experiments}
+
+To check whether our observations on random instances are accurate on real data,
+we use the 100 public instances from track 2 of the 2022 model counting
+competition\footnote{\url{https://mccompetition.org/2022/mc\_description}}. This
+time, the \textsf{WMC} algorithms are run on Intel Xeon Gold~6138 with
+\SI{32}{\gibi\byte} of memory and a \SI{1}{\hour} time limit. As in
+\cref{sec:random_experiments}, we compute the density and the primal treewidth
+of each instance.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{real.pdf}
+  \caption{The best-performing algorithm for each combination of density and
+    primal treewidth according to the experiments on competition benchmarks.
+    Both ranges of values are divided into ten bins so that there are ten
+    instances in each bin. The best-performing algorithm for each combination of
+    bins is the algorithm that solved the largest number of instances, with ties
+    broken by minimising total running time. An empty cell means that either no
+    benchmark had this combination of density and primal treewidth or all
+    algorithms failed on all such instances.}\label{fig:real}
+\end{figure}
+
+\Cref{fig:real} shows the best-performing algorithm for various combinations of
+the parameters. We observe that:
+\begin{itemize}
+  \item \textsc{DPMC}~\cite{DBLP:conf/cp/DudekPV20} is best on most instances
+        with low primal treewidth,
+  \item \textsc{c2d}~\cite{DBLP:conf/ecai/Darwiche04} is able to handle some
+        low-density high-primal-treewidth instances that all the other
+        algorithms fail on,
+  \item \textsc{Cachet}~\cite{DBLP:conf/sat/SangBBKP04} (as well as
+        \textsc{d4}~\cite{DBLP:conf/ijcai/LagniezM17} to some extent) excel when
+        both density and primal treewidth are quite high,
+  \item and \textsc{miniC2D}~\cite{DBLP:conf/ijcai/OztokD15} does not have an
+        easily-recognisable niche.
+\end{itemize}
+
+TODO: compare these results with the previous section.
 
 \section{Conclusions and Future Work}
 
@@ -652,7 +858,7 @@ formulas extended with parameters that control primal treewidth and literal
 weights. Among other things, we established statistical evidence for the
 existence of an exponential relationship between primal treewidth and the
 running time of all \textsf{WMC} algorithms. The running time of ADD-based
-algorithms was observed to peak at a higher density, scale worse w.r.t. primal
+algorithms was observed to peak at a higher density, scale worse w.r.t.\ primal
 treewidth, and depend negatively on repeating weight values compared to
 algorithms based on search or knowledge compilation. These observations can, to
 some degree, be extended to a closely related weighted projected model counting
@@ -667,9 +873,9 @@ it is encouraging that there is only a slight decrease in the proportion of
 satisfiable instances between $\rho=0$ and $\rho = 1$). Perhaps a theoretical
 investigation of the proposed model is warranted, including a characterisation
 of how $\rho$ influences primal treewidth and the structure of the primal graph
-more generally. Since treewidth is widely used in parameterised complexity
-\cite{DBLP:series/txcs/DowneyF13}, formally establishing a connection with
-$\rho$ could make our random model useful for a variety of other hard
+more generally. Since treewidth is widely used in parameterised
+complexity~\cite{DBLP:series/txcs/DowneyF13}, formally establishing a connection
+with $\rho$ could make our random model useful for a variety of other hard
 computational problems.
 
 To keep the number of experiments feasible, we restricted our attention to 3-CNF
