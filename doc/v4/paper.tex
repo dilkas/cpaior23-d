@@ -35,17 +35,23 @@
 
 \begin{document}
 
-\title{Generating Random Instances of Weighted Model Counting}
+\title{Generating Random Instances of\\Weighted Model Counting\thanks{The work
+    was done while the author was a PhD student at the University of
+    Edinburgh.}}
 \subtitle{An Empirical Analysis with Varying Primal Treewidth}
 \titlerunning{Generating Random WMC Instances}
 
 \author{Paulius Dilkas}
 
 \authorrunning{P. Dilkas}
-\institute{University of Edinburgh, Edinburgh, UK\\
-\email{p.dilkas@sms.ed.ac.uk}}
+\institute{National University of Singapore, Singapore, Singapore\\
+\email{paulius.dilkas@nus.edu.sg}}
 
 \maketitle
+
+% TODO: Add a data accessibility statement in the paper.  Data accessibility statements provide information about where the research data and other artefacts supporting the results reported in the paper can be found. Where applicable, links to the repository where the dataset(s) are publicly archived are included.
+% TODO: shorten to 15 pages (excluding just references, the acknowledgements must fit)
+% TODO: check for compilation errors/warnings (including bibtex)
 
 \begin{abstract}
   Weighted model counting (\textsf{WMC}) is an extension of propositional model
@@ -72,8 +78,6 @@
     complexity}
 \end{abstract}
 
-% TODO: use grammarly on the new paragraphs
-
 \section{Introduction}
 
 % WMC
@@ -96,8 +100,9 @@ broadly classified as based on
 search~\cite{DBLP:conf/sat/SangBBKP04,DBLP:conf/ijcai/SharmaRSM19}, knowledge
 compilation~\cite{DBLP:conf/ecai/Darwiche04,DBLP:conf/ijcai/LagniezM17,DBLP:conf/ijcai/OztokD15},
 and dynamic programming~\cite{DBLP:conf/aaai/DudekPV20,DBLP:conf/cp/DudekPV20}.
-Other alternatives include approximate~\cite{DBLP:conf/aaai/RenkensKBR14} and
-parallel algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18},
+Other alternatives include
+approximate~\cite{DBLP:series/faia/ChakrabortyMV21,DBLP:conf/aaai/RenkensKBR14}
+and parallel algorithms~\cite{DBLP:conf/pgm/DalLL18,DBLP:conf/esa/FichteHWZ18},
 hybrid approaches~\cite{DBLP:conf/sat/HecherTW20}, quantum
 computing~\cite{DBLP:conf/ecai/Riguzzi20}, and reduction to model
 counting~\cite{DBLP:conf/ijcai/ChakrabortyFMV15}.
@@ -411,6 +416,10 @@ efficiently.
           \,\}|}{|N|}\right)$\; \label{line:return}
   }
 \end{algorithm}
+% TODO: Q1. The idea behind the random instance generator is to reduce the density of the primal graph (via having some overlapping edges) while:
+% a) avoiding having many variables that do not occur in any clause and
+% b) promoting tree-like subgraphs that are likely to have low treewidth.
+% The final version of the paper will include a definition of treewidth and a better explanation of the intuition behind Algorithm 1.
 
 The process for generating random $k$-CNF formulas is summarized as
 \cref{alg:random}. For the rest of this section, let ${\{x_{i}\}}_{i=1}^{\nu}$
@@ -815,7 +824,7 @@ although significantly less pronounced and with high variance.
 
 To sum, we found that \textsc{c2d} and \textsc{d4} are the most memory-intensive
 algorithms, \textsc{Cachet} is great on random instances in general,
-\textsc{miniC2D} exceeds on low-density high-primal-treewidth instances, and
+\textsc{miniC2D} excels on low-density high-primal-treewidth instances, and
 \textsc{DPMC} is at its best on low-density low-primal-treewidth instances.
 Furthermore, a median instance with all weights equal to each other is about
 three times easier for \textsc{DPMC} than a median instance with random weights.
@@ -913,9 +922,15 @@ Bayesian networks~\cite{DBLP:conf/kr/Darwiche02}.
 % space, where most solutions are distant to each other w.r.t. the Hamming
 % distance \cite{DBLP:journals/rsa/AchlioptasCR11,DBLP:conf/ijcai/DudekMV17}.
 
-%% \section*{Acknowledgements}
-
-%% The author was supported by the EPSRC Centre for Doctoral Training in Robotics and Autonomous Systems, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016834/1). This work has made use of the resources provided by the Edinburgh Compute and Data Facility (ECDF) (\url{http://www.ecdf.ed.ac.uk/}).
+\subsubsection{Acknowledgements.}
+The author would like to thank Vaishak Belle and the anonymous reviewers for
+their feedback on earlier versions of this work. The author was supported by the
+EPSRC Centre for Doctoral Training in Robotics and Autonomous Systems, funded by
+the UK Engineering and Physical Sciences Research Council (grant EP/L016834/1).
+This work has made use of the resources provided by the Edinburgh Compute and
+Data Facility (ECDF) (\url{http://www.ecdf.ed.ac.uk/}). For the purpose of open
+access, the author has applied a Creative Commons Attribution (CC BY) licence to
+any Author Accepted Manuscript version arising from this submission.
 
 \bibliographystyle{splncs04}
 \bibliography{paper}
