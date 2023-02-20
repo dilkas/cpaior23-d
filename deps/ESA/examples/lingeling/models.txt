@@ -1,3 +1,0 @@
-Exp,2,@@a@@\times @@b@@^{n}, @@a@@*@@b@@**x
-Poly,2,@@a@@\times n^{@@b@@},@@a@@*x**@@b@@
-#SqrtExp,2,@@a@@\times @@b@@^{\sqrt{n}},@@a@@*@@b@@**(x**(0.5))
