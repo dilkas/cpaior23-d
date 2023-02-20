@@ -14,3 +14,11 @@ The original experiments were conducted with:
 * `gcc 10.2.0`
 * `cmake 3.5.2`
 * `python 3.8.1`
+
+# Experimental Results (in `results/`)
+
+* Experiment 1 (Figure 1): `satisfiability.csv` (experimental data in `satisfiability/`)
+* Experiment 2 (Figures 2 and 3): `processed.csv` (for ESA), `regular1.csv` (for everything else)
+* Experiment 3 (the left-hand-side of Figure 4): `regular2.csv`
+* Experiment 4 (the right-hand-side of Figure 4): `regular3.csv`
+* Section 5.2 (Figure 5): `benchmark_runtime.csv`
