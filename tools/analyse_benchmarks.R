@@ -68,7 +68,9 @@ df3 <- df3_partial %>%
   filter(sum(total_best) > 0) %>%
   summarise(best_algorithm = algorithm[which.max(ranking)])
 #tikz(file = "../doc/v4/real.tex", width = 4.8, height = 3.9, standAlone = TRUE)
-tikz(file = "../doc/talk-aiai/real.tex", width = 4.26, height = 3.3,
+#tikz(file = "../doc/talk-aiai/real.tex", width = 4.26, height = 3.3,
+#     standAlone = TRUE)
+tikz(file = "../doc/talk-conference/real.tex", width = 4.28, height = 3.26,
      standAlone = TRUE)
 ggplot(df3, aes(density_bin, tw_bin, fill = best_algorithm)) +
   geom_tile_pattern(aes(pattern = best_algorithm, fill = best_algorithm,

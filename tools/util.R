@@ -43,6 +43,7 @@ read_data <- function(filename) {
 }
 
 plot_with_sd <- function(df, x_value, x_label, per_algorithm = TRUE) {
+  print(df)
   df <- df %>% group_by_at(c("algorithm", x_value)) %>%
     summarise(median = median(time), lb = unname(quantile(time, IQR1)),
               ub = unname(quantile(time, IQR2)))
@@ -140,17 +141,22 @@ plot_4_plots <- function(data, fits) {
                       label.x = 0.1, label.y = 0.95)
 
   # for slides
-  tikz(file = "../doc/talk/treewidth.tex", width = 4.26, height = 3.3,
-       standAlone = TRUE)
+#  tikz(file = "../doc/talk/treewidth.tex", width = 4.26, height = 3.3,
+#       standAlone = TRUE)
+  tikz(file = "../doc/talk-conference/treewidth.tex", width = 4.28,
+     height = 3.26, standAlone = TRUE)
   p1 + theme_light()
   dev.off()
-  tikz(file = "../doc/talk/treewidth2.tex", width = 4.26, height = 3.3,
-       standAlone = TRUE)
+#  tikz(file = "../doc/talk/treewidth2.tex", width = 4.26, height = 3.3,
+#       standAlone = TRUE)
+  tikz(file = "../doc/talk-conference/treewidth2.tex", width = 4.28,
+     height = 3.26, standAlone = TRUE)
   p3 + theme_light()
   dev.off()
 
-  tikz(file = "../doc/talk/linearbase.tex", width = 4.26, height = 2.9,
-       standAlone = TRUE)
+  #tikz(file = "../doc/talk/linearbase.tex", width = 4.26, height = 2.9,
+  #     standAlone = TRUE)
+  tikz(file = "../doc/talk-conference/linearbase.tex", width = 3.47, height = 2.64, standAlone = TRUE)
   p4 + theme_light() + ylab("$e^\\alpha$")
   dev.off()
 

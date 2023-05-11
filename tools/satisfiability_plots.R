@@ -62,8 +62,14 @@ repetitiveness_facets <- function(filename, round_clause_factor_labels,
 #     width = 5.7, height = 3.1, standAlone = TRUE)
 #repetitiveness_facets("../results/satisfiability.csv", TRUE)
 
-tikz(file = "../doc/talk/regular_repetitiveness.tex", width = 4.26,
-     height = 3.3, standAlone = TRUE)
+#tikz(file = "../doc/talk/regular_repetitiveness.tex", width = 4.26,
+#     height = 3.3, standAlone = TRUE)
+#repetitiveness_facets("../results/satisfiability.csv", TRUE, "k", FALSE,
+#                      c(0, 1), c(0, 100))
+#dev.off()
+
+tikz(file = "../doc/talk-conference/regular_repetitiveness.tex", width = 4.28,
+     height = 3.26, standAlone = TRUE)
 repetitiveness_facets("../results/satisfiability.csv", TRUE, "k", FALSE,
                       c(0, 1), c(0, 100))
 dev.off()

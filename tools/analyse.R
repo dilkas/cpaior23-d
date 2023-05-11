@@ -31,7 +31,8 @@ r2table$clause_factor <- as.factor(r2table$clause_factor)
 #tikz(file = "../doc/kr/r2.tex", width = 3, height = 3, standAlone = TRUE)
 #tikz(file = "../../annual-report/thesis/chapters/comparison/r2.tex",
 #     width = 3.1, height = 3.1, standAlone = TRUE)
-tikz(file = "../doc/talk/r2.tex", width = 4.26, height = 2.9, standAlone = TRUE)
+#tikz(file = "../doc/talk/r2.tex", width = 4.26, height = 2.9, standAlone = TRUE)
+tikz(file = "../doc/talk-conference/r2.tex", width = 3.47, height = 2.64, standAlone = TRUE)
 ggplot(r2table, aes(algorithm, clause_factor, fill = r2)) + geom_tile() +
   geom_text(aes(label = round(r2, 2))) +
   xlab(NULL) +
@@ -68,8 +69,11 @@ dev.off()
 # for slides
 data <- read_data("../results/regular3.csv")
 df <- data[data$algorithm == "\\textsc{DPMC}", ] %>% group_by(prop_equal)
-tikz(file = "../doc/talk/epsilon.tex", width = 4.26, height = 3.1,
-     standAlone = TRUE)
+
+#tikz(file = "../doc/talk/epsilon.tex", width = 4.26, height = 3.1,
+#     standAlone = TRUE)
+tikz(file = "../doc/talk-conference/epsilon.tex", width = 3.852,
+     height = 2.934, standAlone = TRUE)
 plot_with_sd(df, "prop_equal", "$\\epsilon$", FALSE) +
   ylim(0, TIMEOUT) +
   theme_light() + ylab("\\textsc{DPMC} runtime (s)")
