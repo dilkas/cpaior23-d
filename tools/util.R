@@ -84,9 +84,13 @@ plot_4_plots <- function(data, fits) {
   data3$algorithm[data3$algorithm == "d4"] <- "\\textsc{d4}"
   data3$algorithm[data3$algorithm == "dpmc"] <- "\\textsc{DPMC}"
   data3$algorithm[data3$algorithm == "minic2d"] <- "\\textsc{miniC2D}"
-  
-  #ylimit <- max(fits$ub, data3$ub)
-  #ylimit <- min(fits$lb, data3$lb)
+  data3 <- subset(data3, select = -c(exponential))
+  names(data3)[names(data3) == 'mu'] <- 'clause_factor'
+  names(data3)[names(data3) == 'base'] <- 'fit'
+  data3$method <- "ESA"
+  fits$method <- "Linear Regression"
+  fits <- rbind(fits, data3)
+  fits <- transform(fits, method = factor(method, levels=c("Linear Regression", "ESA")))
   
   df <- data[data$repetitiveness == 0,] %>% group_by(algorithm, clause_factor)
   p1 <- plot_with_sd(df, "clause_factor", "$\\mu$") +
@@ -121,7 +125,7 @@ plot_4_plots <- function(data, fits) {
     scale_color_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     ylab("Base") +
-    labs(color = "", fill = "", linetype = "") +
+    labs(color = "", fill = "", linetype = "", shape = "") +
     scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
                                      "longdash")) +
     theme_set(theme_gray(base_size = 9)) +
@@ -156,8 +160,28 @@ plot_4_plots <- function(data, fits) {
 
   #tikz(file = "../doc/talk/linearbase.tex", width = 4.26, height = 2.9,
   #     standAlone = TRUE)
-  tikz(file = "../doc/talk-conference/linearbase.tex", width = 3.47, height = 2.64, standAlone = TRUE)
+  tikz(file = "../doc/talk-conference/linearbase.tex", width = 3.47,
+       height = 2.64, standAlone = TRUE)
   p4 + theme_light() + ylab("$e^\\alpha$")
+  dev.off()
+
+  tikz(file = "../doc/talks/4_internal/linearbase2.tex", width = 3.47,
+       height = 2.64, standAlone = TRUE)
+  ggplot(fits, aes(clause_factor, fit, color = algorithm, fill = algorithm,
+                   linetype = algorithm, shape = algorithm)) +
+    geom_line() +
+    geom_point() +
+    geom_ribbon(aes(ymin = lb, ymax = ub), alpha = 0.25, linetype = 0) +
+    xlab("$\\mu$") +
+    scale_color_brewer(palette = "Dark2") +
+    scale_fill_brewer(palette = "Dark2") +
+    ylab("Base") +
+    labs(color = "", fill = "", linetype = "", shape = "") +
+    scale_linetype_manual(values = c("twodash", "dotted", "dotdash", "solid",
+                                     "longdash")) +
+    ylim(0.99, 1.8) +
+    facet_wrap(vars(method)) +
+    theme(legend.position = "bottom")
   dev.off()
 
   # tikz(file = "../doc/kr/treewidth.tex", width = 6.5, height = 4.516875,

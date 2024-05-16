@@ -326,14 +326,25 @@
   \includegraphics{treewidth2.pdf}
 \end{frame}
 
-\begin{frame}{Is The Relationship Exponential?}
-  Let us fit the model \structure{$\ln t \sim \alpha w + \beta$}, i.e.,
-  \structure{$t \sim e^{\beta}{(e^{\alpha})}^{w}$}, where \structure{$t$} is
-  \alert{runtime}, and \structure{$w$} is \alert{primal treewidth}
-  \begin{overprint}%
-  \only<2>{\centerline{\includegraphics{r2.pdf}}}%
-  \uncover<3>{\centerline{\includegraphics{linearbase.pdf}}}%
-  \end{overprint}
+\begin{frame}{Is The Relationship Exponential: Two Approaches}
+  \begin{block}{Linear Regression}
+    We fit the model \structure{$\ln t \sim \alpha w + \beta$}, i.e.,
+    \structure{$t \sim e^{\beta}{(e^{\alpha})}^{w}$}, where \structure{$t$} is
+    \alert{runtime}, and \structure{$w$} is \alert{primal treewidth}
+    \end{block}
+  \begin{block}{Empirical Scaling Analyzer (ESA) v2~\parencite{DBLP:conf/gecco/PushakH20}}
+    TODO
+  \end{block}
+\end{frame}
+
+\begin{frame}{How Well Does Linear Regression Explain the Data?}
+  \centering
+  \includegraphics{r2.pdf}
+\end{frame}
+
+\begin{frame}{The Base of the Exponential}
+  \centering
+  \includegraphics{linearbase2.pdf}
 \end{frame}
 
 \begin{frame}{Does Real Data Confirm Our Observations?}
