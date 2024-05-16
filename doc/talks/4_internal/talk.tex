@@ -8,6 +8,7 @@
 \usepackage[vlined]{algorithm2e}
 \usepackage{spot}
 \usepackage{appendixnumberbeamer}
+\usepackage{csquotes}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{tikzmark}
@@ -36,7 +37,7 @@
 \author{Paulius Dilkas}
 \title{Generating Random WMC Instances}
 \subtitle{An Empirical Analysis with Varying Primal Treewidth}
-\institute[NUS]{National University of Singapore, Singapore}
+\institute[NUS]{National University of Singapore}
 \date{30th May 2024}
 % 40 min talk
 
@@ -197,6 +198,57 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Generating Random WMC Instances: The Algorithm}
+  \begin{columns}
+    \begin{column}{0.69\textwidth}
+      \begin{algorithm}[H]
+        \SetKwData{kcnf}{kcnf}
+        \SetKwFunction{NewVariable}{newVariable}
+        $\structure{\phi} \gets \text{empty CNF formula}$\;
+        $\structure{G} \gets \text{empty graph}$\;
+        \For{$i \gets 1$ \KwTo \alert{$m$\tikz[na] \node[coordinate] (m1) {};}}{
+          $\structure{X} \gets \emptyset$\;
+          \For{$j \gets 1$ \KwTo \alert{$k$\tikz[na] \node[coordinate] (k1) {};}}{
+            $\structure{x} \gets \alert{\NewVariable{$X$, $G$}}\tikz[na] \node[coordinate] (f1) {};$\;
+            $\mathcal{V}(\structure{G}) \gets \mathcal{V}(\structure{G}) \cup \{\, \structure{x} \,\}$\;
+            $\mathcal{E}(\structure{G}) \gets \mathcal{E}(\structure{G}) \cup \{\, \{\,\structure{x}, \structure{y}\,\} \mid \structure{y} \in \structure{X} \,\}$\;
+            $\structure{X} \gets \structure{X} \cup \{\, \structure{x} \,\}$\;
+          }
+          $\structure{\phi} \gets \structure{\phi} \cup \{\,\{\, \structure{l} \leftlsquigarrow \mathcal{U}\{\, \structure{x}, \neg \structure{x} \,\} \mid \structure{x} \in \structure{X} \,\}\,\}$\tikz[na] \node[coordinate] (c1) {};\;
+        }
+      \end{algorithm}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{itemize}
+        \item\tikz[na] \node[coordinate] (m2) {};the number of clauses
+        \item\tikz[na] \node[coordinate] (k2) {};clause width
+        \item\tikz[na] \node[coordinate] (f2) {};a function to pick a variable
+        \item\tikz[na] \node[coordinate] (c2) {};a (fair) coin flip
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \begin{tikzpicture}[overlay]
+    \path[-Latex,shorten >=0.6cm,shorten <=0.5cm,dashed] (m2) edge (m1);
+    \path[-Latex,shorten >=0.6cm,shorten <=0.5cm,dashed] (k2) edge (k1);
+    \path[-Latex,shorten >=0.1cm,shorten <=0.5cm,dashed] (f2) edge (f1);
+    \path[-Latex,shorten >=0.1cm,shorten <=0.5cm,dashed] ([shift={(0, 0.2)}]c2) edge (c1);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{How to Pick a Variable}
+  Parameter \structure{$\rho \in [0, 1]$} biases the probability distribution
+  towards adding variables that would introduce fewer new edges.
+
+  \begin{algorithm}[H]
+    \SetKwProg{Fn}{Function}{:}{}
+    \Fn{\NewVariable{set of variables \structure{$X$}, primal graph \structure{$G$}}}{
+      $\structure{N} \gets \{\, \structure{e} \in \mathcal{E}(\structure{G}) \mid |\structure{e} \cap \structure{X}| = 1 \,\}$\;
+      \lIf{$\structure{N} = \emptyset$}{\Return{$\structure{x} \leftlsquigarrow \mathcal{U}(\{\, \structure{x_1}, \structure{x_2}, \dots, \structure{x_{\alert{n}}} \,\} \setminus \structure{X})$}}
+      \Return{$\structure{x} \leftlsquigarrow \left(\{\, \structure{x_1}, \structure{x_2}, \dots, \structure{x}_{\alert{n}} \,\} \setminus \structure{X}, \structure{y} \mapsto \highlight{\frac{1 - \alert{\rho}}{\alert{n} - |\structure{X}|} + \alert{\rho}\frac{|\{\, \structure{z} \in X \mid \{\,\structure{y}, \structure{z}\,\} \in \mathcal{E}(\structure{G}) \,\}|}{|\structure{N}|}}\right)$}\;
+    }
+  \end{algorithm}
+\end{frame}
+
 \begin{frame}{From Random SAT to Random WMC}
   We introduce parameter \structure{$\rho \in [0, 1]$} that biases the
   probability distribution towards adding variables that would introduce fewer
@@ -288,12 +340,17 @@
   \includegraphics{real}
 \end{frame}
 
-\begin{frame}{Bonus: How \textsc{DPMC} Reacts to Redundancy in Weights}
+\begin{frame}{Bonus 1: How \textsc{DPMC} Reacts to Redundancy in Weights}
   Let \structure{$\epsilon$} be the proportion of variables \structure{$x$} s.t.
   \structure{$w(x) = w(\neg x) = 0.5$}
 
   \centering
   \includegraphics{epsilon}
+\end{frame}
+
+\begin{frame}{Bonus 2: 0/1 Weights Make Counting Easy}
+  \centering
+  \includegraphics{delta}
 \end{frame}
 
 \begin{frame}{Summary}
@@ -316,59 +373,6 @@
       \item Algorithm portfolios for WMC
     \end{itemize}
   \end{itemize}
-\end{frame}
-
-\appendix
-
-\begin{frame}{Generating Random WMC Instances: The Algorithm}
-  \begin{columns}
-    \begin{column}{0.69\textwidth}
-      \begin{algorithm}[H]
-        \SetKwData{kcnf}{kcnf}
-        \SetKwFunction{NewVariable}{newVariable}
-        $\structure{\phi} \gets \text{empty CNF formula}$\;
-        $\structure{G} \gets \text{empty graph}$\;
-        \For{$i \gets 1$ \KwTo \alert{$m$\tikz[na] \node[coordinate] (m1) {};}}{
-          $\structure{X} \gets \emptyset$\;
-          \For{$j \gets 1$ \KwTo \alert{$k$\tikz[na] \node[coordinate] (k1) {};}}{
-            $\structure{x} \gets \alert{\NewVariable{$X$, $G$}}\tikz[na] \node[coordinate] (f1) {};$\;
-            $\mathcal{V}(\structure{G}) \gets \mathcal{V}(\structure{G}) \cup \{\, \structure{x} \,\}$\;
-            $\mathcal{E}(\structure{G}) \gets \mathcal{E}(\structure{G}) \cup \{\, \{\,\structure{x}, \structure{y}\,\} \mid \structure{y} \in \structure{X} \,\}$\;
-            $\structure{X} \gets \structure{X} \cup \{\, \structure{x} \,\}$\;
-          }
-          $\structure{\phi} \gets \structure{\phi} \cup \{\,\{\, \structure{l} \leftlsquigarrow \mathcal{U}\{\, \structure{x}, \neg \structure{x} \,\} \mid \structure{x} \in \structure{X} \,\}\,\}$\tikz[na] \node[coordinate] (c1) {};\;
-        }
-      \end{algorithm}
-    \end{column}
-    \begin{column}{0.31\textwidth}
-      \begin{itemize}
-        \item\tikz[na] \node[coordinate] (m2) {};the number of clauses
-        \item\tikz[na] \node[coordinate] (k2) {};clause width
-        \item\tikz[na] \node[coordinate] (f2) {};a function to pick a variable
-        \item\tikz[na] \node[coordinate] (c2) {};a (fair) coin flip
-      \end{itemize}
-    \end{column}
-  \end{columns}
-  \begin{tikzpicture}[overlay]
-    \path[-Latex,shorten >=0.6cm,shorten <=0.5cm,dashed] (m2) edge (m1);
-    \path[-Latex,shorten >=0.6cm,shorten <=0.5cm,dashed] (k2) edge (k1);
-    \path[-Latex,shorten >=0.1cm,shorten <=0.5cm,dashed] (f2) edge (f1);
-    \path[-Latex,shorten >=0.1cm,shorten <=0.5cm,dashed] ([shift={(0, 0.2)}]c2) edge (c1);
-  \end{tikzpicture}
-\end{frame}
-
-\begin{frame}{How to Pick a Variable}
-  Parameter \structure{$\rho \in [0, 1]$} biases the probability distribution
-  towards adding variables that would introduce fewer new edges.
-
-  \begin{algorithm}[H]
-    \SetKwProg{Fn}{Function}{:}{}
-    \Fn{\NewVariable{set of variables \structure{$X$}, primal graph \structure{$G$}}}{
-      $\structure{N} \gets \{\, \structure{e} \in \mathcal{E}(\structure{G}) \mid |\structure{e} \cap \structure{X}| = 1 \,\}$\;
-      \lIf{$\structure{N} = \emptyset$}{\Return{$\structure{x} \leftlsquigarrow \mathcal{U}(\{\, \structure{x_1}, \structure{x_2}, \dots, \structure{x_{\alert{n}}} \,\} \setminus \structure{X})$}}
-      \Return{$\structure{x} \leftlsquigarrow \left(\{\, \structure{x_1}, \structure{x_2}, \dots, \structure{x}_{\alert{n}} \,\} \setminus \structure{X}, \structure{y} \mapsto \highlight{\frac{1 - \alert{\rho}}{\alert{n} - |\structure{X}|} + \alert{\rho}\frac{|\{\, \structure{z} \in X \mid \{\,\structure{y}, \structure{z}\,\} \in \mathcal{E}(\structure{G}) \,\}|}{|\structure{N}|}}\right)$}\;
-    }
-  \end{algorithm}
 \end{frame}
 
 \end{document}

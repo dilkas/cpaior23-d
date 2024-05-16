@@ -66,15 +66,24 @@ annotate_figure(figure, left = text_grob("Time (s)", rot = 90, vjust = 1,
                                          size = 9))
 dev.off()
 
-# for slides
-data <- read_data("../results/regular3.csv")
-df <- data[data$algorithm == "\\textsc{DPMC}", ] %>% group_by(prop_equal)
-
 #tikz(file = "../doc/talk/epsilon.tex", width = 4.26, height = 3.1,
 #     standAlone = TRUE)
 tikz(file = "../doc/talk-conference/epsilon.tex", width = 3.852,
      height = 2.934, standAlone = TRUE)
+data <- read_data("../results/regular1.csv")
+df <- data[data$algorithm == "\\textsc{DPMC}", ] %>% group_by(prop_equal)
 plot_with_sd(df, "prop_equal", "$\\epsilon$", FALSE) +
+  ylim(0, TIMEOUT) +
+  theme_light() + ylab("\\textsc{DPMC} runtime (s)")
+dev.off()
+
+tikz(file = "../doc/talks/4_internal/delta.tex", width = 3.852,
+     height = 2.934, standAlone = TRUE)
+data <- read_data("../results/regular2.csv")
+df <- data[data$algorithm == "\\textsc{DPMC}", ] %>%
+  group_by(prop_deterministic)
+plot_with_sd(df, "prop_deterministic",
+             "The proportion of variables with weights 0 and 1", FALSE) +
   ylim(0, TIMEOUT) +
   theme_light() + ylab("\\textsc{DPMC} runtime (s)")
 dev.off()
