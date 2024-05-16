@@ -9,6 +9,7 @@
 \usepackage{spot}
 \usepackage{appendixnumberbeamer}
 \usepackage{csquotes}
+\usepackage[clock]{ifsym}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{tikzmark}
@@ -373,6 +374,40 @@
       \item Algorithm portfolios for WMC
     \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Future Work: (Per-Instance) Algorithm Selection}
+ \begin{definition}[\cite{DBLP:journals/ai/BischlKKLMFHHLT16}]
+   Given a set \structure{$\mathcal{I}$} of problem instances, a space of
+   algorithms \structure{$\mathcal{A}$}, and a performance measure
+   \structure{$m \colon \mathcal{I} \times \mathcal{A} \to \mathbb{R}$}, the
+   \alert{algorithm selection problem} is to find a mapping
+   \structure{$s \colon \mathcal{I} \to \mathcal{A}$} that optimises
+   \structure{$\mathbb{E}[m(i, s(i))]$}.
+ \end{definition}
+    \centering
+    \begin{tikzpicture}
+      \onslide<2->{\node (graphs) at (0, 4) {$\phi$};}
+      \onslide<3->{\node (features) at (2, 4) {$\begin{bmatrix}f_1\\ \vdots \\ f_n\end{bmatrix}$};}
+      \onslide<4->{\node[draw] (ml) at (5, 4) {ML\includegraphics[scale=0.1]{llama.jpg}};}
+      \onslide<5->{\node (mcsplit) at (2, 2) {\textsc{Cachet}};}
+      \onslide<5->{\node (mcsplitdown) at (4, 2) {\textsc{c2d}};}
+      \onslide<5->{\node (clique) at (6, 2) {\textsc{d4}};}
+      \onslide<5->{\node (kdown) at (8, 2) {\textsc{miniC2D}};}
+      \onslide<5->{\node (kdown2) at (10, 2) {\textsc{DPMC}};}
+      \onslide<7->{\node (answer) at (2, 0) {answer};}
+      \path[->]<3-> (graphs) edge node[above] {\VarClock} (features);
+      \path[->]<4-> (features) edge (ml);
+      \only<2-5>{\tikzset{properties/.style={}}}
+      \only<6->{\tikzset{properties/.style={ultra thick}}}
+      \draw<5->[->] (ml) edge[properties] (mcsplit);
+      \draw<5-> [->] (ml) edge (mcsplitdown);
+      \path[->]<5-> (ml) edge (clique);
+      \path[->]<5-> (ml) edge (kdown);
+      \path[->]<5-> (ml) edge (kdown2);
+      \path[->]<7-> (mcsplit) edge node[right] {\VarClock} (answer);
+      \draw<7->[->] (graphs) edge [bend right=40] (2, 1);
+    \end{tikzpicture}
 \end{frame}
 
 \end{document}
