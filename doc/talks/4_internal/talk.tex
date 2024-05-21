@@ -25,6 +25,7 @@
 \usecolortheme{seahorse}
 \addbibresource{talk.bib}
 \DeclareMathOperator{\leftlsquigarrow}{\text{\reflectbox{$\rightsquigarrow$}}}
+\DeclareMathOperator{\Vars}{Vars}
 
 \definecolor{c1}{HTML}{1b9e77}
 \definecolor{c2}{HTML}{d95f02}
@@ -118,13 +119,12 @@
           \end{itemize}
     \item \textsc{miniC2D} \textcolor{gray}{\parencite{DBLP:conf/ijcai/OztokD15}}
           \begin{itemize}
-            \item knowledge compilation to \alert{decision sentential decision
-                  diagrams}
+            \item knowledge compilation to \alert{decision-SDDs}
           \end{itemize}
     \item \textsc{DPMC} \textcolor{gray}{\parencite{DBLP:conf/cp/DudekPV20}}
           \begin{itemize}
-            \item dynamic programming with \alert{algebraic decision diagrams}
-                  and \alert{tree decomposition} based planning
+            \item dynamic programming with \alert{ADDs} and \alert{tree
+                  decomposition} based planning
           \end{itemize}
   \end{itemize}
 \end{frame}
@@ -140,6 +140,62 @@
     \item[Q:] \pause Why am I giving a talk about this \alert{now}?
     \item[A:] \includegraphics[width=0.3\linewidth]{shrug}
   \end{itemize}
+\end{frame}
+
+% TODO: highlight the corresponding letters in the title with overlays, maybe add citations
+\begin{frame}{Knowledge Compilation: \alert<4>{d}-\alert<3>{D}\alert<2>{NNF} and
+    \alert<5>{Decision}-\alert<3>{D}\alert<2>{NNF}}
+  \begin{columns}
+    \begin{column}{0.57\textwidth}
+      \begin{description}
+        \item<2->[Negation normal form:] \structure{$\neg$} is only applied to
+              variables
+        \item<3->[Decomposability:] for every \structure{$\alpha \land \beta$},
+              \structure{$\Vars(\alpha) \cap \Vars(\beta) = \emptyset$}
+        \item<4->[Determinism:] for every \structure{$\alpha \lor \beta$},
+              \structure{$\alpha \land \beta \equiv \bot$}
+        \item<5->[Decision:] all disjunctions are of the form
+
+              \begin{tikzpicture}[level 1/.style={sibling distance=2cm}, level 2/.style={sibling distance=1cm}]
+                \node[draw,circle] {$\lor$}
+                child {node[draw,circle] {$\land$}
+                  child {node[draw,rectangle] {$x$}}
+                  child {node {$\vdots$}}
+                }
+                child {node[draw,circle] {$\land$}
+                  child {node[draw,rectangle] {$\neg x$}}
+                  child {node {$\vdots$}}
+                }
+                ;
+              \end{tikzpicture}
+      \end{description}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+      \begin{example}
+        \structure{$C \land (A \lor \neg B)$} in d-DNNF/decision-DNNF:
+      \begin{center}
+      \begin{tikzpicture}[level distance=0.8cm]
+        \node[draw,circle] {$\land$}
+        child {node[draw,circle] {$\lor$}
+          child {node[draw,circle] (parent) {$\land$}
+            child {node[draw,rectangle] {$B$}}
+            child {edge from parent[draw=none]}
+          }
+          child {node[draw,circle] {$\land$}
+            child {node[draw,circle] {$\lor$}
+              child {node[draw,rectangle] (A) {$A$}}
+              child {node[draw,rectangle] {$\neg A$}}
+            }
+            child {node[draw,rectangle] {$\neg B$}}
+          }
+        }
+        child {node[draw,rectangle] {$C$}};
+        \draw (parent) -- (A);
+      \end{tikzpicture}
+      \end{center}
+      \end{example}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[t]{Tree Decompositions and Primal Treewidth}
