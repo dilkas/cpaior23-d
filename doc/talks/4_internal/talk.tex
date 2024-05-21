@@ -10,6 +10,8 @@
 \usepackage{appendixnumberbeamer}
 \usepackage{csquotes}
 \usepackage[clock]{ifsym}
+\usepackage{amsmath}
+\usepackage{mathtools}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{tikzmark}
@@ -139,44 +141,88 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tree Decompositions and Primal Treewidth}
-  Formula in CNF:
+\begin{frame}[t]{Tree Decompositions and Primal Treewidth}
+  A formula in CNF:
   \[
-    \phi = (\four{} \lor \neg \three{} \lor \one{}) \land (\neg \two{} \lor \four{}) \land (\neg \one{} \lor \two{} \lor \four{})
+    \phi = \begin{aligned}(x_1 \lor x_2) \land (x_2 \lor x_3 \lor x_4) \land (x_1 \lor x_4) &\land (x_3 \lor x_5) \land (x_4 \lor x_5 \lor x_6) \\ &\land (x_5 \lor x_6 \lor x_7) \land (x_6 \lor x_7)\end{aligned}
   \]
   \pause
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      Its primal graph:
+  \begin{columns}[t]
+    \begin{column}{0.49\textwidth}
+      The primal graph of \structure{$\phi$} is:
+      \begin{center}
+        \begin{tikzpicture}
+          \node (x1) at (0, 0) {$x_1$};
+          \node (x2) at (1, 1) {$x_2$};
+          \node (x3) at (2, 1) {$x_3$};
+          \node (x4) at (1, 0) {$x_4$};
+          \node (x5) at (2, 0) {$x_5$};
+          \node (x6) at (3, 0) {$x_6$};
+          \node (x7) at (4, 0) {$x_7$};
+          \draw (x1) -- (x2);
+          \draw (x1) -- (x4);
 
-      \hspace{1cm}
-      \begin{tikzpicture}
-        \node (one) at (0, 1) {$\one{}$};
-        \node (two) at (1, 1) {$\two{}$};
-        \node (three) at (0, 0) {$\three{}$};
-        \node (four) at (1, 0) {$\four{}$};
-        \draw (one) -- (two);
-        \draw (one) -- (three);
-        \draw (one) -- (four);
-        \draw (two) -- (four);
-        \draw (three) -- (four);
-      \end{tikzpicture}
-    \end{column}
-    \begin{column}{0.5\textwidth}
+          \draw (x2) -- (x3);
+          \draw (x2) -- (x4);
+
+          \draw (x3) -- (x4);
+          \draw (x3) -- (x5);
+
+          \draw (x4) -- (x5);
+          \draw (x4) to[bend right] (x6);
+
+          \draw (x5) -- (x6);
+          \draw (x5) to[bend left] (x7);
+
+          \draw (x6) -- (x7);
+        \end{tikzpicture}
+
+        \vspace{1.5cm}
+        \onslide<4>{$\therefore$ the primal treewidth of \structure{$\phi$} is \structure{2}}
+      \end{center}
+    \end{column}%
+    \begin{column}{0.49\textwidth}
       \pause
       Its minimum-width tree decomposition:
-
-      \begin{tikzpicture}[every text node part/.style={align=center}]
-        \node[circle,draw] (one) {$\one{}$ $\two{}$\\$\four{}$};
-        \node[circle,draw,right=of one] (two) {$\one{}$ $\three{}$\\$\four{}$};
-        \draw (one) -- (two);
-      \end{tikzpicture}
+      \begin{center}
+        \begin{tikzpicture}[sibling distance=5em]
+          \node {$\{x_4, x_5, x_6\}$}
+          child { node {$\{x_1, x_4\}$}
+            child { node {$\{x_1, x_2\}$} }
+          }
+          child { node {$\{x_2, x_3, x_4\}$}
+            child { node {$\{x_3, x_5\}$} }
+          }
+          child { node {$\{x_5, x_6, x_7\}$}
+            child { node {$\{x_6, x_7\}$} }
+          };
+        \end{tikzpicture}
+      \end{center}
     \end{column}
   \end{columns}
-  \centering
-  \vfill
-  \pause
-  $\therefore$ the primal treewidth of \structure{$\phi$} is \structure{2}
+\end{frame}
+
+\begin{frame}{Formally\dots}
+\begin{definition}[\cite{DBLP:journals/jct/RobertsonS84}]\label{def:treewidth}
+  A \alert{tree decomposition} of a graph \structure{$G$} is a pair
+  \structure{$(T, \chi)$}, where \structure{$T$} is a tree and
+  \structure{$\chi\colon \mathcal{V}(T) \to 2^{\mathcal{V}(G)}$} is a labelling
+  function, with the following properties:
+  \begin{itemize}
+    \item \structure{$\bigcup_{t \in \mathcal{V}(T)} \chi(t) = \mathcal{V}(G)$};
+    \item for every edge \structure{$e \in \mathcal{E}(G)$}, there is
+          \structure{$t \in \mathcal{V}(T)$} s.t.\ \structure{$e$} has both
+          endpoints in \structure{$\chi(t)$};
+    \item for all \structure{$t, t', t'' \in \mathcal{V}(T)$}, if
+          \structure{$t'$} is on the path between \structure{$t$} and
+          \structure{$t''$}, then
+          \structure{$\chi(t) \cap \chi(t'') \subseteq \chi(t')$}.
+  \end{itemize}
+  The \alert{width} of tree decomposition \structure{$(T, \chi)$} is
+  \structure{$\max_{t \in \mathcal{V}(T)} |\chi(t)| - 1$}. The \alert{treewidth}
+  of graph \structure{$G$} is the smallest \structure{$w$} such that
+  \structure{$G$} has a tree decomposition of width \structure{$w$}.
+\end{definition}
 \end{frame}
 
 \begin{frame}{The Parameterised Complexity of WMC Algorithms}
@@ -333,7 +379,8 @@
     \alert{runtime}, and \structure{$w$} is \alert{primal treewidth}
     \end{block}
   \begin{block}{Empirical Scaling Analyzer (ESA) v2~\parencite{DBLP:conf/gecco/PushakH20}}
-    TODO
+    TODO: more details about how these plots were made (the statistical methods,
+    etc.)
   \end{block}
 \end{frame}
 
