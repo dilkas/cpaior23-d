@@ -142,7 +142,6 @@
   \end{itemize}
 \end{frame}
 
-% TODO: highlight the corresponding letters in the title with overlays, maybe add citations
 \begin{frame}{Knowledge Compilation: \alert<4>{d}-\alert<3>{D}\alert<2>{NNF} and
     \alert<5>{Decision}-\alert<3>{D}\alert<2>{NNF}}
   \begin{columns}
@@ -394,12 +393,36 @@
 \end{frame}
 
 \begin{frame}{The Relationship Between \structure{$\rho$} and Primal Treewidth}
+  \begin{block}{Experiment 1 (Validation)}
+    \begin{itemize}
+      \item Set the number of variables to \structure{$100$}
+      \item Consider a geometric sequence of \structure{$11$} densities from
+            \structure{$0.4$} to \structure{$14.1$}
+      \item Let \structure{$\rho$} range from \structure{zero} to
+            \structure{one} in steps of \structure{$0.01$}
+      \item Generate \structure{ten} \structure{$2$}-, \structure{$3$}-,
+            \structure{$4$}-, and \structure{$5$}-CNF formulas
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{The Relationship Between \structure{$\rho$} and Primal Treewidth}
   \includegraphics{regular_repetitiveness.pdf}
 \end{frame}
 % NOTE: density (i.e., ratio of clauses and variables) at the top
 
-% NOTE: from now on, we're only looking at 3-CNF formulas. Maybe introduce a
-% slide for that (+ numbers of variables, etc.)?
+\begin{frame}{Density, Primal Treewidth, and Runtime}
+  \begin{block}{Experiment 2 (The Main One)}
+    \begin{itemize}
+      \item Set the number of variables to \structure{$70$}
+      \item Consider densities ranging from \structure{$1$} to \structure{$4.3$}
+            in steps of \structure{$0.3$}
+      \item Let \structure{$\rho$} range from \structure{$0$} to
+            \structure{$0.5$} in steps of \structure{$0.01$}
+      \item Generate one \structure{$3$}-CNF formula
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 \begin{frame}{Peak Hardness w.r.t. Density}
   Let \structure{$\mu$} denote the \alert{density}, i.e., the number of clauses
