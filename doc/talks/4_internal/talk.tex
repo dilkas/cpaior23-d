@@ -12,6 +12,7 @@
 \usepackage[clock]{ifsym}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{siunitx}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{tikzmark}
@@ -336,7 +337,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{The Relationship Between \alert{$\rho$} and Primal Treewidth}
+\begin{frame}{The Relationship Between \structure{$\rho$} and Primal Treewidth}
   \includegraphics{regular_repetitiveness.pdf}
 \end{frame}
 % NOTE: density (i.e., ratio of clauses and variables) at the top
@@ -379,8 +380,21 @@
     \alert{runtime}, and \structure{$w$} is \alert{primal treewidth}
     \end{block}
   \begin{block}{Empirical Scaling Analyzer (ESA) v2~\parencite{DBLP:conf/gecco/PushakH20}}
-    TODO: more details about how these plots were made (the statistical methods,
-    etc.)
+    \begin{enumerate}
+      \item Prepare a list of hypotheses about scalability, e.g.:
+      \begin{description}
+        \item[exponential:] \structure{$t \sim \alpha \beta^{w}$},
+        \item[polynomial:] \structure{$t \sim \alpha w^{\beta}$}
+      \end{description}
+      \item Use \structure{\SI{30}{\percent}} of the data with the largest
+            values of \structure{$w$} for testing
+      \item For each hypothesis, ESA produces:
+      \begin{itemize}
+        \item estimates of parameter values,
+        \item support loss, and
+        \item challenge loss
+      \end{itemize}
+    \end{enumerate}
   \end{block}
 \end{frame}
 
