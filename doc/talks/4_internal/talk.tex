@@ -301,6 +301,74 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Early History of Random SAT}
+  \begin{itemize}
+    \item \textcite{DBLP:journals/ipl/GoldbergPB82} show that (simplified)
+          \alert{Davis-Putnam procedures} run in \alert{polynomial time} on
+          average on the following model:
+          \begin{itemize}
+            \item Fix the numbers of \alert{variables} and \alert{clauses}
+            \item Let \structure{$p \in (0, 0.5)$}
+            \item For each clause \structure{$C$} and variable \structure{$x$}:
+            \begin{itemize}
+              \item \alert{Add} \structure{$x$} to \structure{$C$} w.p.\
+                    \structure{$p$}
+              \item Or \alert{add} \structure{$\neg x$} to \structure{$C$} w.p.\
+                    \structure{$p$}
+              \item Or \alert{do nothing} w.p.\ \structure{$1 - 2p$}
+            \end{itemize}
+          \end{itemize}
+          \pause
+    \item \textcite{DBLP:journals/dam/FrancoP83} were the first to propose a
+    `reasonable' random \structure{$k$}-CNF model:
+    \begin{enumerate}
+      \item Fix the numbers of \alert{variables}, \alert{clauses}, and
+            \alert{clause width}
+      \item \alert{Sample each clause} independently as a subset of all possible
+            literals
+      \item \alert{Reject} clauses that have \structure{$x$} and
+            \structure{$\neg x$} for some variable \structure{$x$}
+    \end{enumerate}
+    \begin{itemize}
+      \item They show that the Davis-Putnam procedure \alert{requires
+            exponential time} w.p.\ one
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Phase Transitions}
+  \begin{itemize}
+    \item Phase transitions for \alert{decision problems} have been studied both
+          \alert{experimentally} and \alert{theoretically} for a long time (see,
+          e.g., \textcite{DBLP:conf/ijcai/CheesemanKT91})\pause
+    \item Phase transitions are characterised by a parameter \structure{$k$}
+          such that:
+    \begin{itemize}
+      \item For \alert{low} values of \structure{$k$}, the problem is
+            \alert{easy}
+      \item For \alert{high} values of \structure{$k$}, the problem is
+            \alert{easy} again
+      \item \alert{Average} values of \structure{$k$} is where the problem
+            becomes \alert{hard}\pause
+    \end{itemize}
+    \item For SAT-based problems, \alert{(clause) density} is the standard
+          parameter
+          \begin{itemize}
+            \item i.e., the number of \alert{clauses} divided by the number of
+                  \alert{variables}
+            \item (usually parameterised by \alert{clause width})\pause
+          \end{itemize}
+    \item The most comprehensive (experimental) study of phase transitions for
+          \alert{SAT algorithms} is
+          by~\textcite{DBLP:journals/constraints/CoarfaDASV03}
+          \begin{itemize}
+            \item They show that the transition from polynomial to exponential
+                  time \alert{depends on the solver}
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+% NOTE: I could add a lot more of this
+
 \begin{frame}{Generating Random WMC Instances: The Algorithm}
   \begin{columns}
     \begin{column}{0.69\textwidth}
