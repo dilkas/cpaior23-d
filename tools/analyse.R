@@ -68,11 +68,13 @@ dev.off()
 
 #tikz(file = "../doc/talk/epsilon.tex", width = 4.26, height = 3.1,
 #     standAlone = TRUE)
-tikz(file = "../doc/talk-conference/epsilon.tex", width = 3.852,
+#tikz(file = "../doc/talk-conference/epsilon.tex", width = 3.852,
+#     height = 2.934, standAlone = TRUE)
+tikz(file = "../doc/talks/4_internal/epsilon.tex", width = 3.852,
      height = 2.934, standAlone = TRUE)
-data <- read_data("../results/regular1.csv")
+data <- read_data("../results/regular3.csv")
 df <- data[data$algorithm == "\\textsc{DPMC}", ] %>% group_by(prop_equal)
-plot_with_sd(df, "prop_equal", "$\\epsilon$", FALSE) +
+plot_with_sd(df, "prop_equal", "The proportions of variables with weights $(0.5, 0.5)$", FALSE) +
   ylim(0, TIMEOUT) +
   theme_light() + ylab("\\textsc{DPMC} runtime (s)")
 dev.off()

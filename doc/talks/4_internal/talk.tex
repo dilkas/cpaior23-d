@@ -3,7 +3,7 @@
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \usepackage{tikz}
-\usepackage[style=authoryear]{biblatex}
+\usepackage[style=authoryear,giveninits=true,uniquename=init]{biblatex}
 \usepackage{complexity}
 \usepackage[vlined]{algorithm2e}
 \usepackage{spot}
@@ -46,6 +46,26 @@
 \date{30th May 2024}
 % 40 min talk
 
+\newif\iflattersubsect
+
+\AtBeginSection[] {
+    \begin{frame}<beamer>
+    \frametitle{Overview} %
+    \tableofcontents[currentsection]
+    \end{frame}
+    \lattersubsectfalse
+}
+
+\AtBeginSubsection[] {
+    \iflattersubsect
+    \begin{frame}<beamer>
+    \frametitle{Overview} %
+    \tableofcontents[currentsubsection]
+    \end{frame}
+    \fi
+    \lattersubsecttrue
+}
+
 \begin{document}
 
 \begin{frame}[noframenumbering,plain]
@@ -61,6 +81,8 @@
   }
   \titlepage
 \end{frame}
+
+\section{Introduction}
 
 \begin{frame}{Which Algorithm Is Better? It Depends on the Data}
   \begin{center}
@@ -94,7 +116,7 @@
     \begin{column}{0.5\textwidth}
       \begin{example}
         $w(x) = 0.3$, $w(\neg x) = 0.7$, $w(y) = 0.2$, $w(\neg y) = 0.8$
-        \vspace{1cm}
+        \vspace{0.5cm}
 
         $\mathsf{WMC}(\alert{x \lor y}) = w(x)w(y) + w(x)w(\neg y) + w(\neg x)w(y) = 0.44$
       \end{example}
@@ -131,16 +153,18 @@
 
 \begin{frame}{Frequently Asked Questions}
   \begin{itemize}
-    \item[Q:] \pause Why isn't \alert{SharpSAT-TD} included in the experiments?
+    \item[Q:] \pause Why isn't \textsc{SharpSAT-TD} included in the experiments?
     \item[A:] Because I started setting up these experiments \alert{eight days}
-          after the \alert{SharpSAT-TD} paper came out
-    \item[Q:] \pause Why isn't \alert{GANAK} included in the experiments?
+          after the \textsc{SharpSAT-TD} paper came out
+    \item[Q:] \pause Why isn't \textsc{GANAK} included in the experiments?
     \item[A:] Because it's easy to argue that probabilistic algorithms are
           \alert{out of scope} (and I had lots of algorithms already)
     \item[Q:] \pause Why am I giving a talk about this \alert{now}?
     \item[A:] \includegraphics[width=0.3\linewidth]{shrug}
   \end{itemize}
 \end{frame}
+
+\section{Background}
 
 \begin{frame}{Knowledge Compilation: \alert<4>{d}-\alert<3>{D}\alert<2>{NNF} and
     \alert<5>{Decision}-\alert<3>{D}\alert<2>{NNF}}
@@ -282,30 +306,33 @@
 \end{frame}
 
 \begin{frame}{The Parameterised Complexity of WMC Algorithms}
-  Let \structure{$n$} be the number of \structure{variables} and \structure{$m$} be
-  the number of \structure{clauses}.
+  Let \structure{$n$} be the number of \alert{variables} and \structure{$m$} be
+  the number of \alert{clauses}.
   \begin{itemize}
     \item Component caching (used in \textsc{Cachet}) is
-          \alert{$2^{\mathcal{O}(w)}n^{\mathcal{O}(1)}$}, where \structure{$w$}
-          is the \structure{branchwidth} of the underlying hypergraph
+          \structure{$2^{\mathcal{O}(w)}n^{\mathcal{O}(1)}$}, where
+          \structure{$w$} is the \alert{branchwidth} of the underlying
+          hypergraph
           \textcolor{gray}{\parencite{DBLP:journals/jair/BacchusDP09}}
           \begin{itemize}
             \item Branchwidth is within a constant factor of primal treewidth
           \end{itemize}
     \item \textsc{c2d} is based on an algorithm, which is
-          \alert{$\mathcal{O}(2^{w}mw)$}, where \structure{$w$} is at most
-          \structure{primal treewidth}
+          \structure{$\mathcal{O}(2^{w}mw)$}, where \structure{$w$} is at most
+          \alert{primal treewidth}
           \textcolor{gray}{\parencite{DBLP:journals/jacm/Darwiche01,DBLP:conf/ecai/Darwiche04}}
-    \item \textsc{DPMC} can be shown to be \alert{$\mathcal{O}(4^{w}mn)$}, where
-          \structure{$w$} is an upper bound on \structure{primal treewidth}
+    \item \textsc{DPMC} can be shown to be \structure{$\mathcal{O}(4^{w}mn)$},
+          where \structure{$w$} is an upper bound on \alert{primal treewidth}
   \end{itemize}
 \end{frame}
+% NOTE: could add a slide that outlines the proof of DPMC's parameterised
+% complexity (I have the full proof in my notes)
 
 \begin{frame}{Early History of Random SAT}
   \begin{itemize}
-    \item \textcite{DBLP:journals/ipl/GoldbergPB82} show that (simplified)
-          \alert{Davis-Putnam procedures} run in \alert{polynomial time} on
-          average on the following model:
+    \item \textcolor{gray}{\textcite{DBLP:journals/ipl/GoldbergPB82}} show that
+          (simplified) \alert{Davis-Putnam procedures} run in \alert{polynomial
+          time} on average on the following model:
           \begin{itemize}
             \item Fix the numbers of \alert{variables} and \alert{clauses}
             \item Let \structure{$p \in (0, 0.5)$}
@@ -319,8 +346,8 @@
             \end{itemize}
           \end{itemize}
           \pause
-    \item \textcite{DBLP:journals/dam/FrancoP83} were the first to propose a
-    `reasonable' random \structure{$k$}-CNF model:
+    \item \textcolor{gray}{\textcite{DBLP:journals/dam/FrancoP83}} were the
+          first to propose a `reasonable' random \structure{$k$}-CNF model:
     \begin{enumerate}
       \item Fix the numbers of \alert{variables}, \alert{clauses}, and
             \alert{clause width}
@@ -331,7 +358,7 @@
     \end{enumerate}
     \begin{itemize}
       \item They show that the Davis-Putnam procedure \alert{requires
-            exponential time} w.p.\ one
+            exponential time} w.p.\ \structure{$1$}
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -340,7 +367,8 @@
   \begin{itemize}
     \item Phase transitions for \alert{decision problems} have been studied both
           \alert{experimentally} and \alert{theoretically} for a long time (see,
-          e.g., \textcite{DBLP:conf/ijcai/CheesemanKT91})\pause
+          e.g.,
+          \textcolor{gray}{\textcite{DBLP:conf/ijcai/CheesemanKT91}})\pause
     \item Phase transitions are characterised by a parameter \structure{$k$}
           such that:
     \begin{itemize}
@@ -360,7 +388,7 @@
           \end{itemize}
     \item The most comprehensive (experimental) study of phase transitions for
           \alert{SAT algorithms} is
-          by~\textcite{DBLP:journals/constraints/CoarfaDASV03}
+          by~\textcolor{gray}{\textcite{DBLP:journals/constraints/CoarfaDASV03}}
           \begin{itemize}
             \item They show that the transition from polynomial to exponential
                   time \alert{depends on the solver}
@@ -368,6 +396,8 @@
   \end{itemize}
 \end{frame}
 % NOTE: I could add a lot more of this
+
+\section{Random WMC}
 
 \begin{frame}{Generating Random WMC Instances: The Algorithm}
   \begin{columns}
@@ -460,6 +490,10 @@
   \end{block}
 \end{frame}
 
+\section{Experiments}
+
+\subsection{Validation}
+
 \begin{frame}{The Relationship Between \structure{$\rho$} and Primal Treewidth}
   \begin{block}{Experiment 1 (Validation)}
     \begin{itemize}
@@ -477,7 +511,8 @@
 \begin{frame}{The Relationship Between \structure{$\rho$} and Primal Treewidth}
   \includegraphics{regular_repetitiveness.pdf}
 \end{frame}
-% NOTE: density (i.e., ratio of clauses and variables) at the top
+
+\subsection{Hardness}
 
 \begin{frame}{Density, Primal Treewidth, and Runtime}
   \begin{block}{Experiment 2 (The Main One)}
@@ -520,13 +555,16 @@
   \includegraphics{treewidth2.pdf}
 \end{frame}
 
+\subsection{Statistical Analysis}
+
 \begin{frame}{Is The Relationship Exponential: Two Approaches}
   \begin{block}{Linear Regression}
     We fit the model \structure{$\ln t \sim \alpha w + \beta$}, i.e.,
     \structure{$t \sim e^{\beta}{(e^{\alpha})}^{w}$}, where \structure{$t$} is
     \alert{runtime}, and \structure{$w$} is \alert{primal treewidth}
     \end{block}
-  \begin{block}{Empirical Scaling Analyzer (ESA) v2~\parencite{DBLP:conf/gecco/PushakH20}}
+    \begin{block}{Empirical Scaling Analyzer (ESA)
+        v2~\parencite{DBLP:conf/gecco/PushakH20}}
     \begin{enumerate}
       \item Prepare a list of hypotheses about scalability, e.g.:
       \begin{description}
@@ -544,6 +582,7 @@
     \end{enumerate}
   \end{block}
 \end{frame}
+% NOTE: could show some of the tables/plots produced by ESA
 
 \begin{frame}{How Well Does Linear Regression Explain the Data?}
   \centering
@@ -555,15 +594,14 @@
   \includegraphics{linearbase2.pdf}
 \end{frame}
 
+\subsection{Miscellaneous}
+
 \begin{frame}{Does Real Data Confirm Our Observations?}
   \centering
   \includegraphics{real}
 \end{frame}
 
 \begin{frame}{Bonus 1: How \textsc{DPMC} Reacts to Redundancy in Weights}
-  Let \structure{$\epsilon$} be the proportion of variables \structure{$x$} s.t.
-  \structure{$w(x) = w(\neg x) = 0.5$}
-
   \centering
   \includegraphics{epsilon}
 \end{frame}
@@ -572,6 +610,8 @@
   \centering
   \includegraphics{delta}
 \end{frame}
+
+\section{Conclusion}
 
 \begin{frame}{Summary}
   \begin{itemize}
@@ -627,6 +667,11 @@
       \path[->]<7-> (mcsplit) edge node[right] {\VarClock} (answer);
       \draw<7->[->] (graphs) edge [bend right=40] (2, 1);
     \end{tikzpicture}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+        \printbibliography
 \end{frame}
 
 \end{document}
