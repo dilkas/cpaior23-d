@@ -197,7 +197,7 @@
       \begin{example}
         \structure{$C \land (A \lor \neg B)$} in d-DNNF/decision-DNNF:
       \begin{center}
-      \begin{tikzpicture}[level distance=0.8cm]
+      \begin{tikzpicture}[level distance=0.8cm,edge from parent/.style={draw,-Latex}]
         \node[draw,circle] {$\land$}
         child {node[draw,circle] {$\lor$}
           child {node[draw,circle] (parent) {$\land$}
@@ -213,7 +213,7 @@
           }
         }
         child {node[draw,rectangle] {$C$}};
-        \draw (parent) -- (A);
+        \draw[-Latex] (parent) -- (A);
       \end{tikzpicture}
       \end{center}
       \end{example}
@@ -221,89 +221,90 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}[t]{Tree Decompositions and Primal Treewidth}
-  A formula in CNF:
-  \[
-    \phi = \begin{aligned}(x_1 \lor x_2) \land (x_2 \lor x_3 \lor x_4) \land (x_1 \lor x_4) &\land (x_3 \lor x_5) \land (x_4 \lor x_5 \lor x_6) \\ &\land (x_5 \lor x_6 \lor x_7) \land (x_6 \lor x_7)\end{aligned}
-  \]
-  \pause
-  \begin{columns}[t]
-    \begin{column}{0.49\textwidth}
-      The primal graph of \structure{$\phi$} is:
-      \begin{center}
-        \begin{tikzpicture}
-          \node (x1) at (0, 0) {$x_1$};
-          \node (x2) at (1, 1) {$x_2$};
-          \node (x3) at (2, 1) {$x_3$};
-          \node (x4) at (1, 0) {$x_4$};
-          \node (x5) at (2, 0) {$x_5$};
-          \node (x6) at (3, 0) {$x_6$};
-          \node (x7) at (4, 0) {$x_7$};
-          \draw (x1) -- (x2);
-          \draw (x1) -- (x4);
+% NOTE: the example is WRONG!!!
+% \begin{frame}[t]{Tree Decompositions and Primal Treewidth}
+%   An example formula in conjunctive normal form:
+%   \[
+%     \phi = \begin{aligned}(x_1 \lor x_2) \land (x_2 \lor x_3 \lor x_4) \land (x_1 \lor x_4) &\land (x_3 \lor x_5) \land (x_4 \lor x_5 \lor x_6) \\ &\land (x_5 \lor x_6 \lor x_7) \land (x_6 \lor x_7)\end{aligned}
+%   \]
+%   \pause
+%   \begin{columns}[t]
+%     \begin{column}{0.49\textwidth}
+%       The primal graph of \structure{$\phi$} is:
+%       \begin{center}
+%         \begin{tikzpicture}
+%           \node (x1) at (0, 0) {$x_1$};
+%           \node (x2) at (1, 1) {$x_2$};
+%           \node (x3) at (2, 1) {$x_3$};
+%           \node (x4) at (1, 0) {$x_4$};
+%           \node (x5) at (2, 0) {$x_5$};
+%           \node (x6) at (3, 0) {$x_6$};
+%           \node (x7) at (4, 0) {$x_7$};
+%           \draw (x1) -- (x2);
+%           \draw (x1) -- (x4);
 
-          \draw (x2) -- (x3);
-          \draw (x2) -- (x4);
+%           \draw (x2) -- (x3);
+%           \draw (x2) -- (x4);
 
-          \draw (x3) -- (x4);
-          \draw (x3) -- (x5);
+%           \draw (x3) -- (x4);
+%           \draw (x3) -- (x5);
 
-          \draw (x4) -- (x5);
-          \draw (x4) to[bend right] (x6);
+%           \draw (x4) -- (x5);
+%           \draw (x4) to[bend right] (x6);
 
-          \draw (x5) -- (x6);
-          \draw (x5) to[bend left] (x7);
+%           \draw (x5) -- (x6);
+%           \draw (x5) to[bend left] (x7);
 
-          \draw (x6) -- (x7);
-        \end{tikzpicture}
+%           \draw (x6) -- (x7);
+%         \end{tikzpicture}
 
-        \vspace{1.5cm}
-        \onslide<4>{$\therefore$ the primal treewidth of \structure{$\phi$} is \structure{2}}
-      \end{center}
-    \end{column}%
-    \begin{column}{0.49\textwidth}
-      \pause
-      Its minimum-width tree decomposition:
-      \begin{center}
-        \begin{tikzpicture}[sibling distance=5em]
-          \node {$\{x_4, x_5, x_6\}$}
-          child { node {$\{x_1, x_4\}$}
-            child { node {$\{x_1, x_2\}$} }
-          }
-          child { node {$\{x_2, x_3, x_4\}$}
-            child { node {$\{x_3, x_5\}$} }
-          }
-          child { node {$\{x_5, x_6, x_7\}$}
-            child { node {$\{x_6, x_7\}$} }
-          };
-        \end{tikzpicture}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
+%         \vspace{1.5cm}
+%         \onslide<4>{$\therefore$ the primal treewidth of \structure{$\phi$} is \structure{2}}
+%       \end{center}
+%     \end{column}%
+%     \begin{column}{0.49\textwidth}
+%       \pause
+%       Its minimum-width tree decomposition:
+%       \begin{center}
+%         \begin{tikzpicture}[sibling distance=5em]
+%           \node {$\{x_4, x_5, x_6\}$}
+%           child { node {$\{x_1, x_4\}$}
+%             child { node {$\{x_1, x_2\}$} }
+%           }
+%           child { node {$\{x_2, x_3, x_4\}$}
+%             child { node {$\{x_3, x_5\}$} }
+%           }
+%           child { node {$\{x_5, x_6, x_7\}$}
+%             child { node {$\{x_6, x_7\}$} }
+%           };
+%         \end{tikzpicture}
+%       \end{center}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
 
-\begin{frame}{Formally\dots}
-\begin{definition}[\cite{DBLP:journals/jct/RobertsonS84}]\label{def:treewidth}
-  A \alert{tree decomposition} of a graph \structure{$G$} is a pair
-  \structure{$(T, \chi)$}, where \structure{$T$} is a tree and
-  \structure{$\chi\colon \mathcal{V}(T) \to 2^{\mathcal{V}(G)}$} is a labelling
-  function, with the following properties:
-  \begin{itemize}
-    \item \structure{$\bigcup_{t \in \mathcal{V}(T)} \chi(t) = \mathcal{V}(G)$};
-    \item for every edge \structure{$e \in \mathcal{E}(G)$}, there is
-          \structure{$t \in \mathcal{V}(T)$} s.t.\ \structure{$e$} has both
-          endpoints in \structure{$\chi(t)$};
-    \item for all \structure{$t, t', t'' \in \mathcal{V}(T)$}, if
-          \structure{$t'$} is on the path between \structure{$t$} and
-          \structure{$t''$}, then
-          \structure{$\chi(t) \cap \chi(t'') \subseteq \chi(t')$}.
-  \end{itemize}
-  The \alert{width} of tree decomposition \structure{$(T, \chi)$} is
-  \structure{$\max_{t \in \mathcal{V}(T)} |\chi(t)| - 1$}. The \alert{treewidth}
-  of graph \structure{$G$} is the smallest \structure{$w$} such that
-  \structure{$G$} has a tree decomposition of width \structure{$w$}.
-\end{definition}
-\end{frame}
+% \begin{frame}{Formally\dots}
+% \begin{definition}[\cite{DBLP:journals/jct/RobertsonS84}]\label{def:treewidth}
+%   A \alert{tree decomposition} of a graph \structure{$G$} is a pair
+%   \structure{$(T, \chi)$}, where \structure{$T$} is a tree and
+%   \structure{$\chi\colon \mathcal{V}(T) \to 2^{\mathcal{V}(G)}$} is a labelling
+%   function, with the following properties:
+%   \begin{itemize}
+%     \item \structure{$\bigcup_{t \in \mathcal{V}(T)} \chi(t) = \mathcal{V}(G)$};
+%     \item for every edge \structure{$e \in \mathcal{E}(G)$}, there is
+%           \structure{$t \in \mathcal{V}(T)$} s.t.\ \structure{$e$} has both
+%           endpoints in \structure{$\chi(t)$};
+%     \item for all \structure{$t, t', t'' \in \mathcal{V}(T)$}, if
+%           \structure{$t'$} is on the path between \structure{$t$} and
+%           \structure{$t''$}, then
+%           \structure{$\chi(t) \cap \chi(t'') \subseteq \chi(t')$}.
+%   \end{itemize}
+%   The \alert{width} of tree decomposition \structure{$(T, \chi)$} is
+%   \structure{$\max_{t \in \mathcal{V}(T)} |\chi(t)| - 1$}. The \alert{treewidth}
+%   of graph \structure{$G$} is the smallest \structure{$w$} such that
+%   \structure{$G$} has a tree decomposition of width \structure{$w$}.
+% \end{definition}
+% \end{frame}
 
 \begin{frame}{The Parameterised Complexity of WMC Algorithms}
   Let \structure{$n$} be the number of \alert{variables} and \structure{$m$} be
@@ -346,8 +347,8 @@
             \end{itemize}
           \end{itemize}
           \pause
-    \item \textcolor{gray}{\textcite{DBLP:journals/dam/FrancoP83}} were the
-          first to propose a `reasonable' random \structure{$k$}-CNF model:
+    \item \textcolor{gray}{\textcite{DBLP:journals/dam/FrancoP83}} proposed what
+          became the \alert{standard} random \structure{$k$}-CNF model:
     \begin{enumerate}
       \item Fix the numbers of \alert{variables}, \alert{clauses}, and
             \alert{clause width}
@@ -383,8 +384,8 @@
           parameter
           \begin{itemize}
             \item i.e., the number of \alert{clauses} divided by the number of
-                  \alert{variables}
-            \item (usually parameterised by \alert{clause width})\pause
+                  \alert{variables}\pause
+            % \item (usually parameterised by \alert{clause width})\pause
           \end{itemize}
     \item The most comprehensive (experimental) study of phase transitions for
           \alert{SAT algorithms} is
@@ -397,7 +398,7 @@
 \end{frame}
 % NOTE: I could add a lot more of this
 
-\section{Random WMC}
+\section{Generating Random WMC Instances}
 
 \begin{frame}{Generating Random WMC Instances: The Algorithm}
   \begin{columns}
@@ -411,9 +412,9 @@
           $\structure{X} \gets \emptyset$\;
           \For{$j \gets 1$ \KwTo \alert{$k$\tikz[na] \node[coordinate] (k1) {};}}{
             $\structure{x} \gets \alert{\NewVariable{$X$, $G$}}\tikz[na] \node[coordinate] (f1) {};$\;
+            $\structure{X} \gets \structure{X} \cup \{\, \structure{x} \,\}$\;
             $\mathcal{V}(\structure{G}) \gets \mathcal{V}(\structure{G}) \cup \{\, \structure{x} \,\}$\;
             $\mathcal{E}(\structure{G}) \gets \mathcal{E}(\structure{G}) \cup \{\, \{\,\structure{x}, \structure{y}\,\} \mid \structure{y} \in \structure{X} \,\}$\;
-            $\structure{X} \gets \structure{X} \cup \{\, \structure{x} \,\}$\;
           }
           $\structure{\phi} \gets \structure{\phi} \cup \{\,\{\, \structure{l} \leftlsquigarrow \mathcal{U}\{\, \structure{x}, \neg \structure{x} \,\} \mid \structure{x} \in \structure{X} \,\}\,\}$\tikz[na] \node[coordinate] (c1) {};\;
         }
@@ -451,11 +452,11 @@
 \end{frame}
 
 \begin{frame}{From Random SAT to Random WMC}
-  We introduce parameter \structure{$\rho \in [0, 1]$} that biases the
-  probability distribution towards adding variables that would introduce fewer
-  new edges to the primal graph.
+  % We introduce parameter \structure{$\rho \in [0, 1]$} that biases the
+  % probability distribution towards adding variables that would introduce fewer
+  % new edges to the primal graph.
 
-  \vfill
+  % \vfill
   \begin{columns}[t]
     \begin{column}{0.5\linewidth}
       Example partially-filled formula:
@@ -500,8 +501,8 @@
       \item Set the number of variables to \structure{$100$}
       \item Consider a geometric sequence of \structure{$11$} densities from
             \structure{$0.4$} to \structure{$14.1$}
-      \item Let \structure{$\rho$} range from \structure{zero} to
-            \structure{one} in steps of \structure{$0.01$}
+      \item Let \structure{$\rho$} range from \structure{$0$} to \structure{$1$}
+            in steps of \structure{$0.01$}
       \item Generate \structure{ten} \structure{$2$}-, \structure{$3$}-,
             \structure{$4$}-, and \structure{$5$}-CNF formulas
     \end{itemize}
@@ -601,15 +602,15 @@
   \includegraphics{real}
 \end{frame}
 
-\begin{frame}{Bonus 1: How \textsc{DPMC} Reacts to Redundancy in Weights}
+\begin{frame}{Bonus: How \textsc{DPMC} Reacts to Redundancy in Weights}
   \centering
   \includegraphics{epsilon}
 \end{frame}
 
-\begin{frame}{Bonus 2: 0/1 Weights Make Counting Easy}
-  \centering
-  \includegraphics{delta}
-\end{frame}
+% \begin{frame}{Bonus 2: 0/1 Weights Make Counting Easy}
+%   \centering
+%   \includegraphics{delta}
+% \end{frame}
 
 \section{Conclusion}
 
@@ -633,6 +634,13 @@
       \item Algorithm portfolios for WMC
     \end{itemize}
   \end{itemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+        \printbibliography
 \end{frame}
 
 \begin{frame}{Future Work: (Per-Instance) Algorithm Selection}
@@ -667,11 +675,6 @@
       \path[->]<7-> (mcsplit) edge node[right] {\VarClock} (answer);
       \draw<7->[->] (graphs) edge [bend right=40] (2, 1);
     \end{tikzpicture}
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-        \frametitle{References}
-        \printbibliography
 \end{frame}
 
 \end{document}
